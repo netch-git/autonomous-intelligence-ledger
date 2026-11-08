@@ -1,0 +1,45 @@
+name: Autonomous Ledger Auto-Sync Pipeline
+
+on:
+  schedule:
+    # 30分毎に定期実行 (UTC 0-14, 19-23)
+    - cron: '*/30 0-14,19-23 * * *'
+    # 夜間は1時間毎
+    - cron: '0 15-18 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  auto-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Fetch and Update Ledger Data
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python scripts/sync_ledger_data.py
+
+      - name: Commit and Push Updated Ledger
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main || true
+          if [ -n "$(git status --porcelain)" ]; then
+            git add data/ledger_data.json index.html
+            git commit -m "chore(auto-ledger): autonomous sync and timestamp update"
+            git push origin main
+          else
+            echo "No ledger changes detected. Skipping git commit."
+          fi
