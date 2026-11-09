@@ -6,7 +6,7 @@ echo ========================================================
 echo.
 echo 認証後、自動的にサイトが世界規模のエッジ CDN にデプロイされます。
 echo.
-npx wrangler pages deploy . --project-name=world-pulse-chronicle --commit-dirty=true
+npx wrangler pages deploy . --project-name=autonomous-intelligence-ledger --commit-dirty=true
 echo.
-echo [完了] Cloudflare Pages (world-pulse-chronicle) へのデプロイが完了しました。
+echo [完了] Cloudflare Pages (autonomous-intelligence-ledger) へのデプロイが完了しました。
 pause
