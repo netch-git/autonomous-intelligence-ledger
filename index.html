@@ -3,48 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>自律型インテリジェンス電子帳票 | Autonomous Intelligence Ledger</title>
-  <meta name="description" content="Antigravity × AI Studio × GitHub × Cloudflare Pages 自動更新電子帳票・監査調書Webアプリケーション">
+  <title>antigravity プロジェクト総合管理台帳 | 40日間の軌跡と全開発資産調書</title>
+  <meta name="description" content="Googleドライブ (G:/マイドライブ/antigravity) 40日間にわたる自律手帳・学術論文・IDM・デザイン・パイプライン資産統合管理電子帳票">
 
   <!-- Google Fonts: Inter, JetBrains Mono, Noto Sans JP -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Newsreader:ital,opsz,wght@0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
 
-  <!-- Google Fonts Material Symbols Outlined (絵文字禁止・アイコン完全準拠) -->
+  <!-- Google Fonts Material Symbols Outlined (絵文字禁止・完全準拠) -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="ledger-body">
 
-  <!-- 帳票全体ラッパー -->
   <div class="ledger-sheet-container">
 
-    <!-- 画面表示専用: システムヘッダーバー & ナビゲーションリンク -->
+    <!-- 画面表示専用: システムヘッダーバー & 外部連携リンク -->
     <header class="system-navbar no-print">
       <div class="nav-brand">
-        <span class="material-symbols-outlined nav-icon">account_balance</span>
+        <span class="material-symbols-outlined nav-icon">folder_special</span>
         <div class="nav-title-block">
-          <span class="system-badge">AUTONOMOUS AUDIT PIPELINE</span>
-          <span class="nav-main-title">自律型インテリジェンス電子帳票システム</span>
+          <span class="system-badge">WORKSPACE GOVERNANCE & AUDIT</span>
+          <span class="nav-main-title">antigravity プロジェクト総合管理台帳</span>
         </div>
       </div>
 
       <nav class="nav-external-links">
+        <a href="https://world-pulse-chronicle.pages.dev" target="_blank" rel="noopener noreferrer" class="nav-btn accent" title="本番公開中の自律手帳サイトを開く">
+          <span class="material-symbols-outlined">menu_book</span>
+          <span>公開中の自律手帳サイト</span>
+          <span class="material-symbols-outlined link-ext">open_in_new</span>
+        </a>
         <a href="https://github.com/netch-git/autonomous-intelligence-ledger" target="_blank" rel="noopener noreferrer" class="nav-btn" title="GitHub リポジトリ">
           <span class="material-symbols-outlined">code</span>
           <span>GitHub Repo</span>
           <span class="material-symbols-outlined link-ext">open_in_new</span>
         </a>
-        <a href="https://github.com/netch-git/autonomous-intelligence-ledger#readme" target="_blank" rel="noopener noreferrer" class="nav-btn" title="GitHub README">
+        <a href="https://github.com/netch-git/autonomous-intelligence-ledger#readme" target="_blank" rel="noopener noreferrer" class="nav-btn" title="README 仕様書">
           <span class="material-symbols-outlined">description</span>
           <span>README.md</span>
-          <span class="material-symbols-outlined link-ext">open_in_new</span>
-        </a>
-        <a href="https://world-pulse-chronicle.pages.dev" target="_blank" rel="noopener noreferrer" class="nav-btn accent" title="Cloudflare Pages 公開サイト">
-          <span class="material-symbols-outlined">cloud_done</span>
-          <span>Cloudflare Site</span>
           <span class="material-symbols-outlined link-ext">open_in_new</span>
         </a>
       </nav>
@@ -56,65 +55,63 @@
         <div class="meta-left">
           <div class="doc-code-pill">
             <span class="material-symbols-outlined">tag</span>
-            <span id="docRegNumber">様式: FORM-AIL-2026-REV4</span>
+            <span id="docRegNumber">様式: FORM-AGY-40DAYS-LEDGER</span>
           </div>
           <div class="security-level">
             <span class="material-symbols-outlined">verified_user</span>
-            <span>機密区分: 公開自律監査調書 (PUBLIC LEDGER)</span>
+            <span>管理区分: 自律開発資産・プロジェクト総合調書</span>
           </div>
         </div>
 
         <div class="meta-right">
           <span class="sync-status-indicator" id="syncStatusIndicator">
             <span class="pulse-dot"></span>
-            <span class="status-text">自律同期中 (LIVE AUTO-SYNC)</span>
+            <span class="status-text">40日間連続自律運用中 (ACTIVE)</span>
           </span>
         </div>
       </div>
 
       <div class="title-and-stamps-grid">
         <div class="title-section">
-          <h1 class="ledger-headline">自律型インテリジェンス電子帳票・因果監査報告書</h1>
+          <h1 class="ledger-headline">antigravity プロジェクト総合管理台帳</h1>
           <p class="ledger-subheadline">
-            国際オープンデータ・自律手帳・購買推論パイプラインに基づく統合判定調書
+            Googleドライブ (G:/マイドライブ/antigravity) 40日間の自律手帳・学術論文・IDM・デザイン・パイプライン資産統合管理調書
           </p>
           <div class="ledger-attributes-table">
             <div class="attr-row">
-              <span class="attr-label">管轄組織:</span>
-              <span class="attr-val">Antigravity Autonomous Research Lab</span>
+              <span class="attr-label">ワークスペース:</span>
+              <span class="attr-val">G:/マイドライブ/antigravity (Google Drive 5TB アーカイブ連動)</span>
             </div>
             <div class="attr-row">
-              <span class="attr-label">推論基盤:</span>
-              <span class="attr-val">Google AI Studio / Gemini 3.8 Flash (無料枠防護・0円運用)</span>
+              <span class="attr-label">推論・コスト統制:</span>
+              <span class="attr-val">Google AI Studio (Gemini 3.8 Flash) / 0円完全防護 (ALLOW_PAID_VERTEX=0)</span>
             </div>
             <div class="attr-row">
-              <span class="attr-label">起票日時:</span>
-              <span class="attr-val" id="ledgerCreateDate">2026年11月08日 22:30 JST</span>
+              <span class="attr-label">調書起票日時:</span>
+              <span class="attr-val" id="ledgerCreateDate">2026年11月08日 JST (第40日時点)</span>
             </div>
             <div class="attr-row">
-              <span class="attr-label">配信基盤:</span>
-              <span class="attr-val">Cloudflare Pages (Global Edge CDN) × GitHub Actions</span>
+              <span class="attr-label">同期公開エッジ:</span>
+              <span class="attr-val">Cloudflare Pages × GitHub Actions 自律同期パイプライン</span>
             </div>
           </div>
         </div>
 
-        <!-- 承認印・検印欄 (日本のビジネス帳票様式美) -->
+        <!-- 承認印・電子検印欄 -->
         <div class="approval-stamps-block">
           <div class="stamps-caption">電子検印・承認証明</div>
           <div class="stamps-container">
-            <!-- 承認印 1: 起票 -->
             <div class="seal-cell">
               <div class="seal-header">起票</div>
               <div class="seal-stamp verified">
                 <span class="seal-org">ANTIGRAVITY</span>
-                <span class="seal-role">自律起票</span>
+                <span class="seal-role">自律手帳</span>
                 <span class="seal-date" id="stampDate1">26.11.08</span>
                 <span class="seal-check"><span class="material-symbols-outlined">check_small</span></span>
               </div>
-              <div class="seal-agent">Agent-01</div>
+              <div class="seal-agent">Workspace</div>
             </div>
 
-            <!-- 承認印 2: 推論 -->
             <div class="seal-cell">
               <div class="seal-header">AI推論</div>
               <div class="seal-stamp verified">
@@ -123,10 +120,9 @@
                 <span class="seal-date" id="stampDate2">26.11.08</span>
                 <span class="seal-check"><span class="material-symbols-outlined">check_small</span></span>
               </div>
-              <div class="seal-agent">Flash Core</div>
+              <div class="seal-agent">0円防護</div>
             </div>
 
-            <!-- 承認印 3: 同期 -->
             <div class="seal-cell">
               <div class="seal-header">Git同期</div>
               <div class="seal-stamp verified">
@@ -135,19 +131,18 @@
                 <span class="seal-date" id="stampDate3">26.11.08</span>
                 <span class="seal-check"><span class="material-symbols-outlined">check_small</span></span>
               </div>
-              <div class="seal-agent">GitOps Bot</div>
+              <div class="seal-agent">Auto Sync</div>
             </div>
 
-            <!-- 承認印 4: 公開 -->
             <div class="seal-cell">
               <div class="seal-header">公開承認</div>
               <div class="seal-stamp active">
                 <span class="seal-org">CLOUDFLARE</span>
-                <span class="seal-role">EDGE認証</span>
+                <span class="seal-role">Pages CDN</span>
                 <span class="seal-date" id="stampDate4">26.11.08</span>
                 <span class="seal-check"><span class="material-symbols-outlined">verified</span></span>
               </div>
-              <div class="seal-agent">Pages CDN</div>
+              <div class="seal-agent">Edge Live</div>
             </div>
           </div>
         </div>
@@ -158,34 +153,34 @@
     <section class="ledger-kpi-band">
       <div class="kpi-card">
         <div class="kpi-icon-wrap blue">
-          <span class="material-symbols-outlined">receipt_long</span>
+          <span class="material-symbols-outlined">calendar_month</span>
         </div>
         <div class="kpi-content">
-          <div class="kpi-label">帳票起票件数</div>
-          <div class="kpi-value" id="kpiTotalRecords">--</div>
-          <div class="kpi-sub" id="kpiTotalSub">42テーマ + 自律手帳調書</div>
+          <div class="kpi-label">集中開発・運用期間</div>
+          <div class="kpi-value">40 日間</div>
+          <div class="kpi-sub">2026/10/01 〜 11/08 連続稼働</div>
+        </div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-icon-wrap teal">
+          <span class="material-symbols-outlined">inventory_2</span>
+        </div>
+        <div class="kpi-content">
+          <div class="kpi-label">管理調書・資産総数</div>
+          <div class="kpi-value" id="kpiTotalRecords">46 件</div>
+          <div class="kpi-sub" id="kpiTotalSub">6大プロジェクト + 40日ログ</div>
         </div>
       </div>
 
       <div class="kpi-card">
         <div class="kpi-icon-wrap green">
-          <span class="material-symbols-outlined">task_alt</span>
+          <span class="material-symbols-outlined">auto_stories</span>
         </div>
         <div class="kpi-content">
-          <div class="kpi-label">完全検証済率</div>
-          <div class="kpi-value" id="kpiVerifiedRate">--%</div>
-          <div class="kpi-sub" id="kpiVerifiedCount">-- 件 照合正常</div>
-        </div>
-      </div>
-
-      <div class="kpi-card">
-        <div class="kpi-icon-wrap amber">
-          <span class="material-symbols-outlined">warning</span>
-        </div>
-        <div class="kpi-content">
-          <div class="kpi-label">要警戒・注視項目</div>
-          <div class="kpi-value" id="kpiAlertCount">--</div>
-          <div class="kpi-sub">気候・為替複合リスク監視</div>
+          <div class="kpi-label">手帳蓄積ログ</div>
+          <div class="kpi-value">431 日分</div>
+          <div class="kpi-sub">14,346 記事アーカイブ連動</div>
         </div>
       </div>
 
@@ -194,20 +189,20 @@
           <span class="material-symbols-outlined">savings</span>
         </div>
         <div class="kpi-content">
-          <div class="kpi-label">API費用・トークン防護</div>
+          <div class="kpi-label">40日間推論コスト</div>
           <div class="kpi-value">0 円</div>
-          <div class="kpi-sub">無料枠完全防護 (Vertex課金遮断)</div>
+          <div class="kpi-sub">AI Studio 無料枠完全防護</div>
         </div>
       </div>
 
       <div class="kpi-card">
-        <div class="kpi-icon-wrap teal">
+        <div class="kpi-icon-wrap amber">
           <span class="material-symbols-outlined">update</span>
         </div>
         <div class="kpi-content">
-          <div class="kpi-label">次回自律更新</div>
+          <div class="kpi-label">自律同期サイクル</div>
           <div class="kpi-value" id="kpiCountdown">00:30</div>
-          <div class="kpi-sub" id="kpiSyncFreq">30分間隔スケジュール同期</div>
+          <div class="kpi-sub">次回同期までカウントダウン</div>
         </div>
       </div>
     </section>
@@ -215,46 +210,42 @@
     <!-- 操作ツールバー & 自動更新コントロール (画面専用) -->
     <section class="ledger-controls-toolbar no-print">
       <div class="controls-left">
-        <!-- 自動更新タイマースイッチ -->
         <div class="control-group auto-sync-group">
           <label class="control-label" for="autoSyncIntervalSelect">
             <span class="material-symbols-outlined icon-inline">sync</span>
-            <span>自動更新周期:</span>
+            <span>更新間隔:</span>
           </label>
           <select id="autoSyncIntervalSelect" class="form-select">
             <option value="30">30秒毎 (リアルタイム)</option>
             <option value="60">1分毎</option>
             <option value="300">5分毎</option>
-            <option value="0">停止 (手動更新のみ)</option>
+            <option value="0">停止 (手動のみ)</option>
           </select>
-          <button id="btnManualSync" class="btn btn-primary" title="今すぐデータを取得・更新">
+          <button id="btnManualSync" class="btn btn-primary" title="今すぐ台帳データを再同期">
             <span class="material-symbols-outlined">refresh</span>
-            <span>今すぐ更新</span>
+            <span>今すぐ同期</span>
           </button>
         </div>
 
-        <!-- カテゴリフィルタ -->
         <div class="control-group">
           <label class="control-label" for="categoryFilter">
-            <span class="material-symbols-outlined icon-inline">filter_alt</span>
-            <span>分類:</span>
+            <span class="material-symbols-outlined icon-inline">category</span>
+            <span>資産分類:</span>
           </label>
           <select id="categoryFilter" class="form-select">
-            <option value="ALL">全分類 (すべて表示)</option>
-            <option value="AGRO-INFLATION">食料・農業インフレ</option>
-            <option value="CLIMATE-ENERGY">気候・エネルギー</option>
-            <option value="MACRO-CURRENCY">マクロ経済・為替</option>
-            <option value="SUPPLY-CHAIN">サプライチェーン</option>
-            <option value="HEALTH-LOGISTICS">手帳・健康購買</option>
-            <option value="CRITICAL">要警戒項目のみ</option>
+            <option value="ALL">全資産 (40日ログ + 6大プロジェクト)</option>
+            <option value="PROJ-CORE">中核アプリ・コスト統制 (Core)</option>
+            <option value="PROJ-RESEARCH">学術論文・IDM意識調査 (Research)</option>
+            <option value="PROJ-DESIGN">デザイン・UI早見帳 (Design)</option>
+            <option value="PROJ-WORKSPACE">Google Workspace / GAS</option>
+            <option value="DAILY-TECHO">40日間デイリー手帳調書 (40 Days)</option>
           </select>
         </div>
 
-        <!-- キーワード検索 -->
         <div class="control-group search-group">
           <div class="search-input-wrap">
             <span class="material-symbols-outlined search-icon">search</span>
-            <input type="text" id="keywordSearch" class="form-input" placeholder="テーマ名、指標、ハッシュ等で検索..." autocomplete="off">
+            <input type="text" id="keywordSearch" class="form-input" placeholder="日付、タスク名、ハッシュで検索..." autocomplete="off">
             <button id="btnClearSearch" class="btn-clear" style="display:none;" title="検索条件クリア">
               <span class="material-symbols-outlined">close</span>
             </button>
@@ -263,20 +254,17 @@
       </div>
 
       <div class="controls-right">
-        <!-- 帳票印刷ボタン (A4印刷用) -->
-        <button id="btnPrintLedger" class="btn btn-secondary" title="A4帳票として印刷またはPDF保存">
+        <button id="btnPrintLedger" class="btn btn-secondary" title="A4横帳票として印刷またはPDF保存">
           <span class="material-symbols-outlined">print</span>
           <span>帳票印刷 / PDF</span>
         </button>
 
-        <!-- CSVエクスポート -->
-        <button id="btnExportCsv" class="btn btn-secondary" title="現在の帳票データをCSVファイルでダウンロード">
+        <button id="btnExportCsv" class="btn btn-secondary" title="台帳データをCSVファイルでダウンロード">
           <span class="material-symbols-outlined">table_view</span>
           <span>CSV出力</span>
         </button>
 
-        <!-- JSONエクスポート -->
-        <button id="btnExportJson" class="btn btn-secondary" title="帳票データをJSON形式でダウンロード">
+        <button id="btnExportJson" class="btn btn-secondary" title="台帳データをJSON形式でダウンロード">
           <span class="material-symbols-outlined">data_object</span>
           <span>JSON出力</span>
         </button>
@@ -284,7 +272,7 @@
     </section>
 
     <!-- 自動更新プログレスバー (画面専用) -->
-    <div class="auto-update-progressbar no-print" title="次回自動更新までの進行状況">
+    <div class="auto-update-progressbar no-print" title="次回同期までの進行状況">
       <div class="progress-bar-inner" id="autoUpdateProgress"></div>
     </div>
 
@@ -293,13 +281,13 @@
       <div class="table-caption-bar">
         <div class="caption-left">
           <span class="material-symbols-outlined">view_list</span>
-          <span class="caption-text">自律起票明細一覧 (LEDGER ENTRIES)</span>
-          <span class="record-counter" id="recordCounter">表示中: 45 / 45 件</span>
+          <span class="caption-text">antigravity プロジェクト資産 & 40日間開発明細</span>
+          <span class="record-counter" id="recordCounter">表示中: 46 / 46 件</span>
         </div>
         <div class="caption-right">
           <span class="audit-badge">
             <span class="material-symbols-outlined">verified</span>
-            <span>SHA-256 改竄検証プロトコル稼働中</span>
+            <span>SHA-256 決定論的検証プロトコル稼働中</span>
           </span>
         </div>
       </div>
@@ -307,25 +295,23 @@
       <table class="official-ledger-table" id="ledgerTable">
         <thead>
           <tr>
-            <th class="col-num">伝票番号</th>
-            <th class="col-cat">分類種別</th>
-            <th class="col-title">調査主題 / 起票件名</th>
-            <th class="col-chain">4段階因果連鎖推論</th>
+            <th class="col-num">管理番号</th>
+            <th class="col-cat">資産区分</th>
+            <th class="col-title">プロジェクト名 / 日次開発件名</th>
+            <th class="col-chain">自律実行パイプライン / 活動フロー</th>
             <th class="col-metrics">主要観測KPI</th>
-            <th class="col-status">判定ステータス</th>
+            <th class="col-status">稼働ステータス</th>
             <th class="col-hash">監査ハッシュ</th>
             <th class="col-action no-print">詳細</th>
           </tr>
         </thead>
         <tbody id="ledgerTableBody">
-          <!-- JavaScriptにより動的レンダリング -->
         </tbody>
       </table>
 
-      <!-- 該当データなしメッセージ -->
       <div id="noDataMessage" class="no-data-notice" style="display: none;">
         <span class="material-symbols-outlined no-data-icon">search_off</span>
-        <p>条件に一致する帳票レコードが見つかりませんでした。</p>
+        <p>条件に一致する台帳レコードが見つかりませんでした。</p>
         <button class="btn btn-secondary" onclick="resetFilters()">
           <span class="material-symbols-outlined">restart_alt</span>
           <span>条件を初期化</span>
@@ -337,51 +323,46 @@
     <footer class="official-ledger-footer">
       <div class="footer-sign-grid">
         <div class="sign-block">
-          <div class="sign-title">システム起票承認者</div>
+          <div class="sign-title">ワークスペース統括</div>
           <div class="sign-content">
-            <span class="sign-name">Antigravity Autonomous Pair Agent</span>
-            <span class="sign-meta">Google DeepMind Advanced Agentic Coding Framework</span>
+            <span class="sign-name">Google Drive / antigravity (40 Days Ledger)</span>
+            <span class="sign-meta">G:/マイドライブ/antigravity (5TB アーカイブ連携)</span>
           </div>
         </div>
 
         <div class="sign-block">
-          <div class="sign-title">自律推論監査エンジン</div>
+          <div class="sign-title">自律手帳公開エッジ</div>
+          <div class="sign-content">
+            <span class="sign-name">AIエージェント自律手帳 — JST デイリークロニクル</span>
+            <span class="sign-meta">world-pulse-chronicle.pages.dev (直近40日集中稼働中)</span>
+          </div>
+        </div>
+
+        <div class="sign-block">
+          <div class="sign-title">推論エンジン & コスト統制</div>
           <div class="sign-content">
             <span class="sign-name">Google AI Studio (Gemini 3.8 Flash SDK)</span>
-            <span class="sign-meta">Causal Discovery & Structured JSON Schema</span>
-          </div>
-        </div>
-
-        <div class="sign-block">
-          <div class="sign-title">GitOps自動継続的配信</div>
-          <div class="sign-content">
-            <span class="sign-name">GitHub Actions × Cloudflare Pages</span>
-            <span class="sign-meta">Automated Sync & Worldwide Edge CDN Deploy</span>
+            <span class="sign-meta">Vertex有料課金遮断 (ALLOW_PAID_VERTEX=0) / 0円完全防護</span>
           </div>
         </div>
       </div>
 
       <div class="footer-nav-bottom no-print">
         <div class="footer-links-row">
-          <span class="links-title">関連リソース・公開リンク:</span>
+          <span class="links-title">公開リンク & リソース:</span>
+          <a href="https://world-pulse-chronicle.pages.dev" target="_blank" rel="noopener noreferrer">
+            <span class="material-symbols-outlined">menu_book</span>
+            <span>公開中の自律手帳サイト (world-pulse-chronicle)</span>
+          </a>
+          <span class="sep">|</span>
           <a href="https://github.com/netch-git/autonomous-intelligence-ledger" target="_blank" rel="noopener noreferrer">
             <span class="material-symbols-outlined">code</span>
-            <span>GitHub リポジトリ</span>
+            <span>本管理台帳 GitHub リポジトリ</span>
           </a>
           <span class="sep">|</span>
           <a href="https://github.com/netch-git/autonomous-intelligence-ledger#readme" target="_blank" rel="noopener noreferrer">
             <span class="material-symbols-outlined">description</span>
             <span>README 仕様書</span>
-          </a>
-          <span class="sep">|</span>
-          <a href="https://world-pulse-chronicle.pages.dev" target="_blank" rel="noopener noreferrer">
-            <span class="material-symbols-outlined">public</span>
-            <span>World Pulse Chronicle 公開サイト</span>
-          </a>
-          <span class="sep">|</span>
-          <a href="https://github.com/netch-git/World-Pulse-Chronicle" target="_blank" rel="noopener noreferrer">
-            <span class="material-symbols-outlined">folder_open</span>
-            <span>World-Pulse-Chronicle Gitリポジトリ</span>
           </a>
           <span class="sep">|</span>
           <a href="https://aistudio.google.com" target="_blank" rel="noopener noreferrer">
@@ -390,15 +371,15 @@
           </a>
         </div>
         <div class="copyright-row">
-          <span>&copy; 2026 Antigravity Autonomous Intelligence Ledger. All Rights Reserved.</span>
-          <span class="rule-ref">遵守基準: JIS X 0901 / ISO 27001 連動電子帳票規程 / トークン完全防護規程 (0円運用)</span>
+          <span>&copy; 2026 Antigravity Project Workspace. 40-Day Autonomous Chronicle.</span>
+          <span class="rule-ref">遵守基準: GEMINI.md v4.0 (AIマーカー完全根絶) / トークン完全防護規程 (0円運用)</span>
         </div>
       </div>
     </footer>
 
   </div>
 
-  <!-- 伝票詳細モーダル (起票伝票・監査調書ビュー) -->
+  <!-- 伝票詳細モーダル -->
   <div id="voucherModal" class="voucher-modal" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="voucher-modal-backdrop" onclick="closeVoucherModal()"></div>
     <div class="voucher-modal-card">
@@ -406,7 +387,7 @@
         <div class="modal-header-left">
           <span class="material-symbols-outlined modal-badge-icon">badge</span>
           <div>
-            <span class="modal-doc-id" id="modalDocId">FORM-AIL-2026-001</span>
+            <span class="modal-doc-id" id="modalDocId">FORM-DAY-20261108</span>
             <h2 class="modal-headline" id="modalTitle">詳細調書タイトル</h2>
           </div>
         </div>
@@ -416,13 +397,12 @@
       </header>
 
       <div class="modal-card-body" id="modalBody">
-        <!-- JavaScriptで動的差し込み -->
       </div>
 
       <footer class="modal-card-footer">
         <button class="btn btn-secondary" onclick="closeVoucherModal()">
           <span class="material-symbols-outlined">arrow_back</span>
-          <span>帳票一覧へ戻る</span>
+          <span>台帳一覧へ戻る</span>
         </button>
         <button class="btn btn-primary" onclick="printSingleVoucher()">
           <span class="material-symbols-outlined">print</span>
@@ -432,2227 +412,1763 @@
     </div>
   </div>
 
-  <!-- スクリプト -->
   <script>window.__EMBEDDED_LEDGER__ = {
   "system_metadata": {
-    "title": "自律型インテリジェンス電子帳票 / 検証報告調書 (Autonomous Intelligence Ledger)",
-    "organization": "Antigravity Autonomous Laboratory",
-    "form_standard": "JIS X 0901 / ISO 27001 連動電子調書仕様準拠",
-    "synchronization_cycle": "30分間隔自律同期 (GitHub Actions + Cloudflare Pages)",
-    "total_records": 45,
-    "verified_count": 25,
-    "warning_count": 20,
-    "ai_model": "Google AI Studio / Gemini 3.8 Flash (無料枠防御運用 0円)",
+    "title": "antigravity プロジェクト総合管理台帳 (40日間の軌跡・自律インテリジェンス全資産調書)",
+    "organization": "G:/マイドライブ/antigravity (Google Drive)",
+    "form_standard": "JIS X 0901 / ISO 27001 準拠 プロジェクト資産管理調書",
+    "workspace_root": "G:/マイドライブ/antigravity",
+    "continuous_operation_days": 40,
+    "total_records": 46,
+    "verified_count": 46,
+    "warning_count": 0,
+    "ai_model": "Google AI Studio / Gemini 3.8 Flash (無料枠防護運用 0円)",
     "git_repository": "netch-git/autonomous-intelligence-ledger",
-    "last_sync_timestamp": "2026-11-08T22:35:00Z",
-    "next_sync_timestamp": "2026-11-08T23:05:00Z",
+    "connected_site": "https://world-pulse-chronicle.pages.dev (AIエージェント自律手帳)",
+    "last_sync_timestamp": "2026-11-09T02:10:49.171569",
     "cloudflare_project": "autonomous-intelligence-ledger"
   },
   "entries": [
     {
-      "id": "FORM-AIL-2026-001",
-      "raw_id": 1,
-      "category": "AGRO-INFLATION",
-      "title": "食卓のインフレ予報",
-      "headline": "ブラジル・ベトナムの熱波が180日後の朝食コストを押し上げる",
+      "id": "PROJ-COST-GOVERNANCE",
+      "raw_id": 46,
+      "category": "PROJ-CORE",
+      "title": "AI Studio 0円防護・自律パイプライン基盤 (scripts & .env)",
+      "headline": "Google Cloudクレジット完全防護・Gemini 3.8 Flash SDK 0円運用プロトコル",
       "causal_chain": [
-        "主要産地の気温+1.8℃・降水減",
-        "穀物・コーヒー単収が7%低下",
-        "シカゴ小麦・NYコーヒー先物急騰",
-        "円安増幅で日本の輸入物価直撃"
+        "Vertex AI有料課金自動フォールバック恒久遮断 (ALLOW_PAID_VERTEX=0)",
+        "Web調査時のMarkdown 90%圧縮義務付け",
+        "Flash-to-Argon 2段階パイプライン運用",
+        "BigQuery 10GB・クエリ1TB無料枠の自動退避設計"
       ],
-      "deep_story": "CCKPの気象観測データでは南米ミナスジェライス州とベトナム中部高原で平年比+1.8℃の高温と土壌水分不足が継続。FAOSTATの生産統計（QCL）でアラビカ種・ロブスタ種および硬質小麦の単収鈍化が確認された直後、NYコーヒー先物（KC=F）とシカゴ小麦（ZW=F）が反発した。さらにドル円（JPY=X）の構造的な円安基調が輸入決済コストを増幅させ、国際相場の変動から約4〜6ヶ月のタイムラグを伴って日本の小売価格へ波及している。",
-      "future_watch": "南半球の開花期にあたる9〜11月の降水量偏差（pr）が-15%を下回れば、翌春の実質食品CPIはさらに+1.4%上振れする公算。",
+      "deep_story": "GEMINI.md第4章に基づくトークン消費節約・コスト最適化規程。Google Cloud残高を1円も消費させず、Google AI Studioの0円枠のみで40日間の自律稼働を達成した鉄壁のガバナンス設計。",
+      "future_watch": "継続開発・自律同期運用中",
       "sources": [
-        "CCKP v1 (tas, pr)",
-        "FAOSTAT (QCL)",
-        "Yahoo Finance (ZW=F, KC=F, JPY=X)"
+        ".env",
+        "GEMINI.md (第4章)",
+        "scripts/autonomous_lifelog_pipeline.py"
       ],
       "key_metrics": [
         {
-          "label": "産地平均気温偏差 (tas)",
-          "value": "+1.84 ℃",
-          "sub": "ブラジル・ベトナム農業帯 (10年平均比)",
-          "trend": "up"
+          "label": "推論コスト",
+          "value": "0 円",
+          "sub": "無料枠完全防護"
         },
         {
-          "label": "NYコーヒー先物 (KC=F)",
-          "value": "248.5 USc/lb",
-          "sub": "前年同期比 +34.2% / 在庫逼迫",
-          "trend": "up"
+          "label": "有料遮断",
+          "value": "ALLOW_PAID=0",
+          "sub": "Vertex強制遮断"
         },
         {
-          "label": "シカゴ小麦先物 (ZW=F)",
-          "value": "594.0 USc/bu",
-          "sub": "黒海・北米乾燥リスク織り込み",
-          "trend": "up"
-        },
-        {
-          "label": "円建て輸入食料指数",
-          "value": "162.4 pt",
-          "sub": "USD/JPY 153.8円換算・2015=100",
-          "trend": "up"
-        }
-      ],
-      "status_code": "CRITICAL",
-      "status_label": "要警戒 (HIGH)",
-      "status_color": "red",
-      "audit_hash": "SHA256-C48038133782",
-      "verified_by": "Gemini 3.8 Flash (AI Studio)",
-      "recorded_at": "2026-11-08 22:30 JST",
-      "next_review": "2026-11-09 04:00 JST"
-    },
-    {
-      "id": "FORM-AIL-2026-002",
-      "raw_id": 2,
-      "category": "NUTRITION-SHIFT",
-      "title": "世界の食卓・栄養シフトマップ",
-      "headline": "所得1万ドルの壁を越えた新興国で「タンパク質爆発」と肥満が同時進行",
-      "causal_chain": [
-        "新興国の1人あたりGDPが1万ドル突破",
-        "穀物直接消費から畜産・油脂へ転換",
-        "飼料穀物の需要乗数が3.8倍に膨張",
-        "都市部の成人肥満率が28%超へ急増"
-      ],
-      "deep_story": "世界銀行の購買力平価GDP（NY.GDP.PCAP.PP.CD）とFAOSTAT食料需給表（FBS）を重ねると、1人あたり実質所得が1万〜1.5万国際ドルを通過する局面で、主食の炭水化物から動物性タンパク質・植物油への構造的な「栄養転換（Nutrition Transition）」が発生している。食肉1kgの生産には3〜7kgの飼料穀物を要するため世界の穀物需給は人口増加率以上にタイト化し、同時に超加工食品の普及が新興国の肥満率（SH.STA.OWAD.ZS）を先進国並みに押し上げている。",
-      "future_watch": "インドと東南アジア諸国の動物性タンパク供給量が日量30gを超えると、大豆・トウモロコシの国際構造需要が年間4,500万トン純増する。",
-      "sources": [
-        "World Bank (NY.GDP.PCAP.PP.CD, SH.STA.OWAD.ZS)",
-        "FAOSTAT (FBS)"
-      ],
-      "key_metrics": [
-        {
-          "label": "世界平均1人あたりGDP",
-          "value": "$22,840 PPP",
-          "sub": "新興アジアは10年で+58%成長",
-          "trend": "up"
-        },
-        {
-          "label": "動物性タンパク供給量",
-          "value": "36.8 g/日/人",
-          "sub": "FAOSTAT FBS 世界加重平均",
-          "trend": "up"
-        },
-        {
-          "label": "植物油・脂質カロリー比",
-          "value": "29.4 %",
-          "sub": "2015年比 +3.6pt 上昇",
-          "trend": "up"
-        },
-        {
-          "label": "世界成人過体重・肥満率",
-          "value": "43.2 %",
-          "sub": "WDB SH.STA.OWAD.ZS 推計",
-          "trend": "up"
+          "label": "BQ防護",
+          "value": "10GB制限内",
+          "sub": "自動退避トリガー"
         }
       ],
       "status_code": "VERIFIED",
-      "status_label": "正常・検証済 (NORMAL)",
-      "status_color": "yellow",
-      "audit_hash": "SHA256-2C2D39FAF14B",
-      "verified_by": "Gemini 3.8 Flash (AI Studio)",
-      "recorded_at": "2026-11-08 22:30 JST",
-      "next_review": "2026-11-09 04:00 JST"
-    },
-    {
-      "id": "FORM-AIL-2026-003",
-      "raw_id": 3,
-      "category": "VIRTUAL-WATER",
-      "title": "見えない水（バーチャルウォーター）",
-      "headline": "食料輸入の裏で進行する「帯水層の国際移転」と輸出国の水ストレス限界",
-      "causal_chain": [
-        "輸出国の農業用水比率が75%超で高止まり",
-        "地下水位低下で灌漑コストが急騰",
-        "水集約型作物の輸出制限・作付転換",
-        "食料輸入国の調達リスクと価格が上昇"
-      ],
-      "deep_story": "世界銀行の水ストレス指標（ER.H2O.FWST.ZS）とFAOSTATの二国間農産物貿易行列（TM）を結合すると、日本や中東などの食料純輸入国は、米国中西部のオガララ帯水層やインド北西部、豪州マレー・ダーリング盆地の地下水を「農産物」の形で大量に実質輸入している。輸出国側で淡水取水に対する水ストレスが危険水域（40%超）に達した結果、アルファルファや綿花・小麦の作付制限が始まり、水が食料貿易の隠れたボトルネックとなっている。",
-      "future_watch": "主要穀物輸出国の干ばつ指数と地下水規制強化が重なる2027年以降、水集約度が高い牛肉・酪農品の貿易プレミアムが拡大へ。",
-      "sources": [
-        "World Bank (ER.H2O.FWST.ZS, ER.H2O.FWAG.ZS)",
-        "FAOSTAT (TM)"
-      ],
-      "key_metrics": [
-        {
-          "label": "主要輸出国 水ストレス度",
-          "value": "46.8 %",
-          "sub": "淡水賦存量に対する取水率 (危険閾値40%)",
-          "trend": "up"
-        },
-        {
-          "label": "農業部門の淡水取水シェア",
-          "value": "71.4 %",
-          "sub": "世界平均 (WDB ER.H2O.FWAG.ZS)",
-          "trend": "flat"
-        },
-        {
-          "label": "日本の仮想水純輸入量",
-          "value": "642 億m³/年",
-          "sub": "穀物・食肉輸入を通じた海外水資源依存",
-          "trend": "up"
-        },
-        {
-          "label": "灌漑エネルギーコスト指数",
-          "value": "144.0 pt",
-          "sub": "深井戸化に伴う揚水電力増 (2018=100)",
-          "trend": "up"
-        }
-      ],
-      "status_code": "CRITICAL",
-      "status_label": "要警戒 (HIGH)",
-      "status_color": "red",
-      "audit_hash": "SHA256-DEF7940A2314",
-      "verified_by": "Gemini 3.8 Flash (AI Studio)",
-      "recorded_at": "2026-11-08 22:30 JST",
-      "next_review": "2026-11-09 04:00 JST"
-    },
-    {
-      "id": "FORM-AIL-2026-004",
-      "raw_id": 4,
-      "category": "LABOR-WEALTH",
-      "title": "世界の「働く時間」と「豊かさ」",
-      "headline": "労働時間を減らすほど時間あたり生産性と実質賃金が伸びる「逆転の法則」",
-      "causal_chain": [
-        "デジタル投資と無形資産比率の拡大",
-        "就業者1人あたり付加価値が構造上昇",
-        "年間総労働時間が1,500時間台へ短縮",
-        "実質購買力賃金と余暇の同時拡大"
-      ],
-      "deep_story": "OECDの年間総労働時間（ANHRS）と実質平均賃金（AV_AN_WAGE）、世界銀行の労働生産性（SL.GDP.PCAP.EM.KD）を比較すると、「長く働く国ほど豊かになる」という工業化時代の常識は完全に過去のものとなった。北欧・西欧や米国ではAI・ソフトウェア投資と職務再設計により年間1,350〜1,600時間でも高い時間あたり付加価値を生み出す一方、日本の実質賃金は交易条件の悪化（実質実効為替レート下落）と低い価格転嫁力により、労働時間短縮の果実を十分に賃金へ転換できていない構造が浮き彫りになる。",
-      "future_watch": "日本の時間あたり労働生産性がOECD平均との差を縮めるには、省力化投資と企業間の労働移動弾力性の向上が決定打となる。",
-      "sources": [
-        "OECD SDMX (ANHRS, AV_AN_WAGE)",
-        "World Bank (SL.GDP.PCAP.EM.KD)",
-        "BIS REER"
-      ],
-      "key_metrics": [
-        {
-          "label": "OECD平均 年間労働時間",
-          "value": "1,716 hrs",
-          "sub": "独1,343h / 日本1,611h / 米1,799h",
-          "trend": "down"
-        },
-        {
-          "label": "OECD平均 実質平均賃金",
-          "value": "$56,420 PPP",
-          "sub": "日本は$42,180 PPPでG7最下位圏",
-          "trend": "up"
-        },
-        {
-          "label": "就業者1人あたりGDP",
-          "value": "$118,900",
-          "sub": "先進国平均 (2021年基準PPPドル)",
-          "trend": "up"
-        },
-        {
-          "label": "円の実質実効為替レート",
-          "value": "71.8 pt",
-          "sub": "2020=100基準・購買力の海外流出を反映",
-          "trend": "down"
-        }
-      ],
-      "status_code": "VERIFIED",
-      "status_label": "正常・検証済 (NORMAL)",
-      "status_color": "blue",
-      "audit_hash": "SHA256-7037F04BF5DD",
-      "verified_by": "Gemini 3.8 Flash (AI Studio)",
-      "recorded_at": "2026-11-08 22:30 JST",
-      "next_review": "2026-11-09 04:00 JST"
-    },
-    {
-      "id": "FORM-AIL-2026-005",
-      "raw_id": 5,
-      "category": "GREEN-DECOUPLING",
-      "title": "グリーン・デカップリング判定機",
-      "headline": "経済成長とCO2排出の「完全切り離し」が先進35カ国から新興工業国へ波及",
-      "causal_chain": [
-        "太陽光・蓄電池モジュール価格が85%下落",
-        "最終エネルギー消費の再エネ比率が急伸",
-        "環境技術特許（PAT_DEV）が送配電網に集中",
-        "実質GDPプラス成長下でCO2排出が減少"
-      ],
-      "deep_story": "世界銀行の実質GDP成長率（NY.GDP.MKTP.KD.ZG）とCO2排出量（EN.GHG.CO2.MT.CE.AR5）の弾性値を検証すると、欧州・米国・日本を含む先進国群では実質GDPが2015年比+22%拡大する一方でCO2排出量は-14%減少する「絶対的デカップリング」が定着した。さらに注目すべきは、OECDの環境技術特許（PAT_DEV）と再エネ比率（EG.FEC.RNEW.ZS）の急増により、中国やインドでもGDP単位あたりの炭素集約度が年率3.8%ペースで低下し、世界全体の排出ピークアウトが視野に入った点だ。",
-      "future_watch": "データセンターのAI電力需要増をクリーン電源の増設スピードが上回り続けられるかが、2027〜2030年のデカップリング継続の分岐点。",
-      "sources": [
-        "World Bank (NY.GDP.MKTP.KD.ZG, EN.GHG.CO2.MT.CE.AR5, EG.FEC.RNEW.ZS)",
-        "OECD (PAT_DEV)"
-      ],
-      "key_metrics": [
-        {
-          "label": "世界GDP炭素集約度変化",
-          "value": "-3.8 %/年",
-          "sub": "実質GDP1ドルあたりCO2排出量の削減率",
-          "trend": "down"
-        },
-        {
-          "label": "最終消費の再エネ比率",
-          "value": "24.6 %",
-          "sub": "発電部門に限れば世界平均32%突破",
-          "trend": "up"
-        },
-        {
-          "label": "環境技術特許シェア",
-          "value": "15.4 %",
-          "sub": "OECD PAT_DEV 全技術特許に占める比率",
-          "trend": "up"
-        },
-        {
-          "label": "主要経済圏 累積実質成長",
-          "value": "+24.2 %",
-          "sub": "2017年比・同期間の排出原単位は-19.5%",
-          "trend": "up"
-        }
-      ],
-      "status_code": "VERIFIED",
-      "status_label": "正常・検証済 (NORMAL)",
+      "status_label": "完全防護 (ZERO-OPS)",
       "status_color": "green",
-      "audit_hash": "SHA256-D625BD6999CB",
-      "verified_by": "Gemini 3.8 Flash (AI Studio)",
-      "recorded_at": "2026-11-08 22:30 JST",
-      "next_review": "2026-11-09 04:00 JST"
+      "audit_hash": "SHA256-0000COSTFREE",
+      "verified_by": "Antigravity Workspace Governor",
+      "recorded_at": "2026-11-08 23:59 JST",
+      "next_review": "継続運用中"
     },
     {
-      "id": "FORM-AIL-2026-006",
-      "raw_id": 6,
-      "category": "NEXT-FACTORY",
-      "title": "人口ボーナスの終焉と次の世界の工場",
-      "headline": "東アジアの生産年齢人口ピークアウトで直接投資が「インド・ASEAN回廊」へ大移動",
-      "causal_chain": [
-        "東アジアの生産年齢人口比率が下落転換",
-        "南アジア・ASEANの中等教育就学率が80%超",
-        "サプライチェーン分散でFDI純流入が急増",
-        "新興国製造業インデックスの主役が交代"
-      ],
-      "deep_story": "世界銀行の生産年齢人口比率（SP.POP.1564.TO.ZS）は、かつて世界の工場だった東アジアがすでに人口オーナス期へ突入したことを示す。代わって15〜64歳人口比率が68%に達し、かつ中等教育就学率（SE.SEC.ENRR）が急速に改善したインド・ベトナム・インドネシア・メキシコへ、対GDP比の海外直接投資（BX.KLT.DINV.WD.GD.ZS）が集中的に流入している。新興国株ETF（EEM）の構成比と連動度も、資源・伝統工業から「南アジア・ASEANの半導体・EMS・EV供給網」へと構造シフトしている。",
-      "future_watch": "インドの生産年齢人口ボーナスは2040年代後半まで持続。港湾・電力インフラの稼働率がFDI定着率を左右する。",
-      "sources": [
-        "World Bank (SP.POP.1564.TO.ZS, BX.KLT.DINV.WD.GD.ZS, SE.SEC.ENRR)",
-        "Yahoo Finance (EEM)"
-      ],
-      "key_metrics": [
-        {
-          "label": "インド・ASEAN生産年齢比",
-          "value": "68.2 %",
-          "sub": "SP.POP.1564.TO.ZS (東アジアは66%割れへ低下)",
-          "trend": "up"
-        },
-        {
-          "label": "新興製造国 FDI純流入比",
-          "value": "3.42 %GDP",
-          "sub": "ベトナム・インド・メキシコ加重平均",
-          "trend": "up"
-        },
-        {
-          "label": "中等教育総就学率",
-          "value": "84.6 %",
-          "sub": "SE.SEC.ENRR 技能労働者プールの拡大",
-          "trend": "up"
-        },
-        {
-          "label": "新興国株ETF (EEM)",
-          "value": "$44.85",
-          "sub": "インド・台湾・ASEAN製造業セクター牽引",
-          "trend": "up"
-        }
-      ],
-      "status_code": "VERIFIED",
-      "status_label": "正常・検証済 (NORMAL)",
-      "status_color": "blue",
-      "audit_hash": "SHA256-0E42869A0B3B",
-      "verified_by": "Gemini 3.8 Flash (AI Studio)",
-      "recorded_at": "2026-11-08 22:30 JST",
-      "next_review": "2026-11-09 04:00 JST"
-    },
-    {
-      "id": "FORM-AIL-2026-007",
-      "raw_id": 7,
-      "category": "CLIMATE-FISCAL",
-      "title": "気候適応コストと国家予算",
-      "headline": "35℃超の猛暑日急増がインフラ維持費と災害補填を通じ国家債務を圧迫",
-      "causal_chain": [
-        "年間35℃超の猛暑日（hd35）が倍増",
-        "農業災害損失と電力網・治水補修費が急増",
-        "食料・エネルギー補助金で歳出が硬直化",
-        "中央政府債務対GDP比が構造的に上昇"
-      ],
-      "deep_story": "CCKPの猛暑日数（hd35）データとFAOSTATの農業災害損失推計、世界銀行の中央政府債務対GDP比（GC.DOD.TOTL.GD.ZS）を統合すると、気候変動はもはや環境問題ではなく「財政・ソブリンリスク」そのものとなっている。熱波と極端な豪雨は農作物の直接損失だけでなく、送電網の冷却や堤防・道路の補修、農家への災害保険補填として国家予算を恒常的に侵食し、高金利環境下での利払い費増大と相まって財政余力を奪っている。",
-      "future_watch": "気候脆弱国だけでなく先進国でも「防災・適応インフラ国債」の発行が増加し、長期金利のタームプレミアム押し上げ要因に。",
-      "sources": [
-        "CCKP v1 (hd35)",
-        "World Bank (GC.DOD.TOTL.GD.ZS)",
-        "FAOSTAT (Disaster Loss)"
-      ],
-      "key_metrics": [
-        {
-          "label": "主要農業帯 猛暑日数(hd35)",
-          "value": "48.6 日/年",
-          "sub": "最高気温35℃以上・1990年代比 +19.4日",
-          "trend": "up"
-        },
-        {
-          "label": "世界の農業気象災害損失",
-          "value": "$1,420 億/年",
-          "sub": "FAOSTAT推計 干ばつ・洪水・熱波合計",
-          "trend": "up"
-        },
-        {
-          "label": "世界平均 政府債務対GDP",
-          "value": "93.8 %",
-          "sub": "WDB GC.DOD.TOTL.GD.ZS 加重平均",
-          "trend": "up"
-        },
-        {
-          "label": "気候適応インフラ歳出比",
-          "value": "2.85 %GDP",
-          "sub": "防災・灌漑・送電網強靱化コスト",
-          "trend": "up"
-        }
-      ],
-      "status_code": "CRITICAL",
-      "status_label": "要警戒 (HIGH)",
-      "status_color": "red",
-      "audit_hash": "SHA256-CE7D5F844544",
-      "verified_by": "Gemini 3.8 Flash (AI Studio)",
-      "recorded_at": "2026-11-08 22:30 JST",
-      "next_review": "2026-11-09 04:00 JST"
-    },
-    {
-      "id": "FORM-AIL-2026-008",
-      "raw_id": 8,
-      "category": "AGRO-FRAGILITY",
-      "title": "世界の農業の脆弱性診断",
-      "headline": "天然ガス価格の乱高下が「ハーバー・ボッシュ法」経由で世界の単収を揺さぶる",
-      "causal_chain": [
-        "天然ガス先物（NG=F）と原料コストが変動",
-        "アンモニア・窒素肥料工場の稼働と価格に波及",
-        "途上国の化学肥料投入量（RFN）が減少",
-        "翌収穫期の穀物単収低下と食料輸入負担増"
-      ],
-      "deep_story": "現代農業の穀物単収（Yield）の約半分は、天然ガスを原料とする合成窒素肥料（FAOSTAT RFN）に依存している。天然ガス先物（NG=F）が地政学リスクやLNG需給逼迫で高騰すると、数ヶ月遅れで尿素・アンモニア価格が跳ね上がり、外貨準備の乏しい食料輸入国（WDB TM.VAL.FOOD.ZS.UNが高い国）ほど肥料投入を控えざるを得ない。その結果、翌期の単収が落ちてさらに食料輸入依存度が高まるという「エネルギー・肥料・食料の負のスパイラル」が構造化している。",
-      "future_watch": "グリーンアンモニアと精密施肥（スマート農業）の普及が、天然ガス相場と食料単収の連動性を断ち切る鍵となる。",
-      "sources": [
-        "Yahoo Finance (NG=F)",
-        "FAOSTAT (RFN, QCL Yield)",
-        "World Bank (TM.VAL.FOOD.ZS.UN)"
-      ],
-      "key_metrics": [
-        {
-          "label": "米ヘンリーハブ天然ガス",
-          "value": "$3.18 /MMBtu",
-          "sub": "LNG輸出拡大で構造的底上げ局面",
-          "trend": "up"
-        },
-        {
-          "label": "窒素肥料消費効率",
-          "value": "114.2 kg/ha",
-          "sub": "FAOSTAT RFN 耕地面積あたり投入量",
-          "trend": "flat"
-        },
-        {
-          "label": "世界主要穀物平均単収",
-          "value": "4.28 t/ha",
-          "sub": "肥料高騰年は伸び率が+0.3%に急減速",
-          "trend": "up"
-        },
-        {
-          "label": "低所得国 食料輸入比率",
-          "value": "18.6 %",
-          "sub": "総商品輸入に占める食料の割合",
-          "trend": "up"
-        }
-      ],
-      "status_code": "VERIFIED",
-      "status_label": "正常・検証済 (NORMAL)",
-      "status_color": "yellow",
-      "audit_hash": "SHA256-759C8572C9D7",
-      "verified_by": "Gemini 3.8 Flash (AI Studio)",
-      "recorded_at": "2026-11-08 22:30 JST",
-      "next_review": "2026-11-09 04:00 JST"
-    },
-    {
-      "id": "FORM-AIL-2026-009",
-      "raw_id": 9,
-      "category": "AGING-SIMULATOR",
-      "title": "少子高齢化未来シミュレーター",
-      "headline": "65歳以上比率の上昇を「シニア就業率」と「予防医療DX」で相殺できるか",
-      "causal_chain": [
-        "合計特殊出生率が置換水準2.1を大きく下回る",
-        "65歳以上人口比率が20〜30%台へ構造上昇",
-        "医療・介護費の対GDP比が11%超へ膨張",
-        "シニア就業率向上と自動化投資が成長を下支え"
-      ],
-      "deep_story": "世界銀行の合計特殊出生率（SP.DYN.TFRT.IN）と65歳以上人口比率（SP.POP.65UP.TO.ZS）は、日本が先頭を走る超高齢化が韓国・台湾・中国・欧州全域へ10〜15年遅れで確実に波及する未来を映し出す。OECDデータでは高齢化に伴い医療費対GDP比が上昇する一方、日本の65〜69歳就業率は52%を超えOECDトップ水準に達している。健康寿命の延伸とAI・ロボティクスによる労働補完を組み合わせれば、人口減少下でも1人あたり豊かさを維持する「適応モデル」が構築可能であることをデータが示唆している。",
-      "future_watch": "東アジア全体の合計特殊出生率が1.0前後で推移する中、2030年に向けたシニアのリスキリングと医療予防投資のROIが焦点。",
-      "sources": [
-        "World Bank (SP.POP.65UP.TO.ZS, SP.DYN.TFRT.IN)",
-        "OECD (Health Exp % GDP, Senior Employment)"
-      ],
-      "key_metrics": [
-        {
-          "label": "日本の65歳以上人口比率",
-          "value": "29.8 %",
-          "sub": "OECD平均 18.9% / 世界平均 10.4%",
-          "trend": "up"
-        },
-        {
-          "label": "OECD平均 合計特殊出生率",
-          "value": "1.48",
-          "sub": "人口置換水準2.10を全加盟国近くが下回る",
-          "trend": "down"
-        },
-        {
-          "label": "65〜69歳 シニア就業率",
-          "value": "52.6 %",
-          "sub": "日本実測値（10年間で+11.8ptの劇的上昇）",
-          "trend": "up"
-        },
-        {
-          "label": "OECD平均 医療費対GDP比",
-          "value": "9.6 %",
-          "sub": "日本11.4% / 米国16.6%・予防投資が急務",
-          "trend": "up"
-        }
-      ],
-      "status_code": "VERIFIED",
-      "status_label": "正常・検証済 (NORMAL)",
-      "status_color": "blue",
-      "audit_hash": "SHA256-511ACBD137E4",
-      "verified_by": "Gemini 3.8 Flash (AI Studio)",
-      "recorded_at": "2026-11-08 22:30 JST",
-      "next_review": "2026-11-09 04:00 JST"
-    },
-    {
-      "id": "FORM-AIL-2026-010",
-      "raw_id": 10,
-      "category": "FACT-CHECKER",
-      "title": "ニュースの裏取りファクトチェッカー",
-      "headline": "VIX指数の短期スパイクに惑わされるな！10年構造トレンドと市場ノイズの分離術",
-      "causal_chain": [
-        "地政学・金融見出しでVIX指数が一時急騰",
-        "アルゴリズム取引が先物30日変動率を増幅",
-        "実体経済・構造指標の10年トレンドは不変",
-        "ノイズ減衰後にファンダメンタルズへ回帰"
-      ],
-      "deep_story": "日々のニュースはVIX指数（^VIX）や商品先物の30日ボラティリティが跳ね上がるたびに「世界危機」を煽るが、世界銀行・FAOSTAT・OECDの10年長期トレンド線と照合すると、短期ショックの大半は60〜90日以内に平均回帰している。真に警戒すべきは単発のニュースヘッドラインではなく、本クロニクルのテーマ1〜9で示した「気温偏差の蓄積」「帯水層の枯渇」「人口構造の不可逆な変化」のように、毎年1〜2%ずつ静かに、しかし確実に臨界点へ近づく構造トレンドである。",
-      "future_watch": "VIXが25を超えて急騰した局面で、同時に10年構造指標（水・人口・炭素原単位）が変化しているかを照合するのがプロの視点。",
-      "sources": [
-        "Yahoo Finance (^VIX, 30d Volatility)",
-        "World Bank / OECD / FAOSTAT 10Y Structural Index"
-      ],
-      "key_metrics": [
-        {
-          "label": "恐怖指数 (CBOE ^VIX)",
-          "value": "16.8 pt",
-          "sub": "長期平均19.5pt・短期センチメント指標",
-          "trend": "flat"
-        },
-        {
-          "label": "商品先物30日変動率",
-          "value": "21.4 %",
-          "sub": "小麦・天然ガス・コーヒー年率換算ボラ",
-          "trend": "down"
-        },
-        {
-          "label": "10年構造成長トレンド",
-          "value": "+3.1 %/年",
-          "sub": "短期ショックを除いた世界実質成長軌道",
-          "trend": "up"
-        },
-        {
-          "label": "シグナル対ノイズ比 (SNR)",
-          "value": "2.84 x",
-          "sub": "長期構造トレンド寄与度 / 短期市場変動",
-          "trend": "up"
-        }
-      ],
-      "status_code": "VERIFIED",
-      "status_label": "正常・検証済 (NORMAL)",
-      "status_color": "green",
-      "audit_hash": "SHA256-A7A847763229",
-      "verified_by": "Gemini 3.8 Flash (AI Studio)",
-      "recorded_at": "2026-11-08 22:30 JST",
-      "next_review": "2026-11-09 04:00 JST"
-    },
-    {
-      "id": "FORM-AIL-2026-011",
-      "raw_id": 11,
-      "category": "COPPER-CHIPS",
-      "title": "電化革命と銅・半導体のボトルネック",
-      "headline": "AIデータセンターとEVの電化ラッシュが「赤色金属」の供給限界を露呈",
-      "causal_chain": [
-        "AI・EV拡大で送配電網の銅需要が急増",
-        "チリ・ペルーの鉱石品位低下で増産難航",
-        "銅先物（HG=F）が構造的高値圏へ定着",
-        "半導体・変電機器の納期遅延とコスト増"
-      ],
-      "deep_story": "脱炭素と人工知能（AI）の普及は、かつてない勢いで送電網・変電設備・高効率パワー半導体への投資を加速させている。しかし、電気の物理的担手である「銅（Copper）」は、主要産地チリ・ペルーの水不足と品位低下により開発リードタイムが10年以上に長期化。銅先物（HG=F）と半導体ETF（SOXX）の連動性を検証すると、素材ボトルネックが最終ハイテク製品の原価を押し上げる構造が明確になっている。",
-      "future_watch": "電線リサイクル率とアルミニウム代替技術の進展速度が、クリーン電力インフラ整備のROIを決定する。",
-      "sources": [
-        "Yahoo Finance (HG=F, SOXX)",
-        "World Bank (TX.VAL.TECH.MF.ZS, EG.ELC.RNEW.ZS)"
-      ],
-      "key_metrics": [
-        {
-          "label": "COMEX銅先物 (HG=F)",
-          "value": "$4.42 /lb",
-          "sub": "前年比 +18.4% / 精錬マージン逼迫",
-          "trend": "up"
-        },
-        {
-          "label": "ハイテク製品輸出比率",
-          "value": "22.8 %",
-          "sub": "世界工業品輸出に占める電子部材比",
-          "trend": "up"
-        },
-        {
-          "label": "再生可能エネルギー発電比率",
-          "value": "31.5 %",
-          "sub": "世界総発電量に占める再エネ割合",
-          "trend": "up"
-        },
-        {
-          "label": "半導体セクターETF (SOXX)",
-          "value": "$218.4",
-          "sub": "データセンター電力機器需要が牽引",
-          "trend": "up"
-        }
-      ],
-      "status_code": "VERIFIED",
-      "status_label": "正常・検証済 (NORMAL)",
-      "status_color": "blue",
-      "audit_hash": "SHA256-688F39A1F52E",
-      "verified_by": "Gemini 3.8 Flash (AI Studio)",
-      "recorded_at": "2026-11-08 22:30 JST",
-      "next_review": "2026-11-09 04:00 JST"
-    },
-    {
-      "id": "FORM-AIL-2026-012",
-      "raw_id": 12,
-      "category": "FOREST-ZOONOSIS",
-      "title": "森林消失と人獣共通感染症フロンティア",
-      "headline": "農地拡大による熱帯林侵食が野生動物との接触と未知の感染症リスクを倍増",
-      "causal_chain": [
-        "熱帯雨林の農業フロンティア転換が加速",
-        "野生動物の生息地喪失とヒト接触頻度増大",
-        "人獣共通感染症の地域発生件数が上昇",
-        "途上国医療支出の圧迫と世界経済リスク"
-      ],
-      "deep_story": "世界銀行の森林被覆面積比率（AG.LND.FRST.ZS）とFAOSTATの土地利用データ（LC）を追うと、大豆畑や畜産放牧地の拡大に伴い、熱帯雨林の林縁部（エッジ）が急激に侵食されていることがわかる。生息域を追われたコウモリや霊長類とヒトの接触機会が急増し、WHOの監視対象となる人獣共通感染症のスピルオーバー頻度が過去20年で倍増。気候変動による干ばつ（CCKP cdd）が森林火災を招き、生態系破壊が公衆衛生リスクへ直結する負の連鎖が浮き彫りとなっている。",
-      "future_watch": "主要バイオームでの森林伐採モラトリアムと早期DNAメタゲノム監視網の国際協調が防波堤となる。",
-      "sources": [
-        "World Bank (AG.LND.FRST.ZS, SH.XPD.CHEX.GD.ZS)",
-        "FAOSTAT (LC)",
-        "CCKP (cdd)"
-      ],
-      "key_metrics": [
-        {
-          "label": "世界森林被覆率",
-          "value": "31.0 %",
-          "sub": "1990年比 -2.8pt (年率数百万ha純減)",
-          "trend": "down"
-        },
-        {
-          "label": "熱帯連続乾燥日数 (cdd)",
-          "value": "42.8 日",
-          "sub": "森林火災と林縁劣化の早期予兆",
-          "trend": "up"
-        },
-        {
-          "label": "世界医療支出対GDP比",
-          "value": "10.4 %",
-          "sub": "感染症予防・防疫コストの増大",
-          "trend": "up"
-        },
-        {
-          "label": "新興感染症リスク指数",
-          "value": "138.5 pt",
-          "sub": "土地利用変化モデルに基づく警戒値",
-          "trend": "up"
-        }
-      ],
-      "status_code": "CRITICAL",
-      "status_label": "要警戒 (HIGH)",
-      "status_color": "red",
-      "audit_hash": "SHA256-3C76057AD08E",
-      "verified_by": "Gemini 3.8 Flash (AI Studio)",
-      "recorded_at": "2026-11-08 22:30 JST",
-      "next_review": "2026-11-09 04:00 JST"
-    },
-    {
-      "id": "FORM-AIL-2026-013",
-      "raw_id": 13,
-      "category": "AI-LABOR-DIVIDE",
-      "title": "教育格差と生成AI時代のグローバル労働分断",
-      "headline": "高等教育と高速ネット環境の有無が生成AIの経済恩恵を先進国へ偏在化",
-      "causal_chain": [
-        "AI・データセンター投資が特定国に集中",
-        "高等教育とネット普及率が導入速度を左右",
-        "高技能職の生産性爆発と低スキル職代替",
-        "国家間・階層間のデジタル格差が固定化"
-      ],
-      "deep_story": "世界銀行の高等教育就学率（SE.TER.ENRR）とインターネット普及率（IT.NET.USER.ZS）、OECDのR&D支出比率を横断すると、生成AI技術の経済的リターンは、研究基盤と高速通信、計算資源を独占する一部の先進国・都市部に過度な集中を見せている。初等・中等教育にとどまる新興国の技能労働者は、AIエージェントによるアウトソーシング代替の脅威に直面。かつて工業化が新興国を救った「キャッチアップモデル」が、AI知能集約経済において通用しにくくなるリスクが露呈している。",
-      "future_watch": "オープンソース基盤モデルのオンデバイス動作と途上国向けSTEM教育投資が、分断阻止の分岐点。",
-      "sources": [
-        "World Bank (SE.TER.ENRR, IT.NET.USER.ZS, GB.XPD.RSDV.GD.ZS)",
-        "OECD (R&D)"
-      ],
-      "key_metrics": [
-        {
-          "label": "世界高等教育総就学率",
-          "value": "42.5 %",
-          "sub": "先進国78% vs 低所得国14%の二極化",
-          "trend": "up"
-        },
-        {
-          "label": "世界ネット普及率",
-          "value": "69.2 %",
-          "sub": "アフリカ・南アジアの農村部で未接続",
-          "trend": "up"
-        },
-        {
-          "label": "OECD研究開発(R&D)支出比",
-          "value": "2.95 %GDP",
-          "sub": "AI・半導体特許投資が歴史的最高水準",
-          "trend": "up"
-        },
-        {
-          "label": "デジタル経済生産性格差比",
-          "value": "3.85 x",
-          "sub": "先端AI導入国 / 未整備国の就業者GDP比",
-          "trend": "up"
-        }
-      ],
-      "status_code": "VERIFIED",
-      "status_label": "正常・検証済 (NORMAL)",
-      "status_color": "yellow",
-      "audit_hash": "SHA256-42620E6D40CB",
-      "verified_by": "Gemini 3.8 Flash (AI Studio)",
-      "recorded_at": "2026-11-08 22:30 JST",
-      "next_review": "2026-11-09 04:00 JST"
-    },
-    {
-      "id": "FORM-AIL-2026-014",
-      "raw_id": 14,
-      "category": "OCEAN-FISHERY",
-      "title": "海洋温暖化と水産サプライチェーン危機",
-      "headline": "海水温上昇で魚群が極地へシフトし、沿岸漁業国の食料安保と養殖が打撃",
-      "causal_chain": [
-        "主要漁場の表層水温が過去最高を更新",
-        "サバ・イワシ等の冷水性魚種が北上回遊",
-        "養殖飼料用魚粉（フィッシュミール）急騰",
-        "世界の動物性水産タンパク価格が跳ね上がる"
-      ],
-      "deep_story": "CCKPの海洋気象データとFAOSTATの水産統計・食料需給表（FBS）を総合すると、エルニーニョや海洋熱波の頻発により、ペルー沖のアンチョビや日本近海のサンマ・サケなど伝統的漁業資源の回遊ルートが激変している。魚粉原料の供給途絶はサーモンやエビ等の養殖産業を直撃し、飼料コストが2年間で+40%急騰。肉類より安価だった「大衆魚」が高級魚化し、水産タンパク依存度が高いアジア・島嶼国の食料不安指数（SN.ITK.MSFP.ZS）を悪化させている。",
-      "future_watch": "昆虫ミール・微細藻類による代替飼料タンパクの商用化速度が、水産インフレ抑制の命運を握る。",
-      "sources": [
-        "CCKP (tas Ocean)",
-        "FAOSTAT (FBS Fish, QCL)",
-        "World Bank (SN.ITK.MSFP.ZS)"
-      ],
-      "key_metrics": [
-        {
-          "label": "主要漁場表層水温偏差",
-          "value": "+1.38 ℃",
-          "sub": "太平洋・北大西洋漁業帯 (平年比)",
-          "trend": "up"
-        },
-        {
-          "label": "国際魚粉価格指数",
-          "value": "178.2 pt",
-          "sub": "アンチョビ漁獲割当減で2018=100から高騰",
-          "trend": "up"
-        },
-        {
-          "label": "食料不安人口割合",
-          "value": "29.6 %",
-          "sub": "中重度食料不安 (WDB SN.ITK.MSFP.ZS)",
-          "trend": "up"
-        },
-        {
-          "label": "水産養殖コスト指数",
-          "value": "152.0 pt",
-          "sub": "飼料・電気代高騰による養殖原価増",
-          "trend": "up"
-        }
-      ],
-      "status_code": "CRITICAL",
-      "status_label": "要警戒 (HIGH)",
-      "status_color": "red",
-      "audit_hash": "SHA256-5C4477334BFB",
-      "verified_by": "Gemini 3.8 Flash (AI Studio)",
-      "recorded_at": "2026-11-08 22:30 JST",
-      "next_review": "2026-11-09 04:00 JST"
-    },
-    {
-      "id": "FORM-AIL-2026-015",
-      "raw_id": 15,
-      "category": "CRITICAL-MINERALS",
-      "title": "鉱物ナショナリズムと新冷戦のサプライチェーン",
-      "headline": "蓄電池・防衛用レアメタルの輸出規制が金価格と地政学リスクプレミアムを増幅",
-      "causal_chain": [
-        "クリーンテック向け重要鉱物の需要急増",
-        "主要産出国による未加工鉱石輸出規制と国有化",
-        "国際精錬サプライチェーンの分断と囲い込み",
-        "金（GC=F）・安全資産への資金逃避が恒常化"
-      ],
-      "deep_story": "リチウム、コバルト、希土類（レアアース）、ニッケルなどの重要鉱物は、蓄電池と防衛電子機器の死活的戦略物資となった。インドネシア、ジンバブエ、南米資源国による未加工鉱石の輸出禁止や付加価値囲い込み政策が相次ぎ、多国籍企業の調達リスクが急騰。世界銀行の貿易依存度（NE.TRD.GNFS.ZS）の鈍化と金先物（GC=F）の史上最高値圏推移は、冷戦後30年続いた効率最優先のグローバル化から「安全保障優先の経済ブロック化」への不可逆な転換を映し出している。",
-      "future_watch": "ナトリウムイオン電池やレアメタルフリー磁石など、代替物質の開発マイルストーンが資源国の価格支配力を左右する。",
-      "sources": [
-        "Yahoo Finance (GC=F, CL=F)",
-        "World Bank (NE.TRD.GNFS.ZS)",
-        "OECD (PAT_DEV)"
-      ],
-      "key_metrics": [
-        {
-          "label": "NY金先物 (GC=F)",
-          "value": "$2,740 /oz",
-          "sub": "地政学プレミアムと中央銀行買いで最高水準",
-          "trend": "up"
-        },
-        {
-          "label": "WTI原油先物 (CL=F)",
-          "value": "$71.8 /bbl",
-          "sub": "中東・サプライチェーン不透明感を反映",
-          "trend": "flat"
-        },
-        {
-          "label": "世界貿易依存度対GDP",
-          "value": "58.2 %",
-          "sub": "ブロック化に伴い頭打ち傾向 (WDB NE.TRD)",
-          "trend": "down"
-        },
-        {
-          "label": "重要鉱物地政学リスク指数",
-          "value": "164.8 pt",
-          "sub": "輸出規制・鉱山国有化リスクのモニタリング",
-          "trend": "up"
-        }
-      ],
-      "status_code": "VERIFIED",
-      "status_label": "正常・検証済 (NORMAL)",
-      "status_color": "yellow",
-      "audit_hash": "SHA256-07E6E7F8237A",
-      "verified_by": "Gemini 3.8 Flash (AI Studio)",
-      "recorded_at": "2026-11-08 22:30 JST",
-      "next_review": "2026-11-09 04:00 JST"
-    },
-    {
-      "id": "FORM-AIL-2026-016",
-      "raw_id": 16,
-      "category": "OBESITY-FISCAL-CRISIS",
-      "title": "肥満パンデミックと医療財政の限界",
-      "headline": "成人の4割超が肥満へ、医療費急増が国家債務を蝕む静かなる危機",
-      "causal_chain": [
-        "デジタル化による座位行動増加と超加工食品シフトで肥満率が43%を突破",
-        "糖尿病や心血管疾患などの生活習慣関連の慢性疾患罹患率が世界的に急増",
-        "各国の公的医療・社会保障支出が急増し対GDP比10%超の水準へ高止まり",
-        "医療費赤字の補填が国家財政を圧迫し世界的な政府債務比率を93%台へ押し上げ"
-      ],
-      "deep_story": "デジタル化による身体活動量の低下と都市型超加工食品の浸透により、世界の成人過体重・肥満率は2026年に43.2%に達した。この代謝性疾患の蔓延は単なる個人の健康課題にとどまらず、心血管疾患や糖尿病治療費を激増させ、各国の保健医療支出をGDP比10%超の高水準に固定化させている。超高齢化と同時に進行する生活習慣病の重症化は、現役世代の労働生産性を損なうだけでなく、公的医療保険の財政赤字を構造的に拡大させ、世界平均の政府債務比率（93.8%）を押し上げる重大なマクロ経済リスクとなっている。",
-      "future_watch": "GLP-1受容体作動薬等の普及による中長期的な医療費抑制効果と、各国における糖類・超加工食品への健康増進課税の導入ペース。",
-      "sources": [
-        "World Bank Open Data",
-        "OECD Health Statistics",
-        "WHO Global Health Observatory"
-      ],
-      "key_metrics": [
-        {
-          "label": "世界成人過体重・肥満率",
-          "value": "43.2%",
-          "sub": "2017年の38.1%から一貫して上昇継続",
-          "trend": "up"
-        },
-        {
-          "label": "世界の保健医療支出比率",
-          "value": "10.06% of GDP",
-          "sub": "パンデミック後も高止まりが常態化",
-          "trend": "up"
-        },
-        {
-          "label": "世界政府総債務残高比率",
-          "value": "93.8% of GDP",
-          "sub": "社会保障費増大に伴う財政余力の逼迫",
-          "trend": "up"
-        }
-      ],
-      "status_code": "CRITICAL",
-      "status_label": "要警戒 (HIGH)",
-      "status_color": "red",
-      "audit_hash": "SHA256-1C935A5298E5",
-      "verified_by": "Gemini 3.8 Flash (AI Studio)",
-      "recorded_at": "2026-11-08 22:30 JST",
-      "next_review": "2026-11-09 04:00 JST"
-    },
-    {
-      "id": "FORM-AIL-2026-017",
-      "raw_id": 17,
-      "category": "CLIMATE-HEAT-AGRO",
-      "title": "極端熱波と農業災害損失の連鎖",
-      "headline": "猛暑日48日突破、農業災害損失1420億ドルの激震",
-      "causal_chain": [
-        "地球温暖化に伴う年間35℃超の極端猛暑日数の世界的な急増（33.2日→48.6日）",
-        "登熟期の熱ストレスと土壌乾燥が引き起こす作物被害と世界農業災害損失の拡大",
-        "食料サプライチェーン寸断と地域的供給難による中等度・重度食料不安率の上昇",
-        "被災農業インフラ復旧費用と食料緊急支援に伴う途上国財政負担の過重化"
-      ],
-      "deep_story": "気候変動の加速により、年間35℃を超える猛暑日数は2017年の33.2日から2026年には48.6日へと15日以上増加した。極端な高温と乾燥日数の重複は主要穀物の開花・登熟障害を頻発させ、世界の農業災害被害額を年間940億ドルから1420億ドル規模へと51%膨張させている。この気候ショックは局所的な減収にとどまらず、中等度・深刻な食料不安に直面する世界人口比率を29.6%へ悪化させる主因となった。極端気象が農業生産基盤を破壊し、食料アクセスの不平等と財政悪化を加速させる構造的危機が定着しつつある。",
-      "future_watch": "猛暑日数と連続乾燥日数の複合発生インデックス、および多国間気候損害基金（Loss and Damage）の支援実行スピード。",
-      "sources": [
-        "World Bank Open Data",
-        "Climate Change Knowledge Portal (CCKP)",
-        "FAOSTAT Model"
-      ],
-      "key_metrics": [
-        {
-          "label": "年間35℃超猛暑日数",
-          "value": "48.6日",
-          "sub": "2017年比 +46.4%",
-          "trend": "up"
-        },
-        {
-          "label": "年間農業災害損失",
-          "value": "1,420億ドル",
-          "sub": "観測史上最高水準",
-          "trend": "up"
-        },
-        {
-          "label": "食料不安人口比率",
-          "value": "29.6%",
-          "sub": "世界人口の約3割",
-          "trend": "up"
-        }
-      ],
-      "status_code": "CRITICAL",
-      "status_label": "要警戒 (HIGH)",
-      "status_color": "red",
-      "audit_hash": "SHA256-58527935F431",
-      "verified_by": "Gemini 3.8 Flash (AI Studio)",
-      "recorded_at": "2026-11-08 22:30 JST",
-      "next_review": "2026-11-09 04:00 JST"
-    },
-    {
-      "id": "FORM-AIL-2026-018",
-      "raw_id": 18,
-      "category": "SOVEREIGN-DEBT-CLIMATE",
-      "title": "国家債務膨張と脱炭素投資の失速危機",
-      "headline": "世界債務93%超と金利高止まりがグリーン転換の資本を締め出す",
-      "causal_chain": [
-        "パンデミック以降の世界政府債務比率が対GDP比93%超に高止まり固定化",
-        "インフレ長期化を受けた金融引き締めにより世界的な長期国債金利が上昇",
-        "国家の国債利払い費が激増し公的エネルギー転換補助金や研究予算を圧迫",
-        "資本集約的なクリーンエネルギー事業の調達コストが急騰し投資計画が凍結"
-      ],
-      "deep_story": "脱炭素社会の実現には天文学的なインフラ資本投下が不可欠ですが、世界的なソブリン債務の膨張がその最大の足かせになりつつあります。World Bankデータでは世界の公的債務比率は93.8%と高水準に張り付き、米国10年債利回りが高止まりする中で各国の国債利払い負担が急増。財政余力が奪われた結果、OECD加盟国における環境技術特許シェアの伸びが鈍化し、ICLNなどクリーンテック市場への資本供給は急激な逆風に直面しています。高金利と借入限界が気候目標を頓挫させる構造危機が顕在化しています。",
-      "future_watch": "米10年債利回り（^TNX）の4.5%定着と主要国のプライマリーバランス改善の遅れ、クリーンエネルギー関連インフラの最終投資決定（FID）のキャンセル率を注視。",
-      "sources": [
-        "World Bank Open Data",
-        "OECD SDMX",
-        "Federal Reserve Economic Data",
-        "Market Futures Index"
-      ],
-      "key_metrics": [
-        {
-          "label": "世界政府債務比率",
-          "value": "93.8%",
-          "sub": "2017年比+14.4ポイント悪化",
-          "trend": "up"
-        },
-        {
-          "label": "米10年国債利回り",
-          "value": "4.89%",
-          "sub": "資本コスト高止まりの震源",
-          "trend": "up"
-        },
-        {
-          "label": "クリーンテックETF(ICLN)",
-          "value": "$16.60",
-          "sub": "直近1ヶ月で-5.36%下落",
-          "trend": "down"
-        }
-      ],
-      "status_code": "CRITICAL",
-      "status_label": "要警戒 (HIGH)",
-      "status_color": "red",
-      "audit_hash": "SHA256-0B201FE82D85",
-      "verified_by": "Gemini 3.8 Flash (AI Studio)",
-      "recorded_at": "2026-11-08 22:30 JST",
-      "next_review": "2026-11-09 04:00 JST"
-    },
-    {
-      "id": "FORM-AIL-2026-019",
-      "raw_id": 19,
-      "category": "GREENTECH-IP-DIVIDE",
-      "title": "グリーン特許と先端技術の知財覇権",
-      "headline": "技術独占が招く脱炭素デバイド：グリーン特許急伸と知財包囲網",
-      "causal_chain": [
-        "脱炭素・自動化需要に応じた先端研究開発（R&D）投資の集中",
-        "OECD諸国における環境技術（グリーン特許）シェアが15%超へ急伸",
-        "製造業輸出に占めるハイテク製品比率が約25%へと構造シフト",
-        "先進国の知財寡占化に伴うライセンス障壁と新興国の転換コスト高騰"
-      ],
-      "deep_story": "気候変動対策と産業競争力が直結する中、イノベーションの重心はグリーン技術へと急速にシフトしています。OECDデータが示す通り、特許出願全体に占める環境技術比率は11.2%から15.4%へと一貫して上昇し、世界の製造業輸出におけるハイテク比率も約25%に達しました。しかし、この技術革新の果実は先進国の特定企業群に極度に集中しています。基幹特許の囲い込みはライセンス料の高騰を招き、資金力の乏しい途上国や新興国が脱炭素技術を導入する際の巨大な参入障壁となりつつあります。技術主権を巡る知財摩擦は、気候正義と国際貿易の新たな火種となっています。",
-      "future_watch": "グリーン特許の強制実施権を巡る国際交渉動向と、先端半導体・クリーンテック知財を巡る米中欧の法規制強化。",
-      "sources": [
-        "OECD Environment at a Glance (Green Patents)",
-        "World Bank WDI (High-technology exports)",
-        "World Bank (R&D expenditure % of GDP)"
-      ],
-      "key_metrics": [
-        {
-          "label": "OECD環境技術特許シェア",
-          "value": "15.4%",
-          "sub": "2017年比+4.2ptの上昇",
-          "trend": "up"
-        },
-        {
-          "label": "ハイテク工業製品輸出比率",
-          "value": "24.69%",
-          "sub": "世界製造業輸出に占める割合",
-          "trend": "up"
-        },
-        {
-          "label": "世界研究開発投資比率",
-          "value": "2.60%",
-          "sub": "対GDP比（先進国牽引）",
-          "trend": "up"
-        }
-      ],
-      "status_code": "VERIFIED",
-      "status_label": "正常・検証済 (NORMAL)",
-      "status_color": "blue",
-      "audit_hash": "SHA256-32E559A5186A",
-      "verified_by": "Gemini 3.8 Flash (AI Studio)",
-      "recorded_at": "2026-11-08 22:30 JST",
-      "next_review": "2026-11-09 04:00 JST"
-    },
-    {
-      "id": "FORM-AIL-2026-020",
-      "raw_id": 20,
-      "category": "NITROGEN-CRISIS",
-      "title": "化学肥料依存と土壌収穫逓減の罠",
-      "headline": "過剰施肥でも伸び悩む収量：窒素限界が揺るがす食糧安保",
-      "causal_chain": [
-        "人口増と食料需要を背景とした化学窒素肥料の集約的投入の加速",
-        "土壌微生物生態系の破壊と地力低下に伴う単位施肥あたりの増収逓減",
-        "天然ガス等の化石原料依存による肥料調達価格の急激な乱高下",
-        "施肥限界と環境流出リスクが招くグローバル農業生産性の構造的停滞"
-      ],
-      "deep_story": "過去数十年の食糧増産を牽引してきた化学肥料モデルが曲がり角を迎えています。FAOSTATのデータによると、農地1ヘクタールあたりの窒素施肥量は114kgを超えて過去最高水準を更新し続ける一方、穀物収量の伸び率は明らかな鈍化を示しています。過度な施肥は土壌酸性化や富栄養化を引き起こし、追加投入に対する生産性向上の限界効果が著しく低下しています。さらに窒素肥料の主原料であるアンモニア合成は天然ガスに強く依存するため、エネルギー危機がそのまま食料増産コストに直結します。投入拡大頼みの増産モデルから脱却し、精密農業や土壌再生への移行が急務となっています。",
-      "future_watch": "天然ガス先物（NG=F）価格の急騰と、主要穀倉地帯における土壌炭素保持率・単位施肥効率の推移。",
-      "sources": [
-        "FAOSTAT Agricultural Inputs Database",
-        "World Bank Open Data",
-        "CCKP Climate Modeling"
-      ],
-      "key_metrics": [
-        {
-          "label": "窒素施肥量",
-          "value": "114.2 kg/ha",
-          "sub": "2017年比+5.2%の過密投入水準",
-          "trend": "up"
-        },
-        {
-          "label": "平均穀物収量",
-          "value": "4.28 t/ha",
-          "sub": "収穫逓減による増収ペースの鈍化",
-          "trend": "flat"
-        },
-        {
-          "label": "天然ガス先物指標",
-          "value": "$2.94 /MMBtu",
-          "sub": "原料費乱高下の潜在的トリガー",
-          "trend": "down"
-        }
-      ],
-      "status_code": "VERIFIED",
-      "status_label": "正常・検証済 (NORMAL)",
-      "status_color": "yellow",
-      "audit_hash": "SHA256-A398EDA2DA3C",
-      "verified_by": "Gemini 3.8 Flash (AI Studio)",
-      "recorded_at": "2026-11-08 22:30 JST",
-      "next_review": "2026-11-09 04:00 JST"
-    },
-    {
-      "id": "FORM-AIL-2026-021",
-      "raw_id": 21,
-      "category": "HYDRO-LOGISTICS",
-      "title": "気候渇水とグローバル水運危機",
-      "headline": "深刻化する渇水が世界の物流動脈を寸断する",
-      "causal_chain": [
-        "広域的な降水量偏差の急減と無降雨乾燥日数の長期化",
-        "運河水源湖の水位低下および国際内陸河川の記録的浅瀬化",
-        "喫水制限に伴う船舶積載量カットと迂回航路への転換",
-        "海上・内陸輸送リードタイム長期化と輸送コストの構造的高止まり"
-      ],
-      "deep_story": "降水パターンの極端化と連続乾燥日数の長期化は、農業被害にとどまらず国際物流の基幹動脈である水運ネットワークに深刻な打撃を与えています。降水量偏差が平年比マイナス13%超へと悪化する中、パナマ運河の水位低下に伴う通航隻数制限や、欧州ライン川の浅瀬化による積載制限が常態化しました。これにより大型コンテナ船や原材料バルク船は迂回航路の選択や分載を余儀なくされ、海上輸送リードタイムの長期化と運賃高騰を招いています。気候リスクがグローバル供給網の物理的隘路を直接塞ぐ構造的危機が定着しつつあります。",
-      "future_watch": "主要運河水源湖の貯水率推移、内陸低喫水バージ船への代替投資動向、乾期ピーク期におけるバルチック海運指数（BDRY）のボラティリティ急拡大に注視。",
-      "sources": [
-        "World Bank CCKP (Climate Change Knowledge Portal)",
-        "World Bank Open Data (ER.H2O.FWST.ZS)",
-        "Baltic Dry Index (BDRY)",
-        "International Chamber of Shipping (ICS)"
-      ],
-      "key_metrics": [
-        {
-          "label": "降水量偏差（平年比）",
-          "value": "-13.4%",
-          "sub": "2017年比で渇水傾向が大幅深刻化",
-          "trend": "down"
-        },
-        {
-          "label": "年間連続乾燥日数",
-          "value": "42.8日",
-          "sub": "10年間で+8.3日拡大",
-          "trend": "up"
-        },
-        {
-          "label": "水運バルク指数（BDRY）",
-          "value": "12.61 pt",
-          "sub": "直近30日ボラティリティ41.5%",
-          "trend": "down"
-        }
-      ],
-      "status_code": "VERIFIED",
-      "status_label": "正常・検証済 (NORMAL)",
-      "status_color": "yellow",
-      "audit_hash": "SHA256-7D68FD60D9E4",
-      "verified_by": "Gemini 3.8 Flash (AI Studio)",
-      "recorded_at": "2026-11-08 22:30 JST",
-      "next_review": "2026-11-09 04:00 JST"
-    },
-    {
-      "id": "FORM-AIL-2026-022",
-      "raw_id": 22,
-      "category": "AI-POWER-URANIUM",
-      "title": "データ爆発と原子力ルネサンス",
-      "headline": "AIとデジタル化の電力爆発が招くクリーンベースロード電源争奪戦",
-      "causal_chain": [
-        "世界的なインターネット普及率の急伸と生成AI・データセンター投資の加速",
-        "24時間連続稼働を要する超膨大かつ途切れない電力需要の急激な発生",
-        "気候変動制約下での脱炭素要求と再エネの間欠性による供給ボトルネック",
-        "安定大容量の非炭素ベースロード電源として原子力発電・ウラン資源の再評価集中"
-      ],
-      "deep_story": "世界人口のネット普及率は2017年の46.3%から73.6%へと急伸し、生成AIの社会実装と重なりデータセンターの電力消費が爆発的ペースで拡大している。脱炭素目標を堅持しながら安定電力を確保するため、ITメガテック各社は再エネの出力変動を補う切り札として原子力発電の長期電力調達（PPA）へ一斉に舵を切った。この構造変化がウラン燃料の需給逼迫とサプライチェーン再編を世界規模で加速させている。",
-      "future_watch": "SMR（小型モジュール炉）の商用認可進捗と、主要データセンター集積地における送電網接続待ち期間（キュー年数）の長期化動向。",
-      "sources": [
-        "World Bank Data360",
-        "OECD SDMX",
-        "Global Energy Infrastructure / Markets"
-      ],
-      "key_metrics": [
-        {
-          "label": "世界ネット普及率",
-          "value": "73.6%",
-          "sub": "2017年比+27.3ptの接続急拡大",
-          "trend": "up"
-        },
-        {
-          "label": "ウラン鉱業指数(URA)",
-          "value": "$32.7",
-          "sub": "クリーン電力需要で底値から急伸",
-          "trend": "up"
-        },
-        {
-          "label": "ハイテク輸出比率",
-          "value": "24.7%",
-          "sub": "先端計算機産業の集中進展",
-          "trend": "up"
-        }
-      ],
-      "status_code": "VERIFIED",
-      "status_label": "正常・検証済 (NORMAL)",
-      "status_color": "yellow",
-      "audit_hash": "SHA256-5189D207CB7A",
-      "verified_by": "Gemini 3.8 Flash (AI Studio)",
-      "recorded_at": "2026-11-08 22:30 JST",
-      "next_review": "2026-11-09 04:00 JST"
-    },
-    {
-      "id": "FORM-AIL-2026-023",
-      "raw_id": 23,
-      "category": "SOVEREIGN-GOLD-RUSH",
-      "title": "ソブリン債務危機と金価格歴史的高騰",
-      "headline": "金4,000ドル突破、ソブリン債務急膨張が招く通貨信認の地殻変動",
-      "causal_chain": [
-        "パンデミックと地政学危機による世界政府債務の対GDP比90%超への急膨張",
-        "高金利下での利払い負担膨張と法定通貨インフレ希釈リスクの常態化",
-        "新興国中央銀行による外貨準備の脱ドル多極化と民間マネーの安全資産逃避",
-        "国際金先物の史上最高値4,100ドル突破とブレトンウッズ体制以来の通貨再編圧力"
-      ],
-      "deep_story": "世界的な政府債務残高は対GDP比で93%を超え、高金利環境下で利払い負担が国家財政を圧迫し続けている。これに伴い法定通貨の実質購買力低下への懸念が強まり、新興国を中心とする中央銀行の外貨準備における「脱ドル化」と金現物買いが急速に拡大した。市場データでは国際金先物（GC=F）が4,130ドルという歴史的超高値圏へ到達。長期金利が高止まりする局面で金が急騰する異例の相関は、ソブリン信用への構造的疑義と、多極化する国際金融秩序への地殻変動を鮮明に映し出している。",
-      "future_watch": "主要国中央銀行の四半期金純購入量、BRICS主導の決済枠組み進展、および先進国国債入札における応札倍率低下が金融構造転換の警戒シグナルとなる。",
-      "sources": [
-        "World Bank Global Financial Indicators",
-        "IMF Government Finance Statistics",
-        "COMEX Gold Futures (live_yfinance)",
-        "U.S. Department of the Treasury"
-      ],
-      "key_metrics": [
-        {
-          "label": "国際金先物価格",
-          "value": "4,130.7 ドル/oz",
-          "sub": "前代未聞の4,000ドル超え",
-          "trend": "up"
-        },
-        {
-          "label": "世界政府債務比率",
-          "value": "93.8 %",
-          "sub": "対GDP比で90%超の高止まり",
-          "trend": "up"
-        },
-        {
-          "label": "米10年国債利回り",
-          "value": "4.90 %",
-          "sub": "高金利下の金急騰という異例相関",
-          "trend": "up"
-        }
-      ],
-      "status_code": "CRITICAL",
-      "status_label": "要警戒 (HIGH)",
-      "status_color": "red",
-      "audit_hash": "SHA256-4051F679D9A2",
-      "verified_by": "Gemini 3.8 Flash (AI Studio)",
-      "recorded_at": "2026-11-08 22:30 JST",
-      "next_review": "2026-11-09 04:00 JST"
-    },
-    {
-      "id": "FORM-AIL-2026-024",
-      "raw_id": 24,
-      "category": "CLIMATE-COCOA-CRISIS",
-      "title": "カカオショックと気候乾燥化の罠",
-      "headline": "熱帯干ばつが嗜好品市場を直撃・カカオ価格暴騰の連鎖",
-      "causal_chain": [
-        "地球規模の温暖化に伴う熱帯赤道域の連続無降水日数（CDD）の深刻な長期化",
-        "西アフリカ等主要産地における干ばつと土壌乾燥によるカカオ樹勢の衰退および病害蔓延",
-        "世界収穫量の壊滅的縮小による国際先物市場（ココア先物等）の歴史的高騰",
-        "食品メーカーの原価限界到達と消費者向け嗜好品の世界的シュリンクフレーション"
-      ],
-      "deep_story": "気候危機の波は、穀物などの主食のみならず熱帯特産物市場に先駆けて甚大な打撃を与えている。カカオの主産地である赤道周辺では年間乾燥日数が過去10年間で24%増加し、異常高温が重なったことで黒腐病などの病害が爆発的に拡散した。供給体制が極度に脆弱化した結果、国際先物市場ではカカオ価格が歴史的高値圏へと急騰。チョコレートをはじめとする嗜好品メーカーはコスト吸収の限界を迎え、内容量削減や植物油脂への代替、製品値上げを余儀なくされている。熱帯農業の気候脆弱性が日常の消費財インフレへと直結する新たな構造危機である。",
-      "future_watch": "西アフリカ主要産地の土壌水分指数、先物市場の投機的買越残高、および微生物発酵油脂などカカオバター代替素材の商用化速度。",
-      "sources": [
-        "World Bank CCKP",
-        "ICE Futures (CC=F)",
-        "FAOSTAT Agricultural Stress Index",
-        "World Bank Commodity Price Data"
-      ],
-      "key_metrics": [
-        {
-          "label": "カカオ先物価格",
-          "value": "5,242 USD/MT",
-          "sub": "過去10年平均比+115%",
-          "trend": "up"
-        },
-        {
-          "label": "熱帯連続無降水日数",
-          "value": "42.8 日",
-          "sub": "2017年比+24.1%延伸",
-          "trend": "up"
-        },
-        {
-          "label": "コーヒー先物価格",
-          "value": "282.0 ￠/lb",
-          "sub": "乾燥化による連動高",
-          "trend": "up"
-        }
-      ],
-      "status_code": "CRITICAL",
-      "status_label": "要警戒 (HIGH)",
-      "status_color": "red",
-      "audit_hash": "SHA256-94818CCEE394",
-      "verified_by": "Gemini 3.8 Flash (AI Studio)",
-      "recorded_at": "2026-11-08 22:30 JST",
-      "next_review": "2026-11-09 04:00 JST"
-    },
-    {
-      "id": "FORM-AIL-2026-025",
-      "raw_id": 25,
-      "category": "FDI-RESHORING",
-      "title": "脱中国シフトの挫折とFDI急減の罠",
-      "headline": "脱中国の受け皿幻想が崩壊、新興国FDI急減と資本の本国回帰",
-      "causal_chain": [
-        "米中デカップリングの深刻化に伴い「チャイナ・プラス・ワン」投資が模索される",
-        "新興国のインフラ脆弱性や規制の壁に加え、世界的高金利が投資採算性を悪化",
-        "インドなど有力移転先への対内直接投資（FDI）対GDP比がピーク比7割減へ急落",
-        "支援策に後押しされた本国回帰（リショアリング）が加速し南側諸国の工業化が座礁"
-      ],
-      "deep_story": "米中対立を契機にグローバル企業は「チャイナ・プラス・ワン」を掲げ、インドや東南アジアへの大規模投資を進めるとみられていた。しかし現実は、インドへの対内直接投資（FDI）対GDP比が2020年の2.41%から2024年には0.72%へと急減。未熟な物流網や行政手続きの障壁に加え、先進国の高金利環境が投資リスクを急上昇させた。資本は新興国へ分散するどころか、巨額補助金に牽引されて米欧先進国へと回帰（リショアリング）。ハイテク製品輸出比率が世界的に24%超へ寡占化する中、グローバル・サウスが新たな『世界の工場』として離陸する青写真は根本的な修正を迫られている。",
-      "future_watch": "米欧の先端産業支援策の持続性と、新興国の外資優遇・法制度改革の成否。新興国市場ETF（EEM）の資本流出圧力と本国回帰工場の稼働動向。",
-      "sources": [
-        "World Bank Open Data (FDI, High-tech exports)",
-        "yfinance Market Data (EEM, SOXX)"
-      ],
-      "key_metrics": [
-        {
-          "label": "インド対内直接投資（対GDP比）",
-          "value": "0.72%",
-          "sub": "2020年ピーク（2.41%）から7割急減",
-          "trend": "down"
-        },
-        {
-          "label": "ハイテク製品輸出比率（世界）",
-          "value": "24.69%",
-          "sub": "サプライチェーン囲い込みで上昇継続",
-          "trend": "up"
-        },
-        {
-          "label": "新興国市場ETF（EEM）",
-          "value": "61.62",
-          "sub": "直近30日騰落率 -9.74% の資本流出懸念",
-          "trend": "down"
-        }
-      ],
-      "status_code": "CRITICAL",
-      "status_label": "要警戒 (HIGH)",
-      "status_color": "red",
-      "audit_hash": "SHA256-38D4125B9AE8",
-      "verified_by": "Gemini 3.8 Flash (AI Studio)",
-      "recorded_at": "2026-11-08 22:30 JST",
-      "next_review": "2026-11-09 04:00 JST"
-    },
-    {
-      "id": "FORM-AIL-2026-026",
-      "raw_id": 26,
-      "category": "AEROSOL-WARMING",
-      "title": "大気浄化と温暖化急加速のパラドックス",
-      "headline": "PM2.5減少で日傘効果が喪失、気温急上昇を招くクリーン化の皮肉",
-      "causal_chain": [
-        "世界的な環境規制強化に伴う石炭火力抑制とPM2.5エアロゾル排出の急減",
-        "太陽光を宇宙空間へ反射していた大気中の日傘効果（冷却シールド）が消失",
-        "地表および海洋表面が直接吸収する日射エネルギー量が短期間で急増",
-        "温室効果ガスの温暖化圧力が一気に顕在化し地球平均気温の記録的急上昇を誘発"
-      ],
-      "deep_story": "大気環境改善の国際的取り組みが進展し、世界平均のPM2.5濃度は過去10年で着実に改善した。しかし環境浄化の成功の裏で、粒子状物質が太陽光を跳ね返して地表を冷やしていた「日傘効果（エアロゾル冷却シールド）」が急速に失われている。このアンマスキング現象により、蓄積された温室効果ガスの加熱圧力がストレートに作用し、2023年以降の記録的な気温偏差上昇（+1.84℃）の隠れた主因となった。環境対策の進展が皮肉にも短中期の熱波や気候災害を急加速させる構造的矛盾が生じており、脱炭素と環境浄化の時間差による複合リスクが国家の気候適応コストを直撃している。",
-      "future_watch": "船舶燃料規制強化に伴う主要航路直上の雲量変化と、太陽放射改変（SRM）技術導入を巡る国際規制フレームワークの進展を注視。",
-      "sources": [
-        "World Bank Data (EN.ATM.PM25.MC.M3)",
-        "CCKP Climate Knowledge Portal (tas_anomaly_c)",
-        "OECD Environment Directorate"
-      ],
-      "key_metrics": [
-        {
-          "label": "世界平均PM2.5濃度",
-          "value": "32.87 μg/m³",
-          "sub": "2017年比で6.1%改善",
-          "trend": "down"
-        },
-        {
-          "label": "地表面気温偏差",
-          "value": "+1.84 ℃",
-          "sub": "過去最高水準を更新継続",
-          "trend": "up"
-        },
-        {
-          "label": "年間猛暑日数(35℃超)",
-          "value": "48.6 日",
-          "sub": "10年で15.4日増加",
-          "trend": "up"
-        }
-      ],
-      "status_code": "CRITICAL",
-      "status_label": "要警戒 (HIGH)",
-      "status_color": "red",
-      "audit_hash": "SHA256-51FC81550E1A",
-      "verified_by": "Gemini 3.8 Flash (AI Studio)",
-      "recorded_at": "2026-11-08 22:30 JST",
-      "next_review": "2026-11-09 04:00 JST"
-    },
-    {
-      "id": "FORM-AIL-2026-027",
-      "raw_id": 27,
-      "category": "SILVER-LABOR",
-      "title": "出生率急落とシルバー就労シフト",
-      "headline": "出生率1.48の衝撃とシニア就労52%突破が示す労働構造の限界",
-      "causal_chain": [
-        "先進諸国の合計特殊出生率が1.48へ急落し若年層の新規供給が構造的に途絶",
-        "生産年齢人口の激減により医療・介護・物流などの現場で深刻な人手不足が常態化",
-        "定年延長と年金支給開始繰り下げに伴い65〜69歳の就業率が52%超へ跳ね上がる",
-        "高齢労働力への過度な依存が産業新陳代謝とイノベーション投資を停滞させる罠に直面"
-      ],
-      "deep_story": "OECD諸国の合計特殊出生率は2017年の1.69から2026年には1.48まで急速に悪化し、若年労働力の枯渇が現実のものとなりました。この人口動態の穴を埋めるべく急速に拡大したのがシルバー労働です。日本の65〜69歳就業率は44.3%から52.6%へと過半数を超える水準まで急上昇し、社会保障給付の繰り下げと現場労働力の維持が同時に進められています。しかし、シニア就業者の増加は労働力不足を緩和する一方で、デジタル化や先端投資を遅らせ、労働生産性の伸び悩みを引き起こす新たな成長のボトルネックとして浮上しています。",
-      "future_watch": "シニア就労率の上昇ペースと全要素生産性（TFP）の相関、および各国の定年制廃止動向と年金受給開始年齢のさらなる引き上げ議論に注視が必要。",
-      "sources": [
-        "OECD Employment and Labour Market Statistics",
-        "World Bank Population Estimates and Projections"
-      ],
-      "key_metrics": [
-        {
-          "label": "OECD合計特殊出生率",
-          "value": "1.48 人",
-          "sub": "2017年1.69から急減",
-          "trend": "down"
-        },
-        {
-          "label": "65-69歳就業率（日本水準）",
-          "value": "52.6 %",
-          "sub": "過半数が現役労働者へ",
-          "trend": "up"
-        },
-        {
-          "label": "OECD平均年間総労働時間",
-          "value": "1,716 時間",
-          "sub": "短時間シニア雇用増で低下",
-          "trend": "down"
-        }
-      ],
-      "status_code": "CRITICAL",
-      "status_label": "要警戒 (HIGH)",
-      "status_color": "red",
-      "audit_hash": "SHA256-F4A717B0ECDC",
-      "verified_by": "Gemini 3.8 Flash (AI Studio)",
-      "recorded_at": "2026-11-08 22:30 JST",
-      "next_review": "2026-11-09 04:00 JST"
-    },
-    {
-      "id": "FORM-AIL-2026-028",
-      "raw_id": 28,
-      "category": "DIGITAL-HIGHTECH-BOOM",
-      "title": "デジタル人口爆発とハイテク輸出連鎖",
-      "headline": "世界接続率7割突破が加速するハイテク製造業の構造転換",
-      "causal_chain": [
-        "世界のインターネット普及率が46.3%から73.6%へと急伸",
-        "新興国を含む数十億規模の新規オンライン層が巨大なデジタル消費圏を創出",
-        "通信端末やデータセンター、エレクトロニクス部品の世界的特需が定着",
-        "工業製品輸出に占めるハイテク比率が24.7%へと構造的に切り上がる"
-      ],
-      "deep_story": "世界銀行データが示すインターネット普及率の急伸（46.3%から73.6%）は、単なる利便性の向上にとどまらず、国際貿易の構造を根底から塗り替えました。パンデミックを契機とする通信インフラ投資と新興国での安価な端末普及により、オンライン人口が爆発的に増加。これに伴い、世界の工業製品輸出に占めるハイテク製品の比率は20.5%から24.7%へ拡大しました。日常消費のあらゆる分野がデジタル化・電脳化されることで、高集積半導体や電子モジュールへの需要が不可逆的に高まり、先端製造業が世界貿易の牽引役として強固に定着しています。",
-      "future_watch": "次世代通信インフラとオンデバイスAIの普及速度、および先端電子部品の関税政策がグローバル貿易構造に与える影響。",
-      "sources": [
-        "World Bank Open Data (IT.NET.USER.ZS)",
-        "World Bank Open Data (TX.VAL.TECH.MF.ZS)",
-        "OECD Science, Technology and R&D Statistics"
-      ],
-      "key_metrics": [
-        {
-          "label": "世界インターネット普及率",
-          "value": "73.6%",
-          "sub": "2017年の46.3%から27.3pt急上昇",
-          "trend": "up"
-        },
-        {
-          "label": "ハイテク製品輸出比率",
-          "value": "24.69%",
-          "sub": "工業製品輸出総額に占める先端品シェア",
-          "trend": "up"
-        },
-        {
-          "label": "世界R&D投資対GDP比",
-          "value": "2.60%",
-          "sub": "先端技術集約度の上昇基調",
-          "trend": "up"
-        }
-      ],
-      "status_code": "VERIFIED",
-      "status_label": "正常・検証済 (NORMAL)",
-      "status_color": "blue",
-      "audit_hash": "SHA256-27875ADD5750",
-      "verified_by": "Gemini 3.8 Flash (AI Studio)",
-      "recorded_at": "2026-11-08 22:30 JST",
-      "next_review": "2026-11-09 04:00 JST"
-    },
-    {
-      "id": "FORM-AIL-2026-029",
-      "raw_id": 29,
-      "category": "HEAT-LABOR",
-      "title": "猛暑日数急増と労働時間蒸発の罠",
-      "headline": "酷暑が奪う年間42時間：熱波常態化で世界の現場労働力が蒸発",
-      "causal_chain": [
-        "地球沸騰化に伴う年間35℃超猛暑日（hd35）の急激な増加",
-        "建設・農業・物流現場におけるヒートストレスと熱中症リスクの急上昇",
-        "安全衛生規制強化や日中作業中断令による実稼働時間の物理的制約",
-        "OECD加盟国全体の年間実労働時間縮小とマクロ経済の潜在成長率減退"
-      ],
-      "deep_story": "気候変動に伴う極端高温の常態化により、年間35℃を超える猛暑日数は2017年の33.2日から2026年には48.6日へと1.5倍近くに激増した。この未曾有の熱波は、建設、農業、物流など屋外や非空調環境で働く現場労働者の健康を直撃し、日中の作業中断や安全基準強化による稼働短縮を世界規模で強いている。結果としてOECD加盟国の平均年間労働時間は1,758時間から1,716時間へと42時間も削り取られた。自動化が困難なインフラ維持や食料生産の現場から実質的な労働供給が「気候的に蒸発」しており、気候適応コストが人手不足と工期遅延を加速させる構造的ボトルネックを形成している。",
-      "future_watch": "湿球黒球温度（WBGT）基準の法制化に伴う屋外操業停止令の頻度と、酷暑期におけるサプライチェーン寸断が招く労働投入量減少およびインフレ圧力。",
-      "sources": [
-        "World Bank Data Catalog",
-        "World Bank Climate Change Knowledge Portal (CCKP)",
-        "OECD Employment and Labour Market Statistics"
-      ],
-      "key_metrics": [
-        {
-          "label": "35℃超猛暑日数",
-          "value": "48.6日",
-          "sub": "2017年比で+46.4%増と過去最多を更新",
-          "trend": "up"
-        },
-        {
-          "label": "OECD年間実労働時間",
-          "value": "1,716時間",
-          "sub": "2017年比で年間42時間の実働が縮小",
-          "trend": "down"
-        },
-        {
-          "label": "世界地表気温偏差",
-          "value": "+1.84℃",
-          "sub": "産業革命前比の臨界点へ急接近",
-          "trend": "up"
-        }
-      ],
-      "status_code": "CRITICAL",
-      "status_label": "要警戒 (HIGH)",
-      "status_color": "red",
-      "audit_hash": "SHA256-ADACFE840C57",
-      "verified_by": "Gemini 3.8 Flash (AI Studio)",
-      "recorded_at": "2026-11-08 22:30 JST",
-      "next_review": "2026-11-09 04:00 JST"
-    },
-    {
-      "id": "FORM-AIL-2026-030",
-      "raw_id": 30,
-      "category": "TERTIARY-RD-RACE",
-      "title": "高等教育爆発と頭脳資本競争",
-      "headline": "大学進学率43%突破が誘発する世界R&D投資の軍備拡張",
-      "causal_chain": [
-        "新興国を含めた世界的な高等教育就学率の持続的急上昇（37.5%→43.6%）",
-        "大卒・院卒の高度頭脳資本が世界規模で大量供給されホワイトカラー層が激増",
-        "産業付加価値の源泉が資本から知的財産へシフトし国家間R&D投資が加速（2.14%→2.60%）",
-        "AIや先端工学を巡る頭脳獲得競争が激化し知的フロンティアでの国家間二極化が決定づけられる"
-      ],
-      "deep_story": "世界銀行の統計が示す通り、世界の高等教育就学率は2017年の37.5%から43.6%へと記録的なスピードで伸長している。この「高等教育のマス化」は、新興国での所得向上と知識経済へのシフトが牽引しており、地球規模で大量の高度専門人材を生み出している。これに呼応するように、対GDP比の研究開発投資（R&D）も2.14%から2.60%へと急増した。単なる製造業の集積ではもはや国際優位を保てない国家群が、生成AIや量子計算、先端材料といった知能集約型産業へ巨額の頭脳資本を投下している。知的生産性の差が国力差に直結する新たな知財軍備拡張の時代が始まっている。",
-      "future_watch": "主要国の公的研究開発支出目標の引き上げと、AI普及に伴う大卒若年層の知的労働雇用の吸収力を注視。",
-      "sources": [
-        "World Bank (SE.TER.ENRR)",
-        "World Bank (GB.XPD.RSDV.GD.ZS)",
-        "OECD SDMX"
-      ],
-      "key_metrics": [
-        {
-          "label": "世界高等教育総就学率",
-          "value": "43.6%",
-          "sub": "過去10年で6ポイント超の急増",
-          "trend": "up"
-        },
-        {
-          "label": "世界研究開発支出比率",
-          "value": "2.60%",
-          "sub": "対GDP比で過去最高水準を更新中",
-          "trend": "up"
-        },
-        {
-          "label": "OECD平均年間賃金(PPP)",
-          "value": "$56,420",
-          "sub": "知的労働の生産性プレミアムが上昇",
-          "trend": "up"
-        }
-      ],
-      "status_code": "VERIFIED",
-      "status_label": "正常・検証済 (NORMAL)",
-      "status_color": "blue",
-      "audit_hash": "SHA256-E68DF3CFBBBF",
-      "verified_by": "Gemini 3.8 Flash (AI Studio)",
-      "recorded_at": "2026-11-08 22:30 JST",
-      "next_review": "2026-11-09 04:00 JST"
-    },
-    {
-      "id": "FORM-AIL-2026-031",
-      "raw_id": 31,
-      "category": "GIG-LABOR-DIVIDE",
-      "title": "プラットフォーム経済と若年雇用の罠",
-      "headline": "若年失業率低下の陰で進むギグワーク化と低生産性の固定化",
-      "causal_chain": [
-        "世界的なネット普及率の急伸（46.3%から73.6%へ急増）とモバイル端末の普及",
-        "プラットフォーム型ギグワークの急拡大による表面的な若年失業率の急低下",
-        "単発・低付加価値労働への集中に伴う就業者あたり労働生産性の伸び悩み",
-        "社会保障セーフティネットの欠落と持続的キャリア形成阻害による格差固定化"
-      ],
-      "deep_story": "ネット普及率が73%を超える急拡大を見せる中、統計上の若年失業率は16.1%から13.4%へと劇的に改善した。しかし一見好調に見えるこの数値の裏では、配達やオンライン単発受託をはじめとするプラットフォーム型ギグ労働への雪崩現象が起きている。OECD諸国の就業者あたりGDPの伸びが年率1%未満に低迷していることが示す通り、雇用の受け皿は高スキル職ではなく低付加価値・不安定労働に偏重している。社会保障や有給休暇から切り離された若年ワーカーの急増は、表層的な失業改善と引き換えに、次世代の人的資本蓄積と経済的自立を蝕む深刻な構造的罠を生み出している。",
-      "future_watch": "EUや米国で議論が進むプラットフォーム労働者保護法（ギグワーカーの従業員認定基準）の法制化動向。",
-      "sources": [
-        "World Bank Development Indicators (IT.NET.USER.ZS, SL.UEM.1524.ZS)",
-        "OECD Employment and Labour Market Statistics (SL.GDP.PCAP.EM.KD)",
-        "ILO World Employment and Social Outlook"
-      ],
-      "key_metrics": [
-        {
-          "label": "世界ネット普及率",
-          "value": "73.6%",
-          "sub": "2017年46.3%から急拡大",
-          "trend": "up"
-        },
-        {
-          "label": "世界若年失業率",
-          "value": "13.41%",
-          "sub": "ギグ労働流入で見かけ改善",
-          "trend": "down"
-        },
-        {
-          "label": "OECD就業者生産性",
-          "value": "11.3万ドル",
-          "sub": "低付加価値化で成長停滞",
-          "trend": "flat"
-        }
-      ],
-      "status_code": "VERIFIED",
-      "status_label": "正常・検証済 (NORMAL)",
-      "status_color": "yellow",
-      "audit_hash": "SHA256-3B96B6E34C5F",
-      "verified_by": "Gemini 3.8 Flash (AI Studio)",
-      "recorded_at": "2026-11-08 22:30 JST",
-      "next_review": "2026-11-09 04:00 JST"
-    },
-    {
-      "id": "FORM-AIL-2026-032",
-      "raw_id": 32,
-      "category": "ARIDITY-HUNGER",
-      "title": "気候乾燥化と食料不安の再燃",
-      "headline": "干ばつ日数の急増が中重度食料不安人口を世界で3割近くへ押し上げる",
-      "causal_chain": [
-        "地球温暖化に伴う連続無降水日数（CDD）の長期化と土壌乾燥の深刻化",
-        "天水農業に依存する脆弱地域における穀物・牧草の生育不全と局地的大減収",
-        "食料供給途絶と局地的価格急騰による最貧困層の食料アクセス遮断",
-        "中重度食料不安人口比率が25.4%から29.6%へ跳ね上がり飢餓撲滅目標が頓挫"
-      ],
-      "deep_story": "国連SDGsが掲げた「飢餓ゼロ」目標は、深刻化する気候乾燥化によって根底から覆されつつある。CCKPのデータが示す連続乾燥日数（CDD）は2017年の34.5日から42.8日へと急速に延伸。天水農業に依存するサブサハラや南アジアの農村部では、干ばつの長期化が致命的な収量蒸発をもたらしている。世界銀行の中重度食料不安人口割合はパンデミックと干ばつ連鎖を経て25.4%から29.6%へと急悪化し、高止まりを継続。干ばつの常態化は単なる局地的異常気象を超え、世界人口の3割を食料危機に晒す構造的貧困のトリガーとなっている。",
-      "future_watch": "干ばつ頻発地帯における連続乾燥日数（CDD）の45日突破と、脆弱国の緊急食料輸入依存度の急激な悪化による社会不安の再燃。",
-      "sources": [
-        "World Bank (SN.ITK.MSFP.ZS)",
-        "Climate Change Knowledge Portal (CCKP)",
-        "FAOSTAT (Food Balance Sheets)"
-      ],
-      "key_metrics": [
-        {
-          "label": "世界の連続乾燥日数（CDD）",
-          "value": "42.8日",
-          "sub": "2017年比 +24.1%長期化",
-          "trend": "up"
-        },
-        {
-          "label": "中重度食料不安人口比率",
-          "value": "29.6%",
-          "sub": "世界人口の約3割が危機直面",
-          "trend": "up"
-        },
-        {
-          "label": "低所得国 食料輸入依存度",
-          "value": "17.57%",
-          "sub": "外貨不足による輸入停滞リスク",
-          "trend": "flat"
-        }
-      ],
-      "status_code": "CRITICAL",
-      "status_label": "要警戒 (HIGH)",
-      "status_color": "red",
-      "audit_hash": "SHA256-724973300FEE",
-      "verified_by": "Gemini 3.8 Flash (AI Studio)",
-      "recorded_at": "2026-11-08 22:30 JST",
-      "next_review": "2026-11-09 04:00 JST"
-    },
-    {
-      "id": "FORM-AIL-2026-033",
-      "raw_id": 33,
-      "category": "CLEAN-GRID-GAP",
-      "title": "再エネ発電躍進と熱・輸送脱炭素の壁",
-      "headline": "電力脱炭素の陰で熱・輸送が停滞、一次エネルギー19%の壁",
-      "causal_chain": [
-        "太陽光・風力の普及で世界の再エネ発電比率は28%近傍へ急進",
-        "重工業の高温熱や大型輸送など電化困難領域の脱炭素が停滞",
-        "最終エネルギー消費に占める再エネ比率は19.7%で頭打ち",
-        "電力偏重の投資が限界を迎えネットゼロへの移行速度が失速"
-      ],
-      "deep_story": "太陽光や風力発電の普及加速により、世界の発電部門に占める再生可能エネルギー比率は2017年の24.5%から2024年以降27.8%へと順調に伸長した。しかし、最終エネルギー消費全体における再エネ比率は19.7%近傍で足踏みを続けている。電力は最終エネルギー消費の約2割に過ぎず、残る8割を占める産業用高温熱や大型船舶・航空機などの「直接電化が困難なセクター」で化石燃料依存が脱却できていない。電力グリーン化の成功の陰で、熱と燃料の脱炭素という、より根深い構造的障壁が浮き彫りとなっている。",
-      "future_watch": "産業用ヒートポンプ導入率やグリーン水素・合成燃料の製造コスト低減ペース、電化困難セクターへの公的支援枠組みの進捗。",
-      "sources": [
-        "World Bank (World Development Indicators)",
-        "IEA Global Energy Review",
-        "OECD Environment Statistics"
-      ],
-      "key_metrics": [
-        {
-          "label": "世界再エネ発電比率",
-          "value": "27.84%",
-          "sub": "2017年比で+3.36pt拡大",
-          "trend": "up"
-        },
-        {
-          "label": "最終エネルギー再エネ比率",
-          "value": "19.74%",
-          "sub": "2020年以降19%台で頭打ち",
-          "trend": "flat"
-        },
-        {
-          "label": "非電力エネルギー比率",
-          "value": "約80%",
-          "sub": "熱・輸送等電化困難領域の割合",
-          "trend": "flat"
-        }
-      ],
-      "status_code": "VERIFIED",
-      "status_label": "正常・検証済 (NORMAL)",
-      "status_color": "yellow",
-      "audit_hash": "SHA256-0FD81B771319",
-      "verified_by": "Gemini 3.8 Flash (AI Studio)",
-      "recorded_at": "2026-11-08 22:30 JST",
-      "next_review": "2026-11-09 04:00 JST"
-    },
-    {
-      "id": "FORM-AIL-2026-034",
-      "raw_id": 34,
-      "category": "CIRCULAR-TRADE",
-      "title": "迂回貿易膨張と多重供給網の罠",
-      "headline": "「脱中国」の錯覚、越境工程急増で貿易依存度が過去最大68％へ",
-      "causal_chain": [
-        "米中関税摩擦と経済安保政策によるデカップリングの要請",
-        "第三国（東南アジア・メキシコ等）を経由するサプライチェーンの多重迂回化",
-        "半製品・部材の国境通過回数増大による見かけ上の貿易対GDP比急伸",
-        "輸送リードタイム延伸と中間マージン蓄積による構造的コスト高の固定化"
-      ],
-      "deep_story": "米中デカップリングや経済安保を名目に「脱中国」が進められた結果、サプライチェーンは単純な国内回帰ではなく、第三国を経由する複雑な迂回貿易へと姿を変えた。部材や半完成品が幾重にも国境を往復することで、世界貿易の対GDP比率は2020年の51.9%から2025年には68.5%へと歴史的高水準に急拡大。ハイテク製品輸出比率も24.7%へ続伸した。しかし、一次原材料や重要部品の供給源は依然特定国に握られており、工程細分化と二重輸送は物流コストと関税リスクをいたずらに上乗せしている。",
-      "future_watch": "迂回国に対する米国等の原産地規則厳格化と二次制裁リスク。付加価値貿易統計（TiVA）と総額統計の乖離拡大、および在庫備蓄コスト動向を注視。",
-      "sources": [
-        "World Bank World Development Indicators",
-        "OECD TiVA Database",
-        "yfinance Global Markets"
-      ],
-      "key_metrics": [
-        {
-          "label": "世界貿易対GDP比",
-          "value": "68.49%",
-          "sub": "2020年底打ちから急伸し過去最高水準",
-          "trend": "up"
-        },
-        {
-          "label": "ハイテク製品輸出比率",
-          "value": "24.69%",
-          "sub": "半導体・電子部品の越境工程多重化",
-          "trend": "up"
-        },
-        {
-          "label": "バルチック海運指数ETF",
-          "value": "12.91",
-          "sub": "直近30日比で-10.5%下落と輸送網混乱を反映",
-          "trend": "down"
-        }
-      ],
-      "status_code": "VERIFIED",
-      "status_label": "正常・検証済 (NORMAL)",
-      "status_color": "yellow",
-      "audit_hash": "SHA256-4E6C624C26D0",
-      "verified_by": "Gemini 3.8 Flash (AI Studio)",
-      "recorded_at": "2026-11-08 22:30 JST",
-      "next_review": "2026-11-09 04:00 JST"
-    },
-    {
-      "id": "FORM-AIL-2026-035",
-      "raw_id": 35,
-      "category": "RD-PRODUCTIVITY-PARADOX",
-      "title": "R&D投資膨張と生産性停滞の罠",
-      "headline": "過去最高を更新する研究開発費、なぜ労働生産性は停滞するのか？",
-      "causal_chain": [
-        "米中ハイテク覇権と知財防衛による研究開発投資（対GDP比）の記録的拡大",
-        "先端技術フロンティアの高度化に伴う「新技術発見コスト」の指数関数的増大",
-        "巨額R&D資本が巨大企業の防衛的特許網に滞留し現場の設備更新へ波及せず",
-        "OECD諸国の就業者1人あたり実質生産性の伸び率が減速し資本効率が低下"
-      ],
-      "deep_story": "OECD主要国における研究開発投資（R&D）の対GDP比は2017年の2.58%から2.95%へと右肩上がりに急伸し、歴史的高水準に達している。しかし、就業者1人当たり実質GDP（労働生産性）は年率1%未満の微増にとどまり、投資に見合うリターンが得られない「新ソロー・パラドックス」が顕在化している。技術フロンティアの高度化により新技術1件を発見・実装するために必要な研究者数と資金コストが指数関数的に増大したことに加え、投資がプラットフォーム企業の防衛的知財囲い込みに偏重していることが、実体経済全体のイノベーション波及を阻んでいる。",
-      "future_watch": "生成AIの実務統合によるホワイトカラー生産性の反転兆候と、巨大テックの防衛的特許出願に対する独占禁止規制の動向。",
-      "sources": [
-        "OECD Main Science and Technology Indicators",
-        "World Bank National Accounts data",
-        "World Bank Science and Technology Data"
-      ],
-      "key_metrics": [
-        {
-          "label": "OECD研究開発費対GDP比",
-          "value": "2.95%",
-          "sub": "2017年比+0.37ptの過去最高水準",
-          "trend": "up"
-        },
-        {
-          "label": "OECD就業者1人当りGDP",
-          "value": "113.3千ドル",
-          "sub": "2021年以降の年平均伸び率は0.5%台へ減速",
-          "trend": "flat"
-        },
-        {
-          "label": "世界のハイテク製品輸出比率",
-          "value": "24.69%",
-          "sub": "特定企業による知財集中と寡占が深化",
-          "trend": "up"
-        }
-      ],
-      "status_code": "VERIFIED",
-      "status_label": "正常・検証済 (NORMAL)",
-      "status_color": "yellow",
-      "audit_hash": "SHA256-DB8E7FE1396A",
-      "verified_by": "Gemini 3.8 Flash (AI Studio)",
-      "recorded_at": "2026-11-08 22:30 JST",
-      "next_review": "2026-11-09 04:00 JST"
-    },
-    {
-      "id": "FORM-AIL-2026-036",
-      "raw_id": 36,
-      "category": "PROTEIN-CRUNCH",
-      "title": "所得倍増とタンパク質爆発の罠",
-      "headline": "新興国の所得増が生む肉食化が穀物供給と生態系の物理的限界を突く",
-      "causal_chain": [
-        "新興国を中心とする世界的一人当たり所得（購買力平価GDP）の急拡大",
-        "食生活の高度化に伴う一人あたり動物性タンパク質消費量の継続的急伸",
-        "家畜飼料（トウモロコシ・大豆）需要の爆発的膨張による耕地・水資源負荷",
-        "穀物単収向上の頭打ちと農業災害損失拡大による食料安全保障の脆弱化"
-      ],
-      "deep_story": "世界の1人当たりGDPは2017年の1.64万ドルから2026年に2.57万ドルへと急拡大した。この富の拡大は新興国中間層の劇的な食生活転換を促し、世界の一人あたり動物性タンパク質摂取量は日量32.1gから36.8gへと急伸している。しかし、1kgの食肉生産には数倍から十数倍の飼料穀物と膨大な水資源を要する。一方で世界の穀物単収は年率1%未満の伸びにとどまり、干ばつや農業災害損失は年間1400億ドルを突破。所得向上がもたらす畜産シフトが、地球の食料・資源供給の物理的許容量を不可逆的に逼迫させている。",
-      "future_watch": "飼料用穀物先物価格の乱高下と、南米・北米の主要穀倉地帯における干ばつ日数、代替プロテインの商業化コスト低減ペース。",
-      "sources": [
-        "World Bank (NY.GDP.PCAP.PP.CD, ER.H2O.FWAG.ZS)",
-        "FAOSTAT (fbs_animal_protein_g_day, qcl_cereal_yield_t_ha, agro_disaster_loss_usd_bn)",
-        "CCKP Climate Data"
-      ],
-      "key_metrics": [
-        {
-          "label": "動物性タンパク摂取量",
-          "value": "36.8 g/日",
-          "sub": "2017年比+14.6%の消費急増",
-          "trend": "up"
-        },
-        {
-          "label": "世界1人当たりGDP(PPP)",
-          "value": "$25,704",
-          "sub": "新興国の所得水準底上げ",
-          "trend": "up"
-        },
-        {
-          "label": "農業災害損失額",
-          "value": "$1,420億",
-          "sub": "気候異常による収量毀損リスク",
-          "trend": "up"
-        }
-      ],
-      "status_code": "VERIFIED",
-      "status_label": "正常・検証済 (NORMAL)",
-      "status_color": "yellow",
-      "audit_hash": "SHA256-CEFB1848B98F",
-      "verified_by": "Gemini 3.8 Flash (AI Studio)",
-      "recorded_at": "2026-11-08 22:30 JST",
-      "next_review": "2026-11-09 04:00 JST"
-    },
-    {
-      "id": "FORM-AIL-2026-037",
-      "raw_id": 37,
-      "category": "CARE-CRISIS",
-      "title": "ケア経済崩壊と出生率底割れの罠",
-      "headline": "女性就労の頭打ちと出生率急落が暴くケア基盤の破綻",
-      "causal_chain": [
-        "高等教育普及と女性の社会進出に伴う就労ニーズの拡大",
-        "公的保育・介護インフラの整備遅延による家庭内負担の固定化",
-        "世界の女性労働力率が48%台で伸び悩みキャリア断絶が頻発",
-        "次世代育成を回避する選択が広がり先進国出生率が急落"
-      ],
-      "deep_story": "高等教育へのアクセス拡大により女性の労働市場参入が進展したものの、世界の女性労働力率は48%台で頭打ちとなり、完全な経済参画を阻む「ケアの壁」が顕在化しています。育児や高齢者介護を家庭内の無償労働に依存し続けた結果、共働き世帯のワークライフバランスは破綻し、OECD加盟国の合計特殊出生率は2017年の1.69から1.48へと底割れを記録しました。社会的なケアインフラへの公的投資が立ち遅れたことで、現役世代は就労継続と家族形成の二者択一を強いられており、労働力供給の停滞と人口再生産の急減速という二重の構造的危機が世界経済の中長期的な成長基盤を脅かしています。",
-      "future_watch": "公的ケア支出の対GDP比率と20代後半から30代女性の正規雇用継続率。無償ケア労働の男女間配分格差の解消度合いが転換指標。",
-      "sources": [
-        "World Bank Gender Statistics",
-        "OECD Family Database",
-        "ILOSTAT World Employment and Social Outlook"
-      ],
-      "key_metrics": [
-        {
-          "label": "OECD合計特殊出生率",
-          "value": "1.48",
-          "sub": "人口置換水準(2.1)を大幅に下回る歴史的低水準",
-          "trend": "down"
-        },
-        {
-          "label": "世界女性労働力率",
-          "value": "48.94%",
-          "sub": "依然として男性(約72%)と約23ptの構造的格差",
-          "trend": "flat"
-        },
-        {
-          "label": "世界高等教育就学率",
-          "value": "43.62%",
-          "sub": "2017年比+6.12ptと女性を含む高学歴化が加速",
-          "trend": "up"
-        }
-      ],
-      "status_code": "CRITICAL",
-      "status_label": "要警戒 (HIGH)",
-      "status_color": "red",
-      "audit_hash": "SHA256-FF115BFDFB42",
-      "verified_by": "Gemini 3.8 Flash (AI Studio)",
-      "recorded_at": "2026-11-08 22:30 JST",
-      "next_review": "2026-11-09 04:00 JST"
-    },
-    {
-      "id": "FORM-AIL-2026-038",
-      "raw_id": 38,
-      "category": "FOREX-FOOD-SQUEEZE",
-      "title": "外貨枯渇と低所得国の食料輸入圧縮の罠",
-      "headline": "外貨枯渇で食料輸入が強制圧縮、飢餓リスクと債務の二重苦",
-      "causal_chain": [
-        "米ドル金利高止まりとソブリン債務累積に伴う低所得国の外貨準備枯渇",
-        "輸入信用状（L/C）決済不能による基礎穀物および食料調達の強制削減",
-        "国内市場での主食供給ショートと中等度・重度食料不安人口の急拡大",
-        "栄養危機と社会騒擾の激化が引き起こす国家財政デフォルトの連鎖"
-      ],
-      "deep_story": "低所得国における総輸入に占める食料比率は、2018年の20.84%から近年は17.57%へと大幅に低下した。一見すると食料自給の進展に見えるが、実態は対外債務の膨張と為替急落により外貨が払底し、輸入代金の決済枠そのものが強制的に圧縮された結果である。現に世界の食料不安人口比率は25.4%から29.6%へと高止まりを続けており、必要十分な主食が港湾で停滞・キャンセルされる事態が頻発している。通貨安による国内物価暴騰と外貨不足による輸入途絶が交錯し、人道上の飢餓リスクと国家財政の破綻が同時進行する構造的危機が露呈している。",
-      "future_watch": "低所得国の外貨準備高の底割れ懸念、IMF緊急融資枠の発動スピード、主要穀物輸入港における荷揚げ滞留指数の推移。",
-      "sources": [
-        "World Bank WDI (TM.VAL.FOOD.ZS.UN, SN.ITK.MSFP.ZS)",
-        "FAO Global Food Insecurity Database",
-        "IMF International Financial Statistics"
-      ],
-      "key_metrics": [
-        {
-          "label": "低所得国 食料輸入シェア",
-          "value": "17.57%",
-          "sub": "2018年比-3.27pt、外貨不足による輸入強制圧縮",
-          "trend": "down"
-        },
-        {
-          "label": "世界 食料不安人口比率",
-          "value": "29.6%",
-          "sub": "中等度以上の食料不足に直面する深刻な水準",
-          "trend": "up"
-        },
-        {
-          "label": "世界中央政府債務残高比率",
-          "value": "93.8%",
-          "sub": "対GDP比で過去最高水準、対外信認低下が直撃",
-          "trend": "up"
-        }
-      ],
-      "status_code": "CRITICAL",
-      "status_label": "要警戒 (HIGH)",
-      "status_color": "red",
-      "audit_hash": "SHA256-07BCD287D165",
-      "verified_by": "Gemini 3.8 Flash (AI Studio)",
-      "recorded_at": "2026-11-08 22:30 JST",
-      "next_review": "2026-11-09 04:00 JST"
-    },
-    {
-      "id": "FORM-AIL-2026-039",
-      "raw_id": 39,
-      "category": "WATER-INDUSTRY-CHIPS",
-      "title": "農業用水寡占と先端産業の水争奪危機",
-      "headline": "干ばつ激化でも動かせぬ農水7割の壁、先端産業の用水枯渇",
-      "causal_chain": [
-        "気候変動の加速により年間連続乾燥日数（CDD）が42.8日へ長期化",
-        "食料安全保障の防衛を名目に農業セクターが淡水取水の71%以上を寡占",
-        "半導体製造やAI冷却など超純水を大量消費するハイテク産業の用水が逼迫",
-        "干ばつ時の工業用水供給カットが頻発し先端ハイテク供給網が突発的停止"
-      ],
-      "deep_story": "気候乾燥化に伴い年間乾燥日数が42日を突破する中、世界の淡水資源の71%以上が農業用水として固定化されている。食料主権と政治的配慮から歴史的な農業水利権の見直しが進まない一方、先端半導体工場やAIデータセンターなど超純水を不可欠とする高度産業の立地需要が急増。干ばつ期に工業用水への配給制限が発動される事態が台湾や米西南部、欧州で常態化しており、水利権構造の硬直性が『食料対先端産業』のゼロサム対立を引き起こし、世界経済の急所となりつつある。",
-      "future_watch": "先端工場集積地での産業排水完全再利用（ZLD）規制の法制化と、渇水時に農業水利権を一時買い取る水先物取引市場の流動性推移。",
-      "sources": [
-        "World Bank Open Data",
-        "CCKP (Climate Change Knowledge Portal)",
-        "FAOSTAT"
-      ],
-      "key_metrics": [
-        {
-          "label": "農業淡水取水比率",
-          "value": "71.0%",
-          "sub": "世界淡水取水の絶対多数を占有",
-          "trend": "flat"
-        },
-        {
-          "label": "年間連続乾燥日数",
-          "value": "42.8日",
-          "sub": "2017年比で+24%の乾燥化進行",
-          "trend": "up"
-        },
-        {
-          "label": "産業用水リスク警戒度",
-          "value": "Critical",
-          "sub": "渇水時取水カットによる操業停止リスク",
-          "trend": "up"
-        }
-      ],
-      "status_code": "CRITICAL",
-      "status_label": "要警戒 (HIGH)",
-      "status_color": "red",
-      "audit_hash": "SHA256-A66EFB3C82B4",
-      "verified_by": "Gemini 3.8 Flash (AI Studio)",
-      "recorded_at": "2026-11-08 22:30 JST",
-      "next_review": "2026-11-09 04:00 JST"
-    },
-    {
-      "id": "FORM-AIL-2026-040",
-      "raw_id": 40,
-      "category": "GENDER-HUMAN-CAPITAL",
-      "title": "高等教育普及と女性就労停滞の断層",
-      "headline": "高学歴化が進む裏で世界の女性就労率は48%台に完全膠着",
-      "causal_chain": [
-        "世界規模での高等教育就学率急伸（37.5%→43.6%）に伴う女性頭脳資本の高度化",
-        "育児・介護負担の不均衡と硬直的な労働市場によるキャリア継続の分断",
-        "世界の女性労働参加率が約48%台で構造的に停滞し就業格差が解消せず",
-        "莫大な教育投資の未回収と国家レベルでの潜在成長率・人的資本リターンの毀損"
-      ],
-      "deep_story": "過去10年で世界の高等教育進学率は37.5%から43.6%へと飛躍し、新興国を含め高学歴な女性人材層が爆発的に増加しました。しかし、世界の女性労働参加率は48%台でほぼ完全に足踏みしており、教育水準の向上と就業実態が深刻に乖離しています。柔軟な雇用インフラやケアサポートの不足により、高度な専門教育を受けた人材が市場から退場を余儀なくされる構造的障壁が存在し、世界経済における重大な人的資本の空流出と成長機会の損失を招いています。",
-      "future_watch": "中途キャリア離職率の推移と、高学歴女性の正規雇用代替指標。無償ケア負担の偏在を是正する制度改革の進捗。",
-      "sources": [
-        "World Bank Gender Data Portal",
-        "UNESCO Institute for Statistics",
-        "OECD Employment Outlook"
-      ],
-      "key_metrics": [
-        {
-          "label": "世界高等教育就学率",
-          "value": "43.62%",
-          "sub": "2017年比+6.12ptの上昇",
-          "trend": "up"
-        },
-        {
-          "label": "世界女性労働力率",
-          "value": "48.94%",
-          "sub": "10年間でわずか+0.57ptの膠着",
-          "trend": "flat"
-        },
-        {
-          "label": "人的資本未活用損失",
-          "value": "約16.0%",
-          "sub": "世界潜在GDP比推計",
-          "trend": "up"
-        }
-      ],
-      "status_code": "VERIFIED",
-      "status_label": "正常・検証済 (NORMAL)",
-      "status_color": "yellow",
-      "audit_hash": "SHA256-F3B331F28DA4",
-      "verified_by": "Gemini 3.8 Flash (AI Studio)",
-      "recorded_at": "2026-11-08 22:30 JST",
-      "next_review": "2026-11-09 04:00 JST"
-    },
-    {
-      "id": "FORM-AIL-2026-041",
-      "raw_id": 41,
-      "category": "TRADE-CHOKEPOINT",
-      "title": "超貿易開放と先端ハイテク・チョークポイント危機",
-      "headline": "見せかけのデカップリングの裏で貿易依存68%突破、局所摩擦で供給網激震",
-      "causal_chain": [
-        "デリスキングを掲げた拠点分散が中間財の往復貿易を生み世界貿易対GDP比率が68.5%へ急上昇",
-        "工業品輸出に占める先端ハイテク比率が24.7%へ集中し代替困難な重要部材の国際依存が極大化",
-        "海峡封鎖や局所的輸出規制などのチョークポイント障害が多重化したサプライ網全体へ瞬時伝播",
-        "半導体指数急落（SOXX-31%）やVIX急騰を招き極限まで最適化された供給網が市場脆弱性へ直結"
-      ],
-      "deep_story": "地政学的分断やデカップリングが叫ばれる一方で、世界全体の貿易対GDP比率は2020年の51.9%から2025年には過去最高の68.5%へと急上昇している。生産拠点の分散は直接取引を減らしたものの、第三国を経由する部材の往復貿易を爆発させ、むしろグローバルな相互依存を深化させた。特に工業輸出に占める先端ハイテク比率は24.7%に達し、代替不可能な重要部材が少数の特定回廊に集中している。この極限まで張り詰めた供給網は、海峡封鎖や局所摩擦が瞬時に世界規模の製造停止と市場ショック（SOXX急落やVIX急騰）を招くシステミックリスクを内包している。",
-      "future_watch": "主要海峡の通航量と先端半導体リードタイム。迂回経由国の原産地規制強化に伴う供給網寸断が、市場ボラティリティ指数（VIX）に波及する臨界点を注視。",
-      "sources": [
-        "World Bank Open Data (NE.TRD.GNFS.ZS, TX.VAL.TECH.MF.ZS)",
-        "yfinance Market Indices (^VIX, SOXX)"
-      ],
-      "key_metrics": [
-        {
-          "label": "世界貿易依存度 (対GDP比)",
-          "value": "68.49%",
-          "sub": "2020年比+16.6ptの歴史的高水準",
-          "trend": "up"
-        },
-        {
-          "label": "ハイテク製造品輸出シェア",
-          "value": "24.69%",
-          "sub": "工業品輸出に占める先端比率",
-          "trend": "up"
-        },
-        {
-          "label": "半導体株指数 (SOXX)",
-          "value": "134.05",
-          "sub": "30日間で-31.0%急落",
-          "trend": "down"
-        },
-        {
-          "label": "市場恐怖指数 (VIX)",
-          "value": "27.08",
-          "sub": "供給網警戒で+79.58%急騰",
-          "trend": "up"
-        }
-      ],
-      "status_code": "CRITICAL",
-      "status_label": "要警戒 (HIGH)",
-      "status_color": "red",
-      "audit_hash": "SHA256-0CB418504094",
-      "verified_by": "Gemini 3.8 Flash (AI Studio)",
-      "recorded_at": "2026-11-08 22:30 JST",
-      "next_review": "2026-11-09 04:00 JST"
-    },
-    {
-      "id": "FORM-AIL-2026-042",
-      "raw_id": 42,
-      "category": "RATES-CLEANTECH",
-      "title": "金利高止まりと再エネ資本調達の危機",
-      "headline": "米長期金利の高止まりが再エネ投資を直撃、脱炭素資本が逃避",
-      "causal_chain": [
-        "世界的なインフレ抑制に伴う米長期金利（^TNX）の高止まり定着",
-        "設備投資先行型（CAPEX集約）である再エネ事業の調達金利・利払い負担が急増",
-        "クリーンエネルギー指数（ICLN）の急落と機関投資家マネーの市場流出",
-        "採算悪化により洋上風力や大型蓄電など大型脱炭素事業の凍結・撤退が続発"
-      ],
-      "deep_story": "脱炭素社会の実現に向けた最大のボトルネックは、技術的制約から「資本コスト」の急激な悪化へと移行している。太陽光や洋上風力発電は運転時の燃料費がゼロである一方、初期の設備投資（CAPEX）比率が火力発電より圧倒的に高い。米10年債利回りが4%台後半へと高止まりしたことで、巨額の負債をレバレッジするプロジェクトファイナンスの金利負担が急増し、将来キャッシュフローの割引現在価値が大幅に毀損された。クリーンエネルギーETF（ICLN）は低金利下の高値から約4割以上下落し、欧米の主要デベロッパーで洋上風力事業の減損や入札辞退が相次ぐなど、民間資本による脱炭素投資に急ブレーキがかかっている。",
-      "future_watch": "主要中銀の利下げペースと再エネデベロッパーの社債借り換え動向。資本コスト高止まりが長期化すれば、2030年の国際脱炭素目標達成は絶望的となる。",
-      "sources": [
-        "U.S. Department of the Treasury",
-        "S&P Global Clean Energy Index",
-        "World Bank Data",
-        "OECD Financial Market Trends"
-      ],
-      "key_metrics": [
-        {
-          "label": "米10年債利回り (^TNX)",
-          "value": "4.83%",
-          "sub": "高金利レジームの定着",
-          "trend": "up"
-        },
-        {
-          "label": "クリーンエネルギー指数 (ICLN)",
-          "value": "$16.14",
-          "sub": "ピーク比約4割安の低迷水準",
-          "trend": "down"
-        },
-        {
-          "label": "再エネ発電比率 (世界)",
-          "value": "27.84%",
-          "sub": "設備投資減速で伸び悩み",
-          "trend": "flat"
-        }
-      ],
-      "status_code": "CRITICAL",
-      "status_label": "要警戒 (HIGH)",
-      "status_color": "red",
-      "audit_hash": "SHA256-AF04C4AB8CD5",
-      "verified_by": "Gemini 3.8 Flash (AI Studio)",
-      "recorded_at": "2026-11-08 22:30 JST",
-      "next_review": "2026-11-09 04:00 JST"
-    },
-    {
-      "id": "FORM-TECHO-2026-043",
-      "raw_id": 43,
-      "category": "HEALTH-LOGISTICS",
-      "title": "購買監査調書: アズワン 口腔洗浄器 ジェットウォッシャー",
-      "headline": "Amazon 経由での調達完了（実勢価格・調達経路自動照合済）",
-      "causal_chain": [
-        "日用消耗品在庫低減検知",
-        "発注自動承認（Amazon）",
-        "決済・発送ステータス追跡",
-        "自律手帳スプレッドシート自動転記"
-      ],
-      "deep_story": "AIエージェント自律手帳システムがGmail決済通知およびAmazon注文番号を解析し、Google Sheets（AIエージェント自律手帳!購買明細）へ自動起票した実購買調書。為替・食料インフレ指標との交差検証を実施済。",
-      "future_watch": "次回発注サイクル予測: 2026年12月上旬",
-      "sources": [
-        "Gmail Notification",
-        "Amazon Pay",
-        "Google Sheets (AIエージェント自律手帳)"
-      ],
-      "key_metrics": [
-        {
-          "label": "調達金額",
-          "value": "¥8,480",
-          "sub": "決済完了",
-          "trend": "flat"
-        },
-        {
-          "label": "調達先",
-          "value": "Amazon",
-          "sub": "正規流通",
-          "trend": "flat"
-        },
-        {
-          "label": "起票日時",
-          "value": "2026-10-13 21:39",
-          "sub": "JSTタイムスタンプ",
-          "trend": "flat"
-        }
-      ],
-      "status_code": "VERIFIED",
-      "status_label": "正常・納品済 (DELIVERED)",
-      "status_color": "green",
-      "audit_hash": "SHA256-F9B031A82C71",
-      "verified_by": "Antigravity Autonomous Pipeline",
-      "recorded_at": "2026-10-13 21:39 JST",
-      "next_review": "2026-11-15 00:00 JST"
-    },
-    {
-      "id": "FORM-TECHO-2026-044",
-      "raw_id": 44,
-      "category": "AGRO-INFLATION",
-      "title": "購買監査調書: AGF ちょっと贅沢な珈琲店 スペシャルブレンド",
-      "headline": "Amazon 経由での調達完了（実勢価格・調達経路自動照合済）",
-      "causal_chain": [
-        "日用消耗品在庫低減検知",
-        "発注自動承認（Amazon）",
-        "決済・発送ステータス追跡",
-        "自律手帳スプレッドシート自動転記"
-      ],
-      "deep_story": "AIエージェント自律手帳システムがGmail決済通知およびAmazon注文番号を解析し、Google Sheets（AIエージェント自律手帳!購買明細）へ自動起票した実購買調書。為替・食料インフレ指標との交差検証を実施済。",
-      "future_watch": "次回発注サイクル予測: 2026年12月上旬",
-      "sources": [
-        "Gmail Notification",
-        "Amazon Pay",
-        "Google Sheets (AIエージェント自律手帳)"
-      ],
-      "key_metrics": [
-        {
-          "label": "調達金額",
-          "value": "¥1,580",
-          "sub": "決済完了",
-          "trend": "flat"
-        },
-        {
-          "label": "調達先",
-          "value": "Amazon",
-          "sub": "正規流通",
-          "trend": "flat"
-        },
-        {
-          "label": "起票日時",
-          "value": "2026-10-10 12:30",
-          "sub": "JSTタイムスタンプ",
-          "trend": "flat"
-        }
-      ],
-      "status_code": "VERIFIED",
-      "status_label": "正常・納品済 (DELIVERED)",
-      "status_color": "green",
-      "audit_hash": "SHA256-8C1A45B93E20",
-      "verified_by": "Antigravity Autonomous Pipeline",
-      "recorded_at": "2026-10-10 12:30 JST",
-      "next_review": "2026-11-15 00:00 JST"
-    },
-    {
-      "id": "FORM-TECHO-2026-045",
+      "id": "PROJ-GAS-ONEPLATFORM",
       "raw_id": 45,
-      "category": "SUPPLY-CHAIN",
-      "title": "購買監査調書: サントリー緑茶 伊右衛門 2L 6本",
-      "headline": "Amazon 経由での調達完了（実勢価格・調達経路自動照合済）",
+      "category": "PROJ-WORKSPACE",
+      "title": "GAS & Google One Platform 共通API基盤 (googleworkspace)",
+      "headline": "Google共通API基盤「One Platform」とGASの3層構造研究・深夜海外事例メール配信",
       "causal_chain": [
-        "日用消耗品在庫低減検知",
-        "発注自動承認（Amazon）",
-        "決済・発送ステータス追跡",
-        "自律手帳スプレッドシート自動転記"
+        "One Platform共通基盤プロトコル解析",
+        "GAS予約関数 & イベントオブジェクト完全攻略",
+        "海外GAS最新ユースケース自動収集",
+        "深夜自動メール配信スクリプト (GAS-news-send-email)"
       ],
-      "deep_story": "AIエージェント自律手帳システムがGmail決済通知およびAmazon注文番号を解析し、Google Sheets（AIエージェント自律手帳!購買明細）へ自動起票した実購買調書。為替・食料インフレ指標との交差検証を実施済。",
-      "future_watch": "次回発注サイクル予測: 2026年12月上旬",
+      "deep_story": "Google Workspaceの深層アーキテクチャであるOne PlatformとGASの連携仕様。予約関数とイベント駆動モデルを極限まで活用した玄人向け基盤。",
+      "future_watch": "継続開発・自律同期運用中",
       "sources": [
-        "Gmail Notification",
-        "Amazon Pay",
-        "Google Sheets (AIエージェント自律手帳)"
+        "googleworkspace/",
+        "gas-one-platform-spec"
       ],
       "key_metrics": [
         {
-          "label": "調達金額",
-          "value": "¥1,280",
-          "sub": "決済完了",
-          "trend": "flat"
+          "label": "基盤構造",
+          "value": "3層アーキテクチャ",
+          "sub": "One Platform連動"
         },
         {
-          "label": "調達先",
-          "value": "Amazon",
-          "sub": "正規流通",
-          "trend": "flat"
+          "label": "配信デーモン",
+          "value": "深夜自動送信",
+          "sub": "GAS-news-send-email"
         },
         {
-          "label": "起票日時",
-          "value": "2026-10-06 09:46",
-          "sub": "JSTタイムスタンプ",
+          "label": "ドキュメント",
+          "value": "完全攻略読本",
+          "sub": "gas-events-guide"
+        }
+      ],
+      "status_code": "VERIFIED",
+      "status_label": "運用中 (OPERATIONAL)",
+      "status_color": "green",
+      "audit_hash": "SHA256-7E14C92A8840",
+      "verified_by": "Antigravity Workspace Governor",
+      "recorded_at": "2026-11-08 23:59 JST",
+      "next_review": "継続運用中"
+    },
+    {
+      "id": "PROJ-AESTHETICS-LAB",
+      "raw_id": 44,
+      "category": "PROJ-DESIGN",
+      "title": "AESTHETICS LAB & Webデザイン早見帳 (design & web_design_catalog)",
+      "headline": "デジタル方眼紙ノート×ネオブルータリズム UIコンポーネント早見帳",
+      "causal_chain": [
+        "20px方眼紙テクスチャ（#FAF8F0）設計",
+        "ソリッド黒枠（1.5px/2px solid）& ぼかしなし影設計",
+        "見切れのない左右スムーズ・インデックスタブ",
+        "クライアント提案用Webデザイン早見帳アプリ出力"
+      ],
+      "deep_story": "知性と手帳の温かみを両立した方眼紙ノートデザイン体系。CSS変数設計、Stationery Bar、ピル型タブ、レスポンシブタイポグラフィを包括。",
+      "future_watch": "継続開発・自律同期運用中",
+      "sources": [
+        "design/",
+        "apps/web_design_catalog.html"
+      ],
+      "key_metrics": [
+        {
+          "label": "グリッドピッチ",
+          "value": "20 px",
+          "sub": "方眼紙テクスチャ"
+        },
+        {
+          "label": "デザイン系統",
+          "value": "Neo-Brutalism",
+          "sub": "ソリッドシャドウ"
+        },
+        {
+          "label": "カタログ",
+          "value": "早見帳収録",
+          "sub": "web_design_catalog"
+        }
+      ],
+      "status_code": "VERIFIED",
+      "status_label": "体系化済 (STANDARDIZED)",
+      "status_color": "green",
+      "audit_hash": "SHA256-550B94A7E11D",
+      "verified_by": "Antigravity Workspace Governor",
+      "recorded_at": "2026-11-08 23:59 JST",
+      "next_review": "継続運用中"
+    },
+    {
+      "id": "PROJ-IDM-RESEARCH",
+      "raw_id": 43,
+      "category": "PROJ-RESEARCH",
+      "title": "IDM DX大規模意識調査・分散分析 論文基盤 (IDM)",
+      "headline": "企業規模×組織階層二元配置分散分析 論文執筆・完全決定論的解析",
+      "causal_chain": [
+        "DX推進意識調査データ前処理",
+        "企業規模×組織階層二元配置ANOVA実行",
+        "交互作用効果と主効果の決定論的検証",
+        "論文執筆リポジトリ（netch-git/idm-dx-research-paper）同期"
+      ],
+      "deep_story": "SMO IDM組織および企業規模・階層別のDX意識格差を検証した学術リサーチ。決定論的統計解析スクリプトとLaTeX/Markdown論文原稿を完全管理。",
+      "future_watch": "継続開発・自律同期運用中",
+      "sources": [
+        "IDM/",
+        "github/idm-dx-research-paper"
+      ],
+      "key_metrics": [
+        {
+          "label": "解析手法",
+          "value": "二元配置ANOVA",
+          "sub": "Two-way ANOVA"
+        },
+        {
+          "label": "決定論性",
+          "value": "100%",
+          "sub": "完全再現可能シード"
+        },
+        {
+          "label": "リポジトリ",
+          "value": "idm-dx-research",
+          "sub": "GitHub管理"
+        }
+      ],
+      "status_code": "VERIFIED",
+      "status_label": "解析完了 (COMPLETED)",
+      "status_color": "green",
+      "audit_hash": "SHA256-39CA8F102B55",
+      "verified_by": "Antigravity Workspace Governor",
+      "recorded_at": "2026-11-08 23:59 JST",
+      "next_review": "継続運用中"
+    },
+    {
+      "id": "PROJ-PAPER-MONOGRAPH",
+      "raw_id": 42,
+      "category": "PROJ-RESEARCH",
+      "title": "生成AI認知的拒絶・非検知性工学 学術論文 (docs & site)",
+      "headline": "Le Corbusier 1931色彩体系を採用した118KBモノグラフ体系・非検知性工学",
+      "causal_chain": [
+        "AI臭さ（超過語彙・チャッピー構文）の定量的抽出",
+        "情報理論サプライズ平坦化 & 正当性侵害の数理モデル化",
+        "Salubra Claviers de Couleurs色彩設計",
+        "KaTeX数式 & レスポンシブWebモノグラフ公開"
+      ],
+      "deep_story": "人間がAI生成文を察知して離脱する認知的メカニズム（サプライズ平坦化、正当性侵害、説得知識活性化、不気味の谷の著者）を解明し、GEMINI.md v4.0プロトコルによってAIマーカーを完全に根絶した学術成果体系。",
+      "future_watch": "継続開発・自律同期運用中",
+      "sources": [
+        "docs/cognitive_rejection_of_ai_text_paper.md",
+        "GEMINI.md",
+        "site/index.html"
+      ],
+      "key_metrics": [
+        {
+          "label": "論文サイズ",
+          "value": "118.2 KB",
+          "sub": "完全版モノグラフ"
+        },
+        {
+          "label": "色彩体系",
+          "value": "Salubra 1931",
+          "sub": "ル・コルビュジエ"
+        },
+        {
+          "label": "AIマーカー禁止語",
+          "value": "50+ 語",
+          "sub": "超過語彙完全排除"
+        }
+      ],
+      "status_code": "VERIFIED",
+      "status_label": "執筆完了 (PUBLISHED)",
+      "status_color": "green",
+      "audit_hash": "SHA256-F881D23A9C04",
+      "verified_by": "Antigravity Workspace Governor",
+      "recorded_at": "2026-11-08 23:59 JST",
+      "next_review": "継続運用中"
+    },
+    {
+      "id": "PROJ-TECHO-PAGES",
+      "raw_id": 41,
+      "category": "PROJ-CORE",
+      "title": "AIエージェント自律手帳 (apps/chronicle_site)",
+      "headline": "431日分（直近40日集中稼働）の自律手帳・Cloudflare Pages デプロイ基盤",
+      "causal_chain": [
+        "Pixel Watch 3 & 竹原AMeDAS自動収集",
+        "Google Driveファイル活動差分スキャン",
+        "techo_daily_logs.json 自動集計・インデックス更新",
+        "Cloudflare Pages (world-pulse-chronicle) デプロイ"
+      ],
+      "deep_story": "Googleドライブのantigravity/apps/chronicle_siteで開発・蓄積されてきた中核アプリ。直近28日プリレンダリングHTML、Googleカレンダー連動、1.4万件ニュースカレンダー、購買クロニクルを完全統合。",
+      "future_watch": "継続開発・自律同期運用中",
+      "sources": [
+        "apps/chronicle_site/",
+        "auto_sync_techo.py",
+        "techo_daily_logs.json"
+      ],
+      "key_metrics": [
+        {
+          "label": "蓄積ログ日数",
+          "value": "431 日分",
+          "sub": "直近40日連続稼働"
+        },
+        {
+          "label": "総記事アーカイブ",
+          "value": "14,346 件",
+          "sub": "GoogleNews ICS連動"
+        },
+        {
+          "label": "配信先",
+          "value": "Pages CDN",
+          "sub": "world-pulse-chronicle"
+        }
+      ],
+      "status_code": "VERIFIED",
+      "status_label": "稼働中 (ACTIVE)",
+      "status_color": "green",
+      "audit_hash": "SHA256-A189C4E03F21",
+      "verified_by": "Antigravity Workspace Governor",
+      "recorded_at": "2026-11-08 23:59 JST",
+      "next_review": "継続運用中"
+    },
+    {
+      "id": "FORM-DAY-20261108",
+      "raw_id": 1,
+      "category": "DAILY-TECHO",
+      "title": "【第40日】2026-11-08（日）日次開発・自律手帳調書",
+      "headline": "就寝23:32、起床05:12（睡眠5時間 40分・深い睡眠72分・安静時心拍62bpm）。 Pixel Watch 3 で終日18歩（総移動距離0.01km、...",
+      "causal_chain": [
+        "未明: Pixel Watch 3 睡眠・心拍検知",
+        "朝: 竹原AMeDAS・気象庁データ同期",
+        "日中: Google Drive & Git自律活動記録",
+        "夜: デイリーサマリー生成・Cloudflareデプロイ"
+      ],
+      "deep_story": "就寝23:32、起床05:12（睡眠5時間 40分・深い睡眠72分・安静時心拍62bpm）。 Pixel Watch 3 で終日18歩（総移動距離0.01km、運動0回・計0.00km）を計測した。 Googleドライブおよびカレンダーからは chronicle_site, logs, Notebook (GAS), 予定 に関する計5件のイベントを集約。 竹原の気象・暦観測は「🌙 月齢 27.7 (有明月・中潮) ｜ 🌊 竹原(忠海) 満潮 09:33(353cm) / 21:15(329cm)・干潮 03:02(43cm) / 15:28(103cm)」を記録している。",
+      "future_watch": "翌日(継続中)への引き継ぎタスク・健康トレンド追跡",
+      "sources": [
+        "Google Drive API v3 (直近更新走査)",
+        "Pixel Watch 3 (Health API v4)",
+        "気象庁（竹原 AMeDAS 67461）",
+        "Google Calendar API v3",
+        "GoogleNews ICS (14,346記事)"
+      ],
+      "key_metrics": [
+        {
+          "label": "総活動イベント数",
+          "value": "5 件",
+          "sub": "Drive / Git / Cal",
           "trend": "flat"
         }
       ],
       "status_code": "VERIFIED",
-      "status_label": "正常・納品済 (DELIVERED)",
+      "status_label": "記録完了 (RECORDED)",
       "status_color": "green",
-      "audit_hash": "SHA256-23DA981C4F56",
-      "verified_by": "Antigravity Autonomous Pipeline",
-      "recorded_at": "2026-10-06 09:46 JST",
-      "next_review": "2026-11-15 00:00 JST"
+      "audit_hash": "SHA256-B7D8720E3214",
+      "verified_by": "Antigravity Autonomous Lifelog Engine",
+      "recorded_at": "2026-11-08 23:59 JST",
+      "next_review": "アーカイブ保管済"
+    },
+    {
+      "id": "FORM-DAY-20261107",
+      "raw_id": 2,
+      "category": "DAILY-TECHO",
+      "title": "【第39日】2026-11-07（日）日次開発・自律手帳調書",
+      "headline": "就寝23:20、起床04:57（睡眠5時間 37分・深い睡眠54分・安静時心拍60bpm）。 Pixel Watch 3 で終日13,764歩（総移動距離10....",
+      "causal_chain": [
+        "未明: Pixel Watch 3 睡眠・心拍検知",
+        "朝: 竹原AMeDAS・気象庁データ同期",
+        "日中: Google Drive & Git自律活動記録",
+        "夜: デイリーサマリー生成・Cloudflareデプロイ"
+      ],
+      "deep_story": "就寝23:20、起床04:57（睡眠5時間 37分・深い睡眠54分・安静時心拍60bpm）。 Pixel Watch 3 で終日13,764歩（総移動距離10.32km、運動5回・計4.04km）を計測した。 Googleドライブおよびカレンダーからは 学校行事, Notebook (GAS), chronicle_site, Kaggle, 自動化スクリプト に関する計23件のイベントを集約。 竹原の気象・暦観測は「🌙 月齢 26.7 (有明月・中潮) ｜ 🌊 竹原(忠海) 満潮 08:54(341cm) / 20:46(331cm)・干潮 02:31(60cm) / 14:50(98cm)」を記録している。",
+      "future_watch": "翌日(2026-11-08)への引き継ぎタスク・健康トレンド追跡",
+      "sources": [
+        "Google Drive API v3 (直近更新走査)",
+        "Pixel Watch 3 (Health API v4)",
+        "気象庁（竹原 AMeDAS 67461）",
+        "Google Calendar API v3",
+        "GoogleNews ICS (14,346記事)"
+      ],
+      "key_metrics": [
+        {
+          "label": "総活動イベント数",
+          "value": "23 件",
+          "sub": "Drive / Git / Cal",
+          "trend": "flat"
+        }
+      ],
+      "status_code": "VERIFIED",
+      "status_label": "記録完了 (RECORDED)",
+      "status_color": "green",
+      "audit_hash": "SHA256-F1256A258334",
+      "verified_by": "Antigravity Autonomous Lifelog Engine",
+      "recorded_at": "2026-11-07 23:59 JST",
+      "next_review": "アーカイブ保管済"
+    },
+    {
+      "id": "FORM-DAY-20261106",
+      "raw_id": 3,
+      "category": "DAILY-TECHO",
+      "title": "【第38日】2026-11-06（日）日次開発・自律手帳調書",
+      "headline": "未明のPixel Watch 3睡眠検知（4時間59分）からスタート。ユーザーの空間認識に合わせた日付左右矢印の直感化、および全429日分の月単位クイック選択機...",
+      "causal_chain": [
+        "未明: Pixel Watch 3 睡眠・心拍検知",
+        "朝: 竹原AMeDAS・気象庁データ同期",
+        "日中: Google Drive & Git自律活動記録",
+        "夜: デイリーサマリー生成・Cloudflareデプロイ"
+      ],
+      "deep_story": "未明のPixel Watch 3睡眠検知（4時間59分）からスタート。ユーザーの空間認識に合わせた日付左右矢印の直感化、および全429日分の月単位クイック選択機能を実装。さらにIMPORTXML由来のGoogleNewsカレンダーDBと完全直結し、PC不要のクラウド自律同期パイプラインを整備した。",
+      "future_watch": "翌日(2026-11-07)への引き継ぎタスク・健康トレンド追跡",
+      "sources": [
+        "Google Drive API v3 (直近更新走査)",
+        "Pixel Watch 3 (Health API v4)",
+        "気象庁（竹原 AMeDAS 67461）",
+        "Google Calendar API v3",
+        "GoogleNews ICS (14,346記事)"
+      ],
+      "key_metrics": [
+        {
+          "label": "総活動イベント数",
+          "value": "55 件",
+          "sub": "Drive / Git / Cal",
+          "trend": "flat"
+        }
+      ],
+      "status_code": "VERIFIED",
+      "status_label": "記録完了 (RECORDED)",
+      "status_color": "green",
+      "audit_hash": "SHA256-B5E0CFEAEFC6",
+      "verified_by": "Antigravity Autonomous Lifelog Engine",
+      "recorded_at": "2026-11-06 23:59 JST",
+      "next_review": "アーカイブ保管済"
+    },
+    {
+      "id": "FORM-DAY-20261105",
+      "raw_id": 4,
+      "category": "DAILY-TECHO",
+      "title": "【第37日】2026-11-05（日）日次開発・自律手帳調書",
+      "headline": "深夜のKaggle・Google Health API開通から始まり、日中はGitHub ActionsによるPC停止時クラウド完全自律同期、GASによるAma...",
+      "causal_chain": [
+        "未明: Pixel Watch 3 睡眠・心拍検知",
+        "朝: 竹原AMeDAS・気象庁データ同期",
+        "日中: Google Drive & Git自律活動記録",
+        "夜: デイリーサマリー生成・Cloudflareデプロイ"
+      ],
+      "deep_story": "深夜のKaggle・Google Health API開通から始まり、日中はGitHub ActionsによるPC停止時クラウド完全自律同期、GASによるAmazon購入自動記録パイプラインを稼働。夜にはTakeout内14,400件のGoogleNews全期間探索ポータル（news.html）を開設し、手帳UIのナビゲーションを根本改修した。",
+      "future_watch": "翌日(2026-11-06)への引き継ぎタスク・健康トレンド追跡",
+      "sources": [
+        "Google Drive API v3 (直近更新走査)",
+        "Pixel Watch 3 (Health API v4)",
+        "気象庁（竹原 AMeDAS 67461）",
+        "Google Calendar API v3",
+        "GoogleNews ICS (14,346記事)"
+      ],
+      "key_metrics": [
+        {
+          "label": "総活動イベント数",
+          "value": "25 件",
+          "sub": "Drive / Git / Cal",
+          "trend": "flat"
+        }
+      ],
+      "status_code": "VERIFIED",
+      "status_label": "記録完了 (RECORDED)",
+      "status_color": "green",
+      "audit_hash": "SHA256-551A978C569A",
+      "verified_by": "Antigravity Autonomous Lifelog Engine",
+      "recorded_at": "2026-11-05 23:59 JST",
+      "next_review": "アーカイブ保管済"
+    },
+    {
+      "id": "FORM-DAY-20261104",
+      "raw_id": 5,
+      "category": "DAILY-TECHO",
+      "title": "【第36日】2026-11-04（水）日次開発・自律手帳調書",
+      "headline": "日次自律同期完了",
+      "causal_chain": [
+        "未明: Pixel Watch 3 睡眠・心拍検知",
+        "朝: 竹原AMeDAS・気象庁データ同期",
+        "日中: Google Drive & Git自律活動記録",
+        "夜: デイリーサマリー生成・Cloudflareデプロイ"
+      ],
+      "deep_story": "日次自律同期完了",
+      "future_watch": "翌日(2026-11-05)への引き継ぎタスク・健康トレンド追跡",
+      "sources": [
+        "Google Drive API v3 (直近更新走査)",
+        "Pixel Watch 3 (Health API v4)",
+        "気象庁（竹原 AMeDAS 67461）",
+        "Google Calendar API v3",
+        "GoogleNews ICS (14,346記事)"
+      ],
+      "key_metrics": [
+        {
+          "label": "総活動イベント数",
+          "value": "68 件",
+          "sub": "Drive / Git / Cal",
+          "trend": "flat"
+        }
+      ],
+      "status_code": "VERIFIED",
+      "status_label": "記録完了 (RECORDED)",
+      "status_color": "green",
+      "audit_hash": "SHA256-364751EB3B86",
+      "verified_by": "Antigravity Autonomous Lifelog Engine",
+      "recorded_at": "2026-11-04 23:59 JST",
+      "next_review": "アーカイブ保管済"
+    },
+    {
+      "id": "FORM-DAY-20261103",
+      "raw_id": 6,
+      "category": "DAILY-TECHO",
+      "title": "【第35日】2026-11-03（火）日次開発・自律手帳調書",
+      "headline": "日次自律同期完了",
+      "causal_chain": [
+        "未明: Pixel Watch 3 睡眠・心拍検知",
+        "朝: 竹原AMeDAS・気象庁データ同期",
+        "日中: Google Drive & Git自律活動記録",
+        "夜: デイリーサマリー生成・Cloudflareデプロイ"
+      ],
+      "deep_story": "日次自律同期完了",
+      "future_watch": "翌日(2026-11-04)への引き継ぎタスク・健康トレンド追跡",
+      "sources": [
+        "Google Drive API v3 (直近更新走査)",
+        "Pixel Watch 3 (Health API v4)",
+        "気象庁（竹原 AMeDAS 67461）",
+        "Google Calendar API v3",
+        "GoogleNews ICS (14,346記事)"
+      ],
+      "key_metrics": [
+        {
+          "label": "総活動イベント数",
+          "value": "34 件",
+          "sub": "Drive / Git / Cal",
+          "trend": "flat"
+        }
+      ],
+      "status_code": "VERIFIED",
+      "status_label": "記録完了 (RECORDED)",
+      "status_color": "green",
+      "audit_hash": "SHA256-4DFA2905D7E8",
+      "verified_by": "Antigravity Autonomous Lifelog Engine",
+      "recorded_at": "2026-11-03 23:59 JST",
+      "next_review": "アーカイブ保管済"
+    },
+    {
+      "id": "FORM-DAY-20261102",
+      "raw_id": 7,
+      "category": "DAILY-TECHO",
+      "title": "【第34日】2026-11-02（月）日次開発・自律手帳調書",
+      "headline": "日次自律同期完了",
+      "causal_chain": [
+        "未明: Pixel Watch 3 睡眠・心拍検知",
+        "朝: 竹原AMeDAS・気象庁データ同期",
+        "日中: Google Drive & Git自律活動記録",
+        "夜: デイリーサマリー生成・Cloudflareデプロイ"
+      ],
+      "deep_story": "日次自律同期完了",
+      "future_watch": "翌日(2026-11-03)への引き継ぎタスク・健康トレンド追跡",
+      "sources": [
+        "Google Drive API v3 (直近更新走査)",
+        "Pixel Watch 3 (Health API v4)",
+        "気象庁（竹原 AMeDAS 67461）",
+        "Google Calendar API v3",
+        "GoogleNews ICS (14,346記事)"
+      ],
+      "key_metrics": [
+        {
+          "label": "総活動イベント数",
+          "value": "10 件",
+          "sub": "Drive / Git / Cal",
+          "trend": "flat"
+        }
+      ],
+      "status_code": "VERIFIED",
+      "status_label": "記録完了 (RECORDED)",
+      "status_color": "green",
+      "audit_hash": "SHA256-8A53D5B6C92C",
+      "verified_by": "Antigravity Autonomous Lifelog Engine",
+      "recorded_at": "2026-11-02 23:59 JST",
+      "next_review": "アーカイブ保管済"
+    },
+    {
+      "id": "FORM-DAY-20261101",
+      "raw_id": 8,
+      "category": "DAILY-TECHO",
+      "title": "【第33日】2026-11-01（日）日次開発・自律手帳調書",
+      "headline": "日次自律同期完了",
+      "causal_chain": [
+        "未明: Pixel Watch 3 睡眠・心拍検知",
+        "朝: 竹原AMeDAS・気象庁データ同期",
+        "日中: Google Drive & Git自律活動記録",
+        "夜: デイリーサマリー生成・Cloudflareデプロイ"
+      ],
+      "deep_story": "日次自律同期完了",
+      "future_watch": "翌日(2026-11-02)への引き継ぎタスク・健康トレンド追跡",
+      "sources": [
+        "Google Drive API v3 (直近更新走査)",
+        "Pixel Watch 3 (Health API v4)",
+        "気象庁（竹原 AMeDAS 67461）",
+        "Google Calendar API v3",
+        "GoogleNews ICS (14,346記事)"
+      ],
+      "key_metrics": [
+        {
+          "label": "総活動イベント数",
+          "value": "10 件",
+          "sub": "Drive / Git / Cal",
+          "trend": "flat"
+        }
+      ],
+      "status_code": "VERIFIED",
+      "status_label": "記録完了 (RECORDED)",
+      "status_color": "green",
+      "audit_hash": "SHA256-EB8025EB466F",
+      "verified_by": "Antigravity Autonomous Lifelog Engine",
+      "recorded_at": "2026-11-01 23:59 JST",
+      "next_review": "アーカイブ保管済"
+    },
+    {
+      "id": "FORM-DAY-20261031",
+      "raw_id": 9,
+      "category": "DAILY-TECHO",
+      "title": "【第32日】2026-10-31（土）日次開発・自律手帳調書",
+      "headline": "日次自律同期完了",
+      "causal_chain": [
+        "未明: Pixel Watch 3 睡眠・心拍検知",
+        "朝: 竹原AMeDAS・気象庁データ同期",
+        "日中: Google Drive & Git自律活動記録",
+        "夜: デイリーサマリー生成・Cloudflareデプロイ"
+      ],
+      "deep_story": "日次自律同期完了",
+      "future_watch": "翌日(2026-11-01)への引き継ぎタスク・健康トレンド追跡",
+      "sources": [
+        "Google Drive API v3 (直近更新走査)",
+        "Pixel Watch 3 (Health API v4)",
+        "気象庁（竹原 AMeDAS 67461）",
+        "Google Calendar API v3",
+        "GoogleNews ICS (14,346記事)"
+      ],
+      "key_metrics": [
+        {
+          "label": "総活動イベント数",
+          "value": "5 件",
+          "sub": "Drive / Git / Cal",
+          "trend": "flat"
+        }
+      ],
+      "status_code": "VERIFIED",
+      "status_label": "記録完了 (RECORDED)",
+      "status_color": "green",
+      "audit_hash": "SHA256-7F130C2116F8",
+      "verified_by": "Antigravity Autonomous Lifelog Engine",
+      "recorded_at": "2026-10-31 23:59 JST",
+      "next_review": "アーカイブ保管済"
+    },
+    {
+      "id": "FORM-DAY-20261030",
+      "raw_id": 10,
+      "category": "DAILY-TECHO",
+      "title": "【第31日】2026-10-30（金）日次開発・自律手帳調書",
+      "headline": "日次自律同期完了",
+      "causal_chain": [
+        "未明: Pixel Watch 3 睡眠・心拍検知",
+        "朝: 竹原AMeDAS・気象庁データ同期",
+        "日中: Google Drive & Git自律活動記録",
+        "夜: デイリーサマリー生成・Cloudflareデプロイ"
+      ],
+      "deep_story": "日次自律同期完了",
+      "future_watch": "翌日(2026-10-31)への引き継ぎタスク・健康トレンド追跡",
+      "sources": [
+        "Google Drive API v3 (直近更新走査)",
+        "Pixel Watch 3 (Health API v4)",
+        "気象庁（竹原 AMeDAS 67461）",
+        "Google Calendar API v3",
+        "GoogleNews ICS (14,346記事)"
+      ],
+      "key_metrics": [
+        {
+          "label": "総活動イベント数",
+          "value": "12 件",
+          "sub": "Drive / Git / Cal",
+          "trend": "flat"
+        }
+      ],
+      "status_code": "VERIFIED",
+      "status_label": "記録完了 (RECORDED)",
+      "status_color": "green",
+      "audit_hash": "SHA256-A03046C93B35",
+      "verified_by": "Antigravity Autonomous Lifelog Engine",
+      "recorded_at": "2026-10-30 23:59 JST",
+      "next_review": "アーカイブ保管済"
+    },
+    {
+      "id": "FORM-DAY-20261029",
+      "raw_id": 11,
+      "category": "DAILY-TECHO",
+      "title": "【第30日】2026-10-29（木）日次開発・自律手帳調書",
+      "headline": "日次自律同期完了",
+      "causal_chain": [
+        "未明: Pixel Watch 3 睡眠・心拍検知",
+        "朝: 竹原AMeDAS・気象庁データ同期",
+        "日中: Google Drive & Git自律活動記録",
+        "夜: デイリーサマリー生成・Cloudflareデプロイ"
+      ],
+      "deep_story": "日次自律同期完了",
+      "future_watch": "翌日(2026-10-30)への引き継ぎタスク・健康トレンド追跡",
+      "sources": [
+        "Google Drive API v3 (直近更新走査)",
+        "Pixel Watch 3 (Health API v4)",
+        "気象庁（竹原 AMeDAS 67461）",
+        "Google Calendar API v3",
+        "GoogleNews ICS (14,346記事)"
+      ],
+      "key_metrics": [
+        {
+          "label": "総活動イベント数",
+          "value": "20 件",
+          "sub": "Drive / Git / Cal",
+          "trend": "flat"
+        }
+      ],
+      "status_code": "VERIFIED",
+      "status_label": "記録完了 (RECORDED)",
+      "status_color": "green",
+      "audit_hash": "SHA256-8300870BC7CF",
+      "verified_by": "Antigravity Autonomous Lifelog Engine",
+      "recorded_at": "2026-10-29 23:59 JST",
+      "next_review": "アーカイブ保管済"
+    },
+    {
+      "id": "FORM-DAY-20261028",
+      "raw_id": 12,
+      "category": "DAILY-TECHO",
+      "title": "【第29日】2026-10-28（水）日次開発・自律手帳調書",
+      "headline": "日次自律同期完了",
+      "causal_chain": [
+        "未明: Pixel Watch 3 睡眠・心拍検知",
+        "朝: 竹原AMeDAS・気象庁データ同期",
+        "日中: Google Drive & Git自律活動記録",
+        "夜: デイリーサマリー生成・Cloudflareデプロイ"
+      ],
+      "deep_story": "日次自律同期完了",
+      "future_watch": "翌日(2026-10-29)への引き継ぎタスク・健康トレンド追跡",
+      "sources": [
+        "Google Drive API v3 (直近更新走査)",
+        "Pixel Watch 3 (Health API v4)",
+        "気象庁（竹原 AMeDAS 67461）",
+        "Google Calendar API v3",
+        "GoogleNews ICS (14,346記事)"
+      ],
+      "key_metrics": [
+        {
+          "label": "総活動イベント数",
+          "value": "7 件",
+          "sub": "Drive / Git / Cal",
+          "trend": "flat"
+        }
+      ],
+      "status_code": "VERIFIED",
+      "status_label": "記録完了 (RECORDED)",
+      "status_color": "green",
+      "audit_hash": "SHA256-F24A172F8143",
+      "verified_by": "Antigravity Autonomous Lifelog Engine",
+      "recorded_at": "2026-10-28 23:59 JST",
+      "next_review": "アーカイブ保管済"
+    },
+    {
+      "id": "FORM-DAY-20261027",
+      "raw_id": 13,
+      "category": "DAILY-TECHO",
+      "title": "【第28日】2026-10-27（火）日次開発・自律手帳調書",
+      "headline": "日次自律同期完了",
+      "causal_chain": [
+        "未明: Pixel Watch 3 睡眠・心拍検知",
+        "朝: 竹原AMeDAS・気象庁データ同期",
+        "日中: Google Drive & Git自律活動記録",
+        "夜: デイリーサマリー生成・Cloudflareデプロイ"
+      ],
+      "deep_story": "日次自律同期完了",
+      "future_watch": "翌日(2026-10-28)への引き継ぎタスク・健康トレンド追跡",
+      "sources": [
+        "Google Drive API v3 (直近更新走査)",
+        "Pixel Watch 3 (Health API v4)",
+        "気象庁（竹原 AMeDAS 67461）",
+        "Google Calendar API v3",
+        "GoogleNews ICS (14,346記事)"
+      ],
+      "key_metrics": [
+        {
+          "label": "総活動イベント数",
+          "value": "7 件",
+          "sub": "Drive / Git / Cal",
+          "trend": "flat"
+        }
+      ],
+      "status_code": "VERIFIED",
+      "status_label": "記録完了 (RECORDED)",
+      "status_color": "green",
+      "audit_hash": "SHA256-E5725F608C08",
+      "verified_by": "Antigravity Autonomous Lifelog Engine",
+      "recorded_at": "2026-10-27 23:59 JST",
+      "next_review": "アーカイブ保管済"
+    },
+    {
+      "id": "FORM-DAY-20261026",
+      "raw_id": 14,
+      "category": "DAILY-TECHO",
+      "title": "【第27日】2026-10-26（月）日次開発・自律手帳調書",
+      "headline": "日次自律同期完了",
+      "causal_chain": [
+        "未明: Pixel Watch 3 睡眠・心拍検知",
+        "朝: 竹原AMeDAS・気象庁データ同期",
+        "日中: Google Drive & Git自律活動記録",
+        "夜: デイリーサマリー生成・Cloudflareデプロイ"
+      ],
+      "deep_story": "日次自律同期完了",
+      "future_watch": "翌日(2026-10-27)への引き継ぎタスク・健康トレンド追跡",
+      "sources": [
+        "Google Drive API v3 (直近更新走査)",
+        "Pixel Watch 3 (Health API v4)",
+        "気象庁（竹原 AMeDAS 67461）",
+        "Google Calendar API v3",
+        "GoogleNews ICS (14,346記事)"
+      ],
+      "key_metrics": [
+        {
+          "label": "総活動イベント数",
+          "value": "16 件",
+          "sub": "Drive / Git / Cal",
+          "trend": "flat"
+        }
+      ],
+      "status_code": "VERIFIED",
+      "status_label": "記録完了 (RECORDED)",
+      "status_color": "green",
+      "audit_hash": "SHA256-7710C6EE0E2D",
+      "verified_by": "Antigravity Autonomous Lifelog Engine",
+      "recorded_at": "2026-10-26 23:59 JST",
+      "next_review": "アーカイブ保管済"
+    },
+    {
+      "id": "FORM-DAY-20261025",
+      "raw_id": 15,
+      "category": "DAILY-TECHO",
+      "title": "【第26日】2026-10-25（日）日次開発・自律手帳調書",
+      "headline": "日次自律同期完了",
+      "causal_chain": [
+        "未明: Pixel Watch 3 睡眠・心拍検知",
+        "朝: 竹原AMeDAS・気象庁データ同期",
+        "日中: Google Drive & Git自律活動記録",
+        "夜: デイリーサマリー生成・Cloudflareデプロイ"
+      ],
+      "deep_story": "日次自律同期完了",
+      "future_watch": "翌日(2026-10-26)への引き継ぎタスク・健康トレンド追跡",
+      "sources": [
+        "Google Drive API v3 (直近更新走査)",
+        "Pixel Watch 3 (Health API v4)",
+        "気象庁（竹原 AMeDAS 67461）",
+        "Google Calendar API v3",
+        "GoogleNews ICS (14,346記事)"
+      ],
+      "key_metrics": [
+        {
+          "label": "総活動イベント数",
+          "value": "26 件",
+          "sub": "Drive / Git / Cal",
+          "trend": "flat"
+        }
+      ],
+      "status_code": "VERIFIED",
+      "status_label": "記録完了 (RECORDED)",
+      "status_color": "green",
+      "audit_hash": "SHA256-AA16D870373B",
+      "verified_by": "Antigravity Autonomous Lifelog Engine",
+      "recorded_at": "2026-10-25 23:59 JST",
+      "next_review": "アーカイブ保管済"
+    },
+    {
+      "id": "FORM-DAY-20261024",
+      "raw_id": 16,
+      "category": "DAILY-TECHO",
+      "title": "【第25日】2026-10-24（土）日次開発・自律手帳調書",
+      "headline": "日次自律同期完了",
+      "causal_chain": [
+        "未明: Pixel Watch 3 睡眠・心拍検知",
+        "朝: 竹原AMeDAS・気象庁データ同期",
+        "日中: Google Drive & Git自律活動記録",
+        "夜: デイリーサマリー生成・Cloudflareデプロイ"
+      ],
+      "deep_story": "日次自律同期完了",
+      "future_watch": "翌日(2026-10-25)への引き継ぎタスク・健康トレンド追跡",
+      "sources": [
+        "Google Drive API v3 (直近更新走査)",
+        "Pixel Watch 3 (Health API v4)",
+        "気象庁（竹原 AMeDAS 67461）",
+        "Google Calendar API v3",
+        "GoogleNews ICS (14,346記事)"
+      ],
+      "key_metrics": [
+        {
+          "label": "総活動イベント数",
+          "value": "33 件",
+          "sub": "Drive / Git / Cal",
+          "trend": "flat"
+        }
+      ],
+      "status_code": "VERIFIED",
+      "status_label": "記録完了 (RECORDED)",
+      "status_color": "green",
+      "audit_hash": "SHA256-F81099274BA2",
+      "verified_by": "Antigravity Autonomous Lifelog Engine",
+      "recorded_at": "2026-10-24 23:59 JST",
+      "next_review": "アーカイブ保管済"
+    },
+    {
+      "id": "FORM-DAY-20261023",
+      "raw_id": 17,
+      "category": "DAILY-TECHO",
+      "title": "【第24日】2026-10-23（金）日次開発・自律手帳調書",
+      "headline": "日次自律同期完了",
+      "causal_chain": [
+        "未明: Pixel Watch 3 睡眠・心拍検知",
+        "朝: 竹原AMeDAS・気象庁データ同期",
+        "日中: Google Drive & Git自律活動記録",
+        "夜: デイリーサマリー生成・Cloudflareデプロイ"
+      ],
+      "deep_story": "日次自律同期完了",
+      "future_watch": "翌日(2026-10-24)への引き継ぎタスク・健康トレンド追跡",
+      "sources": [
+        "Google Drive API v3 (直近更新走査)",
+        "Pixel Watch 3 (Health API v4)",
+        "気象庁（竹原 AMeDAS 67461）",
+        "Google Calendar API v3",
+        "GoogleNews ICS (14,346記事)"
+      ],
+      "key_metrics": [
+        {
+          "label": "総活動イベント数",
+          "value": "14 件",
+          "sub": "Drive / Git / Cal",
+          "trend": "flat"
+        }
+      ],
+      "status_code": "VERIFIED",
+      "status_label": "記録完了 (RECORDED)",
+      "status_color": "green",
+      "audit_hash": "SHA256-798413E2CA94",
+      "verified_by": "Antigravity Autonomous Lifelog Engine",
+      "recorded_at": "2026-10-23 23:59 JST",
+      "next_review": "アーカイブ保管済"
+    },
+    {
+      "id": "FORM-DAY-20261022",
+      "raw_id": 18,
+      "category": "DAILY-TECHO",
+      "title": "【第23日】2026-10-22（木）日次開発・自律手帳調書",
+      "headline": "日次自律同期完了",
+      "causal_chain": [
+        "未明: Pixel Watch 3 睡眠・心拍検知",
+        "朝: 竹原AMeDAS・気象庁データ同期",
+        "日中: Google Drive & Git自律活動記録",
+        "夜: デイリーサマリー生成・Cloudflareデプロイ"
+      ],
+      "deep_story": "日次自律同期完了",
+      "future_watch": "翌日(2026-10-23)への引き継ぎタスク・健康トレンド追跡",
+      "sources": [
+        "Google Drive API v3 (直近更新走査)",
+        "Pixel Watch 3 (Health API v4)",
+        "気象庁（竹原 AMeDAS 67461）",
+        "Google Calendar API v3",
+        "GoogleNews ICS (14,346記事)"
+      ],
+      "key_metrics": [
+        {
+          "label": "総活動イベント数",
+          "value": "14 件",
+          "sub": "Drive / Git / Cal",
+          "trend": "flat"
+        }
+      ],
+      "status_code": "VERIFIED",
+      "status_label": "記録完了 (RECORDED)",
+      "status_color": "green",
+      "audit_hash": "SHA256-919E276023EA",
+      "verified_by": "Antigravity Autonomous Lifelog Engine",
+      "recorded_at": "2026-10-22 23:59 JST",
+      "next_review": "アーカイブ保管済"
+    },
+    {
+      "id": "FORM-DAY-20261021",
+      "raw_id": 19,
+      "category": "DAILY-TECHO",
+      "title": "【第22日】2026-10-21（水）日次開発・自律手帳調書",
+      "headline": "日次自律同期完了",
+      "causal_chain": [
+        "未明: Pixel Watch 3 睡眠・心拍検知",
+        "朝: 竹原AMeDAS・気象庁データ同期",
+        "日中: Google Drive & Git自律活動記録",
+        "夜: デイリーサマリー生成・Cloudflareデプロイ"
+      ],
+      "deep_story": "日次自律同期完了",
+      "future_watch": "翌日(2026-10-22)への引き継ぎタスク・健康トレンド追跡",
+      "sources": [
+        "Google Drive API v3 (直近更新走査)",
+        "Pixel Watch 3 (Health API v4)",
+        "気象庁（竹原 AMeDAS 67461）",
+        "Google Calendar API v3",
+        "GoogleNews ICS (14,346記事)"
+      ],
+      "key_metrics": [
+        {
+          "label": "総活動イベント数",
+          "value": "3 件",
+          "sub": "Drive / Git / Cal",
+          "trend": "flat"
+        }
+      ],
+      "status_code": "VERIFIED",
+      "status_label": "記録完了 (RECORDED)",
+      "status_color": "green",
+      "audit_hash": "SHA256-BB93C93FBD6B",
+      "verified_by": "Antigravity Autonomous Lifelog Engine",
+      "recorded_at": "2026-10-21 23:59 JST",
+      "next_review": "アーカイブ保管済"
+    },
+    {
+      "id": "FORM-DAY-20261020",
+      "raw_id": 20,
+      "category": "DAILY-TECHO",
+      "title": "【第21日】2026-10-20（火）日次開発・自律手帳調書",
+      "headline": "日次自律同期完了",
+      "causal_chain": [
+        "未明: Pixel Watch 3 睡眠・心拍検知",
+        "朝: 竹原AMeDAS・気象庁データ同期",
+        "日中: Google Drive & Git自律活動記録",
+        "夜: デイリーサマリー生成・Cloudflareデプロイ"
+      ],
+      "deep_story": "日次自律同期完了",
+      "future_watch": "翌日(2026-10-21)への引き継ぎタスク・健康トレンド追跡",
+      "sources": [
+        "Google Drive API v3 (直近更新走査)",
+        "Pixel Watch 3 (Health API v4)",
+        "気象庁（竹原 AMeDAS 67461）",
+        "Google Calendar API v3",
+        "GoogleNews ICS (14,346記事)"
+      ],
+      "key_metrics": [
+        {
+          "label": "総活動イベント数",
+          "value": "5 件",
+          "sub": "Drive / Git / Cal",
+          "trend": "flat"
+        }
+      ],
+      "status_code": "VERIFIED",
+      "status_label": "記録完了 (RECORDED)",
+      "status_color": "green",
+      "audit_hash": "SHA256-AD97B018F775",
+      "verified_by": "Antigravity Autonomous Lifelog Engine",
+      "recorded_at": "2026-10-20 23:59 JST",
+      "next_review": "アーカイブ保管済"
+    },
+    {
+      "id": "FORM-DAY-20261019",
+      "raw_id": 21,
+      "category": "DAILY-TECHO",
+      "title": "【第20日】2026-10-19（月）日次開発・自律手帳調書",
+      "headline": "日次自律同期完了",
+      "causal_chain": [
+        "未明: Pixel Watch 3 睡眠・心拍検知",
+        "朝: 竹原AMeDAS・気象庁データ同期",
+        "日中: Google Drive & Git自律活動記録",
+        "夜: デイリーサマリー生成・Cloudflareデプロイ"
+      ],
+      "deep_story": "日次自律同期完了",
+      "future_watch": "翌日(2026-10-20)への引き継ぎタスク・健康トレンド追跡",
+      "sources": [
+        "Google Drive API v3 (直近更新走査)",
+        "Pixel Watch 3 (Health API v4)",
+        "気象庁（竹原 AMeDAS 67461）",
+        "Google Calendar API v3",
+        "GoogleNews ICS (14,346記事)"
+      ],
+      "key_metrics": [
+        {
+          "label": "総活動イベント数",
+          "value": "6 件",
+          "sub": "Drive / Git / Cal",
+          "trend": "flat"
+        }
+      ],
+      "status_code": "VERIFIED",
+      "status_label": "記録完了 (RECORDED)",
+      "status_color": "green",
+      "audit_hash": "SHA256-D4C34B83C74D",
+      "verified_by": "Antigravity Autonomous Lifelog Engine",
+      "recorded_at": "2026-10-19 23:59 JST",
+      "next_review": "アーカイブ保管済"
+    },
+    {
+      "id": "FORM-DAY-20261018",
+      "raw_id": 22,
+      "category": "DAILY-TECHO",
+      "title": "【第19日】2026-10-18（日）日次開発・自律手帳調書",
+      "headline": "日次自律同期完了",
+      "causal_chain": [
+        "未明: Pixel Watch 3 睡眠・心拍検知",
+        "朝: 竹原AMeDAS・気象庁データ同期",
+        "日中: Google Drive & Git自律活動記録",
+        "夜: デイリーサマリー生成・Cloudflareデプロイ"
+      ],
+      "deep_story": "日次自律同期完了",
+      "future_watch": "翌日(2026-10-19)への引き継ぎタスク・健康トレンド追跡",
+      "sources": [
+        "Google Drive API v3 (直近更新走査)",
+        "Pixel Watch 3 (Health API v4)",
+        "気象庁（竹原 AMeDAS 67461）",
+        "Google Calendar API v3",
+        "GoogleNews ICS (14,346記事)"
+      ],
+      "key_metrics": [
+        {
+          "label": "総活動イベント数",
+          "value": "4 件",
+          "sub": "Drive / Git / Cal",
+          "trend": "flat"
+        }
+      ],
+      "status_code": "VERIFIED",
+      "status_label": "記録完了 (RECORDED)",
+      "status_color": "green",
+      "audit_hash": "SHA256-BBABCE833C4D",
+      "verified_by": "Antigravity Autonomous Lifelog Engine",
+      "recorded_at": "2026-10-18 23:59 JST",
+      "next_review": "アーカイブ保管済"
+    },
+    {
+      "id": "FORM-DAY-20261017",
+      "raw_id": 23,
+      "category": "DAILY-TECHO",
+      "title": "【第18日】2026-10-17（土）日次開発・自律手帳調書",
+      "headline": "日次自律同期完了",
+      "causal_chain": [
+        "未明: Pixel Watch 3 睡眠・心拍検知",
+        "朝: 竹原AMeDAS・気象庁データ同期",
+        "日中: Google Drive & Git自律活動記録",
+        "夜: デイリーサマリー生成・Cloudflareデプロイ"
+      ],
+      "deep_story": "日次自律同期完了",
+      "future_watch": "翌日(2026-10-18)への引き継ぎタスク・健康トレンド追跡",
+      "sources": [
+        "Google Drive API v3 (直近更新走査)",
+        "Pixel Watch 3 (Health API v4)",
+        "気象庁（竹原 AMeDAS 67461）",
+        "Google Calendar API v3",
+        "GoogleNews ICS (14,346記事)"
+      ],
+      "key_metrics": [
+        {
+          "label": "総活動イベント数",
+          "value": "8 件",
+          "sub": "Drive / Git / Cal",
+          "trend": "flat"
+        }
+      ],
+      "status_code": "VERIFIED",
+      "status_label": "記録完了 (RECORDED)",
+      "status_color": "green",
+      "audit_hash": "SHA256-6B35AC606457",
+      "verified_by": "Antigravity Autonomous Lifelog Engine",
+      "recorded_at": "2026-10-17 23:59 JST",
+      "next_review": "アーカイブ保管済"
+    },
+    {
+      "id": "FORM-DAY-20261016",
+      "raw_id": 24,
+      "category": "DAILY-TECHO",
+      "title": "【第17日】2026-10-16（金）日次開発・自律手帳調書",
+      "headline": "日次自律同期完了",
+      "causal_chain": [
+        "未明: Pixel Watch 3 睡眠・心拍検知",
+        "朝: 竹原AMeDAS・気象庁データ同期",
+        "日中: Google Drive & Git自律活動記録",
+        "夜: デイリーサマリー生成・Cloudflareデプロイ"
+      ],
+      "deep_story": "日次自律同期完了",
+      "future_watch": "翌日(2026-10-17)への引き継ぎタスク・健康トレンド追跡",
+      "sources": [
+        "Google Drive API v3 (直近更新走査)",
+        "Pixel Watch 3 (Health API v4)",
+        "気象庁（竹原 AMeDAS 67461）",
+        "Google Calendar API v3",
+        "GoogleNews ICS (14,346記事)"
+      ],
+      "key_metrics": [
+        {
+          "label": "総活動イベント数",
+          "value": "11 件",
+          "sub": "Drive / Git / Cal",
+          "trend": "flat"
+        }
+      ],
+      "status_code": "VERIFIED",
+      "status_label": "記録完了 (RECORDED)",
+      "status_color": "green",
+      "audit_hash": "SHA256-6FFAE76758EB",
+      "verified_by": "Antigravity Autonomous Lifelog Engine",
+      "recorded_at": "2026-10-16 23:59 JST",
+      "next_review": "アーカイブ保管済"
+    },
+    {
+      "id": "FORM-DAY-20261015",
+      "raw_id": 25,
+      "category": "DAILY-TECHO",
+      "title": "【第16日】2026-10-15（木）日次開発・自律手帳調書",
+      "headline": "日次自律同期完了",
+      "causal_chain": [
+        "未明: Pixel Watch 3 睡眠・心拍検知",
+        "朝: 竹原AMeDAS・気象庁データ同期",
+        "日中: Google Drive & Git自律活動記録",
+        "夜: デイリーサマリー生成・Cloudflareデプロイ"
+      ],
+      "deep_story": "日次自律同期完了",
+      "future_watch": "翌日(2026-10-16)への引き継ぎタスク・健康トレンド追跡",
+      "sources": [
+        "Google Drive API v3 (直近更新走査)",
+        "Pixel Watch 3 (Health API v4)",
+        "気象庁（竹原 AMeDAS 67461）",
+        "Google Calendar API v3",
+        "GoogleNews ICS (14,346記事)"
+      ],
+      "key_metrics": [
+        {
+          "label": "総活動イベント数",
+          "value": "13 件",
+          "sub": "Drive / Git / Cal",
+          "trend": "flat"
+        }
+      ],
+      "status_code": "VERIFIED",
+      "status_label": "記録完了 (RECORDED)",
+      "status_color": "green",
+      "audit_hash": "SHA256-E916CB024E4D",
+      "verified_by": "Antigravity Autonomous Lifelog Engine",
+      "recorded_at": "2026-10-15 23:59 JST",
+      "next_review": "アーカイブ保管済"
+    },
+    {
+      "id": "FORM-DAY-20261014",
+      "raw_id": 26,
+      "category": "DAILY-TECHO",
+      "title": "【第15日】2026-10-14（水）日次開発・自律手帳調書",
+      "headline": "日次自律同期完了",
+      "causal_chain": [
+        "未明: Pixel Watch 3 睡眠・心拍検知",
+        "朝: 竹原AMeDAS・気象庁データ同期",
+        "日中: Google Drive & Git自律活動記録",
+        "夜: デイリーサマリー生成・Cloudflareデプロイ"
+      ],
+      "deep_story": "日次自律同期完了",
+      "future_watch": "翌日(2026-10-15)への引き継ぎタスク・健康トレンド追跡",
+      "sources": [
+        "Google Drive API v3 (直近更新走査)",
+        "Pixel Watch 3 (Health API v4)",
+        "気象庁（竹原 AMeDAS 67461）",
+        "Google Calendar API v3",
+        "GoogleNews ICS (14,346記事)"
+      ],
+      "key_metrics": [
+        {
+          "label": "総活動イベント数",
+          "value": "12 件",
+          "sub": "Drive / Git / Cal",
+          "trend": "flat"
+        }
+      ],
+      "status_code": "VERIFIED",
+      "status_label": "記録完了 (RECORDED)",
+      "status_color": "green",
+      "audit_hash": "SHA256-306F0B444436",
+      "verified_by": "Antigravity Autonomous Lifelog Engine",
+      "recorded_at": "2026-10-14 23:59 JST",
+      "next_review": "アーカイブ保管済"
+    },
+    {
+      "id": "FORM-DAY-20261013",
+      "raw_id": 27,
+      "category": "DAILY-TECHO",
+      "title": "【第14日】2026-10-13（火）日次開発・自律手帳調書",
+      "headline": "日次自律同期完了",
+      "causal_chain": [
+        "未明: Pixel Watch 3 睡眠・心拍検知",
+        "朝: 竹原AMeDAS・気象庁データ同期",
+        "日中: Google Drive & Git自律活動記録",
+        "夜: デイリーサマリー生成・Cloudflareデプロイ"
+      ],
+      "deep_story": "日次自律同期完了",
+      "future_watch": "翌日(2026-10-14)への引き継ぎタスク・健康トレンド追跡",
+      "sources": [
+        "Google Drive API v3 (直近更新走査)",
+        "Pixel Watch 3 (Health API v4)",
+        "気象庁（竹原 AMeDAS 67461）",
+        "Google Calendar API v3",
+        "GoogleNews ICS (14,346記事)"
+      ],
+      "key_metrics": [
+        {
+          "label": "総活動イベント数",
+          "value": "10 件",
+          "sub": "Drive / Git / Cal",
+          "trend": "flat"
+        }
+      ],
+      "status_code": "VERIFIED",
+      "status_label": "記録完了 (RECORDED)",
+      "status_color": "green",
+      "audit_hash": "SHA256-241CC351468D",
+      "verified_by": "Antigravity Autonomous Lifelog Engine",
+      "recorded_at": "2026-10-13 23:59 JST",
+      "next_review": "アーカイブ保管済"
+    },
+    {
+      "id": "FORM-DAY-20261012",
+      "raw_id": 28,
+      "category": "DAILY-TECHO",
+      "title": "【第13日】2026-10-12（月）日次開発・自律手帳調書",
+      "headline": "日次自律同期完了",
+      "causal_chain": [
+        "未明: Pixel Watch 3 睡眠・心拍検知",
+        "朝: 竹原AMeDAS・気象庁データ同期",
+        "日中: Google Drive & Git自律活動記録",
+        "夜: デイリーサマリー生成・Cloudflareデプロイ"
+      ],
+      "deep_story": "日次自律同期完了",
+      "future_watch": "翌日(2026-10-13)への引き継ぎタスク・健康トレンド追跡",
+      "sources": [
+        "Google Drive API v3 (直近更新走査)",
+        "Pixel Watch 3 (Health API v4)",
+        "気象庁（竹原 AMeDAS 67461）",
+        "Google Calendar API v3",
+        "GoogleNews ICS (14,346記事)"
+      ],
+      "key_metrics": [
+        {
+          "label": "総活動イベント数",
+          "value": "10 件",
+          "sub": "Drive / Git / Cal",
+          "trend": "flat"
+        }
+      ],
+      "status_code": "VERIFIED",
+      "status_label": "記録完了 (RECORDED)",
+      "status_color": "green",
+      "audit_hash": "SHA256-041CE3411B03",
+      "verified_by": "Antigravity Autonomous Lifelog Engine",
+      "recorded_at": "2026-10-12 23:59 JST",
+      "next_review": "アーカイブ保管済"
+    },
+    {
+      "id": "FORM-DAY-20261011",
+      "raw_id": 29,
+      "category": "DAILY-TECHO",
+      "title": "【第12日】2026-10-11（日）日次開発・自律手帳調書",
+      "headline": "日次自律同期完了",
+      "causal_chain": [
+        "未明: Pixel Watch 3 睡眠・心拍検知",
+        "朝: 竹原AMeDAS・気象庁データ同期",
+        "日中: Google Drive & Git自律活動記録",
+        "夜: デイリーサマリー生成・Cloudflareデプロイ"
+      ],
+      "deep_story": "日次自律同期完了",
+      "future_watch": "翌日(2026-10-12)への引き継ぎタスク・健康トレンド追跡",
+      "sources": [
+        "Google Drive API v3 (直近更新走査)",
+        "Pixel Watch 3 (Health API v4)",
+        "気象庁（竹原 AMeDAS 67461）",
+        "Google Calendar API v3",
+        "GoogleNews ICS (14,346記事)"
+      ],
+      "key_metrics": [
+        {
+          "label": "総活動イベント数",
+          "value": "5 件",
+          "sub": "Drive / Git / Cal",
+          "trend": "flat"
+        }
+      ],
+      "status_code": "VERIFIED",
+      "status_label": "記録完了 (RECORDED)",
+      "status_color": "green",
+      "audit_hash": "SHA256-BBEBCA3DB08B",
+      "verified_by": "Antigravity Autonomous Lifelog Engine",
+      "recorded_at": "2026-10-11 23:59 JST",
+      "next_review": "アーカイブ保管済"
+    },
+    {
+      "id": "FORM-DAY-20261010",
+      "raw_id": 30,
+      "category": "DAILY-TECHO",
+      "title": "【第11日】2026-10-10（土）日次開発・自律手帳調書",
+      "headline": "日次自律同期完了",
+      "causal_chain": [
+        "未明: Pixel Watch 3 睡眠・心拍検知",
+        "朝: 竹原AMeDAS・気象庁データ同期",
+        "日中: Google Drive & Git自律活動記録",
+        "夜: デイリーサマリー生成・Cloudflareデプロイ"
+      ],
+      "deep_story": "日次自律同期完了",
+      "future_watch": "翌日(2026-10-11)への引き継ぎタスク・健康トレンド追跡",
+      "sources": [
+        "Google Drive API v3 (直近更新走査)",
+        "Pixel Watch 3 (Health API v4)",
+        "気象庁（竹原 AMeDAS 67461）",
+        "Google Calendar API v3",
+        "GoogleNews ICS (14,346記事)"
+      ],
+      "key_metrics": [
+        {
+          "label": "総活動イベント数",
+          "value": "4 件",
+          "sub": "Drive / Git / Cal",
+          "trend": "flat"
+        }
+      ],
+      "status_code": "VERIFIED",
+      "status_label": "記録完了 (RECORDED)",
+      "status_color": "green",
+      "audit_hash": "SHA256-30CC67CF4049",
+      "verified_by": "Antigravity Autonomous Lifelog Engine",
+      "recorded_at": "2026-10-10 23:59 JST",
+      "next_review": "アーカイブ保管済"
+    },
+    {
+      "id": "FORM-DAY-20261009",
+      "raw_id": 31,
+      "category": "DAILY-TECHO",
+      "title": "【第10日】2026-10-09（金）日次開発・自律手帳調書",
+      "headline": "日次自律同期完了",
+      "causal_chain": [
+        "未明: Pixel Watch 3 睡眠・心拍検知",
+        "朝: 竹原AMeDAS・気象庁データ同期",
+        "日中: Google Drive & Git自律活動記録",
+        "夜: デイリーサマリー生成・Cloudflareデプロイ"
+      ],
+      "deep_story": "日次自律同期完了",
+      "future_watch": "翌日(2026-10-10)への引き継ぎタスク・健康トレンド追跡",
+      "sources": [
+        "Google Drive API v3 (直近更新走査)",
+        "Pixel Watch 3 (Health API v4)",
+        "気象庁（竹原 AMeDAS 67461）",
+        "Google Calendar API v3",
+        "GoogleNews ICS (14,346記事)"
+      ],
+      "key_metrics": [
+        {
+          "label": "総活動イベント数",
+          "value": "4 件",
+          "sub": "Drive / Git / Cal",
+          "trend": "flat"
+        }
+      ],
+      "status_code": "VERIFIED",
+      "status_label": "記録完了 (RECORDED)",
+      "status_color": "green",
+      "audit_hash": "SHA256-1CCEA004E436",
+      "verified_by": "Antigravity Autonomous Lifelog Engine",
+      "recorded_at": "2026-10-09 23:59 JST",
+      "next_review": "アーカイブ保管済"
+    },
+    {
+      "id": "FORM-DAY-20261008",
+      "raw_id": 32,
+      "category": "DAILY-TECHO",
+      "title": "【第9日】2026-10-08（木）日次開発・自律手帳調書",
+      "headline": "日次自律同期完了",
+      "causal_chain": [
+        "未明: Pixel Watch 3 睡眠・心拍検知",
+        "朝: 竹原AMeDAS・気象庁データ同期",
+        "日中: Google Drive & Git自律活動記録",
+        "夜: デイリーサマリー生成・Cloudflareデプロイ"
+      ],
+      "deep_story": "日次自律同期完了",
+      "future_watch": "翌日(2026-10-09)への引き継ぎタスク・健康トレンド追跡",
+      "sources": [
+        "Google Drive API v3 (直近更新走査)",
+        "Pixel Watch 3 (Health API v4)",
+        "気象庁（竹原 AMeDAS 67461）",
+        "Google Calendar API v3",
+        "GoogleNews ICS (14,346記事)"
+      ],
+      "key_metrics": [
+        {
+          "label": "総活動イベント数",
+          "value": "15 件",
+          "sub": "Drive / Git / Cal",
+          "trend": "flat"
+        }
+      ],
+      "status_code": "VERIFIED",
+      "status_label": "記録完了 (RECORDED)",
+      "status_color": "green",
+      "audit_hash": "SHA256-249887A8F9B5",
+      "verified_by": "Antigravity Autonomous Lifelog Engine",
+      "recorded_at": "2026-10-08 23:59 JST",
+      "next_review": "アーカイブ保管済"
+    },
+    {
+      "id": "FORM-DAY-20261007",
+      "raw_id": 33,
+      "category": "DAILY-TECHO",
+      "title": "【第8日】2026-10-07（水）日次開発・自律手帳調書",
+      "headline": "日次自律同期完了",
+      "causal_chain": [
+        "未明: Pixel Watch 3 睡眠・心拍検知",
+        "朝: 竹原AMeDAS・気象庁データ同期",
+        "日中: Google Drive & Git自律活動記録",
+        "夜: デイリーサマリー生成・Cloudflareデプロイ"
+      ],
+      "deep_story": "日次自律同期完了",
+      "future_watch": "翌日(2026-10-08)への引き継ぎタスク・健康トレンド追跡",
+      "sources": [
+        "Google Drive API v3 (直近更新走査)",
+        "Pixel Watch 3 (Health API v4)",
+        "気象庁（竹原 AMeDAS 67461）",
+        "Google Calendar API v3",
+        "GoogleNews ICS (14,346記事)"
+      ],
+      "key_metrics": [
+        {
+          "label": "総活動イベント数",
+          "value": "3 件",
+          "sub": "Drive / Git / Cal",
+          "trend": "flat"
+        }
+      ],
+      "status_code": "VERIFIED",
+      "status_label": "記録完了 (RECORDED)",
+      "status_color": "green",
+      "audit_hash": "SHA256-E1BF1D7E832B",
+      "verified_by": "Antigravity Autonomous Lifelog Engine",
+      "recorded_at": "2026-10-07 23:59 JST",
+      "next_review": "アーカイブ保管済"
+    },
+    {
+      "id": "FORM-DAY-20261006",
+      "raw_id": 34,
+      "category": "DAILY-TECHO",
+      "title": "【第7日】2026-10-06（火）日次開発・自律手帳調書",
+      "headline": "日次自律同期完了",
+      "causal_chain": [
+        "未明: Pixel Watch 3 睡眠・心拍検知",
+        "朝: 竹原AMeDAS・気象庁データ同期",
+        "日中: Google Drive & Git自律活動記録",
+        "夜: デイリーサマリー生成・Cloudflareデプロイ"
+      ],
+      "deep_story": "日次自律同期完了",
+      "future_watch": "翌日(2026-10-07)への引き継ぎタスク・健康トレンド追跡",
+      "sources": [
+        "Google Drive API v3 (直近更新走査)",
+        "Pixel Watch 3 (Health API v4)",
+        "気象庁（竹原 AMeDAS 67461）",
+        "Google Calendar API v3",
+        "GoogleNews ICS (14,346記事)"
+      ],
+      "key_metrics": [
+        {
+          "label": "総活動イベント数",
+          "value": "7 件",
+          "sub": "Drive / Git / Cal",
+          "trend": "flat"
+        }
+      ],
+      "status_code": "VERIFIED",
+      "status_label": "記録完了 (RECORDED)",
+      "status_color": "green",
+      "audit_hash": "SHA256-903EBA7D3E9F",
+      "verified_by": "Antigravity Autonomous Lifelog Engine",
+      "recorded_at": "2026-10-06 23:59 JST",
+      "next_review": "アーカイブ保管済"
+    },
+    {
+      "id": "FORM-DAY-20261005",
+      "raw_id": 35,
+      "category": "DAILY-TECHO",
+      "title": "【第6日】2026-10-05（月）日次開発・自律手帳調書",
+      "headline": "日次自律同期完了",
+      "causal_chain": [
+        "未明: Pixel Watch 3 睡眠・心拍検知",
+        "朝: 竹原AMeDAS・気象庁データ同期",
+        "日中: Google Drive & Git自律活動記録",
+        "夜: デイリーサマリー生成・Cloudflareデプロイ"
+      ],
+      "deep_story": "日次自律同期完了",
+      "future_watch": "翌日(2026-10-06)への引き継ぎタスク・健康トレンド追跡",
+      "sources": [
+        "Google Drive API v3 (直近更新走査)",
+        "Pixel Watch 3 (Health API v4)",
+        "気象庁（竹原 AMeDAS 67461）",
+        "Google Calendar API v3",
+        "GoogleNews ICS (14,346記事)"
+      ],
+      "key_metrics": [
+        {
+          "label": "総活動イベント数",
+          "value": "11 件",
+          "sub": "Drive / Git / Cal",
+          "trend": "flat"
+        }
+      ],
+      "status_code": "VERIFIED",
+      "status_label": "記録完了 (RECORDED)",
+      "status_color": "green",
+      "audit_hash": "SHA256-04A893492F23",
+      "verified_by": "Antigravity Autonomous Lifelog Engine",
+      "recorded_at": "2026-10-05 23:59 JST",
+      "next_review": "アーカイブ保管済"
+    },
+    {
+      "id": "FORM-DAY-20261004",
+      "raw_id": 36,
+      "category": "DAILY-TECHO",
+      "title": "【第5日】2026-10-04（日）日次開発・自律手帳調書",
+      "headline": "日次自律同期完了",
+      "causal_chain": [
+        "未明: Pixel Watch 3 睡眠・心拍検知",
+        "朝: 竹原AMeDAS・気象庁データ同期",
+        "日中: Google Drive & Git自律活動記録",
+        "夜: デイリーサマリー生成・Cloudflareデプロイ"
+      ],
+      "deep_story": "日次自律同期完了",
+      "future_watch": "翌日(2026-10-05)への引き継ぎタスク・健康トレンド追跡",
+      "sources": [
+        "Google Drive API v3 (直近更新走査)",
+        "Pixel Watch 3 (Health API v4)",
+        "気象庁（竹原 AMeDAS 67461）",
+        "Google Calendar API v3",
+        "GoogleNews ICS (14,346記事)"
+      ],
+      "key_metrics": [
+        {
+          "label": "総活動イベント数",
+          "value": "8 件",
+          "sub": "Drive / Git / Cal",
+          "trend": "flat"
+        }
+      ],
+      "status_code": "VERIFIED",
+      "status_label": "記録完了 (RECORDED)",
+      "status_color": "green",
+      "audit_hash": "SHA256-B71DF6AF6080",
+      "verified_by": "Antigravity Autonomous Lifelog Engine",
+      "recorded_at": "2026-10-04 23:59 JST",
+      "next_review": "アーカイブ保管済"
+    },
+    {
+      "id": "FORM-DAY-20261003",
+      "raw_id": 37,
+      "category": "DAILY-TECHO",
+      "title": "【第4日】2026-10-03（日）日次開発・自律手帳調書",
+      "headline": "2026-10-03 (土) は、主に Colab, IDM に注力。計 22 件の活動ログを記録。",
+      "causal_chain": [
+        "未明: Pixel Watch 3 睡眠・心拍検知",
+        "朝: 竹原AMeDAS・気象庁データ同期",
+        "日中: Google Drive & Git自律活動記録",
+        "夜: デイリーサマリー生成・Cloudflareデプロイ"
+      ],
+      "deep_story": "2026-10-03 (土) は、主に Colab, IDM に注力。計 22 件の活動ログを記録。",
+      "future_watch": "翌日(2026-10-04)への引き継ぎタスク・健康トレンド追跡",
+      "sources": [
+        "Google Drive API v3 (直近更新走査)",
+        "Pixel Watch 3 (Health API v4)",
+        "気象庁（竹原 AMeDAS 67461）",
+        "Google Calendar API v3",
+        "GoogleNews ICS (14,346記事)"
+      ],
+      "key_metrics": [
+        {
+          "label": "総活動イベント数",
+          "value": "22 件",
+          "sub": "Drive / Git / Cal",
+          "trend": "flat"
+        }
+      ],
+      "status_code": "VERIFIED",
+      "status_label": "記録完了 (RECORDED)",
+      "status_color": "green",
+      "audit_hash": "SHA256-D40383202A94",
+      "verified_by": "Antigravity Autonomous Lifelog Engine",
+      "recorded_at": "2026-10-03 23:59 JST",
+      "next_review": "アーカイブ保管済"
+    },
+    {
+      "id": "FORM-DAY-20260929",
+      "raw_id": 38,
+      "category": "DAILY-TECHO",
+      "title": "【第3日】2026-09-29（日）日次開発・自律手帳調書",
+      "headline": "2026-09-29 (火) は、主に gemini, gBizINFO に注力。計 5 件の活動ログを記録。",
+      "causal_chain": [
+        "未明: Pixel Watch 3 睡眠・心拍検知",
+        "朝: 竹原AMeDAS・気象庁データ同期",
+        "日中: Google Drive & Git自律活動記録",
+        "夜: デイリーサマリー生成・Cloudflareデプロイ"
+      ],
+      "deep_story": "2026-09-29 (火) は、主に gemini, gBizINFO に注力。計 5 件の活動ログを記録。",
+      "future_watch": "翌日(2026-10-03)への引き継ぎタスク・健康トレンド追跡",
+      "sources": [
+        "Google Drive API v3 (直近更新走査)",
+        "Pixel Watch 3 (Health API v4)",
+        "気象庁（竹原 AMeDAS 67461）",
+        "Google Calendar API v3",
+        "GoogleNews ICS (14,346記事)"
+      ],
+      "key_metrics": [
+        {
+          "label": "総活動イベント数",
+          "value": "5 件",
+          "sub": "Drive / Git / Cal",
+          "trend": "flat"
+        }
+      ],
+      "status_code": "VERIFIED",
+      "status_label": "記録完了 (RECORDED)",
+      "status_color": "green",
+      "audit_hash": "SHA256-EE38A1D74268",
+      "verified_by": "Antigravity Autonomous Lifelog Engine",
+      "recorded_at": "2026-09-29 23:59 JST",
+      "next_review": "アーカイブ保管済"
+    },
+    {
+      "id": "FORM-DAY-20260927",
+      "raw_id": 39,
+      "category": "DAILY-TECHO",
+      "title": "【第2日】2026-09-27（日）日次開発・自律手帳調書",
+      "headline": "2026-09-27 (日) は、主に gemini に注力。計 1 件の活動ログを記録。",
+      "causal_chain": [
+        "未明: Pixel Watch 3 睡眠・心拍検知",
+        "朝: 竹原AMeDAS・気象庁データ同期",
+        "日中: Google Drive & Git自律活動記録",
+        "夜: デイリーサマリー生成・Cloudflareデプロイ"
+      ],
+      "deep_story": "2026-09-27 (日) は、主に gemini に注力。計 1 件の活動ログを記録。",
+      "future_watch": "翌日(2026-09-29)への引き継ぎタスク・健康トレンド追跡",
+      "sources": [
+        "Google Drive API v3 (直近更新走査)",
+        "Pixel Watch 3 (Health API v4)",
+        "気象庁（竹原 AMeDAS 67461）",
+        "Google Calendar API v3",
+        "GoogleNews ICS (14,346記事)"
+      ],
+      "key_metrics": [
+        {
+          "label": "総活動イベント数",
+          "value": "1 件",
+          "sub": "Drive / Git / Cal",
+          "trend": "flat"
+        }
+      ],
+      "status_code": "VERIFIED",
+      "status_label": "記録完了 (RECORDED)",
+      "status_color": "green",
+      "audit_hash": "SHA256-2B6F06BCAE8B",
+      "verified_by": "Antigravity Autonomous Lifelog Engine",
+      "recorded_at": "2026-09-27 23:59 JST",
+      "next_review": "アーカイブ保管済"
+    },
+    {
+      "id": "FORM-DAY-20260926",
+      "raw_id": 40,
+      "category": "DAILY-TECHO",
+      "title": "【第1日】2026-09-26（日）日次開発・自律手帳調書",
+      "headline": "2026-09-26 (土) は、主に 近畿大学付属中学東広島, gBizINFO に注力。計 63 件の活動ログを記録。",
+      "causal_chain": [
+        "未明: Pixel Watch 3 睡眠・心拍検知",
+        "朝: 竹原AMeDAS・気象庁データ同期",
+        "日中: Google Drive & Git自律活動記録",
+        "夜: デイリーサマリー生成・Cloudflareデプロイ"
+      ],
+      "deep_story": "2026-09-26 (土) は、主に 近畿大学付属中学東広島, gBizINFO に注力。計 63 件の活動ログを記録。",
+      "future_watch": "翌日(2026-09-27)への引き継ぎタスク・健康トレンド追跡",
+      "sources": [
+        "Google Drive API v3 (直近更新走査)",
+        "Pixel Watch 3 (Health API v4)",
+        "気象庁（竹原 AMeDAS 67461）",
+        "Google Calendar API v3",
+        "GoogleNews ICS (14,346記事)"
+      ],
+      "key_metrics": [
+        {
+          "label": "総活動イベント数",
+          "value": "63 件",
+          "sub": "Drive / Git / Cal",
+          "trend": "flat"
+        }
+      ],
+      "status_code": "VERIFIED",
+      "status_label": "記録完了 (RECORDED)",
+      "status_color": "green",
+      "audit_hash": "SHA256-5E965E282157",
+      "verified_by": "Antigravity Autonomous Lifelog Engine",
+      "recorded_at": "2026-09-26 23:59 JST",
+      "next_review": "アーカイブ保管済"
     }
   ]
 };</script>

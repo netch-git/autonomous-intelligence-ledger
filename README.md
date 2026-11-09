@@ -1,75 +1,55 @@
-# Autonomous Intelligence Ledger (自律型インテリジェンス電子帳票)
+# antigravity プロジェクト総合管理台帳 (40-Day Project Ledger)
 
-> **Antigravity × Google AI Studio × GitHub × Cloudflare Pages による完全自律型同期・電子帳票監査システム**
+> **Google ドライブ (`G:/マイドライブ/antigravity`) で40日近くにわたって蓄積・開発されてきた全プロジェクト資産・日次自律手帳ログ・学術論文・IDM・デザイン・パイプラインを統合管理・点検する電子帳票Webアプリケーション**
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
 [![Inference](https://img.shields.io/badge/Gemini_API-3.8_Flash_(0_Yen)-blue?style=flat-square)](https://aistudio.google.com)
 [![Icons](https://img.shields.io/badge/Icons-Google_Fonts_Material_Symbols-4285F4?style=flat-square)](https://fonts.google.com/icons)
 [![Style](https://img.shields.io/badge/Form_Style-JIS_X_0901_Compliant-1e293b?style=flat-square)](style.css)
-[![Edge CDN](https://img.shields.io/badge/Cloudflare_Pages-Ready-F38020?style=flat-square)](https://pages.cloudflare.com)
+[![Edge CDN](https://img.shields.io/badge/Cloudflare_Pages-Ready-F38020?style=flat-square)](https://autonomous-intelligence-ledger.pages.dev)
 
 ---
 
 ## 1. 概要 (Overview)
 
-『**Autonomous Intelligence Ledger (自律型インテリジェンス電子帳票)**』は、Antigravity（自律型ペアプログラミング・エージェント）と Google AI Studio（Gemini 3.8 Flash SDK）、GitHub（GitOps自律同期）、および Cloudflare Pages（世界規模のエッジCDN）を横断連携させ、国際オープンデータ因果連鎖や自律手帳・購買ログを公的ビジネス帳票・監査調書の様式で自動記録・更新・公開するWebアプリケーションです。
+本システムは、Google ドライブの `antigravity` ワークスペース（`G:/マイドライブ/antigravity`）において約40日間にわたり開発・自律運用されてきたすべてのプロジェクト資産、日次手帳ログ、学術論文、分析スクリプトを、日本の公的ビジネス帳票・監査調書の様式で一覧・点検・管理するための**自動更新型・統合電子帳票Webアプリケーション**です。
 
 ### 規程・設計ガイドライン
-- **絵文字完全排除（NO-EMOJI POLICY）**: 業務・学術・監査調書としての品格と可読性を保つため、システム全体（UI、帳票テーブル、ドキュメント）において絵文字を一切排除し、100% **Google Fonts Material Symbols Outlined** のベクターアイコンを採用しています。
-- **公的帳票・稟議書様式美**: 電子検印・承認印（Antigravity起票 / AI Studio推論 / GitHub同期 / Cloudflare公開承認の4連印影）、JIS規格連動様式番号、SHA-256改竄防止ハッシュを標準装備。
-- **A4帳票印刷・PDF出力完全対応 (`@media print`)**: ブラウザの印刷ダイアログ (`Ctrl+P` / `Cmd+P`) から、ヘッダー、印鑑、明細テーブル、署名欄がA4横（Landscape）用紙に収まる専用CSSを完備。
-- **0円枠完全防護（Token & Cost Governance）**: すべての自律推論は Google AI Studio の無料APIキー枠（Gemini 3.8 Flash）で完結させ、有料課金ルート（Vertex AI）へのフォールバックを遮断しています。
+- **絵文字完全排除（NO-EMOJI POLICY）**: 業務・資産管理調書としての品格と視認性を保つため、システム全体において絵文字を一切排除し、100% **Google Fonts Material Symbols Outlined** のベクターアイコンを採用しています。
+- **公的帳票・稟議書様式美**: 電子検印・承認印（起票 / AI推論 / Git同期 / 公開承認の4連印影）、JIS規格連動様式番号、決定論的SHA-256監査ハッシュを標準装備。
+- **A4横帳票印刷・PDF出力完全対応 (`@media print`)**: ブラウザの印刷ダイアログ (`Ctrl+P` / `Cmd+P`) から、ヘッダー、印鑑、明細テーブル、署名欄がA4横（Landscape）用紙に収まる専用CSSを完備。
+- **0円枠完全防護（Token & Cost Governance）**: すべての自律推論は Google AI Studio の無料APIキー枠（Gemini 3.8 Flash）で完結させ、Vertex AIの有料課金を恒久的に遮断（`ALLOW_PAID_VERTEX=0`）しています。
 
 ---
 
-## 2. 外部連携リンク集 (External Links & Portals)
+## 2. 管理対象プロジェクト資産 (Managed Workspace Assets)
 
-本システムと相互接続されている主要リソースへの直結リンクです。
+本台帳には、以下の40日間にわたる全資産が収録されています。
 
-| 対象リソース | リンク種別 | URL / アクセス先 |
+| 管理番号 | 資産区分 | プロジェクト名 / 概要 | 成果物・参照先 |
+| :--- | :--- | :--- | :--- |
+| **PROJ-TECHO-PAGES** | 中核開発基盤 | **AIエージェント自律手帳** (431日分ログ・直近40日集中稼働) | `apps/chronicle_site/` ([公開サイト](https://world-pulse-chronicle.pages.dev)) |
+| **PROJ-PAPER-MONOGRAPH** | 学術リサーチ | **生成AI認知的拒絶・非検知性工学 論文** (Salubra 1931色彩) | `docs/`, `site/index.html` (118KBモノグラフ) |
+| **PROJ-IDM-RESEARCH** | 学術リサーチ | **IDM DX大規模意識調査 二元配置ANOVA論文** | `IDM/`, `netch-git/idm-dx-research-paper` |
+| **PROJ-AESTHETICS-LAB** | デザイン・UI | **AESTHETICS LAB & Webデザイン早見帳** | `design/`, `apps/web_design_catalog.html` |
+| **PROJ-GAS-ONEPLATFORM** | Workspace | **GAS & Google One Platform 共通API基盤・深夜配信** | `googleworkspace/`, `gas-one-platform-spec` |
+| **PROJ-COST-GOVERNANCE** | コスト統制 | **AI Studio 0円防護・自律パイプライン基盤** | `.env`, `GEMINI.md` (第4章), `scripts/` |
+| **FORM-DAY-20261108〜** | 40日間手帳調書 | **第1日〜第40日 デイリー開発・ライフログ調書** (40件) | `apps/chronicle_site/techo_daily_logs.json` |
+
+---
+
+## 3. 外部連携リンク集 (External Links & Portals)
+
+| リソース | 役割 | URL |
 | :--- | :--- | :--- |
-| **GitHub 本リポジトリ** | ソースコード・構成管理 | [netch-git/autonomous-intelligence-ledger](https://github.com/netch-git/autonomous-intelligence-ledger) |
-| **GitHub README 仕様書** | 仕様・設計ドキュメント | [README.md 直リンク](https://github.com/netch-git/autonomous-intelligence-ledger#readme) |
-| **World Pulse Chronicle** | 国際オープンデータ自律サイト | [world-pulse-chronicle.pages.dev](https://world-pulse-chronicle.pages.dev) |
-| **連携元 GitHub リポジトリ** | 因果分析・データパイプライン | [netch-git/World-Pulse-Chronicle](https://github.com/netch-git/World-Pulse-Chronicle) |
+| **本管理台帳 Webアプリ** | 40日間プロジェクト総合管理帳票 | [autonomous-intelligence-ledger.pages.dev](https://autonomous-intelligence-ledger.pages.dev) |
+| **本台帳 GitHub リポジトリ** | 台帳ソースコード・構成管理 | [netch-git/autonomous-intelligence-ledger](https://github.com/netch-git/autonomous-intelligence-ledger) |
+| **公開中の自律手帳サイト** | デイリークロニクル本番サイト | [world-pulse-chronicle.pages.dev](https://world-pulse-chronicle.pages.dev) |
 | **Google AI Studio** | Gemini 3.8 Flash 推論環境 | [aistudio.google.com](https://aistudio.google.com) |
-| **Cloudflare Pages 管理** | エッジホスティング | [dash.cloudflare.com](https://dash.cloudflare.com) |
 
 ---
 
-## 3. システムアーキテクチャ (System Architecture)
-
-```mermaid
-flowchart LR
-    A["Google AI Studio\n(Gemini 3.8 Flash)"] -->|構造化因果推論| B["Antigravity Agent\n(自律監査調書起票)"]
-    C["国際オープンデータ\n(WB, FAOSTAT, CCKP)"] --> B
-    D["AIエージェント自律手帳\n(購買明細・健康ログ)"] --> B
-    B -->|ハッシュ照合 & JSON更新| E["GitHub Actions\n(GitOps 自律同期)"]
-    E -->|Git Push| F["GitHub Repository\n(netch-git)"]
-    E -->|Wrangler Deploy| G["Cloudflare Pages\n(世界規模エッジCDN)"]
-    G --> H["電子帳票Webアプリ\n(A4印刷 / CSV / 自動更新)"]
-```
-
----
-
-## 4. 主な機能 (Core Features)
-
-1. **リアルタイム自動更新エンジン (Live Auto-Sync Engine)**:
-   - 30秒 / 1分 / 5分 / 停止 の更新サイクルを自由に選択可能。
-   - 次回更新までのプログレスバーゲージおよび手動「今すぐ更新」ボタン。
-2. **多次元フィルタ & 全文検索**:
-   - 分類別（食料・農業インフレ、気候・エネルギー、マクロ経済・為替、サプライチェーン、手帳・健康購買、要警戒項目）。
-   - キーワード入力によるインクリメンタル検索（件名、指標、ハッシュ）。
-3. **起票伝票詳細モーダル (Voucher Detail Inspection)**:
-   - レコードの「開く」を押すと、詳細な因果ストーリー、予測シナリオ、データソース、数理検証指標を1枚の監査調書としてポップアップ表示。
-4. **エクスポート & 印刷出力**:
-   - `[ 帳票印刷 / PDF ]`: A4横形式での美しい公式帳票印刷。
-   - `[ CSV出力 ]`: 現在フィルタ中のデータをUTF-8 (BOM付) CSVとして一括保存。
-   - `[ JSON出力 ]`: メタデータを含む構造化JSONエクスポート。
-
----
-
-## 5. デプロイ手順 (Deployment Guide)
+## 4. デプロイ手順 (Deployment Guide)
 
 ### 方法 A: Cloudflare Pages への直接デプロイ (Wrangler CLI)
 
@@ -84,43 +64,12 @@ chmod +x deploy.sh
 ./deploy.sh
 ```
 
-初回実行時はブラウザが自動的に開き、Cloudflareの認証画面で「許可」を押すだけでエッジネットワークに即時デプロイされます。
-
 ### 方法 B: GitHub Actions による自動デプロイ
 
-リポジトリの `Settings -> Secrets and variables -> Actions` に以下のシークレットを登録します:
-- `CLOUDFLARE_API_TOKEN`: Cloudflare Pages のデプロイ権限を持つAPIトークン
-- `CLOUDFLARE_ACCOUNT_ID`: Cloudflare アカウントID
-
-設定完了後、`main` ブランチにプッシュするだけで `.github/workflows/deploy.yml` が自動起動し、Cloudflare Pages へ最新の帳票Webアプリがデプロイされます。
+リポジトリの `main` ブランチにプッシュするだけで、`.github/workflows/deploy.yml` が自動起動し、Cloudflare Pages (`autonomous-intelligence-ledger`) へ最新の台帳がデプロイされます。
 
 ---
 
-## 6. ディレクトリ構成 (Repository Structure)
+## 5. ライセンス (License)
 
-```text
-autonomous-intelligence-ledger/
-├── index.html                   # 帳票Webアプリ本体 (自己完結型・埋め込みフォールバック内蔵)
-├── style.css                    # 公的帳票デザイン・承認印スタイル・@media print定義
-├── app.js                       # 自動更新タイマー・フィルタ・CSV出力・モーダル制御
-├── data/
-│   └── ledger_data.json         # 45件の統合帳票データセット (最新ハッシュ照合済)
-├── scripts/
-│   └── sync_ledger_data.py      # 定期同期・ハッシュ再計算・index.html同期デーモン
-├── .github/
-│   └── workflows/
-│       ├── deploy.yml           # Cloudflare Pages / GitHub Pages 自動デプロイ
-│       └── auto_sync.yml        # 定期自律データ更新ワークフロー
-├── deploy_to_cloudflare.bat     # Windows用デプロイスクリプト
-├── deploy.sh                    # Linux / Mac用デプロイスクリプト
-├── wrangler.toml                # Cloudflare Pages 設定ファイル
-├── _headers                     # セキュリティ・CORS・キャッシュ設定
-├── LICENSE                      # MIT License
-└── README.md                    # 本仕様書
-```
-
----
-
-## 7. ライセンス (License)
-
-MIT License. Copyright (c) 2026 Antigravity Autonomous Research Lab.
+MIT License. Copyright (c) 2026 Antigravity Workspace Governor.
