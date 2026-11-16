@@ -1,0 +1,1482 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixel 9a 仕事・生活 使いこなし3時間勉強会ガイド</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400..600,0..1,0" rel="stylesheet">
+  <style>
+    /* ==========================================================================
+       Digital Agency Design System (DADS) Compliant Tokens & Base Styles
+       ========================================================================== */
+    :root {
+      /* Color Palette - DADS */
+      --dads-blue-1000: #00118F;
+      --dads-blue-900: #0017C1;
+      --dads-blue-800: #0027E8;
+      --dads-blue-100: #D9E6FF;
+      --dads-blue-50: #E8F0FE;
+
+      --dads-grey-900: #1A1A1C;
+      --dads-grey-700: #4B4B4D;
+      --dads-grey-600: #666668;
+      --dads-grey-400: #949497;
+      --dads-grey-300: #CCCCCC;
+      --dads-grey-100: #F1F1F4;
+      --dads-grey-50: #F8F8FA;
+      --dads-white: #FFFFFF;
+
+      --dads-green-700: #197A4B;
+      --dads-green-50: #EBF8F1;
+      --dads-red-700: #EC0000;
+      --dads-red-50: #FDEEEE;
+      --dads-amber-800: #8A6100;
+      --dads-amber-600: #B78F00;
+      --dads-amber-50: #FFF8DC;
+      --dads-focus: #FF9900;
+
+      /* Typography */
+      --font-sans: "Noto Sans JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+
+      /* Radii & Spacing */
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.75;
+      letter-spacing: 0.02em;
+      color: var(--dads-grey-900);
+      background-color: var(--dads-grey-50);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* DADS Focus Ring */
+    :focus-visible {
+      outline: 3px solid var(--dads-focus);
+      outline-offset: 2px;
+    }
+
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 20px;
+      line-height: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      vertical-align: middle;
+      user-select: none;
+    }
+
+    a {
+      color: var(--dads-blue-900);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    a:hover {
+      color: var(--dads-blue-1000);
+      background-color: var(--dads-blue-50);
+    }
+
+    /* Top Header (DADS Global Header) */
+    .dads-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: var(--dads-white);
+      border-bottom: 2px solid var(--dads-grey-900);
+      padding: 12px 24px;
+    }
+
+    .dads-header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .dads-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .dads-brand-tag {
+      background-color: var(--dads-blue-900);
+      color: var(--dads-white);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: var(--radius-sm);
+      letter-spacing: 0.04em;
+    }
+
+    .dads-brand-title {
+      font-size: 1.0625rem;
+      font-weight: 700;
+      color: var(--dads-grey-900);
+    }
+
+    .dads-header-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .progress-status {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background-color: var(--dads-grey-100);
+      border: 1px solid var(--dads-grey-300);
+      padding: 6px 14px;
+      border-radius: var(--radius-md);
+      font-size: 0.875rem;
+      font-weight: 700;
+    }
+
+    .progress-track {
+      width: 96px;
+      height: 8px;
+      background-color: var(--dads-grey-300);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background-color: var(--dads-green-700);
+      transition: width 0.2s ease;
+    }
+
+    /* DADS Buttons */
+    .dads-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 44px;
+      padding: 8px 18px;
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      font-weight: 700;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: background-color 0.15s, border-color 0.15s, color 0.15s;
+    }
+
+    .dads-btn-secondary {
+      background-color: var(--dads-white);
+      color: var(--dads-blue-900);
+      border: 1.5px solid var(--dads-blue-900);
+    }
+    .dads-btn-secondary:hover {
+      background-color: var(--dads-blue-50);
+    }
+
+    .dads-btn-primary {
+      background-color: var(--dads-blue-900);
+      color: var(--dads-white);
+      border: 1.5px solid var(--dads-blue-900);
+    }
+    .dads-btn-primary:hover {
+      background-color: var(--dads-blue-1000);
+      border-color: var(--dads-blue-1000);
+    }
+
+    /* Layout Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 32px 24px 80px;
+    }
+
+    /* DADS Hero Block */
+    .hero-block {
+      background-color: var(--dads-white);
+      border: 1px solid var(--dads-grey-300);
+      border-top: 6px solid var(--dads-blue-900);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      margin-bottom: 32px;
+    }
+
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--dads-blue-900);
+      margin-bottom: 12px;
+    }
+
+    .hero-block h1 {
+      font-size: clamp(1.5rem, 2.8vw, 2.25rem);
+      line-height: 1.4;
+      font-weight: 700;
+      color: var(--dads-grey-900);
+      margin-bottom: 16px;
+    }
+
+    .hero-lead {
+      font-size: 1rem;
+      color: var(--dads-grey-700);
+      max-width: 860px;
+      margin-bottom: 24px;
+    }
+
+    .hero-summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 16px;
+    }
+
+    .hero-summary-item {
+      background-color: var(--dads-grey-50);
+      border: 1px solid var(--dads-grey-300);
+      border-radius: var(--radius-md);
+      padding: 16px;
+    }
+
+    .hero-summary-label {
+      font-size: 0.8125rem;
+      font-weight: 700;
+      color: var(--dads-blue-900);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hero-summary-desc {
+      font-size: 0.875rem;
+      color: var(--dads-grey-700);
+    }
+
+    /* DADS Tabs */
+    .dads-tabs {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+
+    @media (max-width: 900px) {
+      .dads-tabs {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 540px) {
+      .dads-tabs {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .dads-tab {
+      background-color: var(--dads-white);
+      border: 1.5px solid var(--dads-grey-300);
+      border-radius: var(--radius-md);
+      padding: 14px 16px;
+      text-align: left;
+      cursor: pointer;
+      font-family: var(--font-sans);
+      transition: border-color 0.15s, background-color 0.15s;
+      min-height: 72px;
+    }
+
+    .dads-tab:hover {
+      border-color: var(--dads-blue-900);
+      background-color: var(--dads-blue-50);
+    }
+
+    .dads-tab.active {
+      border-color: var(--dads-blue-900);
+      border-width: 2px;
+      background-color: var(--dads-blue-50);
+    }
+
+    .dads-tab-time {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--dads-blue-900);
+      margin-bottom: 4px;
+    }
+
+    .dads-tab-title {
+      display: block;
+      font-size: 0.9375rem;
+      font-weight: 700;
+      color: var(--dads-grey-900);
+    }
+
+    /* Section */
+    .part-section { display: none; }
+    .part-section.active { display: block; }
+
+    .section-heading {
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--dads-grey-300);
+    }
+
+    .section-heading h2 {
+      font-size: 1.5rem;
+      line-height: 1.45;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+
+    .section-heading p {
+      font-size: 0.9375rem;
+      color: var(--dads-grey-700);
+    }
+
+    /* Topic Card */
+    .topic-card {
+      background-color: var(--dads-white);
+      border: 1px solid var(--dads-grey-300);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      margin-bottom: 28px;
+      display: grid;
+      grid-template-columns: 1.3fr 0.9fr;
+      gap: 32px;
+      align-items: start;
+    }
+
+    @media (max-width: 880px) {
+      .topic-card {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .topic-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    /* DADS Tag / Chip */
+    .dads-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: var(--radius-sm);
+      border: 1px solid transparent;
+    }
+
+    .tag-blue { background-color: var(--dads-blue-50); color: var(--dads-blue-900); border-color: var(--dads-blue-100); }
+    .tag-red { background-color: var(--dads-red-50); color: var(--dads-red-700); border-color: #f5bcbc; }
+    .tag-green { background-color: var(--dads-green-50); color: var(--dads-green-700); border-color: #b7e1cd; }
+    .tag-amber { background-color: var(--dads-amber-50); color: var(--dads-amber-800); border-color: #f0d788; }
+
+    /* DADS Checkbox */
+    .dads-check {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.875rem;
+      font-weight: 700;
+      cursor: pointer;
+      padding: 6px 12px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--dads-grey-300);
+      background-color: var(--dads-grey-50);
+      min-height: 40px;
+    }
+
+    .dads-check input {
+      width: 20px;
+      height: 20px;
+      accent-color: var(--dads-blue-900);
+      cursor: pointer;
+    }
+
+    .topic-title {
+      font-size: 1.25rem;
+      line-height: 1.45;
+      font-weight: 700;
+      margin-bottom: 14px;
+      color: var(--dads-grey-900);
+    }
+
+    /* DADS Notification Banner */
+    .dads-banner {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      font-size: 0.9rem;
+      margin: 14px 0;
+      border: 1px solid;
+    }
+
+    .dads-banner-error {
+      background-color: var(--dads-red-50);
+      border-color: var(--dads-red-700);
+      color: #6b0000;
+    }
+
+    .dads-banner-success {
+      background-color: var(--dads-green-50);
+      border-color: var(--dads-green-700);
+      color: #0e4a2d;
+    }
+
+    .dads-banner-warning {
+      background-color: var(--dads-amber-50);
+      border-color: var(--dads-amber-600);
+      color: #5c4000;
+    }
+
+    .instructor-note {
+      display: none;
+      background-color: var(--dads-amber-50);
+      border: 1.5px dashed var(--dads-amber-600);
+      border-radius: var(--radius-md);
+      padding: 14px 16px;
+      font-size: 0.875rem;
+      margin-top: 14px;
+      color: #5c4000;
+    }
+
+    body.instructor-mode .instructor-note {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    /* Ordered Steps */
+    .steps {
+      list-style: none;
+      counter-reset: step;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 16px 0;
+    }
+
+    .steps li {
+      counter-increment: step;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.9375rem;
+    }
+
+    .steps li::before {
+      content: counter(step);
+      flex: 0 0 26px;
+      height: 26px;
+      border-radius: 50%;
+      background-color: var(--dads-blue-900);
+      color: var(--dads-white);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+
+    .menu-chip {
+      display: inline-block;
+      background-color: var(--dads-grey-100);
+      border: 1px solid var(--dads-grey-300);
+      padding: 1px 8px;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      font-size: 0.875rem;
+      color: var(--dads-grey-900);
+    }
+
+    /* Pixel 9a Screen Simulator (Clean Schematic) */
+    .phone-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .pixel-device {
+      width: 288px;
+      background-color: #1A1A1C;
+      border-radius: 32px;
+      padding: 12px;
+      border: 2px solid #4B4B4D;
+    }
+
+    .pixel-notch {
+      width: 10px;
+      height: 10px;
+      background-color: #000000;
+      border-radius: 50%;
+      border: 1.5px solid #4B4B4D;
+      margin: 0 auto 8px;
+    }
+
+    .pixel-screen {
+      background-color: var(--dads-white);
+      border-radius: 20px;
+      overflow: hidden;
+      min-height: 360px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid #4B4B4D;
+      font-size: 0.8125rem;
+    }
+
+    .sim-status {
+      background-color: var(--dads-grey-100);
+      padding: 6px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--dads-grey-700);
+      border-bottom: 1px solid var(--dads-grey-300);
+    }
+
+    .sim-body {
+      padding: 12px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .sim-title {
+      font-size: 0.9375rem;
+      font-weight: 700;
+      color: var(--dads-grey-900);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .sim-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 9px 10px;
+      background-color: var(--dads-grey-50);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--dads-grey-300);
+      font-size: 0.78rem;
+      gap: 8px;
+    }
+
+    .sim-row-left {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .sim-row.highlight {
+      background-color: var(--dads-blue-50);
+      border: 2px solid var(--dads-blue-900);
+      font-weight: 700;
+      color: var(--dads-blue-900);
+    }
+
+    .sim-tap-badge {
+      background-color: var(--dads-red-700);
+      color: var(--dads-white);
+      font-size: 0.625rem;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: var(--radius-sm);
+    }
+
+    .sim-row.warn-row {
+      background-color: var(--dads-red-50);
+      border: 1.5px solid var(--dads-red-700);
+      color: #6b0000;
+    }
+
+    .sim-navbar {
+      background-color: var(--dads-grey-100);
+      border-top: 1px solid var(--dads-grey-300);
+      padding: 8px 20px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      color: var(--dads-grey-700);
+      font-weight: 700;
+      font-size: 0.8125rem;
+    }
+
+    .gesture-bar {
+      width: 84px;
+      height: 4px;
+      background-color: var(--dads-grey-900);
+      border-radius: 999px;
+      margin: 4px auto;
+    }
+
+    .sim-caption {
+      font-size: 0.8125rem;
+      color: var(--dads-grey-700);
+      text-align: center;
+      max-width: 290px;
+    }
+
+    .sim-switch {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .sim-btn {
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      padding: 6px 12px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--dads-grey-300);
+      background-color: var(--dads-white);
+      color: var(--dads-grey-900);
+      cursor: pointer;
+      font-weight: 700;
+      min-height: 36px;
+    }
+
+    .sim-btn.active {
+      background-color: var(--dads-blue-900);
+      color: var(--dads-white);
+      border-color: var(--dads-blue-900);
+    }
+
+    /* DADS Data Table */
+    .dads-table-wrap {
+      overflow-x: auto;
+      background-color: var(--dads-white);
+      border: 1px solid var(--dads-grey-300);
+      border-radius: var(--radius-lg);
+      margin-bottom: 28px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9375rem;
+    }
+
+    th, td {
+      padding: 14px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--dads-grey-300);
+    }
+
+    th {
+      background-color: var(--dads-grey-100);
+      font-weight: 700;
+      color: var(--dads-grey-900);
+    }
+
+    tr:last-child td { border-bottom: none; }
+
+    /* Official Links Card */
+    .official-links {
+      background-color: var(--dads-white);
+      border: 1px solid var(--dads-grey-300);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      margin-top: 24px;
+    }
+
+    .official-links h3 {
+      font-size: 1.0625rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .link-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+      font-size: 0.875rem;
+    }
+
+    .link-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    @media print {
+      .dads-header, .dads-tabs, .sim-switch { display: none !important; }
+      .part-section { display: block !important; margin-bottom: 40px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="dads-header">
+    <div class="dads-header-inner">
+      <div class="dads-brand">
+        <span class="dads-brand-tag">PIXEL 9a 実践ガイド</span>
+        <span class="dads-brand-title">3時間使いこなし勉強会テキスト</span>
+      </div>
+      <div class="dads-header-actions">
+        <div class="progress-status" aria-live="polite">
+          <span class="material-symbols-outlined">task_alt</span>
+          <span>設定完了: <span id="doneCount">0</span> / <span id="totalCount">10</span></span>
+          <div class="progress-track">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+        </div>
+        <button type="button" class="dads-btn dads-btn-secondary" id="instructorBtn" onclick="toggleInstructorMode()">
+          <span class="material-symbols-outlined">school</span>
+          <span id="instructorBtnLabel">講師用トークメモ: OFF</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Hero -->
+    <section class="hero-block">
+      <div class="hero-kicker">
+        <span class="material-symbols-outlined">smartphone</span>
+        <span>社内支給端末 iPhone から Google Pixel 9a への移行フォロー</span>
+      </div>
+      <h1>「前のほうが良かった」を<br>「Pixelにして仕事が楽になった」に変える3時間</h1>
+      <p class="hero-lead">
+        スペックや専門用語の説明は行いません。全員同じ着信音で誰の電話か分からない問題、アラームの迷子、写真バックアップの通信量トラブルから、
+        Googleドライブの書類スキャン・自動文字起こし・翻訳・Gemini連携まで、<strong>明日からの実務が楽になる使いこなし</strong>に絞って解説します。
+      </p>
+      <div class="hero-summary-grid">
+        <div class="hero-summary-item">
+          <div class="hero-summary-label"><span class="material-symbols-outlined">looks_one</span>第1部（45分）</div>
+          <div class="hero-summary-desc">iPhoneとの操作差・着信音・アラーム・画面設定</div>
+        </div>
+        <div class="hero-summary-item">
+          <div class="hero-summary-label"><span class="material-symbols-outlined">looks_two</span>第2部（45分）</div>
+          <div class="hero-summary-desc">写真バックアップの罠回避 ＆ Google基本アプリ</div>
+        </div>
+        <div class="hero-summary-item">
+          <div class="hero-summary-label"><span class="material-symbols-outlined">looks_3</span>第3部（55分）</div>
+          <div class="hero-summary-desc">スキャン・文字起こし・翻訳・Gemini実務ワーク</div>
+        </div>
+        <div class="hero-summary-item">
+          <div class="hero-summary-label"><span class="material-symbols-outlined">looks_4</span>第4部（35分）</div>
+          <div class="hero-summary-desc">3時間進行表 ＆ よくある質問まとめ</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Part Navigation Tabs -->
+    <nav class="dads-tabs" aria-label="勉強会パート選択">
+      <button type="button" class="dads-tab active" onclick="showPart('part1', this)">
+        <span class="dads-tab-time">第1部（0:00〜0:45）</span>
+        <span class="dads-tab-title">1. 操作・着信音・アラーム解消</span>
+      </button>
+      <button type="button" class="dads-tab" onclick="showPart('part2', this)">
+        <span class="dads-tab-time">第2部（0:45〜1:30）</span>
+        <span class="dads-tab-title">2. バックアップ罠 ＆ Googleアプリ</span>
+      </button>
+      <button type="button" class="dads-tab" onclick="showPart('part3', this)">
+        <span class="dads-tab-time">第3部（1:45〜2:40）</span>
+        <span class="dads-tab-title">3. 仕事効率化 AI・スキャン・録音</span>
+      </button>
+      <button type="button" class="dads-tab" onclick="showPart('part4', this)">
+        <span class="dads-tab-time">第4部（2:40〜3:00）</span>
+        <span class="dads-tab-title">4. 3時間進行表 ＆ 質問集</span>
+      </button>
+    </nav>
+
+    <!-- ================= PART 1 ================= -->
+    <section id="part1" class="part-section active">
+      <div class="section-heading">
+        <h2><span class="material-symbols-outlined">touch_app</span>第1部：iPhoneとの違いを解消し、ストレスをゼロにする（45分）</h2>
+        <p>まずは「前の画面に戻れない」「誰の電話か分からない」「アラームが分からない」の3大ストレスを全員で解消します。</p>
+      </div>
+
+      <!-- Topic 1: Navigation -->
+      <article class="topic-card">
+        <div>
+          <div class="topic-meta">
+            <span class="dads-tag tag-red"><span class="material-symbols-outlined">report_problem</span>よくある困りごと 1</span>
+            <label class="dads-check"><input type="checkbox" class="task-check" onchange="updateProgress()"> 設定完了</label>
+          </div>
+          <h3 class="topic-title">1. 「前の画面に戻れない」を解決（3ボタン切替も可能）</h3>
+          <div class="dads-banner dads-banner-error">
+            <span class="material-symbols-outlined">error</span>
+            <div><strong>なぜ困るか：</strong>Pixelの初期設定は「画面の左右端から内側にスワイプで戻る」方式です。iPhoneの「左上を押して戻る」に慣れていると最初必ず迷います。</div>
+          </div>
+          <ol class="steps">
+            <li><span class="menu-chip">設定</span> アプリ（歯車アイコン）を開きます。</li>
+            <li>一番下までスクロールして <span class="menu-chip">システム</span> ＞ <span class="menu-chip">ナビゲーション モード</span> をタップします。</li>
+            <li>スワイプが難しければ <span class="menu-chip">3 ボタン ナビゲーション</span> を選びます。画面下に <strong>戻る・ホーム・履歴</strong> の3ボタンが常時表示されます。</li>
+          </ol>
+          <div class="dads-banner dads-banner-success">
+            <span class="material-symbols-outlined">lightbulb</span>
+            <div><strong>どちらを選ぶべきか：</strong>慣れるとジェスチャーが速いですが、「まず迷わず使いたい」方は遠慮なく <strong>3ボタン</strong> にして問題ありません（いつでも戻せます）。</div>
+          </div>
+          <div class="instructor-note">
+            <span class="material-symbols-outlined">school</span>
+            <div><strong>講師メモ：</strong>開始10分で「戻れない人」が出ると進行が止まります。ここで全員に「画面下の戻るボタンを出したい人は今出しましょう」と声をかけると安心感が生まれます。</div>
+          </div>
+        </div>
+
+        <div class="phone-wrap">
+          <div class="sim-switch">
+            <button type="button" class="sim-btn active" onclick="setNavSim('3btn', this)">3ボタン表示（安心）</button>
+            <button type="button" class="sim-btn" onclick="setNavSim('gesture', this)">ジェスチャー（初期）</button>
+          </div>
+          <div class="pixel-device">
+            <div class="pixel-notch"></div>
+            <div class="pixel-screen">
+              <div class="sim-status"><span>9:30</span><span>5G / 88%</span></div>
+              <div class="sim-body">
+                <div class="sim-title"><span class="material-symbols-outlined">settings</span>ナビゲーション モード</div>
+                <div id="navRowGesture" class="sim-row"><span>ジェスチャー ナビゲーション</span><span>未選択</span></div>
+                <div id="navRow3btn" class="sim-row highlight"><span>3 ボタン ナビゲーション</span><span class="sim-tap-badge">選択中</span></div>
+                <div style="font-size:0.75rem; color:#4B4B4D; padding:6px;">
+                  画面下部に「戻る・ホーム・アプリ履歴」の3つのボタンが常に表示されます。
+                </div>
+              </div>
+              <div id="navSimBottom" class="sim-navbar">
+                <span><span class="material-symbols-outlined">arrow_back</span></span>
+                <span><span class="material-symbols-outlined">circle</span></span>
+                <span><span class="material-symbols-outlined">stop</span></span>
+              </div>
+            </div>
+          </div>
+          <p class="sim-caption">上のボタンで「3ボタン」と「ジェスチャー」の見た目を切り替えられます</p>
+        </div>
+      </article>
+
+      <!-- Topic 2: Ringtone -->
+      <article class="topic-card">
+        <div>
+          <div class="topic-meta">
+            <span class="dads-tag tag-red"><span class="material-symbols-outlined">notifications_active</span>職場の混乱を解消</span>
+            <label class="dads-check"><input type="checkbox" class="task-check" onchange="updateProgress()"> 設定完了</label>
+          </div>
+          <h3 class="topic-title">2. 全員同じ着信音を卒業！自分の着信音・通知音に変える</h3>
+          <div class="dads-banner dads-banner-error">
+            <span class="material-symbols-outlined">error</span>
+            <div><strong>なぜ困るか：</strong>全員に同じPixel 9aが配布されたため、1台鳴るたびに周囲の全員が自分の端末を確認してしまう混乱が起きています。</div>
+          </div>
+          <ol class="steps">
+            <li><span class="menu-chip">設定</span> ＞ <span class="menu-chip">音とバイブレーション</span> を開きます。</li>
+            <li><span class="menu-chip">着信音</span> をタップし、好きなカテゴリから音を試聴して選び、右上の <span class="menu-chip">保存</span> をタップします。</li>
+            <li>同様に <span class="menu-chip">デフォルトの通知音</span> も変更すると、メールやチャット着信も他の人と区別できます。</li>
+            <li><strong>音量のコツ：</strong>本体の音量ボタンを押したときに出るバーの下のメニューアイコンを押すと、<strong>着信音・通知・アラーム・メディア</strong>を個別に調整できます。</li>
+          </ol>
+          <div class="dads-banner dads-banner-success">
+            <span class="material-symbols-outlined">lightbulb</span>
+            <div><strong>応用設定：</strong>特定の上司や重要顧客だけ音を変えたい場合は、<span class="menu-chip">連絡先</span> アプリから相手を開き、右上のメニュー ＞ <span class="menu-chip">着信音を設定</span> で個別設定が可能です。</div>
+          </div>
+          <div class="instructor-note">
+            <span class="material-symbols-outlined">school</span>
+            <div><strong>講師メモ：</strong>ここは1分間「各自で違う音を選んで保存する時間」を取ります。試聴音が鳴るため、事前に「音を出して選んでください」と案内してください。</div>
+          </div>
+        </div>
+
+        <div class="phone-wrap">
+          <div class="pixel-device">
+            <div class="pixel-notch"></div>
+            <div class="pixel-screen">
+              <div class="sim-status"><span>9:45</span><span>5G / 87%</span></div>
+              <div class="sim-body">
+                <div class="sim-title"><span class="material-symbols-outlined">volume_up</span>音とバイブレーション</div>
+                <div class="sim-row"><span class="sim-row-left"><span class="material-symbols-outlined">call</span>着信音の音量</span><span>70%</span></div>
+                <div class="sim-row"><span class="sim-row-left"><span class="material-symbols-outlined">notifications</span>通知の音量</span><span>50%</span></div>
+                <div class="sim-row"><span class="sim-row-left"><span class="material-symbols-outlined">alarm</span>アラームの音量</span><span>85%</span></div>
+                <div class="sim-row highlight"><span class="sim-row-left"><span class="material-symbols-outlined">music_note</span>着信音</span><span class="sim-tap-badge">変更</span></div>
+                <div class="sim-row"><span class="sim-row-left"><span class="material-symbols-outlined">mail</span>デフォルトの通知音</span><span>Popcorn</span></div>
+                <div class="sim-row"><span class="sim-row-left"><span class="material-symbols-outlined">vibration</span>着信時のバイブ</span><span>ON</span></div>
+              </div>
+              <div class="sim-navbar">
+                <span class="material-symbols-outlined">arrow_back</span>
+                <span class="material-symbols-outlined">circle</span>
+                <span class="material-symbols-outlined">stop</span>
+              </div>
+            </div>
+          </div>
+          <p class="sim-caption">設定 ＞ 音とバイブレーション ＞ 着信音（選択後に必ず「保存」をタップ）</p>
+        </div>
+      </article>
+
+      <!-- Topic 3: Alarm & Display -->
+      <article class="topic-card">
+        <div>
+          <div class="topic-meta">
+            <span class="dads-tag tag-blue"><span class="material-symbols-outlined">alarm</span>業務・生活の基本</span>
+            <label class="dads-check"><input type="checkbox" class="task-check" onchange="updateProgress()"> 設定完了</label>
+          </div>
+          <h3 class="topic-title">3. アラーム設定と「画面がすぐ暗くなる」問題の解決</h3>
+          <div class="dads-banner dads-banner-error">
+            <span class="material-symbols-outlined">error</span>
+            <div><strong>なぜ困るか：</strong>時計アプリの場所や曜日繰り返しの設定方法が分からない。また、操作中に30秒で画面が消えてしまいストレスになる。</div>
+          </div>
+          <ol class="steps">
+            <li><strong>アラーム：</strong><span class="menu-chip">時計</span> アプリを開く ＞ 下の <span class="menu-chip">アラーム</span> ＞ 追加ボタン（＋）で時刻を決定します。</li>
+            <li>作成した時間枠をタップすると、<strong>繰り返す曜日（月〜金など）</strong>や <strong>アラームの名前（例：朝礼10分前）</strong>、<strong>アラーム音</strong> を設定できます。</li>
+            <li><strong>画面消灯時間の延長：</strong><span class="menu-chip">設定</span> ＞ <span class="menu-chip">ディスプレイとタップ</span> ＞ <span class="menu-chip">画面消灯</span> を初期値30秒から <strong>1分〜2分</strong> に変更します。</li>
+            <li><strong>電池残量％表示：</strong><span class="menu-chip">設定</span> ＞ <span class="menu-chip">バッテリー</span> ＞ <span class="menu-chip">バッテリー残量</span> をONにすると画面右上に数字が表示されます。</li>
+          </ol>
+          <div class="dads-banner dads-banner-warning">
+            <span class="material-symbols-outlined">warning</span>
+            <div><strong>重要：</strong>本体をマナーモード（バイブ）にしていてもアラームは鳴りますが、<strong>「アラームの音量」がゼロ</strong>だと鳴りません。</div>
+          </div>
+        </div>
+
+        <div class="phone-wrap">
+          <div class="pixel-device">
+            <div class="pixel-notch"></div>
+            <div class="pixel-screen">
+              <div class="sim-status"><span>9:55</span><span>5G / 86%</span></div>
+              <div class="sim-body">
+                <div class="sim-title"><span class="material-symbols-outlined">alarm</span>時計 ＞ アラーム</div>
+                <div class="sim-row highlight">
+                  <div>
+                    <div style="font-size:1.1rem; font-weight:700;">08:50</div>
+                    <div style="font-size:0.7rem;">月火水木金 ・ 朝礼10分前</div>
+                  </div>
+                  <span class="sim-tap-badge">ON</span>
+                </div>
+                <div class="sim-row">
+                  <div>
+                    <div style="font-size:1.1rem; font-weight:700;">17:45</div>
+                    <div style="font-size:0.7rem;">月火水木金 ・ 日報提出</div>
+                  </div>
+                  <span style="color:#666668;">OFF</span>
+                </div>
+                <div style="margin-top:auto; text-align:center;">
+                  <span style="display:inline-flex; align-items:center; justify-content:center; background:#0017C1; color:#fff; width:44px; height:44px; border-radius:50%;">
+                    <span class="material-symbols-outlined">add</span>
+                  </span>
+                </div>
+              </div>
+              <div class="sim-navbar"><span>アラーム</span><span>時計</span><span>タイマー</span></div>
+            </div>
+          </div>
+          <p class="sim-caption">追加ボタン（＋）で作成後、時間枠をタップして曜日と名前を設定</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- ================= PART 2 ================= -->
+    <section id="part2" class="part-section">
+      <div class="section-heading">
+        <h2><span class="material-symbols-outlined">cloud_done</span>第2部：デフォルトの罠を回避 ＆ Google基本アプリ（45分）</h2>
+        <p>初期設定のまま放置すると「会社の容量がすぐ満杯」「外出先で通信量を大量消費」といった事故が起きやすいGoogleフォトのバックアップを正しく設定します。</p>
+      </div>
+
+      <!-- Topic 4: Google Photos Backup Trap -->
+      <article class="topic-card">
+        <div>
+          <div class="topic-meta">
+            <span class="dads-tag tag-red"><span class="material-symbols-outlined">warning</span>最重要：デフォルトの罠</span>
+            <label class="dads-check"><input type="checkbox" class="task-check" onchange="updateProgress()"> 設定完了</label>
+          </div>
+          <h3 class="topic-title">4. 画像・動画のGoogleフォト バックアップ最適化</h3>
+          <div class="dads-banner dads-banner-error">
+            <span class="material-symbols-outlined">error</span>
+            <div>
+              <strong>デフォルト設定の何が問題か：</strong><br>
+              1. 初期設定では「元の画質」や「モバイル通信」で動画までバックアップしようとし、<strong>通信量（ギガ）とGoogleドライブ容量を圧迫</strong>します。<br>
+              2. 個人アカウントと会社アカウントを両方入れている場合、意図しないアカウントに写真が保存される事故が起きます。
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="menu-chip">Google フォト</span> アプリを開く ＞ 右上の <strong>プロフィールアイコン</strong> をタップします。</li>
+            <li>一番上に表示されている <strong>メールアドレス（会社アカウントになっているか）</strong> を確認します。</li>
+            <li><span class="menu-chip">フォトの設定</span> ＞ <span class="menu-chip">バックアップ</span> をタップします。</li>
+            <li><strong>画質の設定：</strong><span class="menu-chip">バックアップの画質</span> を <span class="menu-chip">保存容量の節約画質</span> に変更します（資料や現場写真なら見た目ほぼ変わらず容量を大幅節約できます）。</li>
+            <li><strong>通信量の設定：</strong><span class="menu-chip">モバイルデータ通信の使用量</span> を開き、<span class="menu-chip">モバイルデータを使用して動画をバックアップ</span> を <strong>OFF</strong>、写真もWi-Fi接続時のみ（データ使用なし）に設定します。</li>
+          </ol>
+          <div class="dads-banner dads-banner-success">
+            <span class="material-symbols-outlined">lightbulb</span>
+            <div><strong>フォルダ別制御：</strong><span class="menu-chip">デバイスのフォルダをバックアップ</span> から、Screenshots やチャットアプリのフォルダ単位でON/OFFを切り替えられます。</div>
+          </div>
+          <div class="instructor-note">
+            <span class="material-symbols-outlined">school</span>
+            <div><strong>講師メモ：</strong>ここは全員の画面を見ながら「右上のアイコンからアドレス確認しましたか？」「動画のモバイル通信をOFFにしましたか？」と一つずつ確認するのが確実です。</div>
+          </div>
+        </div>
+
+        <div class="phone-wrap">
+          <div class="pixel-device">
+            <div class="pixel-notch"></div>
+            <div class="pixel-screen">
+              <div class="sim-status"><span>10:20</span><span>5G / 84%</span></div>
+              <div class="sim-body">
+                <div class="sim-title"><span class="material-symbols-outlined">photo_library</span>バックアップ設定</div>
+                <div class="sim-row"><span class="sim-row-left"><span class="material-symbols-outlined">cloud_upload</span>バックアップ</span><span style="color:#0017C1; font-weight:700;">ON</span></div>
+                <div class="sim-row"><span class="sim-row-left"><span class="material-symbols-outlined">account_circle</span>アカウント確認</span><span>company@..</span></div>
+                <div class="sim-row highlight"><span class="sim-row-left"><span class="material-symbols-outlined">high_quality</span>バックアップ画質</span><span>節約画質</span></div>
+                <div class="sim-row warn-row"><span class="sim-row-left"><span class="material-symbols-outlined">signal_cellular_alt</span>モバイルで動画</span><span><strong>OFF推奨</strong></span></div>
+                <div class="sim-row"><span class="sim-row-left"><span class="material-symbols-outlined">folder</span>デバイスのフォルダ</span><span>選択中</span></div>
+              </div>
+              <div class="sim-navbar">
+                <span class="material-symbols-outlined">arrow_back</span>
+                <span class="material-symbols-outlined">circle</span>
+                <span class="material-symbols-outlined">stop</span>
+              </div>
+            </div>
+          </div>
+          <p class="sim-caption">「保存容量の節約画質」＋「動画のモバイル通信バックアップOFF」が鉄則です</p>
+        </div>
+      </article>
+
+      <!-- Topic 5: Google Apps Guide -->
+      <article class="topic-card">
+        <div>
+          <div class="topic-meta">
+            <span class="dads-tag tag-blue"><span class="material-symbols-outlined">apps</span>iPhoneからの乗り換え整理</span>
+            <label class="dads-check"><input type="checkbox" class="task-check" onchange="updateProgress()"> 確認完了</label>
+          </div>
+          <h3 class="topic-title">5. 迷わない！Google基本アプリの使いこなし早見表</h3>
+          <p style="font-size:0.9375rem; color:var(--dads-grey-700); margin-bottom:12px;">
+            iPhoneの「メール」「メモ」「Safari」を使っていた操作は、PixelではすべてGoogleの標準アプリに置き換わります（PCのChromeとも自動同期するのが最大の強みです）。
+          </p>
+          <ol class="steps">
+            <li><strong>Gmail（メール）：</strong>メール一覧を左右にスワイプすると「アーカイブ（整理）」ができます。上部の検索バーで過去のメールも即座に検索できます。</li>
+            <li><strong>Googleカレンダー：</strong>予定だけでなく「タスク（ToDo）」も登録できます。<strong>ホーム画面にウィジェットを置く</strong>と、アプリを開かずに次の予定が常に目に入ります。</li>
+            <li><strong>Google Keep（メモ）：</strong>iPhoneのメモ帳の代わりです。チェックリスト、音声メモ、写真メモがそのままPCのブラウザでも閲覧・編集できます。</li>
+            <li><strong>Chrome（ブラウザ）：</strong>会社のPCで見ていたタブやブックマーク、保存パスワードがPixelと自動同期します。</li>
+          </ol>
+          <div class="dads-banner dads-banner-success">
+            <span class="material-symbols-outlined">lightbulb</span>
+            <div><strong>ウィジェットの置き方：</strong>ホーム画面の何もない場所を長押し ＞ <span class="menu-chip">ウィジェット</span> ＞ <span class="menu-chip">カレンダー</span> や <span class="menu-chip">ドライブのスキャン</span> をドラッグして配置します。</div>
+          </div>
+        </div>
+
+        <div class="phone-wrap">
+          <div class="pixel-device">
+            <div class="pixel-notch"></div>
+            <div class="pixel-screen">
+              <div class="sim-status"><span>10:40</span><span>Wi-Fi / 83%</span></div>
+              <div class="sim-body">
+                <div class="sim-title"><span class="material-symbols-outlined">home</span>ホーム画面おすすめ配置</div>
+                <div style="background:#E8F0FE; border:1.5px solid #0017C1; border-radius:8px; padding:10px;">
+                  <div style="font-size:0.7rem; font-weight:700; color:#0017C1; display:flex; align-items:center; gap:4px;">
+                    <span class="material-symbols-outlined" style="font-size:16px;">calendar_today</span>カレンダー ウィジェット
+                  </div>
+                  <div style="font-size:0.82rem; font-weight:700; margin-top:4px;">13:00 定例ミーティング</div>
+                  <div style="font-size:0.7rem; color:#4B4B4D;">15:30 取引先訪問</div>
+                </div>
+                <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:6px; text-align:center; margin-top:6px; font-size:0.68rem;">
+                  <div style="background:#FDEEEE; padding:8px 2px; border-radius:8px;"><span class="material-symbols-outlined">mail</span><br>Gmail</div>
+                  <div style="background:#E8F0FE; padding:8px 2px; border-radius:8px;"><span class="material-symbols-outlined">map</span><br>マップ</div>
+                  <div style="background:#FFF8DC; padding:8px 2px; border-radius:8px;"><span class="material-symbols-outlined">sticky_note_2</span><br>Keep</div>
+                  <div style="background:#EBF8F1; padding:8px 2px; border-radius:8px;"><span class="material-symbols-outlined">add_to_drive</span><br>Drive</div>
+                </div>
+                <div class="sim-row highlight" style="margin-top:auto;">
+                  <span class="sim-row-left"><span class="material-symbols-outlined">document_scanner</span>ドライブ スキャン</span>
+                  <span>1タップ</span>
+                </div>
+              </div>
+              <div class="sim-navbar">
+                <span class="material-symbols-outlined">arrow_back</span>
+                <span class="material-symbols-outlined">circle</span>
+                <span class="material-symbols-outlined">stop</span>
+              </div>
+            </div>
+          </div>
+          <p class="sim-caption">ホーム画面に「カレンダー」と「ドライブスキャン」を置くと迷いません</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- ================= PART 3 ================= -->
+    <section id="part3" class="part-section">
+      <div class="section-heading">
+        <h2><span class="material-symbols-outlined">auto_awesome</span>第3部：仕事と生活が激変する「Pixel × AI」機能ハンズオン（55分）</h2>
+        <p>「iPhoneのほうが良かった」という声を「これがあるならPixelが便利」に変える、実務直結の4大機能（スキャン・文字起こし・翻訳/かこって検索・Gemini）を体験します。</p>
+      </div>
+
+      <!-- Topic 6: Google Drive Scan -->
+      <article class="topic-card">
+        <div>
+          <div class="topic-meta">
+            <span class="dads-tag tag-green"><span class="material-symbols-outlined">document_scanner</span>紙資料・領収書のデジタル化</span>
+            <label class="dads-check"><input type="checkbox" class="task-check" onchange="updateProgress()"> 体験完了</label>
+          </div>
+          <h3 class="topic-title">6. Googleドライブの強力スキャン（書類・領収書を即PDF化）</h3>
+          <div class="dads-banner dads-banner-error">
+            <span class="material-symbols-outlined">error</span>
+            <div><strong>普通のカメラで撮ると：</strong>机が写り込んだり、斜めになったり、影が入って見づらい画像になり、あとから探すのも困難です。</div>
+          </div>
+          <ol class="steps">
+            <li><span class="menu-chip">Google ドライブ</span> アプリを開く ＞ 右下の <span class="menu-chip">カメラアイコン</span> をタップします。</li>
+            <li>領収書や書類にカメラを向けると、<strong>青い枠が自動で紙を認識</strong>し、手を止めると自動シャッターが切れます。</li>
+            <li>傾き補正・影消し・汚れ除去（指の写り込み消去）もワンタップで完了します。複数ページなら追加ボタンで連続撮影できます。</li>
+            <li><span class="menu-chip">保存</span> を押すと、<strong>中身の文字まで検索できるPDF</strong> としてGoogleドライブに保存されます。</li>
+          </ol>
+          <div class="dads-banner dads-banner-success">
+            <span class="material-symbols-outlined">lightbulb</span>
+            <div><strong>検索のメリット：</strong>PDF内の文字が自動認識（OCR）されるため、あとからドライブの検索窓で「タクシー」「店舗名」と入力するだけで領収書が見つかります。</div>
+          </div>
+        </div>
+
+        <div class="phone-wrap">
+          <div class="pixel-device">
+            <div class="pixel-notch"></div>
+            <div class="pixel-screen">
+              <div class="sim-status"><span>11:10</span><span>Wi-Fi / 80%</span></div>
+              <div class="sim-body" style="background:#1A1A1C; color:#FFFFFF;">
+                <div style="display:flex; justify-content:space-between; font-size:0.75rem;">
+                  <span>閉じる</span>
+                  <span style="color:#D9E6FF; font-weight:700;">自動撮影 ON</span>
+                </div>
+                <div style="flex:1; border:3px solid #4285F4; border-radius:8px; background:#FFFFFF; color:#1A1A1C; padding:14px; margin:8px 6px; display:flex; flex-direction:column; justify-content:space-between;">
+                  <div style="font-weight:700; font-size:0.85rem; border-bottom:1px dashed #CCCCCC; padding-bottom:4px;">領収書</div>
+                  <div style="font-size:0.74rem; color:#4B4B4D;">2026年11月15日<br>株式会社〇〇 御中<br><strong>合計 3,850円</strong></div>
+                  <div style="font-size:0.68rem; color:#0017C1; text-align:right; font-weight:700;">青い枠で自動補正済み</div>
+                </div>
+                <div style="display:flex; justify-content:space-around; font-size:0.72rem; padding-top:4px;">
+                  <span>切り抜き</span><span>色調整</span><span>汚れ除去</span>
+                </div>
+              </div>
+              <div class="sim-navbar" style="background:#1A1A1C; color:#FFFFFF; border-color:#4B4B4D;"><span>＋ 追加</span><span style="color:#D9E6FF;">保存 (.pdf)</span></div>
+            </div>
+          </div>
+          <p class="sim-caption">ドライブ右下「カメラ」＞ 書類にかざすだけで綺麗なPDFに変換</p>
+        </div>
+      </article>
+
+      <!-- Topic 7: Recorder Transcription -->
+      <article class="topic-card">
+        <div>
+          <div class="topic-meta">
+            <span class="dads-tag tag-green"><span class="material-symbols-outlined">mic</span>議事録作成の効率化</span>
+            <label class="dads-check"><input type="checkbox" class="task-check" onchange="updateProgress()"> 体験完了</label>
+          </div>
+          <h3 class="topic-title">7. レコーダー：録音しながらリアルタイム文字起こし＆要約</h3>
+          <div class="dads-banner dads-banner-error">
+            <span class="material-symbols-outlined">error</span>
+            <div><strong>これまでの課題：</strong>会議のメモを取るのに必死で議論に参加できない。長時間の録音をあとから聞き直す時間もない。</div>
+          </div>
+          <ol class="steps">
+            <li>Pixel標準の <span class="menu-chip">レコーダー</span> アプリを開きます（初回は右上アイコン ＞ <span class="menu-chip">レコーダーの設定</span> ＞ 文字起こしの言語が「日本語」か確認）。</li>
+            <li>録音ボタンを押して、画面上部の <span class="menu-chip">文字起こし</span> タブをタップします。<strong>話した言葉がリアルタイムで日本語テキスト化</strong>されます。</li>
+            <li>録音停止後、上部の <span class="menu-chip">要約</span> をタップすると、AIが会議の要点を箇条書きに整理します。</li>
+            <li>共有ボタンから「Googleドキュメントにコピー」を選べば、そのまま議事録の下書きが完成します。</li>
+          </ol>
+          <div class="dads-banner dads-banner-success">
+            <span class="material-symbols-outlined">lightbulb</span>
+            <div><strong>音声の頭出し機能：</strong>文字起こしされたテキスト内の単語をタップすると、<strong>その言葉が話された瞬間の音声</strong>からすぐに再生できます。</div>
+          </div>
+        </div>
+
+        <div class="phone-wrap">
+          <div class="pixel-device">
+            <div class="pixel-notch"></div>
+            <div class="pixel-screen">
+              <div class="sim-status"><span>11:25</span><span>Wi-Fi / 78%</span></div>
+              <div class="sim-body">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <span class="sim-title" style="margin:0;"><span class="material-symbols-outlined">mic</span>レコーダー</span>
+                  <span style="background:#FDEEEE; color:#EC0000; font-size:0.68rem; padding:2px 8px; border-radius:4px; font-weight:700;">録音中 02:14</span>
+                </div>
+                <div style="display:flex; gap:10px; font-size:0.75rem; border-bottom:1px solid #CCCCCC; padding-bottom:6px;">
+                  <span style="color:#666668;">音声波形</span>
+                  <span style="color:#0017C1; font-weight:700; border-bottom:2px solid #0017C1;">文字起こし</span>
+                  <span style="color:#666668;">要約</span>
+                </div>
+                <div style="font-size:0.76rem; color:#1A1A1C; line-height:1.55; background:#F8F8FA; padding:10px; border-radius:8px; border:1px solid #CCCCCC; flex:1;">
+                  「来週の定例会議ですが、資料は木曜日までにドライブへ共有お願いします。」<br><br>
+                  <span style="color:#0017C1;">「承知しました。スキャンしたPDFも入れておきます。」</span>
+                </div>
+                <div class="sim-row highlight"><span class="sim-row-left"><span class="material-symbols-outlined">summarize</span>録音後に「要約」で箇条書き</span><span>AI</span></div>
+              </div>
+              <div class="sim-navbar">
+                <span class="material-symbols-outlined">arrow_back</span>
+                <span class="material-symbols-outlined">stop_circle</span>
+                <span class="material-symbols-outlined">stop</span>
+              </div>
+            </div>
+          </div>
+          <p class="sim-caption">話すそばから文字になり、あとからキーワード検索で頭出し可能</p>
+        </div>
+      </article>
+
+      <!-- Topic 8: Circle to Search & Translation -->
+      <article class="topic-card">
+        <div>
+          <div class="topic-meta">
+            <span class="dads-tag tag-blue"><span class="material-symbols-outlined">translate</span>スクショ不要の瞬間検索＆翻訳</span>
+            <label class="dads-check"><input type="checkbox" class="task-check" onchange="updateProgress()"> 体験完了</label>
+          </div>
+          <h3 class="topic-title">8. 「かこって検索」とリアルタイム画面翻訳</h3>
+          <div class="dads-banner dads-banner-error">
+            <span class="material-symbols-outlined">error</span>
+            <div><strong>これまでの課題：</strong>「英語のエラー画面やPDFの文章を翻訳したい」「画像に写っている商品を調べたい」ときに、アプリ切り替えやコピペに手間がかかる。</div>
+          </div>
+          <ol class="steps">
+            <li><strong>かこって検索：</strong>どの画面を開いていても、画面一番下のバー（3ボタンの人は真ん中のホームボタン）を<strong>長押し</strong>します。</li>
+            <li>画面が反応したら、調べたい文字や画像を<strong>指で丸く囲む</strong>だけで即座にGoogle検索が実行されます。</li>
+            <li><strong>画面まるごと翻訳：</strong>同じ長押し画面の右下に出る <span class="menu-chip">翻訳アイコン</span> をタップすると、英語ページや画像内の文字も<strong>その場ですべて日本語に翻訳</strong>されます。</li>
+          </ol>
+          <div class="dads-banner dads-banner-success">
+            <span class="material-symbols-outlined">lightbulb</span>
+            <div><strong>対面会話や紙の説明書には：</strong><span class="menu-chip">Google 翻訳</span> アプリの「会話」モードや「カメラ入力」を使うと便利です。</div>
+          </div>
+        </div>
+
+        <div class="phone-wrap">
+          <div class="pixel-device">
+            <div class="pixel-notch"></div>
+            <div class="pixel-screen">
+              <div class="sim-status"><span>11:40</span><span>5G / 76%</span></div>
+              <div class="sim-body" style="background-color:#E8F0FE;">
+                <div class="sim-title"><span class="material-symbols-outlined">search</span>かこって検索</div>
+                <div style="border:2px dashed #0017C1; border-radius:12px; padding:12px; background:#FFFFFF; text-align:center;">
+                  <div style="font-size:0.75rem; color:#4B4B4D;">英文マニュアル / 気になる画像</div>
+                  <div style="font-weight:700; color:#0017C1; margin:6px 0;">"Check the backup settings"</div>
+                  <div style="background:#EBF8F1; color:#197A4B; padding:6px 8px; border-radius:6px; font-size:0.75rem; font-weight:700;">
+                    日本語翻訳：「バックアップ設定を確認」
+                  </div>
+                </div>
+                <div class="sim-row highlight" style="margin-top:auto;">
+                  <span class="sim-row-left"><span class="material-symbols-outlined">translate</span>右下の「翻訳」ボタン</span>
+                  <span>即時変換</span>
+                </div>
+              </div>
+              <div class="sim-navbar">
+                <span class="material-symbols-outlined">arrow_back</span>
+                <span style="color:#0017C1;">ホーム長押し</span>
+                <span class="material-symbols-outlined">stop</span>
+              </div>
+            </div>
+          </div>
+          <p class="sim-caption">ホームボタン（または下部バー）長押し ＞ 囲む または 翻訳ボタン</p>
+        </div>
+      </article>
+
+      <!-- Topic 9: Gemini -->
+      <article class="topic-card">
+        <div>
+          <div class="topic-meta">
+            <span class="dads-tag tag-amber"><span class="material-symbols-outlined">assistant</span>Workspace連携</span>
+            <label class="dads-check"><input type="checkbox" class="task-check" onchange="updateProgress()"> 体験完了</label>
+          </div>
+          <h3 class="topic-title">9. 電源ボタン長押しでGemini呼び出し（予定登録・下書き）</h3>
+          <ol class="steps">
+            <li>本体右側面の <strong>電源ボタンを長押し</strong> すると、どの画面からでも Gemini が起動します（電源を切る時は「電源ボタン＋音量上」を同時押し）。</li>
+            <li>マイクボタンを押して、<strong>人にお願いするように話しかける</strong>だけで操作が完了します。</li>
+            <li><strong>実務での活用例：</strong><br>
+              ・「明日14時に〇〇社と打ち合わせをカレンダーに登録して」<br>
+              ・「取引先へ日程変更のお詫びメールを丁寧な敬語で下書きして」<br>
+              ・「今開いているWebページを3行で要約して」
+            </li>
+          </ol>
+          <div class="dads-banner dads-banner-success">
+            <span class="material-symbols-outlined">lightbulb</span>
+            <div><strong>操作に迷ったときも：</strong>「Pixelで着信音を変える手順を教えて」とGeminiに直接質問すれば、その場で手順を案内してくれます。</div>
+          </div>
+        </div>
+
+        <div class="phone-wrap">
+          <div class="pixel-device">
+            <div class="pixel-notch"></div>
+            <div class="pixel-screen">
+              <div class="sim-status"><span>11:55</span><span>5G / 75%</span></div>
+              <div class="sim-body" style="justify-content:flex-end;">
+                <div style="background:#F1F1F4; border:1px solid #CCCCCC; padding:10px; border-radius:8px; font-size:0.76rem; margin-bottom:6px;">
+                  音声入力：「明日10時に経費精算リマインダーをカレンダーに入れて」
+                </div>
+                <div style="background:#E8F0FE; border:1.5px solid #0017C1; padding:10px; border-radius:8px; font-size:0.76rem;">
+                  <strong>Gemini：</strong><br>
+                  Googleカレンダーに「経費精算（明日 10:00〜10:30）」を作成しました。
+                </div>
+              </div>
+              <div class="sim-navbar">
+                <span class="material-symbols-outlined">arrow_back</span>
+                <span class="material-symbols-outlined">circle</span>
+                <span class="material-symbols-outlined">stop</span>
+              </div>
+            </div>
+          </div>
+          <p class="sim-caption">電源ボタン長押しで、カレンダー登録もメール下書きも音声で完結</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- ================= PART 4 ================= -->
+    <section id="part4" class="part-section">
+      <div class="section-heading">
+        <h2><span class="material-symbols-outlined">schedule</span>第4部：3時間勉強会タイムテーブル ＆ よくある質問（35分）</h2>
+        <p>勉強会当日の進行表と、参加者からよく出る質問への回答集です。</p>
+      </div>
+
+      <div class="dads-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>時間</th>
+              <th>パート</th>
+              <th>実施内容・ハンズオン</th>
+              <th>到達ゴール（参加者の状態）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>0:00〜0:15</strong></td>
+              <td>導入</td>
+              <td>なぜPixel 9aになったか／Google Workspaceとの連携メリット</td>
+              <td>「便利になるかもしれない」と前向きになる</td>
+            </tr>
+            <tr>
+              <td><strong>0:15〜0:45</strong></td>
+              <td>第1部</td>
+              <td>3ボタン設定・着信音変更・アラーム・画面消灯延長</td>
+              <td>「戻れない」「誰の電話か不明」が解消</td>
+            </tr>
+            <tr>
+              <td><strong>0:45〜1:30</strong></td>
+              <td>第2部</td>
+              <td>Googleフォトバックアップ最適化・Gmail/カレンダー/Keep体験</td>
+              <td>通信量と保存先ミスの不安が消える</td>
+            </tr>
+            <tr>
+              <td><strong>1:30〜1:45</strong></td>
+              <td>休憩</td>
+              <td>15分休憩・個別質問受付</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td><strong>1:45〜2:40</strong></td>
+              <td>第3部</td>
+              <td>ドライブ書類スキャン・レコーダー文字起こし・翻訳・Gemini</td>
+              <td>「これなら仕事で使える」と実務体験</td>
+            </tr>
+            <tr>
+              <td><strong>2:40〜3:00</strong></td>
+              <td>第4部</td>
+              <td>ウィジェット配置・チェックリスト確認・全体Q&amp;A</td>
+              <td>自分の業務に合わせた設定が完了</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <article class="topic-card" style="grid-template-columns: 1fr;">
+        <div>
+          <div class="topic-meta">
+            <span class="dads-tag tag-amber"><span class="material-symbols-outlined">help</span>よくある質問 Q&amp;A</span>
+            <label class="dads-check"><input type="checkbox" class="task-check" onchange="updateProgress()"> 勉強会完了</label>
+          </div>
+          <h3 class="topic-title">10. iPhone乗り換え組からの「よくある質問」</h3>
+          <ul style="padding-left:20px; display:flex; flex-direction:column; gap:14px; font-size:0.9375rem; margin-top:12px;">
+            <li><strong>Q. 電源の切り方が分かりません（電源ボタン長押しでGeminiが出てしまいます）</strong><br>
+              A. Pixel 9aは <strong>「電源ボタン ＋ 音量（上）ボタン」を同時に押す</strong> か、画面上から2回下にスワイプして右下の電源アイコンをタップします。</li>
+            <li><strong>Q. スクリーンショットの撮り方は？</strong><br>
+              A. <strong>「電源ボタン ＋ 音量（下）ボタン」を同時に短く押す</strong> か、アプリ履歴画面（■ボタン）の下にある「スクリーンショット」をタップします。</li>
+            <li><strong>Q. コントロールセンター（Wi-Fiやライトの画面）はどこですか？</strong><br>
+              A. 画面の一番上から下にスワイプすると通知、<strong>もう一度下にスワイプ</strong>するとWi-Fi・Bluetooth・機内モード・ライトなどのパネルが開きます。</li>
+            <li><strong>Q. 文字入力（フリック入力やローマ字入力）を切り替えたい</strong><br>
+              A. キーボード左下の地球儀アイコン（または設定歯車アイコン）から、12キー（ケータイ打ち）／QWERTY（ローマ字）をいつでも切り替えられます。</li>
+          </ul>
+        </div>
+      </article>
+
+      <div class="official-links">
+        <h3><span class="material-symbols-outlined">open_in_new</span>公式Googleヘルプ リファレンス（勉強会後の自習用）</h3>
+        <div class="link-grid">
+          <div class="link-item"><span class="material-symbols-outlined">chevron_right</span><a href="https://support.google.com/pixelphone/answer/6073614?hl=ja" target="_blank" rel="noopener">Google Pixel を使いこなす（ナビゲーション操作）</a></div>
+          <div class="link-item"><span class="material-symbols-outlined">chevron_right</span><a href="https://support.google.com/pixelphone/answer/2819577?hl=ja" target="_blank" rel="noopener">音、バイブレーション、着信音の変更</a></div>
+          <div class="link-item"><span class="material-symbols-outlined">chevron_right</span><a href="https://support.google.com/clock/answer/2840926?hl=ja" target="_blank" rel="noopener">時計アプリでアラームを設定する</a></div>
+          <div class="link-item"><span class="material-symbols-outlined">chevron_right</span><a href="https://support.google.com/pixelphone/answer/6193313?hl=ja&co=GENIE.Platform%3DAndroid" target="_blank" rel="noopener">Googleフォトの写真・動画バックアップ設定</a></div>
+          <div class="link-item"><span class="material-symbols-outlined">chevron_right</span><a href="https://support.google.com/drive/answer/3145835?hl=ja&co=GENIE.Platform%3DAndroid" target="_blank" rel="noopener">Googleドライブでドキュメントをスキャンする</a></div>
+          <div class="link-item"><span class="material-symbols-outlined">chevron_right</span><a href="https://support.google.com/pixelphone/answer/16267698?hl=ja" target="_blank" rel="noopener">レコーダーで文字起こし・要約を作成する</a></div>
+          <div class="link-item"><span class="material-symbols-outlined">chevron_right</span><a href="https://support.google.com/pixelphone/answer/14508957?hl=ja" target="_blank" rel="noopener">「かこって検索」で画面を検索・翻訳する</a></div>
+          <div class="link-item"><span class="material-symbols-outlined">chevron_right</span><a href="https://support.google.com/pixelphone/answer/15283615?hl=ja" target="_blank" rel="noopener">Google Pixel で Gemini を使用する</a></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    function showPart(partId, tabEl) {
+      document.querySelectorAll('.part-section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(partId).classList.add('active');
+      document.querySelectorAll('.dads-tab').forEach(tab => tab.classList.remove('active'));
+      if (tabEl) tabEl.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function setNavSim(mode, btn) {
+      btn.parentElement.querySelectorAll('.sim-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const r3 = document.getElementById('navRow3btn');
+      const rg = document.getElementById('navRowGesture');
+      const bot = document.getElementById('navSimBottom');
+      if (mode === '3btn') {
+        r3.classList.add('highlight'); r3.querySelector('span:last-child').outerHTML = '<span class="sim-tap-badge">選択中</span>';
+        rg.classList.remove('highlight'); rg.querySelector('span:last-child').outerHTML = '<span>未選択</span>';
+        bot.innerHTML = '<span class="material-symbols-outlined">arrow_back</span><span class="material-symbols-outlined">circle</span><span class="material-symbols-outlined">stop</span>';
+      } else {
+        rg.classList.add('highlight'); rg.querySelector('span:last-child').outerHTML = '<span class="sim-tap-badge">選択中</span>';
+        r3.classList.remove('highlight'); r3.querySelector('span:last-child').outerHTML = '<span>未選択</span>';
+        bot.innerHTML = '<div class="gesture-bar"></div>';
+      }
+    }
+
+    function toggleInstructorMode() {
+      const isOn = document.body.classList.toggle('instructor-mode');
+      const btn = document.getElementById('instructorBtn');
+      const lbl = document.getElementById('instructorBtnLabel');
+      btn.classList.toggle('dads-btn-primary', isOn);
+      btn.classList.toggle('dads-btn-secondary', !isOn);
+      lbl.textContent = isOn ? '講師用トークメモ: ON' : '講師用トークメモ: OFF';
+    }
+
+    function updateProgress() {
+      const checks = document.querySelectorAll('.task-check');
+      const done = Array.from(checks).filter(c => c.checked).length;
+      document.getElementById('totalCount').textContent = checks.length;
+      document.getElementById('doneCount').textContent = done;
+      document.getElementById('progressFill').style.width = ((done / checks.length) * 100) + '%';
+    }
+
+    updateProgress();
+  </script>
+</body>
+</html>
