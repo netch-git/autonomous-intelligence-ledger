@@ -6,39 +6,55 @@
   <title>Pixel 9a 潜在能力完全解放 3時間実践勉強会ガイド | デジタル庁DADS準拠</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400..600,0..1,0" rel="stylesheet">
   <style>
     /* ==========================================================================
-       Digital Agency Design System (DADS) Compliant Tokens & Base Styles
+       Digital Agency Design System (DADS) Tokens & Modern Editorial System
        ========================================================================== */
     :root {
+      /* DADS Core Palette */
       --dads-blue-1000: #00118F;
       --dads-blue-900: #0017C1;
       --dads-blue-800: #0027E8;
+      --dads-blue-600: #3460FB;
       --dads-blue-100: #D9E6FF;
-      --dads-blue-50: #E8F0FE;
+      --dads-blue-50: #EEF4FF;
 
+      --dads-grey-950: #111113;
       --dads-grey-900: #1A1A1C;
-      --dads-grey-700: #4B4B4D;
-      --dads-grey-600: #666668;
-      --dads-grey-400: #949497;
-      --dads-grey-300: #CCCCCC;
-      --dads-grey-100: #F1F1F4;
-      --dads-grey-50: #F8F8FA;
+      --dads-grey-700: #424246;
+      --dads-grey-600: #626266;
+      --dads-grey-400: #949499;
+      --dads-grey-300: #D4D4D8;
+      --dads-grey-200: #E4E4E7;
+      --dads-grey-100: #F4F4F6;
+      --dads-grey-50: #F8F9FB;
       --dads-white: #FFFFFF;
 
+      /* DADS Semantic & High-Jump Accent Colors */
       --dads-red-900: #C9171E;
-      --dads-red-50: #FDF2F2;
-      --dads-yellow-900: #8F6200;
-      --dads-yellow-50: #FEF9E7;
-      --dads-green-900: #007A3D;
-      --dads-green-50: #E6F4EA;
+      --dads-red-50: #FEF2F2;
+      --dads-yellow-900: #925600;
+      --dads-yellow-50: #FFFBEB;
+      --dads-green-900: #00703C;
+      --dads-green-50: #ECFDF5;
+      --dads-purple-900: #5B21B6;
+      --dads-purple-50: #F5F3FF;
+      --dads-teal-900: #0F766E;
+      --dads-teal-50: #F0FDFA;
 
       --dads-focus-ring: #FF9900;
 
-      --font-base: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --font-base: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       --font-icon: 'Material Symbols Outlined';
+
+      --shadow-sm: 0 1px 3px rgba(0, 17, 143, 0.05), 0 1px 2px rgba(0, 0, 0, 0.04);
+      --shadow-md: 0 4px 16px rgba(0, 17, 143, 0.06), 0 2px 4px rgba(0, 0, 0, 0.03);
+      --shadow-lg: 0 12px 32px rgba(0, 17, 143, 0.10);
+      --radius-md: 8px;
+      --radius-lg: 12px;
+      --radius-xl: 16px;
     }
 
     * {
@@ -47,11 +63,15 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: var(--font-base);
       background-color: var(--dads-grey-50);
       color: var(--dads-grey-900);
-      line-height: 1.7;
+      line-height: 1.75;
       font-size: 16px;
       -webkit-font-smoothing: antialiased;
     }
@@ -60,12 +80,13 @@
       color: var(--dads-blue-900);
       text-decoration: underline;
       text-underline-offset: 3px;
+      font-weight: 500;
     }
     a:hover {
       color: var(--dads-blue-1000);
       text-decoration-thickness: 2px;
     }
-    a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible {
+    a:focus-visible, button:focus-visible, input:focus-visible {
       outline: 3px solid var(--dads-focus-ring);
       outline-offset: 2px;
     }
@@ -79,89 +100,136 @@
       display: inline-block;
       text-transform: none;
       letter-spacing: normal;
-      word-wrap: normal;
       white-space: nowrap;
-      direction: ltr;
       vertical-align: middle;
     }
 
-    /* DADS Header */
+    /* ==========================================================================
+       Header (Modern & Compact on Mobile)
+       ========================================================================== */
     .dads-header {
-      background-color: var(--dads-white);
+      background-color: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(8px);
       border-bottom: 2px solid var(--dads-blue-900);
-      padding: 16px 24px;
+      padding: 12px 24px;
       position: sticky;
       top: 0;
       z-index: 1000;
     }
     .dads-header-inner {
-      max-width: 1200px;
+      max-width: 1140px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
       gap: 12px;
     }
     .dads-site-title {
-      font-size: 20px;
-      font-weight: 700;
+      font-size: 18px;
+      font-weight: 900;
       color: var(--dads-blue-1000);
       display: flex;
       align-items: center;
       gap: 8px;
+      letter-spacing: -0.02em;
     }
     .dads-tag {
       background-color: var(--dads-blue-100);
       color: var(--dads-blue-1000);
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 700;
       padding: 2px 8px;
       border-radius: 4px;
       border: 1px solid var(--dads-blue-900);
+      white-space: nowrap;
     }
     .header-actions {
       display: flex;
-      gap: 10px;
+      gap: 8px;
       align-items: center;
     }
 
-    /* Layout */
+    /* ==========================================================================
+       Main Container & Modern Hero Block
+       ========================================================================== */
     .dads-container {
-      max-width: 1200px;
+      max-width: 1140px;
       margin: 0 auto;
-      padding: 24px 16px 80px 16px;
+      padding: 28px 20px 80px 20px;
     }
 
-    /* Hero block */
     .hero-block {
-      background-color: var(--dads-white);
-      border: 1px solid var(--dads-grey-300);
-      border-left: 6px solid var(--dads-blue-900);
-      padding: 24px;
-      margin-bottom: 24px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      background: linear-gradient(135deg, #00118F 0%, #0017C1 60%, #1D4ED8 100%);
+      color: var(--dads-white);
+      border-radius: var(--radius-xl);
+      padding: 36px 32px;
+      margin-bottom: 28px;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background-color: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      color: var(--dads-white);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 14px;
     }
     .hero-block h1 {
-      font-size: 26px;
-      color: var(--dads-grey-900);
-      margin-bottom: 12px;
-      line-height: 1.4;
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--dads-white);
+      margin-bottom: 14px;
+      line-height: 1.35;
+      letter-spacing: -0.02em;
     }
-    .hero-block p {
-      color: var(--dads-grey-700);
+    .hero-lead {
+      color: rgba(255, 255, 255, 0.92);
       font-size: 15px;
-      margin-bottom: 8px;
+      margin-bottom: 20px;
+      max-width: 880px;
+    }
+    .hero-callout {
+      background-color: var(--dads-white);
+      color: var(--dads-grey-900);
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      box-shadow: var(--shadow-sm);
+    }
+    .hero-callout .material-symbols-outlined {
+      color: var(--dads-blue-900);
+      font-size: 24px;
+      margin-top: 2px;
+    }
+    .hero-callout h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--dads-blue-1000);
+      margin-bottom: 4px;
+    }
+    .hero-callout p {
+      font-size: 13px;
+      color: var(--dads-grey-700);
+      margin: 0;
     }
     .hero-meta {
       display: flex;
       flex-wrap: wrap;
       gap: 16px;
-      margin-top: 16px;
+      margin-top: 20px;
       padding-top: 16px;
-      border-top: 1px solid var(--dads-grey-300);
-      font-size: 14px;
-      color: var(--dads-grey-600);
+      border-top: 1px solid rgba(255, 255, 255, 0.22);
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.9);
     }
     .hero-meta-item {
       display: flex;
@@ -169,58 +237,67 @@
       gap: 6px;
     }
 
-    /* DADS Navigation Tabs */
+    /* ==========================================================================
+       Navigation Tabs (Desktop 6-col Grid / Mobile 2-col Pill Grid - NO Scroll Jump)
+       ========================================================================== */
+    .nav-anchor {
+      scroll-margin-top: 76px;
+    }
     .dads-tabs {
-      display: flex;
-      overflow-x: auto;
-      border-bottom: 2px solid var(--dads-grey-300);
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 8px;
+      margin-bottom: 28px;
       background-color: var(--dads-white);
-      margin-bottom: 24px;
-      gap: 2px;
-      padding: 4px 8px 0 8px;
-      border-top: 1px solid var(--dads-grey-300);
-      border-left: 1px solid var(--dads-grey-300);
-      border-right: 1px solid var(--dads-grey-300);
+      padding: 10px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--dads-grey-300);
+      box-shadow: var(--shadow-sm);
     }
     .dads-tab {
-      display: inline-flex;
+      display: flex;
       flex-direction: column;
       align-items: flex-start;
-      padding: 10px 14px;
-      background: none;
-      border: none;
-      border-bottom: 4px solid transparent;
+      justify-content: center;
+      padding: 10px 12px;
+      background-color: var(--dads-grey-50);
+      border: 1px solid var(--dads-grey-200);
+      border-radius: var(--radius-md);
       color: var(--dads-grey-700);
       font-family: var(--font-base);
       font-size: 13px;
-      font-weight: 500;
+      font-weight: 700;
       cursor: pointer;
       text-align: left;
-      white-space: nowrap;
-      transition: all 0.15s ease-in-out;
+      transition: all 0.15s ease;
     }
     .dads-tab:hover {
-      color: var(--dads-blue-900);
       background-color: var(--dads-blue-50);
+      border-color: var(--dads-blue-600);
+      color: var(--dads-blue-900);
     }
     .dads-tab.active {
-      color: var(--dads-blue-1000);
-      font-weight: 700;
-      border-bottom: 4px solid var(--dads-blue-900);
-      background-color: var(--dads-blue-50);
+      background-color: var(--dads-blue-900);
+      border-color: var(--dads-blue-1000);
+      color: var(--dads-white);
+      box-shadow: 0 4px 10px rgba(0, 23, 193, 0.22);
     }
     .dads-tab-time {
       font-size: 11px;
+      font-weight: 500;
       color: var(--dads-grey-600);
-      display: block;
       margin-bottom: 2px;
     }
     .dads-tab.active .dads-tab-time {
-      color: var(--dads-blue-900);
-      font-weight: 700;
+      color: var(--dads-blue-100);
+    }
+    .dads-tab-title {
+      line-height: 1.3;
     }
 
-    /* Sections */
+    /* ==========================================================================
+       Section & Cards (High Jump Rate & Clear Hierarchy)
+       ========================================================================== */
     .part-section {
       display: none;
     }
@@ -228,151 +305,137 @@
       display: block;
     }
 
-    /* Section Header */
     .section-header {
-      background-color: var(--dads-blue-900);
-      color: var(--dads-white);
-      padding: 20px 24px;
+      background-color: var(--dads-white);
+      border: 1px solid var(--dads-grey-300);
+      border-left: 8px solid var(--dads-blue-900);
+      padding: 22px 24px;
       margin-bottom: 24px;
-      border-radius: 4px 4px 0 0;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
     }
+    .section-header.theme-teal { border-left-color: var(--dads-teal-900); }
+    .section-header.theme-purple { border-left-color: var(--dads-purple-900); }
+    .section-header.theme-green { border-left-color: var(--dads-green-900); }
+
+    .section-kicker {
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--dads-blue-900);
+      margin-bottom: 4px;
+      display: block;
+    }
+    .section-header.theme-teal .section-kicker { color: var(--dads-teal-900); }
+    .section-header.theme-purple .section-kicker { color: var(--dads-purple-900); }
+    .section-header.theme-green .section-kicker { color: var(--dads-green-900); }
+
     .section-header h2 {
       font-size: 22px;
-      margin-bottom: 6px;
+      font-weight: 900;
+      color: var(--dads-grey-950);
+      margin-bottom: 8px;
       display: flex;
       align-items: center;
       gap: 10px;
+      line-height: 1.35;
     }
     .section-header p {
       font-size: 14px;
-      color: var(--dads-blue-100);
+      color: var(--dads-grey-700);
+      margin: 0;
     }
 
-    /* Content Cards */
     .dads-card {
       background-color: var(--dads-white);
       border: 1px solid var(--dads-grey-300);
-      border-radius: 4px;
-      padding: 24px;
+      border-radius: var(--radius-lg);
+      padding: 28px;
       margin-bottom: 24px;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+      box-shadow: var(--shadow-md);
     }
     .dads-card-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-bottom: 1px solid var(--dads-grey-300);
-      padding-bottom: 12px;
-      margin-bottom: 16px;
+      border-bottom: 2px solid var(--dads-grey-100);
+      padding-bottom: 14px;
+      margin-bottom: 18px;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 10px;
     }
     .dads-card-title {
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--dads-grey-900);
+      font-size: 19px;
+      font-weight: 900;
+      color: var(--dads-grey-950);
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
+      line-height: 1.4;
     }
+    .dads-card-title .material-symbols-outlined {
+      background-color: var(--dads-blue-50);
+      color: var(--dads-blue-900);
+      padding: 8px;
+      border-radius: var(--radius-md);
+      font-size: 22px;
+    }
+
+    /* High-Contrast Badges */
     .dads-badge {
       display: inline-flex;
       align-items: center;
       gap: 4px;
       font-size: 12px;
       font-weight: 700;
-      padding: 3px 8px;
-      border-radius: 3px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      white-space: nowrap;
     }
     .dads-badge-critical {
-      background-color: var(--dads-red-50);
-      color: var(--dads-red-900);
-      border: 1px solid var(--dads-red-900);
+      background-color: var(--dads-red-900);
+      color: var(--dads-white);
     }
     .dads-badge-info {
-      background-color: var(--dads-blue-50);
-      color: var(--dads-blue-900);
-      border: 1px solid var(--dads-blue-900);
+      background-color: var(--dads-blue-900);
+      color: var(--dads-white);
     }
     .dads-badge-success {
-      background-color: var(--dads-green-50);
-      color: var(--dads-green-900);
-      border: 1px solid var(--dads-green-900);
+      background-color: var(--dads-green-900);
+      color: var(--dads-white);
     }
     .dads-badge-pro {
-      background-color: #F3E8FD;
-      color: #6200EE;
-      border: 1px solid #6200EE;
+      background-color: var(--dads-purple-900);
+      color: var(--dads-white);
     }
 
-    /* DADS Alert Callouts */
-    .dads-alert {
-      padding: 16px;
-      border-radius: 4px;
-      margin: 16px 0;
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-      font-size: 14px;
-    }
-    .dads-alert-warning {
-      background-color: var(--dads-yellow-50);
-      border-left: 5px solid var(--dads-yellow-900);
-      color: var(--dads-grey-900);
-    }
-    .dads-alert-warning .material-symbols-outlined {
-      color: var(--dads-yellow-900);
-    }
-    .dads-alert-danger {
-      background-color: var(--dads-red-50);
-      border-left: 5px solid var(--dads-red-900);
-      color: var(--dads-grey-900);
-    }
-    .dads-alert-danger .material-symbols-outlined {
-      color: var(--dads-red-900);
-    }
-    .dads-alert-info {
-      background-color: var(--dads-blue-50);
-      border-left: 5px solid var(--dads-blue-900);
-      color: var(--dads-grey-900);
-    }
-    .dads-alert-info .material-symbols-outlined {
-      color: var(--dads-blue-900);
-    }
-    .dads-alert-success {
-      background-color: var(--dads-green-50);
-      border-left: 5px solid var(--dads-green-900);
-      color: var(--dads-grey-900);
-    }
-    .dads-alert-success .material-symbols-outlined {
-      color: var(--dads-green-900);
-    }
-    .dads-alert-content h4 {
-      font-size: 15px;
-      font-weight: 700;
-      margin-bottom: 4px;
-    }
-
-    /* Detailed Step Guide Box (Super Click-by-Click) */
+    /* Step-by-Step Operation Box */
     .detailed-step-box {
-      background-color: var(--dads-white);
+      background-color: var(--dads-grey-50);
       border: 1px solid var(--dads-grey-300);
       border-left: 5px solid var(--dads-blue-900);
-      border-radius: 4px;
-      padding: 16px;
-      margin: 16px 0;
+      border-radius: var(--radius-md);
+      padding: 20px;
+      margin: 18px 0;
     }
+    .detailed-step-box.accent-purple { border-left-color: var(--dads-purple-900); }
+    .detailed-step-box.accent-green { border-left-color: var(--dads-green-900); }
+
     .detailed-step-header {
-      font-size: 16px;
-      font-weight: 700;
+      font-size: 15px;
+      font-weight: 900;
       color: var(--dads-blue-1000);
       display: flex;
       align-items: center;
       gap: 8px;
-      margin-bottom: 12px;
-      padding-bottom: 8px;
-      border-bottom: 1px dashed var(--dads-grey-300);
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--dads-grey-300);
     }
+    .detailed-step-box.accent-purple .detailed-step-header { color: var(--dads-purple-900); }
+    .detailed-step-box.accent-green .detailed-step-header { color: var(--dads-green-900); }
+
     .substep-list {
       list-style: none;
       padding: 0;
@@ -381,25 +444,36 @@
     .substep-item {
       display: flex;
       align-items: flex-start;
-      gap: 12px;
-      margin-bottom: 12px;
-      font-size: 14px;
-      line-height: 1.6;
+      gap: 14px;
+      margin-bottom: 14px;
+      padding-bottom: 14px;
+      border-bottom: 1px dashed var(--dads-grey-300);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+    .substep-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
     }
     .substep-num {
-      width: 24px;
-      height: 24px;
+      width: 28px;
+      height: 28px;
       background-color: var(--dads-blue-900);
       color: var(--dads-white);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 12px;
-      font-weight: 700;
+      font-size: 13px;
+      font-weight: 900;
       flex-shrink: 0;
       margin-top: 2px;
+      box-shadow: 0 2px 4px rgba(0, 23, 193, 0.25);
     }
+    .detailed-step-box.accent-purple .substep-num { background-color: var(--dads-purple-900); }
+    .detailed-step-box.accent-green .substep-num { background-color: var(--dads-green-900); }
+
     .substep-text {
       flex: 1;
     }
@@ -407,57 +481,91 @@
       display: inline-flex;
       align-items: center;
       gap: 4px;
-      background-color: var(--dads-grey-100);
-      border: 1px solid var(--dads-grey-400);
-      padding: 2px 8px;
-      border-radius: 4px;
+      background-color: var(--dads-white);
+      border: 1.5px solid var(--dads-blue-900);
+      padding: 1px 8px;
+      border-radius: 6px;
       font-weight: 700;
       color: var(--dads-blue-1000);
       font-size: 13px;
+      margin: 0 2px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    }
+    .substep-ui-tag .material-symbols-outlined {
+      font-size: 15px;
     }
     .substep-screen-note {
       display: block;
-      font-size: 12px;
-      color: var(--dads-grey-600);
-      margin-top: 4px;
-      background-color: var(--dads-grey-50);
-      padding: 6px 10px;
-      border-radius: 4px;
-      border-left: 3px solid var(--dads-grey-400);
+      font-size: 13px;
+      color: var(--dads-grey-700);
+      margin-top: 8px;
+      background-color: var(--dads-white);
+      padding: 10px 14px;
+      border-radius: var(--radius-md);
+      border-left: 4px solid var(--dads-blue-600);
     }
 
-    /* Grids */
+    /* Two-Column Grids */
     .two-col-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 20px;
+      gap: 18px;
       margin: 16px 0;
-    }
-    @media (max-width: 800px) {
-      .two-col-grid {
-        grid-template-columns: 1fr;
-      }
     }
     .col-box {
       background-color: var(--dads-grey-50);
       border: 1px solid var(--dads-grey-300);
-      border-radius: 4px;
-      padding: 16px;
+      border-radius: var(--radius-md);
+      padding: 18px;
     }
     .col-box.primary {
       border-color: var(--dads-blue-900);
-      background-color: #FAFCFF;
+      background-color: var(--dads-blue-50);
     }
     .col-box h4 {
-      font-size: 15px;
-      font-weight: 700;
+      font-size: 16px;
+      font-weight: 900;
       margin-bottom: 10px;
+      color: var(--dads-grey-950);
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
+    }
+    .col-box h4 .material-symbols-outlined {
+      color: var(--dads-blue-900);
+    }
+    .col-box ol, .col-box ul {
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .col-box li {
+      margin-bottom: 6px;
     }
 
-    /* Pixel Interactive Simulator UI */
+    /* DADS Alerts */
+    .dads-alert {
+      padding: 16px 18px;
+      border-radius: var(--radius-md);
+      margin: 16px 0;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      font-size: 14px;
+    }
+    .dads-alert-info {
+      background-color: var(--dads-blue-50);
+      border: 1px solid var(--dads-blue-100);
+      border-left: 5px solid var(--dads-blue-900);
+    }
+    .dads-alert-info .material-symbols-outlined { color: var(--dads-blue-900); }
+    .dads-alert-content h4 {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    /* Pixel Simulator */
     .simulator-wrapper {
       display: flex;
       gap: 24px;
@@ -466,21 +574,21 @@
       flex-wrap: wrap;
     }
     .phone-mockup {
-      width: 280px;
-      height: 480px;
-      background-color: #111;
-      border-radius: 36px;
+      width: 264px;
+      height: 460px;
+      background-color: #18181B;
+      border-radius: 34px;
       padding: 10px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+      box-shadow: var(--shadow-lg);
       position: relative;
       flex-shrink: 0;
-      border: 3px solid #333;
+      border: 3px solid #3F3F46;
     }
     .phone-screen {
       width: 100%;
       height: 100%;
-      background-color: #F8F9FA;
-      border-radius: 28px;
+      background-color: #F8FAFC;
+      border-radius: 26px;
       overflow: hidden;
       position: relative;
       display: flex;
@@ -493,8 +601,8 @@
       top: 6px;
       left: 50%;
       transform: translateX(-50%);
-      width: 12px;
-      height: 12px;
+      width: 10px;
+      height: 10px;
       background-color: #000;
       border-radius: 50%;
       z-index: 10;
@@ -506,44 +614,44 @@
       align-items: center;
       padding: 0 16px;
       font-size: 10px;
-      font-weight: bold;
-      background: rgba(255,255,255,0.9);
-      border-bottom: 1px solid #EEE;
+      font-weight: 700;
+      background: rgba(255,255,255,0.92);
+      border-bottom: 1px solid #E2E8F0;
     }
     .phone-content {
       flex: 1;
-      padding: 12px;
+      padding: 14px;
       overflow-y: auto;
       display: flex;
       flex-direction: column;
       gap: 8px;
     }
     .phone-bottom-nav {
-      height: 38px;
+      height: 40px;
       display: flex;
       justify-content: space-around;
       align-items: center;
       background-color: #FFF;
-      border-top: 1px solid #DDD;
+      border-top: 1px solid #E2E8F0;
     }
     .gesture-bar {
       width: 80px;
       height: 4px;
-      background-color: #555;
+      background-color: #64748B;
       border-radius: 2px;
       margin: 16px auto 8px auto;
     }
     .simulator-controls {
       flex: 1;
-      min-width: 280px;
+      min-width: 260px;
     }
 
-    /* DADS Table */
+    /* Tables */
     .dads-table-wrap {
       overflow-x: auto;
       margin: 16px 0;
       border: 1px solid var(--dads-grey-300);
-      border-radius: 4px;
+      border-radius: var(--radius-md);
     }
     .dads-table {
       width: 100%;
@@ -553,85 +661,77 @@
       background-color: var(--dads-white);
     }
     .dads-table th {
-      background-color: var(--dads-grey-100);
-      color: var(--dads-grey-900);
+      background-color: var(--dads-blue-1000);
+      color: var(--dads-white);
       font-weight: 700;
       padding: 12px 14px;
-      border-bottom: 2px solid var(--dads-grey-300);
-      border-right: 1px solid var(--dads-grey-300);
+      border-right: 1px solid rgba(255,255,255,0.2);
     }
     .dads-table td {
-      padding: 12px 14px;
-      border-bottom: 1px solid var(--dads-grey-300);
-      border-right: 1px solid var(--dads-grey-300);
+      padding: 14px;
+      border-bottom: 1px solid var(--dads-grey-200);
+      border-right: 1px solid var(--dads-grey-200);
       vertical-align: top;
     }
-    .dads-table tr:last-child td {
-      border-bottom: none;
-    }
-    .dads-table tr:hover {
-      background-color: var(--dads-blue-50);
-    }
+    .dads-table tr:last-child td { border-bottom: none; }
+    .dads-table tr:hover { background-color: var(--dads-blue-50); }
 
-    /* DADS Accordion */
+    /* Accordion */
     .dads-accordion {
       border: 1px solid var(--dads-grey-300);
-      border-radius: 4px;
+      border-radius: var(--radius-md);
       margin-bottom: 12px;
       background-color: var(--dads-white);
+      overflow: hidden;
     }
     .dads-accordion-trigger {
       width: 100%;
       text-align: left;
-      padding: 14px 18px;
+      padding: 16px 18px;
       background: none;
       border: none;
       font-family: var(--font-base);
       font-size: 15px;
       font-weight: 700;
-      color: var(--dads-grey-900);
+      color: var(--dads-grey-950);
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 12px;
       cursor: pointer;
     }
     .dads-accordion-trigger:hover {
-      background-color: var(--dads-grey-50);
+      background-color: var(--dads-blue-50);
       color: var(--dads-blue-900);
     }
     .dads-accordion-body {
       padding: 16px 18px;
-      border-top: 1px solid var(--dads-grey-300);
+      border-top: 1px solid var(--dads-grey-200);
+      background-color: var(--dads-grey-50);
       font-size: 14px;
       color: var(--dads-grey-700);
       display: none;
     }
-    .dads-accordion.open .dads-accordion-body {
-      display: block;
-    }
-    .dads-accordion.open .dads-accordion-trigger .chevron {
-      transform: rotate(180deg);
-    }
-    .chevron {
-      transition: transform 0.2s ease;
-    }
+    .dads-accordion.open .dads-accordion-body { display: block; }
+    .dads-accordion.open .dads-accordion-trigger .chevron { transform: rotate(180deg); }
+    .chevron { transition: transform 0.2s ease; flex-shrink: 0; }
 
-    /* Interactive Checklist */
+    /* Checklist */
     .checklist-item {
       display: flex;
       align-items: flex-start;
       gap: 12px;
-      padding: 10px 12px;
-      border-radius: 4px;
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
       background-color: var(--dads-grey-50);
-      margin-bottom: 8px;
+      margin-bottom: 10px;
       border: 1px solid var(--dads-grey-300);
       cursor: pointer;
       user-select: none;
+      font-size: 14px;
+      transition: all 0.15s ease;
     }
-    .checklist-item:hover {
-      background-color: var(--dads-blue-50);
-    }
+    .checklist-item:hover { background-color: var(--dads-blue-50); border-color: var(--dads-blue-600); }
     .checklist-item.checked {
       background-color: var(--dads-green-50);
       border-color: var(--dads-green-900);
@@ -639,48 +739,50 @@
       color: var(--dads-grey-600);
     }
     .checklist-item input[type="checkbox"] {
-      margin-top: 4px;
+      margin-top: 3px;
       width: 18px;
       height: 18px;
+      flex-shrink: 0;
       cursor: pointer;
     }
 
-    /* Speaker Notes */
+    /* Instructor Notes */
     .instructor-note {
-      background-color: #F6F4FF;
-      border-left: 4px solid #6200EE;
-      padding: 14px;
-      border-radius: 0 4px 4px 0;
+      background-color: var(--dads-purple-50);
+      border: 1px solid #DDD6FE;
+      border-left: 5px solid var(--dads-purple-900);
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
       margin: 14px 0;
       font-size: 13px;
       display: none;
     }
-    .instructor-note.visible {
-      display: block;
-    }
+    .instructor-note.visible { display: block; }
     .instructor-header {
       font-weight: 700;
-      color: #6200EE;
+      color: var(--dads-purple-900);
       display: flex;
       align-items: center;
       gap: 6px;
       margin-bottom: 4px;
     }
 
-    /* DADS Buttons */
+    /* Buttons */
     .dads-btn {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      justify-content: center;
+      gap: 6px;
       font-family: var(--font-base);
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
-      padding: 8px 16px;
-      border-radius: 4px;
+      padding: 9px 16px;
+      border-radius: var(--radius-md);
       cursor: pointer;
       border: 1px solid transparent;
       text-decoration: none;
-      transition: all 0.15s ease-in-out;
+      transition: all 0.15s ease;
+      white-space: nowrap;
     }
     .dads-btn-primary {
       background-color: var(--dads-blue-900);
@@ -689,7 +791,6 @@
     .dads-btn-primary:hover {
       background-color: var(--dads-blue-1000);
       color: var(--dads-white);
-      text-decoration: none;
     }
     .dads-btn-secondary {
       background-color: var(--dads-white);
@@ -701,16 +802,28 @@
       border-color: var(--dads-grey-900);
     }
 
+    /* Bottom Part Navigation (Next / Prev without going to page top) */
+    .part-pager {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 2px solid var(--dads-grey-200);
+      flex-wrap: wrap;
+    }
+
     /* Footer */
     .dads-footer {
-      background-color: var(--dads-grey-900);
+      background-color: var(--dads-grey-950);
       color: var(--dads-white);
-      padding: 32px 24px;
+      padding: 36px 24px;
       font-size: 14px;
       margin-top: 48px;
     }
     .dads-footer-inner {
-      max-width: 1200px;
+      max-width: 1140px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
@@ -722,22 +835,128 @@
       margin-bottom: 10px;
       color: var(--dads-blue-100);
     }
-    .dads-footer-col ul {
-      list-style: none;
+    .dads-footer-col ul { list-style: none; }
+    .dads-footer-col li { margin-bottom: 6px; }
+    .dads-footer a { color: var(--dads-blue-100); text-decoration: none; }
+    .dads-footer a:hover { text-decoration: underline; }
+
+    /* ==========================================================================
+       Mobile Readability Optimization (<= 768px)
+       ========================================================================== */
+    @media (max-width: 960px) {
+      .dads-tabs {
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
-    .dads-footer-col li {
-      margin-bottom: 6px;
-    }
-    .dads-footer a {
-      color: var(--dads-blue-100);
-      text-decoration: none;
-    }
-    .dads-footer a:hover {
-      text-decoration: underline;
+
+    @media (max-width: 768px) {
+      .dads-header {
+        padding: 10px 14px;
+      }
+      .dads-header-inner {
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .dads-site-title {
+        font-size: 16px;
+        flex: 1 1 auto;
+      }
+      .dads-tag {
+        display: none;
+      }
+      .btn-label-desktop {
+        display: none;
+      }
+      .dads-btn {
+        padding: 7px 10px;
+        font-size: 12px;
+      }
+      .dads-container {
+        padding: 14px 12px 64px 12px;
+      }
+      .hero-block {
+        padding: 20px 16px;
+        border-radius: var(--radius-lg);
+      }
+      .hero-block h1 {
+        font-size: 20px;
+      }
+      .hero-lead {
+        font-size: 14px;
+      }
+      .hero-callout {
+        padding: 14px;
+        gap: 10px;
+      }
+      /* Mobile 2-col clean grid for tabs - ZERO horizontal scroll frustration! */
+      .dads-tabs {
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+        padding: 8px;
+      }
+      .dads-tab {
+        padding: 10px;
+        font-size: 12px;
+      }
+      .dads-tab-time {
+        font-size: 10px;
+      }
+      .section-header {
+        padding: 16px;
+      }
+      .section-header h2 {
+        font-size: 18px;
+      }
+      .dads-card {
+        padding: 18px 14px;
+        margin-bottom: 18px;
+      }
+      .dads-card-title {
+        font-size: 16px;
+      }
+      .two-col-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+      .detailed-step-box {
+        padding: 14px 12px;
+      }
+      .substep-item {
+        font-size: 14px;
+        gap: 10px;
+      }
+      .phone-mockup {
+        margin: 0 auto;
+      }
+      .simulator-wrapper {
+        flex-direction: column;
+        align-items: center;
+      }
+      .simulator-controls {
+        width: 100%;
+      }
+      /* Mobile friendly stacked table */
+      .dads-table thead {
+        display: none;
+      }
+      .dads-table, .dads-table tbody, .dads-table tr, .dads-table td {
+        display: block;
+        width: 100%;
+      }
+      .dads-table tr {
+        margin-bottom: 12px;
+        border: 1px solid var(--dads-grey-300);
+        border-radius: var(--radius-md);
+        overflow: hidden;
+      }
+      .dads-table td {
+        border-right: none;
+        padding: 10px 12px;
+      }
     }
 
     @media print {
-      .dads-header, .dads-tabs, .header-actions, .dads-btn, .phone-mockup {
+      .dads-header, .dads-tabs, .header-actions, .dads-btn, .phone-mockup, .part-pager {
         display: none !important;
       }
       .part-section {
@@ -752,18 +971,18 @@
   <header class="dads-header">
     <div class="dads-header-inner">
       <div class="dads-site-title">
-        <span class="material-symbols-outlined" style="font-size: 26px;">smartphone</span>
-        Pixel 9a 潜在能力完全解放 3時間実践勉強会
+        <span class="material-symbols-outlined" style="font-size: 24px;">smartphone</span>
+        <span>Pixel 9a 実践勉強会ガイド</span>
         <span class="dads-tag">デジタル庁DADS準拠</span>
       </div>
       <div class="header-actions">
         <button type="button" class="dads-btn dads-btn-secondary" id="toggleInstructorBtn" onclick="toggleInstructorNotes()">
           <span class="material-symbols-outlined">record_voice_over</span>
-          <span id="instructorBtnText">講師用メモを表示</span>
+          <span id="instructorBtnText">講師メモ</span>
         </button>
         <button type="button" class="dads-btn dads-btn-primary" onclick="window.print()">
           <span class="material-symbols-outlined">print</span>
-          印刷・資料保存
+          <span class="btn-label-desktop">印刷・PDF保存</span>
         </button>
       </div>
     </div>
@@ -771,37 +990,43 @@
 
   <main class="dads-container">
 
-    <!-- Hero / Objective Block -->
+    <!-- Modern High-Contrast Hero Block -->
     <section class="hero-block">
-      <h1>Pixel 9a × Google Workspace 潜在能力完全解放 3時間実践勉強会</h1>
-      <p><strong>「iPhoneより使いにくい」を「Pixel 9aとGoogle連携がないと仕事にならない」へ変えるための完全攻略マニュアルです。</strong></p>
-      <p>3ボタンナビ・着信音・フォト罠解除などの基本ストレス根絶はもちろん、<strong>Googleギャラリー・Keep共有・カレンダー連携・マップAR・2画面分割・自動ルール・ライブキャプション・GoogleレンズのPCテキスト転送・Gemini Workspace拡張機能（@Gmail/@カレンダー/@ドライブ）・NotebookLM音声解説</strong>まで、Pixel 9aの隠し機能と実務キラー機能を1タップずつ完全解説します。</p>
-      
-      <div class="dads-alert dads-alert-info">
-        <span class="material-symbols-outlined">rocket_launch</span>
-        <div class="dads-alert-content">
-          <h4>本ガイドの到達点：個人操作から「チーム全体の生産性爆発」へ</h4>
-          <p>すべての項目に「どこのボタンを押すか」の具体的タップ手順を記載しています。3時間の研修が終わる頃には、全員が自分の業務に合わせてPixelを自在に操れる状態になります。</p>
+      <div class="hero-eyebrow">
+        <span class="material-symbols-outlined" style="font-size: 16px;">bolt</span>
+        社用スマホ切り替え 3時間実践カリキュラム
+      </div>
+      <h1>Pixel 9a × Google Workspace<br>潜在能力完全解放 勉強会ガイド</h1>
+      <p class="hero-lead">
+        「iPhoneのほうが良かった」という声を「Pixel 9aとGoogle連携がないと仕事にならない」へ変えるための完全攻略マニュアルです。基本ストレス根絶から、Googleアプリでのチーム連携、Gemini拡張・NotebookLMまで、1タップずつ迷わず操作できる手順をまとめました。
+      </p>
+
+      <div class="hero-callout">
+        <span class="material-symbols-outlined">touch_app</span>
+        <div>
+          <h4>研修の鉄則：画面の「どこを」「どう押すか」まで完全明記</h4>
+          <p>スマホ操作に不慣れな方でも迷わないよう、アイコン名・ボタン位置・操作結果をすべて具体化しています。下の6つのパートから該当項目を切り替えてご覧ください。</p>
         </div>
       </div>
 
       <div class="hero-meta">
         <div class="hero-meta-item">
           <span class="material-symbols-outlined">schedule</span>
-          想定所要時間：計3時間（180分 / 休憩含む）
+          所要時間：3時間（180分 / 休憩含む）
         </div>
         <div class="hero-meta-item">
           <span class="material-symbols-outlined">group</span>
-          対象：全社員（スマホ操作が苦手な方〜業務効率化を極めたい方）
+          対象：全社員（基礎解消〜AI業務効率化）
         </div>
         <div class="hero-meta-item">
           <span class="material-symbols-outlined">devices</span>
-          必須機材：会社支給 Pixel 9a、PC（Google Workspaceアカウント）
+          機材：会社支給 Pixel 9a、PC
         </div>
       </div>
     </section>
 
-    <!-- Navigation Tabs (6 Parts) -->
+    <!-- Navigation Anchor (Tabs stay right here without scrolling to page top) -->
+    <div id="tabNavAnchor" class="nav-anchor"></div>
     <nav class="dads-tabs" aria-label="勉強会パート選択">
       <button type="button" class="dads-tab active" onclick="showPart('part1', this)">
         <span class="dads-tab-time">第1部（0:00〜0:30）</span>
@@ -813,19 +1038,19 @@
       </button>
       <button type="button" class="dads-tab" onclick="showPart('part3', this)">
         <span class="dads-tab-time">第3部（1:10〜1:45）</span>
-        <span class="dads-tab-title">3. レンズ・スキャン・2画面・字幕</span>
+        <span class="dads-tab-title">3. レンズ・スキャン・2画面</span>
       </button>
       <button type="button" class="dads-tab" onclick="showPart('part4', this)">
         <span class="dads-tab-time">第4部（1:55〜2:30）</span>
-        <span class="dads-tab-title">4. 【超目玉】Gemini拡張 × NotebookLM</span>
+        <span class="dads-tab-title">4. Gemini拡張 × NotebookLM</span>
       </button>
       <button type="button" class="dads-tab" onclick="showPart('part5', this)">
         <span class="dads-tab-time">第5部（2:30〜2:50）</span>
-        <span class="dads-tab-title">5. 写真AI・通話・PC・紛失対策</span>
+        <span class="dads-tab-title">5. 写真AI・通話・紛失対策</span>
       </button>
       <button type="button" class="dads-tab" onclick="showPart('part6', this)">
         <span class="dads-tab-time">第6部（2:50〜3:00）</span>
-        <span class="dads-tab-title">6. 180分進行表・チェック・Q&amp;A</span>
+        <span class="dads-tab-title">6. 進行表・チェック・Q&amp;A</span>
       </button>
     </nav>
 
@@ -834,14 +1059,15 @@
          ===================================================================== -->
     <section id="part1" class="part-section active">
       <div class="section-header">
+        <span class="section-kicker">PART 01 / 0:00 - 0:30（30分）</span>
         <h2>
           <span class="material-symbols-outlined">phonelink_setup</span>
-          第1部：iPhone脱出 ＆ 知らないと損するPixel快適設定（所要時間：30分）
+          iPhone脱出 ＆ 知らないと損するPixel快適設定
         </h2>
-        <p>3ボタン・着信音・フォト罠の解消に加え、「うっかり消した通知の復元」「背面2回タップで即起動」「会社に着いたら自動でマナーモード」まで一気に仕込みます。</p>
+        <p>3ボタン・着信音・フォト罠の解消に加え、「うっかり消した通知の復元」「背面2回タップ」「会社で自動マナーモード」まで一気に仕込みます。</p>
       </div>
 
-      <!-- Card 1-1: Navigation buttons -->
+      <!-- Card 1-1 -->
       <article class="dads-card">
         <div class="dads-card-header">
           <div class="dads-card-title">
@@ -866,7 +1092,8 @@
             <li class="substep-item">
               <span class="substep-num">2</span>
               <div class="substep-text">
-                <span class="substep-ui-tag">3ボタン ナビゲーション</span> の丸をタップすると、画面最下部に「◀（戻る）」「●（ホーム）」「■（履歴）」が常時表示されます。
+                <span class="substep-ui-tag">3ボタン ナビゲーション</span> の丸をタップします。
+                <span class="substep-screen-note">結果：画面最下部に「◀（戻る）」「●（ホーム）」「■（履歴）」が常時表示され、迷わず戻れるようになります。</span>
               </div>
             </li>
           </ul>
@@ -881,11 +1108,11 @@
                 <span>4G 100%</span>
               </div>
               <div class="phone-content">
-                <div style="font-weight: bold; font-size: 13px; margin-bottom: 8px;">ナビゲーション方式の比較</div>
-                <div style="background: #E8F0FE; padding: 10px; border-radius: 6px; font-size: 11px;">
+                <div style="font-weight: 700; font-size: 13px; margin-bottom: 4px;">ナビゲーション方式の比較</div>
+                <div style="background: #E8F0FE; padding: 10px; border-radius: 8px; font-size: 11px;">
                   画面下部の操作パネルを確認してください。
                 </div>
-                <div style="margin-top: 10px; font-size: 11px; color: #666;">
+                <div style="margin-top: 8px; font-size: 11px; color: #555; line-height: 1.6;">
                   ・◀ 戻る：前の画面に戻る<br>
                   ・● ホーム：一発でホームに戻る<br>
                   ・■ 履歴：開いているアプリ一覧
@@ -904,7 +1131,8 @@
                 <span class="material-symbols-outlined">tune</span>
                 画面シミュレーターで切り替え体験
               </h4>
-              <div style="display: flex; gap: 10px; margin-top: 10px;">
+              <p style="font-size: 13px; margin-bottom: 12px;">ボタンを押して画面下部の表示の違いを比較できます。</p>
+              <div style="display: flex; gap: 10px; flex-wrap: wrap;">
                 <button type="button" class="dads-btn dads-btn-primary" onclick="setSimNav('3button')">3ボタン方式にする</button>
                 <button type="button" class="dads-btn dads-btn-secondary" onclick="setSimNav('gesture')">ジェスチャー方式にする</button>
               </div>
@@ -916,7 +1144,7 @@
         </div>
       </article>
 
-      <!-- Card 1-2: Ringtone, Alarm, Photos Trap -->
+      <!-- Card 1-2 -->
       <article class="dads-card">
         <div class="dads-card-header">
           <div class="dads-card-title">
@@ -932,8 +1160,8 @@
               <span class="material-symbols-outlined">volume_up</span>
               着信音・アラーム設定手順
             </h4>
-            <ul style="padding-left: 20px; font-size: 13px; line-height: 1.8;">
-              <li><strong>着信音：</strong><span class="substep-ui-tag">設定</span> ＞ <span class="substep-ui-tag">着信音とバイブレーション</span> ＞ <span class="substep-ui-tag">着信音</span> から好きな音を選び右上「保存」（「デフォルトの通知音」も同様に変更）</li>
+            <ul>
+              <li><strong>着信音：</strong><span class="substep-ui-tag">設定</span> ＞ <span class="substep-ui-tag">着信音とバイブレーション</span> ＞ <span class="substep-ui-tag">着信音</span> から好きな音を選び右上「保存」（通知音も同様に変更）</li>
               <li><strong>アラーム：</strong><span class="substep-ui-tag">時計</span> アプリ ＞ 左下「アラーム」 ＞ 下部「＋」 ＞ 時刻設定 ＞ 曜日「月〜金」をタップ</li>
             </ul>
           </div>
@@ -942,7 +1170,7 @@
               <span class="material-symbols-outlined">cloud_off</span>
               Googleフォトのギガ枯渇防止手順
             </h4>
-            <ul style="padding-left: 20px; font-size: 13px; line-height: 1.8;">
+            <ul>
               <li><span class="substep-ui-tag">Google フォト</span> ＞ 右上の丸い自分のアイコン ＞ <span class="substep-ui-tag">フォトの設定</span> ＞ <span class="substep-ui-tag">バックアップ</span></li>
               <li><span class="substep-ui-tag">モバイルデータ通信の使用量</span> をタップ ＞ 「動画をバックアップ」を<strong>OFF</strong>、上限を「データなし」または「30MB」に設定</li>
             </ul>
@@ -950,17 +1178,17 @@
         </div>
       </article>
 
-      <!-- Card 1-3: Hidden Pixel Super Settings (Quick Tap, Auto Rules, Notification History) -->
+      <!-- Card 1-3 -->
       <article class="dads-card">
         <div class="dads-card-header">
           <div class="dads-card-title">
             <span class="material-symbols-outlined">bolt</span>
             1-3. iPhoneにはない超便利設定：「クイックタップ」「自動ルール」「通知履歴」
           </div>
-          <span class="dads-badge dads-badge-pro">知ってる人だけ得をする</span>
+          <span class="dads-badge dads-badge-pro">時短裏ワザ</span>
         </div>
 
-        <div class="detailed-step-box">
+        <div class="detailed-step-box accent-purple">
           <div class="detailed-step-header">
             <span class="material-symbols-outlined">touch_app</span>
             裏ワザ3選の具体的タップ手順
@@ -969,29 +1197,30 @@
             <li class="substep-item">
               <span class="substep-num">1</span>
               <div class="substep-text">
-                <strong>【背面2回タップ（クイックタップ）】スマホの裏をトントンと2回叩くだけで即起動</strong><br>
-                <span class="substep-ui-tag">設定</span> ＞ <span class="substep-ui-tag">システム</span> ＞ <span class="substep-ui-tag">ジェスチャー</span> ＞ <span class="substep-ui-tag">クイックタップでアクションを開始</span> をONにします。「ライト」「スクリーンショット」「アプリを開く（例：レコーダーやPayPay）」を割り当てると、ロック解除直後に背面を2回叩くだけで一発起動します！
+                <strong>【背面2回タップ（クイックタップ）】</strong><br>
+                <span class="substep-ui-tag">設定</span> ＞ <span class="substep-ui-tag">システム</span> ＞ <span class="substep-ui-tag">ジェスチャー</span> ＞ <span class="substep-ui-tag">クイックタップでアクションを開始</span> をONにし、「ライト」「スクショ」「レコーダー起動」等を割り当てます。
+                <span class="substep-screen-note">結果：スマホの裏面をトントンと2回叩くだけで即起動します。</span>
               </div>
             </li>
             <li class="substep-item">
               <span class="substep-num">2</span>
               <div class="substep-text">
-                <strong>【自動ルール】会社に着いたら自動でマナーモード、自宅なら着信音ON</strong><br>
-                <span class="substep-ui-tag">設定</span> ＞ <span class="substep-ui-tag">システム</span> ＞ <span class="substep-ui-tag">ルール</span> ＞ <span class="substep-ui-tag">ルールを追加</span> をタップ。「会社のWi-Fiネットワーク」または「会社の住所」を指定し、「バイブレーションに設定」を選ぶと、出社した瞬間に自動でマナーモードになります！
+                <strong>【自動ルール】会社に着いたら自動でマナーモード</strong><br>
+                <span class="substep-ui-tag">設定</span> ＞ <span class="substep-ui-tag">システム</span> ＞ <span class="substep-ui-tag">ルール</span> ＞ <span class="substep-ui-tag">ルールを追加</span> から「会社のWi-Fi」を指定し、「バイブレーションに設定」を選択します。
               </div>
             </li>
             <li class="substep-item">
               <span class="substep-num">3</span>
               <div class="substep-text">
-                <strong>【通知履歴】うっかり消したLINE・メール通知を後から復活</strong><br>
-                <span class="substep-ui-tag">設定</span> ＞ <span class="substep-ui-tag">通知</span> ＞ <span class="substep-ui-tag">通知履歴</span> をONにします。これで「大事な通知を間違えてスワイプで消してしまった！」という時でも、過去24時間の全通知を一覧で確認・復元できます。
+                <strong>【通知履歴】うっかり消した通知を復活</strong><br>
+                <span class="substep-ui-tag">設定</span> ＞ <span class="substep-ui-tag">通知</span> ＞ <span class="substep-ui-tag">通知履歴</span> をONにすると、間違えてスワイプ消去した通知も過去24時間分さかのぼって確認できます。
               </div>
             </li>
           </ul>
         </div>
       </article>
 
-      <!-- Card 1-4: Gboard -->
+      <!-- Card 1-4 -->
       <article class="dads-card">
         <div class="dads-card-header">
           <div class="dads-card-title">
@@ -1002,6 +1231,14 @@
         </div>
         <p>キーボード右上の<strong>マイクアイコン</strong>をタップして話すだけで句読点付きで爆速入力。さらに上バーの<strong>クリップボード（バインダー）アイコン</strong>から「お疲れ様です。〇〇です。」等の定型文の<strong>ピン留め（画鋲）アイコン</strong>を押せば永久固定できます。</p>
       </article>
+
+      <div class="part-pager">
+        <span></span>
+        <button type="button" class="dads-btn dads-btn-primary" onclick="switchPartSmooth('part2')">
+          次へ：第2部 Googleアプリ＆チーム連携
+          <span class="material-symbols-outlined">arrow_forward</span>
+        </button>
+      </div>
     </section>
 
 
@@ -1009,15 +1246,16 @@
          PART 2: Googleアプリ徹底活用＆チーム生産性爆上げ (0:30 - 1:10)
          ===================================================================== -->
     <section id="part2" class="part-section">
-      <div class="section-header" style="background-color: #004D40;">
+      <div class="section-header theme-teal">
+        <span class="section-kicker">PART 02 / 0:30 - 1:10（40分）</span>
         <h2>
           <span class="material-symbols-outlined">workspaces</span>
-          第2部：Googleアプリ徹底活用 ＆ チーム生産性爆上げ連携（所要時間：40分）
+          Googleアプリ徹底活用 ＆ チーム生産性爆上げ連携
         </h2>
         <p>Googleギャラリー、Keep、カレンダー、Gmail、Chrome、Googleマップを組み合わせ、個人の連絡からチームの日程調整・情報共有・外回り業務まで一気に加速させます。</p>
       </div>
 
-      <!-- Card 2-1: Google Gallery -->
+      <!-- Card 2-1 -->
       <article class="dads-card">
         <div class="dads-card-header">
           <div class="dads-card-title">
@@ -1029,17 +1267,17 @@
         <div class="two-col-grid">
           <div class="col-box primary">
             <h4><span class="material-symbols-outlined">folder_open</span> 「ギャラリー（Gallery）」を使う場面</h4>
-            <p style="font-size: 13px;">通信量ゼロで、端末内の写真だけ（「カメラ」「Screenshots」「Download」「LINE」等のフォルダ別）をサクッと見たい時。</p>
-            <p style="font-size: 12px; color: var(--dads-grey-700); margin-top: 6px;"><strong>操作：</strong>Playストアで「ギャラリー Google」を入れて開き、右下の <span class="substep-ui-tag">フォルダ</span> タブをタップ。上部の「書類」「人」タグでオフライン自動絞り込みも可能。</p>
+            <p style="font-size: 14px; margin-bottom: 8px;">通信量ゼロで、端末内の写真だけ（「カメラ」「Screenshots」「Download」「LINE」等のフォルダ別）をサクッと見たい時。</p>
+            <p style="font-size: 13px; color: var(--dads-grey-700);"><strong>操作：</strong>Playストアで「ギャラリー Google」を入れて開き、右下の <span class="substep-ui-tag">フォルダ</span> タブをタップ。上部の「書類」「人」タグでオフライン自動絞り込みも可能。</p>
           </div>
           <div class="col-box">
             <h4><span class="material-symbols-outlined">auto_fix_high</span> 「Google フォト」を使う場面</h4>
-            <p style="font-size: 13px;">消しゴムマジックや編集マジック、ベストテイクなどのAI編集をする時や、チーム共有アルバムを見る時。</p>
+            <p style="font-size: 14px;">消しゴムマジックや編集マジック、ベストテイクなどのAI編集をする時や、チーム共有アルバムを見る時。</p>
           </div>
         </div>
       </article>
 
-      <!-- Card 2-2: Google Keep -->
+      <!-- Card 2-2 -->
       <article class="dads-card">
         <div class="dads-card-header">
           <div class="dads-card-title">
@@ -1049,7 +1287,7 @@
           <span class="dads-badge dads-badge-pro">チーム生産性爆上げ</span>
         </div>
 
-        <div class="detailed-step-box">
+        <div class="detailed-step-box accent-green">
           <div class="detailed-step-header">
             <span class="material-symbols-outlined">group_add</span>
             チーム共有・画像テキスト抽出・Googleドキュメント化の具体手順
@@ -1058,13 +1296,14 @@
             <li class="substep-item">
               <span class="substep-num">1</span>
               <div class="substep-text">
-                <strong>【共同編集で共有掲示板】</strong><span class="substep-ui-tag">Google Keep</span> でチェックリストを作成 ＞ 右下の <strong>「︙」</strong> ＞ <span class="substep-ui-tag">共同編集者</span> ＞ 同僚のメールアドレスを入力して「保存」。誰かが完了チェックを入れると全員のスマホ・PCに即同期されます。
+                <strong>【共同編集で共有掲示板】</strong><span class="substep-ui-tag">Google Keep</span> でチェックリストを作成 ＞ 右下の <strong>「︙」</strong> ＞ <span class="substep-ui-tag">共同編集者</span> ＞ 同僚のメールアドレスを入力して「保存」。
+                <span class="substep-screen-note">結果：誰かが完了チェックを入れると全員のスマホ・PCにリアルタイムで即同期されます。</span>
               </div>
             </li>
             <li class="substep-item">
               <span class="substep-num">2</span>
               <div class="substep-text">
-                <strong>【ホワイトボード文字抽出】</strong>メモ左下「＋」＞ <span class="substep-ui-tag">写真を撮る</span> でホワイトボードや名刺を撮影 ＞ 画像をタップして全画面表示 ＞ 右上の <strong>「︙」</strong> ＞ <span class="substep-ui-tag">画像のテキストを抽出</span> をタップすると一瞬でテキスト化されます。
+                <strong>【ホワイトボード文字抽出】</strong>メモ左下「＋」＞ <span class="substep-ui-tag">写真を撮る</span> でホワイトボードや名刺を撮影 ＞ 画像をタップして全画面表示 ＞ 右上の <strong>「︙」</strong> ＞ <span class="substep-ui-tag">画像のテキストを抽出</span> をタップします。
               </div>
             </li>
             <li class="substep-item">
@@ -1077,7 +1316,7 @@
         </div>
       </article>
 
-      <!-- Card 2-3: Google Calendar & Gmail & Chrome -->
+      <!-- Card 2-3 -->
       <article class="dads-card">
         <div class="dads-card-header">
           <div class="dads-card-title">
@@ -1090,7 +1329,7 @@
         <div class="two-col-grid">
           <div class="col-box primary">
             <h4><span class="material-symbols-outlined">event_available</span> カレンダー：全員の空き時間一発特定</h4>
-            <ol style="font-size: 13px; padding-left: 20px; line-height: 1.8;">
+            <ol>
               <li><span class="substep-ui-tag">カレンダー</span> ＞ 右下「＋」＞「予定」</li>
               <li><span class="substep-ui-tag">ユーザーを追加</span> で参加メンバーを選択</li>
               <li>すぐ下の <span class="substep-ui-tag">空いている時間を表示</span> をタップすると全員が空いている候補日時が自動提案される</li>
@@ -1099,7 +1338,7 @@
           </div>
           <div class="col-box">
             <h4><span class="material-symbols-outlined">sync_alt</span> Gmailタスク化 ＆ Chrome/Password連携</h4>
-            <ul style="font-size: 13px; padding-left: 20px; line-height: 1.8;">
+            <ul>
               <li><strong>Gmailタスク化：</strong>メールを開き右上「︙」＞ <span class="substep-ui-tag">タスクに追加</span> でリンク付きToDo登録</li>
               <li><strong>PC Chromeから送信：</strong>PCのChrome共有アイコン ＞ <span class="substep-ui-tag">あなたのデバイスに送信</span> ＞「Pixel 9a」で外出先へ1秒転送</li>
               <li><strong>パスワード自動入力：</strong>GoogleパスワードマネージャーがChromeとアプリで同期しログイン入力が不要に</li>
@@ -1108,7 +1347,7 @@
         </div>
       </article>
 
-      <!-- Card 2-4: Google Maps AR Live View, Timeline, Shared List -->
+      <!-- Card 2-4 -->
       <article class="dads-card">
         <div class="dads-card-header">
           <div class="dads-card-title">
@@ -1127,7 +1366,8 @@
             <li class="substep-item">
               <span class="substep-num">1</span>
               <div class="substep-text">
-                <strong>【ARライブビュー（方向音痴の完全解消）】</strong>徒歩ナビ開始後、画面左下にある <span class="substep-ui-tag">ライブビュー（ピンと四角のアイコン）</span> をタップしてスマホを街並みにかざします。実際の風景の上に<strong>巨大な青い矢印と「あと50mで右折」という看板がAR表示</strong>され、駅出口で逆方向に歩くミスがゼロになります。
+                <strong>【ARライブビュー（方向音痴の完全解消）】</strong>徒歩ナビ開始後、画面左下にある <span class="substep-ui-tag">ライブビュー（ピンと四角のアイコン）</span> をタップしてスマホを街並みにかざします。
+                <span class="substep-screen-note">結果：実際の風景の上に巨大な青い矢印と「あと50mで右折」という看板がAR表示され、駅出口で逆方向に歩くミスがゼロになります。</span>
               </div>
             </li>
             <li class="substep-item">
@@ -1139,12 +1379,23 @@
             <li class="substep-item">
               <span class="substep-num">3</span>
               <div class="substep-text">
-                <strong>【タイムラインで日報・交通費精算】</strong>右上アイコン ＞ <span class="substep-ui-tag">タイムライン</span> で、自分が昨日・先週どの時間にどこに訪問したかの自動移動記録（端末内保存）を確認でき、日報や経費精算の思い出し時間が消滅します。
+                <strong>【タイムラインで日報・交通費精算】</strong>右上アイコン ＞ <span class="substep-ui-tag">タイムライン</span> で、昨日・先週どの時間にどこに訪問したかの自動移動記録を確認でき、日報や経費精算の思い出し時間が消滅します。
               </div>
             </li>
           </ul>
         </div>
       </article>
+
+      <div class="part-pager">
+        <button type="button" class="dads-btn dads-btn-secondary" onclick="switchPartSmooth('part1')">
+          <span class="material-symbols-outlined">arrow_back</span>
+          前へ：第1部
+        </button>
+        <button type="button" class="dads-btn dads-btn-primary" onclick="switchPartSmooth('part3')">
+          次へ：第3部 レンズ・スキャン・2画面
+          <span class="material-symbols-outlined">arrow_forward</span>
+        </button>
+      </div>
     </section>
 
 
@@ -1153,14 +1404,15 @@
          ===================================================================== -->
     <section id="part3" class="part-section">
       <div class="section-header">
+        <span class="section-kicker">PART 03 / 1:10 - 1:45（35分）</span>
         <h2>
           <span class="material-symbols-outlined">document_scanner</span>
-          第3部：現場キャプチャ・Googleレンズ・2画面分割・自動字幕（所要時間：35分）
+          現場キャプチャ・Googleレンズ・2画面分割・自動字幕
         </h2>
         <p>カメラをかざすだけで外国語翻訳やPCへのテキスト直接送信ができるGoogleレンズ、ドライブスキャン、オフライン録音、さらに2画面同時操作と無音字幕まで網羅します。</p>
       </div>
 
-      <!-- Card 3-1: Google Lens & Copy to Computer -->
+      <!-- Card 3-1 -->
       <article class="dads-card">
         <div class="dads-card-header">
           <div class="dads-card-title">
@@ -1185,20 +1437,21 @@
             <li class="substep-item">
               <span class="substep-num">2</span>
               <div class="substep-text">
-                <strong>【リアルタイム翻訳】</strong>下メニューの <span class="substep-ui-tag">翻訳</span> をタップし、海外製の機材マニュアルや英語の資料にかざします。シャッターを押さなくても、画面上の英語がリアルタイムで日本語に上書きされて読めます！
+                <strong>【リアルタイム翻訳】</strong>下メニューの <span class="substep-ui-tag">翻訳</span> をタップし、海外製の機材マニュアルや英語の資料にかざします。シャッターを押さなくても、画面上の英語がリアルタイムで日本語に上書きされて読めます。
               </div>
             </li>
             <li class="substep-item">
               <span class="substep-num">3</span>
               <div class="substep-text">
-                <strong>【パソコンにコピー（超絶時短）】</strong>下メニューの <span class="substep-ui-tag">テキスト</span> をタップして紙の資料や型番を撮影 ＞ 「すべて選択」 ＞ <span class="substep-ui-tag">パソコンにコピー</span> をタップして自分の会社PCを選びます。<strong>1秒後にPC側で「Ctrl+V（貼り付け）」を押すと、スマホで撮った紙の文字がPCにそのままペーストされます！</strong>
+                <strong>【パソコンにコピー（超絶時短）】</strong>下メニューの <span class="substep-ui-tag">テキスト</span> をタップして紙の資料や型番を撮影 ＞ 「すべて選択」 ＞ <span class="substep-ui-tag">パソコンにコピー</span> をタップして自分の会社PCを選びます。
+                <span class="substep-screen-note">結果：1秒後にPC側で「Ctrl+V（貼り付け）」を押すと、スマホで撮った紙の文字がPCにそのままペーストされます！</span>
               </div>
             </li>
           </ul>
         </div>
       </article>
 
-      <!-- Card 3-2: Drive Scan & Offline Recorder -->
+      <!-- Card 3-2 -->
       <article class="dads-card">
         <div class="dads-card-header">
           <div class="dads-card-title">
@@ -1211,7 +1464,7 @@
         <div class="two-col-grid">
           <div class="col-box primary">
             <h4><span class="material-symbols-outlined">document_scanner</span> ドライブスキャン手順</h4>
-            <ol style="font-size: 13px; padding-left: 20px; line-height: 1.8;">
+            <ol>
               <li><span class="substep-ui-tag">ドライブ</span> ＞ 右下の <strong>黒いカメラアイコン</strong>をタップ</li>
               <li>書類にかざすと青枠で自動認識＆自動撮影</li>
               <li>「切り抜き」「カラー（影消し）」調整後、複数枚は左下「＋」</li>
@@ -1220,7 +1473,7 @@
           </div>
           <div class="col-box">
             <h4><span class="material-symbols-outlined">record_voice_over</span> Pixelレコーダー手順</h4>
-            <ol style="font-size: 13px; padding-left: 20px; line-height: 1.8;">
+            <ol>
               <li><span class="substep-ui-tag">レコーダー</span> ＞ 赤い丸（●）で録音開始</li>
               <li><span class="substep-ui-tag">文字起こし</span> タブでオフライン話者分離（話者1・2）確認</li>
               <li>保存後、右上「︙」＞ <span class="substep-ui-tag">Google ドキュメントに保存</span> で第4部のNotebookLMへ！</li>
@@ -1229,7 +1482,7 @@
         </div>
       </article>
 
-      <!-- Card 3-3: Split Screen, Overview Selection, Live Caption, Circle to Search -->
+      <!-- Card 3-3 -->
       <article class="dads-card">
         <div class="dads-card-header">
           <div class="dads-card-title">
@@ -1239,7 +1492,7 @@
           <span class="dads-badge dads-badge-pro">Androidだけの特権</span>
         </div>
 
-        <div class="detailed-step-box">
+        <div class="detailed-step-box accent-purple">
           <div class="detailed-step-header">
             <span class="material-symbols-outlined">touch_app</span>
             作業効率を倍増させる3つのAndroid独自操作
@@ -1249,26 +1502,37 @@
               <span class="substep-num">1</span>
               <div class="substep-text">
                 <strong>【2画面分割（例：上で資料/YouTube、下でKeep/カレンダー）】</strong><br>
-                1つ目のアプリを開いた状態で画面下の <strong>■（履歴ボタン）</strong>をタップ ＞ 画面上部の<strong>アプリアイコン</strong>をタップ ＞ <span class="substep-ui-tag">画面分割</span> をタップ ＞ 下半分に表示したい2つ目のアプリをタップします。資料を見ながらメール返信やカレンダー入力が1画面で完結します！
+                1つ目のアプリを開いた状態で画面下の <strong>■（履歴ボタン）</strong>をタップ ＞ 画面上部の<strong>アプリアイコン</strong>をタップ ＞ <span class="substep-ui-tag">画面分割</span> ＞ 下半分に表示したい2つ目のアプリをタップします。
               </div>
             </li>
             <li class="substep-item">
               <span class="substep-num">2</span>
               <div class="substep-text">
-                <strong>【履歴画面から直接テキスト・画像抜き（Overview Selection）】</strong><br>
-                <strong>■（履歴ボタン）</strong>を押したままの状態（アプリ一覧のカード表示）で、画面内に写っている文字を長押しすると<strong>どんなアプリでも文字選択・コピー</strong>ができ、画像を長押しするとそのまま画像保存・共有ができます。さらに、●（ホームボタン）長押しの<strong>「かこって検索」</strong>なら画面を丸で囲んで即検索・翻訳も可能です。
+                <strong>【履歴画面から直接テキスト・画像抜き ＆ かこって検索】</strong><br>
+                <strong>■（履歴ボタン）</strong>を押した状態のカード上で、画面内の文字を長押しすると<strong>どんなアプリでも文字コピー</strong>、画像を長押しするとそのまま画像保存できます。さらに●（ホーム）長押しの<strong>「かこって検索」</strong>なら画面を丸で囲んで即検索・翻訳が可能です。
               </div>
             </li>
             <li class="substep-item">
               <span class="substep-num">3</span>
               <div class="substep-text">
                 <strong>【ライブキャプション（電車内・無音環境で自動字幕）】</strong><br>
-                音を出せない場所でも、端末の<strong>音量ボタン</strong>を1回押し、音量バーの一番下に出る<strong>「吹き出し（四角に横線）」アイコン</strong>をタップすると、スマホ内で再生中の動画や通話・Web会議の音声がすべてリアルタイムで画面上に日本語字幕表示されます。
+                端末の<strong>音量ボタン</strong>を1回押し、音量バーの一番下に出る<strong>「吹き出し（四角に横線）」アイコン</strong>をタップすると、動画やWeb会議の音声がリアルタイムで画面上に日本語字幕表示されます。
               </div>
             </li>
           </ul>
         </div>
       </article>
+
+      <div class="part-pager">
+        <button type="button" class="dads-btn dads-btn-secondary" onclick="switchPartSmooth('part2')">
+          <span class="material-symbols-outlined">arrow_back</span>
+          前へ：第2部
+        </button>
+        <button type="button" class="dads-btn dads-btn-primary" onclick="switchPartSmooth('part4')">
+          次へ：第4部 Gemini拡張 × NotebookLM
+          <span class="material-symbols-outlined">arrow_forward</span>
+        </button>
+      </div>
     </section>
 
 
@@ -1276,26 +1540,26 @@
          PART 4: 【超目玉】Gemini拡張機能 × NotebookLM (1:55 - 2:30)
          ===================================================================== -->
     <section id="part4" class="part-section">
-      <div class="section-header" style="background-color: #1A1A5E;">
+      <div class="section-header theme-purple">
+        <span class="section-kicker">PART 04 / 1:55 - 2:30（35分）</span>
         <h2>
           <span class="material-symbols-outlined">auto_awesome</span>
-          第4部：【超目玉】Gemini Workspace拡張 × NotebookLM 業務革命（所要時間：35分）
+          【超目玉】Gemini Workspace拡張 × NotebookLM 業務革命
         </h2>
         <p>Pixel 9a最大の破壊力。Geminiに「自分のGmail・カレンダー・ドライブ・Keep」を直接操作させ、さらにNotebookLMで議事録と解説ラジオを自動生成します。</p>
       </div>
 
-      <!-- Card 4-1: Gemini Workspace Extensions -->
+      <!-- Card 4-1 -->
       <article class="dads-card">
         <div class="dads-card-header">
           <div class="dads-card-title">
             <span class="material-symbols-outlined">extension</span>
-            4-1. Gemini「Google Workspace拡張機能」：自分のメール・予定・ドライブをAIが直接操作！
+            4-1. Gemini「Google Workspace拡張機能」：メール・予定・ドライブをAIが直接操作！
           </div>
           <span class="dads-badge dads-badge-critical">秘書の誕生</span>
         </div>
-        <p>単なる質問応答ではなく、GeminiをあなたのGmail・カレンダー・ドライブ・Keepと接続（拡張機能をON）することで、<strong>「アプリを1つも開かずに、話しかけるだけで仕事の段取りが完了する」</strong>次元へ突入します。</p>
 
-        <div class="detailed-step-box">
+        <div class="detailed-step-box accent-purple">
           <div class="detailed-step-header">
             <span class="material-symbols-outlined">touch_app</span>
             Workspace連携の初期設定 ＆ 最強プロンプト実践手順
@@ -1304,27 +1568,27 @@
             <li class="substep-item">
               <span class="substep-num">1</span>
               <div class="substep-text">
-                <span class="substep-ui-tag">Gemini</span> アプリを開き、右上隅の自分の丸いアイコンをタップ ＞ <span class="substep-ui-tag">拡張機能（またはアプリ）</span> をタップし、<strong>「Google Workspace」</strong>と<strong>「Google マップ」</strong>のスイッチをONにします。
+                <span class="substep-ui-tag">Gemini</span> アプリを開き、右上隅の自分の丸いアイコンをタップ ＞ <span class="substep-ui-tag">拡張機能（またはアプリ）</span> ＞ <strong>「Google Workspace」</strong>と<strong>「Google マップ」</strong>のスイッチをONにします。
               </div>
             </li>
             <li class="substep-item">
               <span class="substep-num">2</span>
               <div class="substep-text">
-                <strong>【実演1：Gmail×カレンダー連携】</strong>電源ボタン長押しでGeminiを呼び出し、こう話しかけます：<br>
+                <strong>【実演1：Gmail × カレンダー連携】</strong>電源ボタン長押しでGeminiを呼び出し、話しかけます：
                 <span class="substep-screen-note">「@Gmail 先週〇〇株式会社の田中さんから来た見積もりのメールを要約して。あとその中に書いてある納期を @Googleカレンダー に登録して！」</span>
               </div>
             </li>
             <li class="substep-item">
               <span class="substep-num">3</span>
               <div class="substep-text">
-                <strong>【実演2：ドライブ資料検索＆要約】</strong><br>
+                <strong>【実演2：ドライブ資料検索＆要約】</strong>
                 <span class="substep-screen-note">「@Googleドライブ 2026年の営業戦略っていう資料を探して、要点を3つにまとめて」</span>
               </div>
             </li>
             <li class="substep-item">
               <span class="substep-num">4</span>
               <div class="substep-text">
-                <strong>【実演3：Keepリスト作成】</strong><br>
+                <strong>【実演3：Keepリスト作成】</strong>
                 <span class="substep-screen-note">「@GoogleKeep 明日の大阪出張に必要な持ち物チェックリストを作って保存して」</span>
               </div>
             </li>
@@ -1332,7 +1596,7 @@
         </div>
       </article>
 
-      <!-- Card 4-2: Ask about screen & Gemini Live -->
+      <!-- Card 4-2 -->
       <article class="dads-card">
         <div class="dads-card-header">
           <div class="dads-card-title">
@@ -1345,7 +1609,7 @@
         <div class="two-col-grid">
           <div class="col-box primary">
             <h4><span class="material-symbols-outlined">screenshot</span> 「この画面について質問」手順</h4>
-            <ol style="font-size: 13px; padding-left: 20px; line-height: 1.8;">
+            <ol>
               <li>長文メールやPDFを開いたまま、右側面上の<strong>電源ボタンを1秒長押し</strong></li>
               <li>画面下のGeminiウィンドウ上の <span class="substep-ui-tag">この画面について質問</span> をタップ</li>
               <li>「3行で要約」「丁寧な断りメール案を作って」と指示するだけ</li>
@@ -1353,7 +1617,7 @@
           </div>
           <div class="col-box">
             <h4><span class="material-symbols-outlined">forum</span> Gemini Live（音声壁打ち）手順</h4>
-            <ol style="font-size: 13px; padding-left: 20px; line-height: 1.8;">
+            <ol>
               <li>Gemini右下の<strong>縦波形アイコン（|||）</strong>をタップ</li>
               <li>「来週のプレゼン構成を一緒に考えて」と人間のように会話</li>
               <li>途中で話を遮って「やっぱり結論を最初に持ってきて」と割り込んでもOK</li>
@@ -1362,7 +1626,7 @@
         </div>
       </article>
 
-      <!-- Card 4-3: Recorder to NotebookLM -->
+      <!-- Card 4-3 -->
       <article class="dads-card">
         <div class="dads-card-header">
           <div class="dads-card-title">
@@ -1399,6 +1663,17 @@
           </ul>
         </div>
       </article>
+
+      <div class="part-pager">
+        <button type="button" class="dads-btn dads-btn-secondary" onclick="switchPartSmooth('part3')">
+          <span class="material-symbols-outlined">arrow_back</span>
+          前へ：第3部
+        </button>
+        <button type="button" class="dads-btn dads-btn-primary" onclick="switchPartSmooth('part5')">
+          次へ：第5部 写真AI・通話・紛失対策
+          <span class="material-symbols-outlined">arrow_forward</span>
+        </button>
+      </div>
     </section>
 
 
@@ -1406,15 +1681,16 @@
          PART 5: 写真編集AI・通話AI・PC連携・紛失対策 (2:30 - 2:50)
          ===================================================================== -->
     <section id="part5" class="part-section">
-      <div class="section-header">
+      <div class="section-header theme-green">
+        <span class="section-kicker">PART 05 / 2:30 - 2:50（20分）</span>
         <h2>
           <span class="material-symbols-outlined">auto_fix_high</span>
-          第5部：写真AI編集・通話スクリーニング・PC連携・紛失対策（所要時間：20分）
+          写真AI編集・通話スクリーニング・PC連携・紛失対策
         </h2>
         <p>1タップずつ迷わない写真編集（消しゴム・編集・Add Me・ベストテイク）、営業電話ブロック、PC連携、そして万が一のスマホ紛失時の遠隔ロックまで完璧に押さえます。</p>
       </div>
 
-      <!-- Card 5-1: Photo Magic -->
+      <!-- Card 5-1 -->
       <article class="dads-card">
         <div class="dads-card-header">
           <div class="dads-card-title">
@@ -1427,7 +1703,7 @@
         <div class="two-col-grid">
           <div class="col-box primary">
             <h4><span class="material-symbols-outlined">delete_sweep</span> 消しゴムマジック（不要物を消去）</h4>
-            <ol style="font-size: 13px; padding-left: 20px; line-height: 1.8;">
+            <ol>
               <li><span class="substep-ui-tag">Google フォト</span> で写真を開く ＞ 下バー左から2番目 <span class="substep-ui-tag">編集</span></li>
               <li>下メニューを左へスワイプ ＞ <span class="substep-ui-tag">ツール</span> ＞ <span class="substep-ui-tag">消しゴムマジック</span></li>
               <li>白枠をタップ、または消したい物を<strong>指でグルッと囲む</strong></li>
@@ -1436,7 +1712,7 @@
           </div>
           <div class="col-box">
             <h4><span class="material-symbols-outlined">magic_button</span> 編集マジック（人物を移動・拡大）</h4>
-            <ol style="font-size: 13px; padding-left: 20px; line-height: 1.8;">
+            <ol>
               <li>Googleフォト ＞ <span class="substep-ui-tag">編集</span> ＞ 左下隅の<strong>キラキラマーク（星型）</strong></li>
               <li>動かしたい人をタップ（または囲む）して白く光らせる</li>
               <li>指でドラッグ移動（2本指で拡大縮小）＞ 右下 <strong>「→」</strong></li>
@@ -1445,7 +1721,7 @@
           </div>
           <div class="col-box">
             <h4><span class="material-symbols-outlined">person_add</span> 一緒に写る（Add Me）</h4>
-            <ol style="font-size: 13px; padding-left: 20px; line-height: 1.8;">
+            <ol>
               <li><span class="substep-ui-tag">カメラ</span> ＞ 下部モードをスワイプし <span class="substep-ui-tag">一緒に写る</span></li>
               <li><strong>1枚目：</strong>同僚を「左半分」に寄せて撮影（右を空ける）</li>
               <li><strong>交代：</strong>撮影者が右半分に入り、新撮影者が画面の白いガイド枠を背景に重ねて2枚目を撮影し合成完了</li>
@@ -1453,7 +1729,7 @@
           </div>
           <div class="col-box">
             <h4><span class="material-symbols-outlined">sentiment_satisfied</span> ベストテイク（目つぶり修正）</h4>
-            <ol style="font-size: 13px; padding-left: 20px; line-height: 1.8;">
+            <ol>
               <li>連写した集合写真をGoogleフォトで開く</li>
               <li><span class="substep-ui-tag">編集</span> ＞ <span class="substep-ui-tag">ツール</span> ＞ <span class="substep-ui-tag">ベストテイク</span></li>
               <li>下に出る丸い顔アイコンから目をつぶった人をタップし、目を開けた笑顔の候補を選択して保存</li>
@@ -1462,7 +1738,7 @@
         </div>
       </article>
 
-      <!-- Card 5-2: Call Screen, Quick Share, Webcam, Find My Device -->
+      <!-- Card 5-2 -->
       <article class="dads-card">
         <div class="dads-card-header">
           <div class="dads-card-title">
@@ -1507,7 +1783,7 @@
                 <button type="button" class="dads-btn dads-btn-secondary" onclick="simulateCall('sales')">シミュレーション 1：迷惑営業電話</button>
                 <button type="button" class="dads-btn dads-btn-secondary" onclick="simulateCall('client')">シミュレーション 2：取引先の急用</button>
               </div>
-              <ul style="font-size: 13px; padding-left: 20px; line-height: 1.7;">
+              <ul style="font-size: 13px; padding-left: 20px; line-height: 1.75;">
                 <li><strong>PC連携（Quick Share）：</strong>「共有」＞「クイック共有」で近くのPCへギガ消費ゼロで高速転送</li>
                 <li><strong>USB Webカメラ化：</strong>PCとUSB接続し通知「充電中」＞「ウェブカメラ」で高画質Zoomカメラに</li>
                 <li><strong>紛失対策（デバイスを探す）：</strong>PCで <code>google.com/android/find</code> を開き、場所特定・着信音鳴動・遠隔ロックが可能</li>
@@ -1516,6 +1792,17 @@
           </div>
         </div>
       </article>
+
+      <div class="part-pager">
+        <button type="button" class="dads-btn dads-btn-secondary" onclick="switchPartSmooth('part4')">
+          <span class="material-symbols-outlined">arrow_back</span>
+          前へ：第4部
+        </button>
+        <button type="button" class="dads-btn dads-btn-primary" onclick="switchPartSmooth('part6')">
+          次へ：第6部 進行表・チェック・Q&amp;A
+          <span class="material-symbols-outlined">arrow_forward</span>
+        </button>
+      </div>
     </section>
 
 
@@ -1524,14 +1811,15 @@
          ===================================================================== -->
     <section id="part6" class="part-section">
       <div class="section-header">
+        <span class="section-kicker">PART 06 / 2:50 - 3:00（10分）</span>
         <h2>
           <span class="material-symbols-outlined">checklist</span>
-          第6部：3時間進行表・ハンズオン演習チェック・Q&amp;A集
+          3時間進行表・ハンズオン演習チェック・Q&amp;A集
         </h2>
         <p>勉強会を時間通りに成功させ、受講者が「できた！」を実感するための180分スケジュールと実践チェックリスト、よくある質問集です。</p>
       </div>
 
-      <!-- Card 6-1: Timetable -->
+      <!-- Card 6-1 -->
       <article class="dads-card">
         <div class="dads-card-header">
           <div class="dads-card-title">
@@ -1558,7 +1846,7 @@
                 <td>・3ボタンナビ、着信音、フォト罠解除<br>・背面クイックタップ、会社自動マナーモード（ルール）、通知履歴ON</td>
                 <td>日常ストレスが消え、Pixelならではの時短設定が完了</td>
               </tr>
-              <tr style="background-color: #E6F4EA;">
+              <tr style="background-color: var(--dads-teal-50);">
                 <td><strong>0:30〜1:10</strong><br>(40分)</td>
                 <td><strong>第2部：Googleアプリ＆チーム連携</strong></td>
                 <td>・Googleギャラリー使い分け<br>・Keep共同編集＆ホワイトボード文字抽出<br>・カレンダー「空き時間重ね」＆Meet発行<br>・マップARライブビュー＆タイムライン日報</td>
@@ -1574,7 +1862,7 @@
                 <td><strong>1:45〜1:55</strong><br>(10分)</td>
                 <td colspan="3"><strong>【休憩・個別質問タイム】</strong>（つまずいている受講者のフォロー）</td>
               </tr>
-              <tr style="background-color: #FAF5FF;">
+              <tr style="background-color: var(--dads-purple-50);">
                 <td><strong>1:55〜2:30</strong><br>(35分)</td>
                 <td><strong>第4部：【超目玉】<br>Gemini拡張 × NotebookLM</strong></td>
                 <td>・Gemini Workspace拡張（@Gmail/@カレンダー/@ドライブ/@Keep）操作<br>・「この画面について質問」＆Gemini Live<br>・NotebookLM議事録＆Audio Overviewラジオ</td>
@@ -1597,7 +1885,7 @@
         </div>
       </article>
 
-      <!-- Card 6-2: Checklist -->
+      <!-- Card 6-2 -->
       <article class="dads-card">
         <div class="dads-card-header">
           <div class="dads-card-title">
@@ -1667,7 +1955,7 @@
         </div>
       </article>
 
-      <!-- Card 6-3: FAQ -->
+      <!-- Card 6-3 -->
       <article class="dads-card">
         <div class="dads-card-header">
           <div class="dads-card-title">
@@ -1710,6 +1998,14 @@
           </div>
         </div>
       </article>
+
+      <div class="part-pager">
+        <button type="button" class="dads-btn dads-btn-secondary" onclick="switchPartSmooth('part5')">
+          <span class="material-symbols-outlined">arrow_back</span>
+          前へ：第5部
+        </button>
+        <span></span>
+      </div>
     </section>
 
   </main>
@@ -1726,12 +2022,12 @@
       <div class="dads-footer-col">
         <h5>主要カリキュラム</h5>
         <ul>
-          <li><a href="javascript:void(0)" onclick="switchTabDirect('part1')">1. 快適化＆隠れ設定</a></li>
-          <li><a href="javascript:void(0)" onclick="switchTabDirect('part2')">2. Googleアプリ＆チーム連携</a></li>
-          <li><a href="javascript:void(0)" onclick="switchTabDirect('part3')">3. レンズ・スキャン・2画面・字幕</a></li>
-          <li><a href="javascript:void(0)" onclick="switchTabDirect('part4')">4. Gemini拡張 × NotebookLM</a></li>
-          <li><a href="javascript:void(0)" onclick="switchTabDirect('part5')">5. 写真AI・通話・PC・紛失対策</a></li>
-          <li><a href="javascript:void(0)" onclick="switchTabDirect('part6')">6. 180分進行表・チェック・Q&amp;A</a></li>
+          <li><a href="javascript:void(0)" onclick="switchPartSmooth('part1')">1. 快適化＆隠れ設定</a></li>
+          <li><a href="javascript:void(0)" onclick="switchPartSmooth('part2')">2. Googleアプリ＆チーム連携</a></li>
+          <li><a href="javascript:void(0)" onclick="switchPartSmooth('part3')">3. レンズ・スキャン・2画面・字幕</a></li>
+          <li><a href="javascript:void(0)" onclick="switchPartSmooth('part4')">4. Gemini拡張 × NotebookLM</a></li>
+          <li><a href="javascript:void(0)" onclick="switchPartSmooth('part5')">5. 写真AI・通話・PC・紛失対策</a></li>
+          <li><a href="javascript:void(0)" onclick="switchPartSmooth('part6')">6. 180分進行表・チェック・Q&amp;A</a></li>
         </ul>
       </div>
       <div class="dads-footer-col">
@@ -1746,6 +2042,7 @@
   </footer>
 
   <script>
+    // Tab switch WITHOUT dizzying jump-to-page-top
     function showPart(partId, tabElement) {
       document.querySelectorAll('.part-section').forEach(sec => sec.classList.remove('active'));
       document.querySelectorAll('.dads-tab').forEach(tab => tab.classList.remove('active'));
@@ -1753,15 +2050,20 @@
       const target = document.getElementById(partId);
       if (target) target.classList.add('active');
       if (tabElement) tabElement.classList.add('active');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      // Deliberately NO window.scrollTo(0,0) so the user stays comfortably at the tab bar!
     }
 
-    function switchTabDirect(partId) {
+    // Used by bottom Next/Prev buttons & footer links: smoothly align to tab bar anchor, NOT top of hero
+    function switchPartSmooth(partId) {
       const tabs = document.querySelectorAll('.dads-tab');
       const idxMap = { 'part1': 0, 'part2': 1, 'part3': 2, 'part4': 3, 'part5': 4, 'part6': 5 };
       const idx = idxMap[partId];
       if (idx !== undefined && tabs[idx]) {
         showPart(partId, tabs[idx]);
+        const anchor = document.getElementById('tabNavAnchor');
+        if (anchor) {
+          anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
       }
     }
 
@@ -1771,7 +2073,7 @@
       document.querySelectorAll('.instructor-note').forEach(note => {
         note.classList.toggle('visible', showNotes);
       });
-      document.getElementById('instructorBtnText').textContent = showNotes ? '講師用メモを隠す' : '講師用メモを表示';
+      document.getElementById('instructorBtnText').textContent = showNotes ? 'メモを隠す' : '講師メモ';
     }
 
     function toggleAccordion(btn) {
