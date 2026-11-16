@@ -128,27 +128,6 @@
       align-items: center;
     }
 
-    /* Search Bar */
-    .search-box {
-      display: flex;
-      align-items: center;
-      background: var(--dads-grey-100);
-      border: 1px solid var(--dads-grey-400);
-      border-radius: 4px;
-      padding: 4px 8px;
-    }
-    .search-box input {
-      border: none;
-      background: transparent;
-      font-size: 14px;
-      padding: 4px;
-      width: 160px;
-      font-family: var(--font-base);
-    }
-    .search-box input:focus {
-      outline: none;
-    }
-
     /* Layout */
     .dads-container {
       max-width: 1200px;
@@ -156,7 +135,7 @@
       padding: 24px 16px 80px 16px;
     }
 
-    /* Hero / Purpose block */
+    /* Hero block */
     .hero-block {
       background-color: var(--dads-white);
       border: 1px solid var(--dads-grey-300);
@@ -376,60 +355,77 @@
       margin-bottom: 4px;
     }
 
-    /* Step Guide Grid */
-    .steps-container {
+    /* Detailed Step Guide Box (Super Click-by-Click) */
+    .detailed-step-box {
+      background-color: var(--dads-white);
+      border: 1px solid var(--dads-grey-300);
+      border-left: 5px solid var(--dads-blue-900);
+      border-radius: 4px;
+      padding: 16px;
       margin: 16px 0;
     }
-    .step-item {
+    .detailed-step-header {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--dads-blue-1000);
       display: flex;
-      gap: 16px;
-      margin-bottom: 16px;
-      padding-bottom: 16px;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
       border-bottom: 1px dashed var(--dads-grey-300);
     }
-    .step-item:last-child {
-      border-bottom: none;
-      margin-bottom: 0;
-      padding-bottom: 0;
+    .substep-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
-    .step-number {
-      flex-shrink: 0;
-      width: 32px;
-      height: 32px;
+    .substep-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 12px;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .substep-num {
+      width: 24px;
+      height: 24px;
       background-color: var(--dads-blue-900);
       color: var(--dads-white);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
+      font-size: 12px;
       font-weight: 700;
-      font-size: 14px;
+      flex-shrink: 0;
+      margin-top: 2px;
     }
-    .step-body {
-      flex-grow: 1;
+    .substep-text {
+      flex: 1;
     }
-    .step-title {
-      font-weight: 700;
-      font-size: 16px;
-      color: var(--dads-grey-900);
-      margin-bottom: 4px;
-    }
-    .step-desc {
-      font-size: 14px;
-      color: var(--dads-grey-700);
-      margin-bottom: 8px;
-    }
-    .step-path {
+    .substep-ui-tag {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 4px;
       background-color: var(--dads-grey-100);
-      border: 1px solid var(--dads-grey-300);
-      padding: 4px 10px;
+      border: 1px solid var(--dads-grey-400);
+      padding: 2px 8px;
       border-radius: 4px;
-      font-family: monospace;
-      font-size: 13px;
+      font-weight: 700;
       color: var(--dads-blue-1000);
+      font-size: 13px;
+    }
+    .substep-screen-note {
+      display: block;
+      font-size: 12px;
+      color: var(--dads-grey-600);
+      margin-top: 4px;
+      background-color: var(--dads-grey-50);
+      padding: 6px 10px;
+      border-radius: 4px;
+      border-left: 3px solid var(--dads-grey-400);
     }
 
     /* Comparison & Two-Column Grids */
@@ -814,13 +810,13 @@
     <!-- Hero / Objective Block -->
     <section class="hero-block">
       <h1>社用スマホ切り替え（iPhoneからPixel 9aへ）に伴う実務使いこなし勉強会</h1>
-      <p>「iPhoneのほうが慣れてて良かった」「誰の着信音か分からない」「初期設定のままだと容量や通信量が不安」「AIと言われても何に使えばいいか分からない」という社内の声を解消し、<strong>Pixel 9aの真価（Gemini × NotebookLM連携、オフライン文字起こし、通話スクリーニング、歪み補正スキャン）を叩き込んで実務スピードを何倍にも引き上げる</strong>ための3時間実践カリキュラムです。</p>
+      <p>「iPhoneのほうが慣れてて良かった」「誰の着信音か分からない」「初期設定のままだと容量や通信量が不安」「AIと言われても何を押せばいいか分からない」という社内の声を解消し、<strong>Pixel 9aの真価（Gemini × NotebookLM連携、完全オフライン文字起こし、通話スクリーニング、歪み補正スキャン、写真編集マジック）を手取り足取りの具体的タップ操作で習得</strong>するための3時間実践カリキュラムです。</p>
       
       <div class="dads-alert dads-alert-info">
-        <span class="material-symbols-outlined">lightbulb</span>
+        <span class="material-symbols-outlined">touch_app</span>
         <div class="dads-alert-content">
-          <h4>本勉強会のゴール：スペック自慢ではなく「明日の仕事が爆速化する体験」</h4>
-          <p>スマホ操作が苦手な社員が「迷わず電話・アラームを使える」状態から、営業・事務・企画メンバーが「議事録や資料作成、迷惑電話対応をAIに丸投げできる」レベルまで、参加者全員が実機を触りながら到達します。</p>
+          <h4>本マニュアルの特徴：抽象論は一切なし。「どこのボタンをどう押すか」を完全明記</h4>
+          <p>「写真編集ができます」ではなく「画面下部左から2番目のスライダーマークを押す」まで、スマホ操作が苦手な方でも100%迷わず操作できる具体的な手順を記載しています。</p>
         </div>
       </div>
 
@@ -844,11 +840,11 @@
     <nav class="dads-tabs" aria-label="勉強会パート選択">
       <button type="button" class="dads-tab active" onclick="showPart('part1', this)">
         <span class="dads-tab-time">第1部（0:00〜0:40）</span>
-        <span class="dads-tab-title">1. iPhone脱出＆基本ストレス根絶</span>
+        <span class="dads-tab-title">1. iPhone脱出＆基本設定</span>
       </button>
       <button type="button" class="dads-tab" onclick="showPart('part2', this)">
         <span class="dads-tab-time">第2部（0:40〜1:20）</span>
-        <span class="dads-tab-title">2. 現場直結！爆速情報キャプチャ</span>
+        <span class="dads-tab-title">2. ドライブスキャン＆録音文字起こし</span>
       </button>
       <button type="button" class="dads-tab" onclick="showPart('part3', this)">
         <span class="dads-tab-time">第3部（1:30〜2:15）</span>
@@ -856,24 +852,24 @@
       </button>
       <button type="button" class="dads-tab" onclick="showPart('part4', this)">
         <span class="dads-tab-time">第4部（2:15〜2:45）</span>
-        <span class="dads-tab-title">4. 実務を守る独自AI＆PC連携</span>
+        <span class="dads-tab-title">4. 写真編集マジック・Add Me・通話AI</span>
       </button>
       <button type="button" class="dads-tab" onclick="showPart('part5', this)">
         <span class="dads-tab-time">第5部（2:45〜3:00）</span>
-        <span class="dads-tab-title">5. 進行表・演習チェック・Q&A</span>
+        <span class="dads-tab-title">5. 進行表・演習チェック・Q&amp;A</span>
       </button>
     </nav>
 
     <!-- =====================================================================
-         PART 1: iPhone脱出＆基本ストレス根絶 (0:00 - 0:40)
+         PART 1: iPhone脱出＆基本設定 (0:00 - 0:40)
          ===================================================================== -->
     <section id="part1" class="part-section active">
       <div class="section-header">
         <h2>
           <span class="material-symbols-outlined">phonelink_setup</span>
-          第1部：iPhone脱出＆基本ストレスの完全根絶（所要時間：40分）
+          第1部：iPhone脱出＆基本設定の完全操作手順（所要時間：40分）
         </h2>
-        <p>「戻るボタンがない」「全員の着信音が同じでパニック」「知らないうちに写真でギガ消費」など、乗り換え直後に噴出する不満を最初の40分でゼロにします。</p>
+        <p>「戻るボタンがない」「全員の着信音が同じでパニック」「知らないうちに写真でギガ消費」など、乗り換え直後に噴出する不満を、具体的な画面操作で解消します。</p>
       </div>
 
       <!-- Card 1-1: Navigation buttons -->
@@ -881,44 +877,45 @@
         <div class="dads-card-header">
           <div class="dads-card-title">
             <span class="material-symbols-outlined">navigation</span>
-            1-1. 操作性の完全克服：「3ボタンナビゲーション」への切り替え
+            1-1. 操作性の完全克服：「3ボタンナビゲーション」への切り替え手順
           </div>
           <span class="dads-badge dads-badge-critical">iPhone不満No.1解消</span>
         </div>
-        <p>iPhoneには画面下に物理ボタンがありませんが、Androidは初期設定が「ジェスチャー操作（画面端からスワイプ）」になっているため、「前の画面に戻れない」「アプリ一覧が出せない」というパニックが多発します。<strong>画面下に「▲ ■ ●」を出すことで、誰でも迷わず操作できるようになります。</strong></p>
+        <p>画面下に「◀（戻る）」「●（ホーム）」「■（履歴）」を常時表示させ、操作の迷いをゼロにします。</p>
 
-        <div class="instructor-note">
-          <div class="instructor-header">
-            <span class="material-symbols-outlined">record_voice_over</span>
-            講師用ガイド：ここを強調！
+        <div class="detailed-step-box">
+          <div class="detailed-step-header">
+            <span class="material-symbols-outlined">touch_app</span>
+            3ボタンナビゲーション切り替えの具体的タップ手順
           </div>
-          「使いこなすならジェスチャーが正解」と押し付けないこと！「前の画面に戻るボタンが常に目に見える」安心感こそが、非IT層の拒絶感を解く最大の鍵です。慣れた人だけ後からジェスチャーに戻せば十分です。
-        </div>
-
-        <div class="steps-container">
-          <div class="step-item">
-            <div class="step-number">1</div>
-            <div class="step-body">
-              <div class="step-title">設定アプリを開く</div>
-              <div class="step-desc">ホーム画面またはアプリ一覧から、歯車アイコンの「設定」をタップします。</div>
-              <div class="step-path"><span class="material-symbols-outlined">settings</span> 設定</div>
-            </div>
-          </div>
-          <div class="step-item">
-            <div class="step-number">2</div>
-            <div class="step-body">
-              <div class="step-title">「ナビゲーション モード」を探す</div>
-              <div class="step-desc">「システム」＞「ナビゲーション モード」をタップします（または設定最上部の検索窓に「ナビゲーション」と入力）。</div>
-              <div class="step-path">設定 &gt; システム &gt; ナビゲーション モード</div>
-            </div>
-          </div>
-          <div class="step-item">
-            <div class="step-number">3</div>
-            <div class="step-body">
-              <div class="step-title">「3ボタン ナビゲーション」を選択</div>
-              <div class="step-desc">画面下に「◀（戻る）」「●（ホーム）」「■（タスク一覧）」が表示されます。これでiPhone以上に操作が直感的になります。</div>
-            </div>
-          </div>
+          <ul class="substep-list">
+            <li class="substep-item">
+              <span class="substep-num">1</span>
+              <div class="substep-text">
+                ホーム画面から、歯車アイコンの <span class="substep-ui-tag"><span class="material-symbols-outlined">settings</span> 設定</span> をタップします。
+                <span class="substep-screen-note">※見当たらない場合は画面下から上にスワイプしてアプリ一覧を出し、一番上の検索窓に「設定」と入力します。</span>
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">2</span>
+              <div class="substep-text">
+                画面を下へスクロールし、一番下付近にある <span class="substep-ui-tag">システム</span> をタップします。
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">3</span>
+              <div class="substep-text">
+                システム画面の中にある <span class="substep-ui-tag">ナビゲーション モード</span> をタップします。
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">4</span>
+              <div class="substep-text">
+                「ジェスチャー ナビゲーション」から <span class="substep-ui-tag">3ボタン ナビゲーション</span> の丸いチェックをタップします。
+                <span class="substep-screen-note">タップした瞬間に、画面の一番下に「◀（戻る）」「●（ホーム）」「■（タスク履歴）」が現れます！</span>
+              </div>
+            </li>
+          </ul>
         </div>
 
         <div class="simulator-wrapper">
@@ -975,48 +972,39 @@
         <div class="dads-card-header">
           <div class="dads-card-title">
             <span class="material-symbols-outlined">ring_volume</span>
-            1-2. オフィス内パニック防止：着信音・通知音の個別変更＆アラーム
+            1-2. 着信音・通知音の個別変更 ＆ アラーム設定の具体的タップ手順
           </div>
           <span class="dads-badge dads-badge-critical">社内トラブル即解消</span>
         </div>
-        <p>社用スマホを一斉導入すると、全員が初期設定の着信音（Pixel専用音源符など）のままになり、<strong>オフィスで1台鳴るたびにフロア中の社員がポケットを確認する</strong>という無駄な混乱が発生します。音の個別設定と、消音時の振動設定を徹底します。</p>
+        <p>オフィスで「全員同じ音」になって誰の電話かわからない混乱を完全に防ぎます。</p>
 
         <div class="two-col-grid">
           <div class="col-box">
             <h4>
               <span class="material-symbols-outlined">volume_up</span>
-              着信音・通知音の変更手順
+              着信音・通知音の個別変更タップ手順
             </h4>
-            <ol style="padding-left: 20px; font-size: 14px; line-height: 1.8;">
-              <li>「設定」＞「着信音とバイブレーション」を開く</li>
-              <li>「着信音」をタップ</li>
-              <li>ジャンル別（「Pixel Sounds」「レトロ」「クラシック」等）から自分好みの音を選択</li>
-              <li>「デフォルトの通知音」（メールやチャット用）も同様に変更</li>
+            <ol style="padding-left: 20px; font-size: 13px; line-height: 1.8;">
+              <li><span class="substep-ui-tag">設定</span> ＞ <span class="substep-ui-tag">着信音とバイブレーション</span> をタップ</li>
+              <li>画面を少し下にスクロールし、<span class="substep-ui-tag">着信音</span> をタップ</li>
+              <li>フォルダ一覧（「Pixel Sounds」「ナチュラル」「レトロ」など）から好きなジャンルをタップ</li>
+              <li>音をタップして試聴し、気に入った音を選んで右上の <span class="substep-ui-tag">保存</span> をタップ</li>
+              <li>戻った画面で <span class="substep-ui-tag">デフォルトの通知音</span> も同様に別の音へ変更</li>
             </ol>
-            <div class="step-path" style="margin-top: 10px;">設定 &gt; 着信音とバイブレーション &gt; 着信音</div>
           </div>
 
           <div class="col-box">
             <h4>
               <span class="material-symbols-outlined">alarm</span>
-              時計・アラームの設定手順
+              時計・アラームの設定タップ手順
             </h4>
-            <ol style="padding-left: 20px; font-size: 14px; line-height: 1.8;">
-              <li>ホームまたは一覧から「時計」アプリを起動</li>
-              <li>左下の「アラーム」タブを選択</li>
-              <li>「＋」ボタンで時間を設定</li>
-              <li>「繰り返し（月〜金）」を設定し、業務アラームにする</li>
-              <li>Googleアシスタントとの連携ルーティンもここで組めます</li>
+            <ol style="padding-left: 20px; font-size: 13px; line-height: 1.8;">
+              <li>ホームまたは一覧から青い丸時計アイコンの <span class="substep-ui-tag">時計</span> アプリをタップ</li>
+              <li>左下の <span class="substep-ui-tag">アラーム</span> タブをタップ</li>
+              <li>画面下部中央の大きな青い丸 <span class="substep-ui-tag">＋</span> をタップ</li>
+              <li>時計の文字盤を指でなぞって「時」と「分」を指定（またはキーボード入力）し <span class="substep-ui-tag">OK</span></li>
+              <li>「月〜金」の曜日をタップして青く光らせ、業務日アラームとして保存</li>
             </ol>
-            <div class="step-path" style="margin-top: 10px;">時計アプリ &gt; アラーム &gt; ＋</div>
-          </div>
-        </div>
-
-        <div class="dads-alert dads-alert-warning">
-          <span class="material-symbols-outlined">vibration</span>
-          <div class="dads-alert-content">
-            <h4>重要：会議中の「マナーモード」と「サイレントモード」の違い</h4>
-            <p>音量ボタンを押した際に出てくるアイコンをタップすることで「着信音あり」「バイブレーションのみ（マナーモード）」「完全消音（サイレント）」をワンタップで切り替えられます。</p>
           </div>
         </div>
       </article>
@@ -1026,45 +1014,57 @@
         <div class="dads-card-header">
           <div class="dads-card-title">
             <span class="material-symbols-outlined">cloud_off</span>
-            1-3. 最大の地雷「Googleフォトの自動バックアップ罠」を解除する
+            1-3. Googleフォト「自動バックアップ罠」解除の具体的タップ手順
           </div>
           <span class="dads-badge dads-badge-critical">通信制限・容量事故防止</span>
         </div>
-        <p>Pixelを初期設定のまま使い始めると、<strong>「社用アカウントのGoogleドライブ容量（通常15GB〜数TB）があっという間に満杯になる」「私用写真が社用アカウントにアップロードされる」「動画撮影で社用SIMの月間ギガ数を使い切る」</strong>という重大トラブルが必ず起きます。</p>
+        <p>モバイル通信でギガを使い切ったり、社用Googleドライブが動画で満杯になる事故を防止します。</p>
 
-        <div class="dads-alert dads-alert-danger">
-          <span class="material-symbols-outlined">warning</span>
-          <div class="dads-alert-content">
-            <h4>放置厳禁！初期設定の3つの罠</h4>
-            <p>1. モバイルデータ通信でのバックアップがON（月末に通信制限がかかる）<br>
-            2. 動画（容量数ギガ）まで自動バックアップされ会社の共有ドライブがパンク<br>
-            3. 個人Googleアカウントと混ざり、プライベート写真が会社に同期されるリスク</p>
+        <div class="detailed-step-box">
+          <div class="detailed-step-header">
+            <span class="material-symbols-outlined">touch_app</span>
+            Googleフォト容量事故防止の完全タップ手順
           </div>
-        </div>
-
-        <div class="steps-container">
-          <div class="step-item">
-            <div class="step-number">1</div>
-            <div class="step-body">
-              <div class="step-title">Googleフォト アプリを開く</div>
-              <div class="step-desc">右上のプロフィールアイコンをタップし、「フォトの設定」を選択します。</div>
-            </div>
-          </div>
-          <div class="step-item">
-            <div class="step-number">2</div>
-            <div class="step-body">
-              <div class="step-title">「バックアップ」設定を開く</div>
-              <div class="step-desc">社用で写真バックアップが不要な部署は、ここで「バックアップ」自体をOFFにします。</div>
-            </div>
-          </div>
-          <div class="step-item">
-            <div class="step-number">3</div>
-            <div class="step-body">
-              <div class="step-title">モバイルデータ通信の使用量を制限する（必須）</div>
-              <div class="step-desc">「モバイルデータ通信の使用量」をタップし、「動画をバックアップ（データ使用）」をOFF、1日の上限を「なし」または「30MB」等に設定します。</div>
-              <div class="step-path">フォト設定 &gt; バックアップ &gt; モバイルデータ通信の使用量</div>
-            </div>
-          </div>
+          <ul class="substep-list">
+            <li class="substep-item">
+              <span class="substep-num">1</span>
+              <div class="substep-text">
+                ホーム画面から、4色の風車アイコン <span class="substep-ui-tag">Google フォト</span> をタップします。
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">2</span>
+              <div class="substep-text">
+                画面の<strong>右上隅にある丸い自分のアイコン（またはアカウントの頭文字）</strong>をタップします。
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">3</span>
+              <div class="substep-text">
+                ポップアップメニューの下部にある歯車マークの <span class="substep-ui-tag">フォトの設定</span> をタップします。
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">4</span>
+              <div class="substep-text">
+                一番上にある <span class="substep-ui-tag">バックアップ</span> をタップします。
+                <span class="substep-screen-note">※写真をクラウドに同期しない部署は、ここで一番上の「バックアップ」スイッチを直接OFFにします。</span>
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">5</span>
+              <div class="substep-text">
+                バックアップ画面を下へスクロールし、<span class="substep-ui-tag">モバイルデータ通信の使用量</span> をタップします。
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">6</span>
+              <div class="substep-text">
+                「動画をバックアップ（データ使用）」のスイッチを<strong>OFF（グレー）</strong>にし、1日の上限を <span class="substep-ui-tag">データなし</span> または <span class="substep-ui-tag">30MB</span> に設定します。
+                <span class="substep-screen-note">これで社用スマホの月末通信制限・ギガ枯渇の心配がゼロになります！</span>
+              </div>
+            </li>
+          </ul>
         </div>
       </article>
 
@@ -1073,37 +1073,37 @@
         <div class="dads-card-header">
           <div class="dads-card-title">
             <span class="material-symbols-outlined">keyboard_voice</span>
-            1-4. 入力爆速化：Gboardの「アシスタント音声入力」と「定型文クリップボード」
+            1-4. Gboard「アシスタント音声入力」＆「定型文ピン留め」の操作手順
           </div>
-          <span class="dads-badge dads-badge-success">時短効果抜群</span>
+          <span class="dads-badge dads-badge-success">入力速度3倍化</span>
         </div>
-        <p>iPhoneユーザーがPixelを触って最初に感動するのが「音声入力の圧倒的な精度と速さ」です。Pixel 9aはオンデバイスAI処理により、<strong>句読点や「？」を自動判別し、通常の3倍以上の速度で長文メールや報告書を作成</strong>できます。</p>
+        <p>話した言葉が句読点付きで正確に入力される驚きの体験と、頻出メッセージのワンタップ挿入法です。</p>
 
         <div class="two-col-grid">
           <div class="col-box primary">
             <h4>
               <span class="material-symbols-outlined">mic</span>
-              神機能：アシスタント音声入力
+              アシスタント音声入力の使い方
             </h4>
-            <p style="font-size: 13px; margin-bottom: 8px;">キーボード右上のマイクアイコンをタップして話すだけ。</p>
-            <ul style="font-size: 13px; padding-left: 20px; line-height: 1.8;">
-              <li>「いつも大変お世話になっております」と早口で喋ってもノーミス変換</li>
-              <li>「改行」「送信」などの音声コマンドも認識</li>
-              <li>声で入力しながら、画面上の文字を指でタップして修正できる（音声とキーボードの同時使用）</li>
-            </ul>
+            <ol style="font-size: 13px; padding-left: 20px; line-height: 1.8;">
+              <li>メールやメモの文字入力欄をタップし、キーボード（Gboard）を表示</li>
+              <li>キーボードの<strong>右上隅にあるマイクアイコン</strong>（※検索バーのマイクではなく、キーボード内のマイク）をタップ</li>
+              <li>キーボードの上部がカラフルに光ったら、「いつも大変お世話になっております。明日の会議の件ですが…」と話しかける</li>
+              <li>句読点（、。）が自動で付くのを確認し、話し終えたら再度マイクをタップして終了</li>
+            </ol>
           </div>
 
           <div class="col-box">
             <h4>
               <span class="material-symbols-outlined">content_paste</span>
-              定型文ピン留め（クリップボード履歴）
+              定型文ピン留め（クリップボード）の使い方
             </h4>
-            <p style="font-size: 13px; margin-bottom: 8px;">何度も打つ文章をピン留めして1タップで挿入。</p>
-            <ul style="font-size: 13px; padding-left: 20px; line-height: 1.8;">
-              <li>キーボード上部のクリップボードアイコンをタップ</li>
-              <li>「お疲れ様です。〇〇です。」「Zoom URL」「口座番号」などを長押しして「固定」</li>
-              <li>iPhoneのように辞書登録を1つずつ探す手間がなくなります</li>
-            </ul>
+            <ol style="font-size: 13px; padding-left: 20px; line-height: 1.8;">
+              <li>キーボードの上のバーにある<strong>クリップボード（バインダーの形）アイコン</strong>をタップ</li>
+              <li>クリップボードを有効にし、直前にコピーした文章を表示</li>
+              <li>よく使う定型文（例：「お疲れ様です。〇〇です。」）の右端にある<strong>ピン留め（画鋲）アイコン</strong>をタップ</li>
+              <li>「固定中」の欄に永久保存され、いつでも1タップで本文に挿入可能になります</li>
+            </ol>
           </div>
         </div>
       </article>
@@ -1111,15 +1111,15 @@
 
 
     <!-- =====================================================================
-         PART 2: 現場直結！爆速情報キャプチャ (0:40 - 1:20)
+         PART 2: ドライブスキャン＆録音文字起こし (0:40 - 1:20)
          ===================================================================== -->
     <section id="part2" class="part-section">
       <div class="section-header">
         <h2>
           <span class="material-symbols-outlined">document_scanner</span>
-          第2部：現場直結！爆速情報キャプチャ（所要時間：40分）
+          第2部：現場直結！スキャン＆文字起こしの完全操作手順（所要時間：40分）
         </h2>
-        <p>机の上の紙資料、長時間の会議、画面上の気になる画像。あらゆる現場の情報を一瞬でデジタル化・検索可能にするPixelの基本武器をマスターします。</p>
+        <p>会社の複合機まで歩く必要はありません。机の上の紙を数秒で歪み補正PDFにし、会議の音声を完全オフラインで話者分離文字起こしする完全手順です。</p>
       </div>
 
       <!-- Card 2-1: Drive document scan -->
@@ -1127,49 +1127,62 @@
         <div class="dads-card-header">
           <div class="dads-card-title">
             <span class="material-symbols-outlined">scanner</span>
-            2-1. Googleドライブ爆速スキャン：紙書類を数秒で歪み補正＆文字認識PDF化
+            2-1. Googleドライブ爆速スキャン：紙書類を数秒でPDF化する具体的タップ手順
           </div>
           <span class="dads-badge dads-badge-pro">実務キラー機能</span>
         </div>
-        <p>会社の複合機まで歩いてスキャンする必要はありません。Pixel 9aのカメラとGoogleドライブの連携機能により、<strong>斜めから撮った領収書や分厚い紙の契約書を、自動で輪郭検出し、真っ直ぐな白黒/カラーPDFとしてクラウドに即時保存</strong>できます。</p>
 
-        <div class="steps-container">
-          <div class="step-item">
-            <div class="step-number">1</div>
-            <div class="step-body">
-              <div class="step-title">Googleドライブを開き「カメラ」アイコンをタップ</div>
-              <div class="step-desc">右下の「＋」またはカメラアイコン（スキャン）を押します。</div>
-            </div>
+        <div class="detailed-step-box">
+          <div class="detailed-step-header">
+            <span class="material-symbols-outlined">touch_app</span>
+            Googleドライブ スキャンの1ステップずつ完全手順
           </div>
-          <div class="step-item">
-            <div class="step-number">2</div>
-            <div class="step-body">
-              <div class="step-title">紙書類にかざすだけで「自動シャッター」</div>
-              <div class="step-desc">書類の四隅が青枠で自動認識され、ブレずに静止すると自動で撮影されます。手動でシャッターを押す必要すらありません。</div>
-            </div>
-          </div>
-          <div class="step-item">
-            <div class="step-number">3</div>
-            <div class="step-body">
-              <div class="step-title">自動歪み補正・影消し ＆ 複数ページの追加</div>
-              <div class="step-desc">机の影や歪みが自動で消去され、スキャナーで読み取ったかのような白く鮮明なPDFになります。左下の「＋」で何ページでも追加スキャン可能。</div>
-            </div>
-          </div>
-          <div class="step-item">
-            <div class="step-number">4</div>
-            <div class="step-body">
-              <div class="step-title">保存と同時にOCR（文字検索）可能に</div>
-              <div class="step-desc">保存先を社内共有フォルダに指定すれば、PCから開いたときにも文字検索（Ctrl+F）が効く検索可能PDFとして即共有完了します。</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="instructor-note">
-          <div class="instructor-header">
-            <span class="material-symbols-outlined">record_voice_over</span>
-            講師用ガイド：ここを実演！
-          </div>
-          会場で手元のレシートやA4用紙を斜め45度から机の上に置いてかざしてみてください。自動でシャッターが切られ、一瞬で真っ直ぐな長方形に補正される様子を見せると、会場から「おおっ」と声が上がります！
+          <ul class="substep-list">
+            <li class="substep-item">
+              <span class="substep-num">1</span>
+              <div class="substep-text">
+                ホーム画面から、黄色・青・緑の三角アイコン <span class="substep-ui-tag">ドライブ</span> をタップします。
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">2</span>
+              <div class="substep-text">
+                画面の右下にある <strong>黒いカメラマークのアイコン</strong>（または右下の「＋」を押して「スキャン」）をタップします。
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">3</span>
+              <div class="substep-text">
+                カメラが起動します。机の上にスキャンしたい紙書類を置き、スマホを上からかざします。
+                <span class="substep-screen-note">書類の四隅が青い枠で自動認識され、ブレずに静止すると自動的に「カシャッ」と撮影されます（手動でシャッターを押す必要もありません）。</span>
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">4</span>
+              <div class="substep-text">
+                撮影後、画面右上の <span class="substep-ui-tag"><span class="material-symbols-outlined">crop</span> 切り抜き</span> アイコンをタップすると、四隅の丸い点を指で動かして書類の端を微調整できます。
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">5</span>
+              <div class="substep-text">
+                画面右上の <span class="substep-ui-tag"><span class="material-symbols-outlined">palette</span> カラーパレット</span> アイコンをタップし、用途に合わせて「カラー」または「白黒」を選択します。影が自動で消去されます。
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">6</span>
+              <div class="substep-text">
+                2枚目以降のページがある場合は、画面<strong>左下の「＋（ページ追加）」</strong>をタップして続けて撮影します。
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">7</span>
+              <div class="substep-text">
+                すべて撮り終わったら、画面<strong>右下の「保存」</strong>をタップします。ファイル名（例：見積書_20261115）を入力し、保存先フォルダを確認して「保存」を押します。
+                <span class="substep-screen-note">これでPCのブラウザから開いた際にも文字検索（Ctrl+F）ができる高品質なPDFが完成します！</span>
+              </div>
+            </li>
+          </ul>
         </div>
       </article>
 
@@ -1178,36 +1191,56 @@
         <div class="dads-card-header">
           <div class="dads-card-title">
             <span class="material-symbols-outlined">record_voice_over</span>
-            2-2. Pixelレコーダー：完全オフライン・話者分離リアルタイム文字起こし
+            2-2. Pixelレコーダー：完全オフライン話者分離文字起こしの具体的タップ手順
           </div>
           <span class="dads-badge dads-badge-critical">iPhoneにない最強武器</span>
         </div>
-        <p>Pixelの「レコーダー」アプリは、他社スマホと次元が違います。<strong>機内モード（完全オフライン）でも通信せずに、日本語の会話をリアルタイムで文字起こしし、「話者1」「話者2」と自動で人物を分離</strong>してくれます。情報漏洩が厳しい社内会議でも安心して使えます。</p>
 
-        <div class="two-col-grid">
-          <div class="col-box primary">
-            <h4>
-              <span class="material-symbols-outlined">speech_to_text</span>
-              会議中のレコーダー活用
-            </h4>
-            <ul style="font-size: 14px; padding-left: 20px; line-height: 1.8;">
-              <li>録音ボタンを押すだけで、画面上にリアルタイムで日本語テキストが流れる</li>
-              <li>「文字起こし」タブで過去の会議から特定のキーワード（例：「納期」「見積もり」）を瞬時に全文検索</li>
-              <li>該当の単語をタップすると、その発言の音声箇所へ即ジャンプ再生</li>
-            </ul>
+        <div class="detailed-step-box">
+          <div class="detailed-step-header">
+            <span class="material-symbols-outlined">touch_app</span>
+            レコーダー文字起こし＆ドキュメント保存の完全手順
           </div>
-
-          <div class="col-box">
-            <h4>
-              <span class="material-symbols-outlined">cloud_sync</span>
-              レコーダーWebサイト（recorder.google.com）
-            </h4>
-            <ul style="font-size: 14px; padding-left: 20px; line-height: 1.8;">
-              <li>バックアップをONにしておけば、PCのブラウザから直接すべての録音と文字起こしテキストにアクセス可能</li>
-              <li>スマホからPCへ音声を転送する手間がゼロになります</li>
-              <li>ここからテキストをコピーして、第3部のNotebookLMに投入します！</li>
-            </ul>
-          </div>
+          <ul class="substep-list">
+            <li class="substep-item">
+              <span class="substep-num">1</span>
+              <div class="substep-text">
+                赤い丸の中に白い音声波形があるアイコン <span class="substep-ui-tag">レコーダー</span> アプリをタップします。
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">2</span>
+              <div class="substep-text">
+                画面下部の中央にある <strong>大きな赤い丸ボタン（●）</strong>をタップすると、即座に録音が始まります。
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">3</span>
+              <div class="substep-text">
+                画面中央の <span class="substep-ui-tag">文字起こし</span> タブをタップします。
+                <span class="substep-screen-note">機内モード（完全オフライン）でも、話している日本語がリアルタイムでテキスト化され、「話者1」「話者2」と話者が自動分離されます！</span>
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">4</span>
+              <div class="substep-text">
+                録音を終了する時は、画面下部の一時停止ボタンを押した後、右側の <strong>チェックマーク（ 保存）</strong>をタップします。
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">5</span>
+              <div class="substep-text">
+                保存した録音をタップして開き、画面<strong>右上隅の「︙（3点リーダー）」</strong>をタップします。
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">6</span>
+              <div class="substep-text">
+                メニューから <span class="substep-ui-tag">Google ドキュメントに保存</span> をタップします。
+                <span class="substep-screen-note">数秒でGoogleドライブに文字起こしテキストのGoogleドキュメントが自動生成されます。これを第3部のNotebookLMに投入します！</span>
+              </div>
+            </li>
+          </ul>
         </div>
       </article>
 
@@ -1216,33 +1249,35 @@
         <div class="dads-card-header">
           <div class="dads-card-title">
             <span class="material-symbols-outlined">frame_inspect</span>
-            2-3. かこって検索（Circle to Search）：画面内の文字コピー・翻訳・計算
+            2-3. かこって検索（Circle to Search）：画面内の文字コピー・翻訳の操作手順
           </div>
           <span class="dads-badge dads-badge-pro">日常時短ワザ</span>
         </div>
-        <p>Instagram、PDF、アプリ内の画像、動画再生中など、「テキスト選択できない画面」でも、<strong>ホームボタン（またはジェスチャーバー）を長押しして指で囲むだけ</strong>で、瞬時に文字を抽出し、検索や翻訳ができます。</p>
 
-        <div class="steps-container">
-          <div class="step-item">
-            <div class="step-number">1</div>
-            <div class="step-body">
-              <div class="step-title">どの画面からでもナビバーを長押し</div>
-              <div class="step-desc">画面下に青白いエフェクトが現れ、画面全体が一時停止します。</div>
-            </div>
+        <div class="two-col-grid">
+          <div class="col-box primary">
+            <h4>
+              <span class="material-symbols-outlined">gesture</span>
+              かこって検索の起動と囲み方
+            </h4>
+            <ol style="font-size: 13px; padding-left: 20px; line-height: 1.8;">
+              <li>コピーできない画像やPDF、Instagram、動画などを画面に開く</li>
+              <li>画面の一番下にある<strong>「●（ホームボタン）」または「横棒（ナビゲーションバー）」を約1秒間長押し</strong></li>
+              <li>画面に青白い光のエフェクトが現れ、画面が一時停止したら、調べたい文字や画像を<strong>指先でグルッと円を描くように囲む</strong></li>
+            </ol>
           </div>
-          <div class="step-item">
-            <div class="step-number">2</div>
-            <div class="step-body">
-              <div class="step-title">気になる部分を指で丸く囲む（またはタップ）</div>
-              <div class="step-desc">画像内の英語、知らない専門用語、型番、グラフなどをサッとなぞります。</div>
-            </div>
-          </div>
-          <div class="step-item">
-            <div class="step-number">3</div>
-            <div class="step-body">
-              <div class="step-title">「テキストをコピー」または「翻訳」</div>
-              <div class="step-desc">画像の中に埋め込まれた電話番号やURLもテキストとして抽出してクリップボードに送れます。</div>
-            </div>
+
+          <div class="col-box">
+            <h4>
+              <span class="material-symbols-outlined">translate</span>
+              テキスト抽出と翻訳のタップ手順
+            </h4>
+            <ol style="font-size: 13px; padding-left: 20px; line-height: 1.8;">
+              <li>文字を囲むと、下部にGoogle検索結果がせり上がってきます</li>
+              <li>選択された文字の上にある <span class="substep-ui-tag">テキストをコピー</span> をタップすればクリップボードへ保存</li>
+              <li>英語などの外国語の場合は、右側の <span class="substep-ui-tag">翻訳</span> をタップすると画面上の外国語が一瞬で日本語に上書き翻訳されます</li>
+              <li>元に戻るには、画面外をタップするか◀（戻る）を押すだけです</li>
+            </ol>
           </div>
         </div>
       </article>
@@ -1250,15 +1285,15 @@
 
 
     <!-- =====================================================================
-         PART 3: 【超目玉】Gemini × NotebookLM 業務爆速連携 (1:30 - 2:15)
+         PART 3: 【超目玉】Gemini × NotebookLM連携 (1:30 - 2:15)
          ===================================================================== -->
     <section id="part3" class="part-section">
       <div class="section-header" style="background-color: #1A1A5E;">
         <h2>
           <span class="material-symbols-outlined">auto_awesome</span>
-          第3部：【超目玉】Gemini × NotebookLM 業務爆速エコシステム（所要時間：45分）
+          第3部：【超目玉】Gemini × NotebookLM 業務爆速エコシステムの完全操作手順（所要時間：45分）
         </h2>
-        <p>「Pixel 9aにして本当によかった！」と全員が確信する最重要パート。現場で集めた音声・紙資料を、Googleの最新AI環境で爆速ナレッジ化するワークフローを実演・演習します。</p>
+        <p>「Pixel 9aにして本当によかった！」と全員が確信するハイライトパート。音声・資料をGoogleの最新AIで爆速ナレッジ化する具体的な画面操作を体験します。</p>
       </div>
 
       <!-- Card 3-1: Recorder to NotebookLM Workflow -->
@@ -1266,141 +1301,136 @@
         <div class="dads-card-header">
           <div class="dads-card-title">
             <span class="material-symbols-outlined">hub</span>
-            3-1. 神連携ワークフロー：会議録音 → NotebookLM で議事録・決定事項・FAQ自動生成
+            3-1. 会議録音 → NotebookLM で議事録・決定事項・FAQ自動生成の具体的タップ手順
           </div>
           <span class="dads-badge dads-badge-pro">業務革命レベル</span>
         </div>
-        <p>会議の議事録作成に1時間もかけていませんか？<strong>Pixel 9aで録音した文字起こしテキストを、GoogleのAIリサーチツール「NotebookLM」に投入するだけで、決定事項・宿題・Q&Aが数秒で整理</strong>されます。</p>
 
-        <div class="workflow-flow">
-          <div class="workflow-step">
-            <div class="workflow-step-icon">
-              <span class="material-symbols-outlined">mic</span>
-            </div>
-            <div>
-              <strong>STEP 1: Pixel 9aのレコーダーで会議を録音</strong><br>
-              <span style="font-size: 13px; color: var(--dads-grey-700);">高精度な文字起こしが自動生成される。クラウド同期を有効にしておく。</span>
-            </div>
+        <div class="detailed-step-box">
+          <div class="detailed-step-header">
+            <span class="material-symbols-outlined">touch_app</span>
+            文字起こしをNotebookLMに読み込ませて議事録を生成する完全手順
           </div>
-          <div class="workflow-arrow"><span class="material-symbols-outlined">arrow_downward</span></div>
-          <div class="workflow-step">
-            <div class="workflow-step-icon">
-              <span class="material-symbols-outlined">drive_file_move</span>
-            </div>
-            <div>
-              <strong>STEP 2: GoogleドキュメントまたはKeepへ1タップ転送</strong><br>
-              <span style="font-size: 13px; color: var(--dads-grey-700);">レコーダーアプリのメニューから「Google ドキュメントに保存」を押すだけ。</span>
-            </div>
-          </div>
-          <div class="workflow-arrow"><span class="material-symbols-outlined">arrow_downward</span></div>
-          <div class="workflow-step" style="border-color: #6200EE; background-color: #FAF5FF;">
-            <div class="workflow-step-icon" style="background-color: #6200EE; color: #FFF;">
-              <span class="material-symbols-outlined">psychology</span>
-            </div>
-            <div>
-              <strong style="color: #6200EE;">STEP 3: NotebookLM（notebooklm.google.com）にソースとして追加</strong><br>
-              <span style="font-size: 13px; color: var(--dads-grey-700);">Googleドライブから先ほどのドキュメントを選択して追加する。</span>
-            </div>
-          </div>
-          <div class="workflow-arrow"><span class="material-symbols-outlined">arrow_downward</span></div>
-          <div class="workflow-step" style="border-color: var(--dads-green-900); background-color: var(--dads-green-50);">
-            <div class="workflow-step-icon" style="background-color: var(--dads-green-900); color: #FFF;">
-              <span class="material-symbols-outlined">task_alt</span>
-            </div>
-            <div>
-              <strong style="color: var(--dads-green-900);">STEP 4: AIに対話形式で指示出し・ワンクリック出力</strong><br>
-              <span style="font-size: 13px; color: var(--dads-grey-700);">「決定事項と次回のアクションアイテムを整理して」「〇〇課長の発言の懸念点は何？」など質問すると、会議の該当箇所（引用元付き）で回答！</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-box primary" style="margin-top: 16px;">
-          <h4>
-            <span class="material-symbols-outlined">headphones</span>
-            NotebookLMの驚異の機能「音声ディープダイブ（Audio Overview）」
-          </div>
-          <p style="font-size: 14px; margin-bottom: 8px;">NotebookLMには、ソース資料をもとに<strong>2人のAIホストがラジオ番組のように楽しく深掘り対談してくれる音声解説機能</strong>が搭載されています。</p>
-          <p style="font-size: 13px; color: var(--dads-grey-700);">会議の文字起こしや難解な長文資料を流し込み、「生成」を押すだけ。移動中や退勤時にPixel 9aとイヤホンでラジオ感覚で聴くだけで、会議の内容や重要トピックが頭にスッと入ります。</p>
-        </div>
-      </article>
-
-      <!-- Card 3-2: Paper Document to NotebookLM bot -->
-      <article class="dads-card">
-        <div class="dads-card-header">
-          <div class="dads-card-title">
-            <span class="material-symbols-outlined">menu_book</span>
-            3-2. 紙のマニュアル・契約書を数分で「専属社内チャットボット」に変える
-          </div>
-          <span class="dads-badge dads-badge-pro">現場DXの極み</span>
-        </div>
-        <p>オフィスのキャビネットに眠っている分厚い紙の製品マニュアル、就業規則、契約書の雛形。これらをPixel 9aでスキャンしてNotebookLMに入れると、<strong>「その資料のことなら何でも知っている専属AIアシスタント」</strong>が一瞬で完成します。</p>
-
-        <div class="two-col-grid">
-          <div class="col-box">
-            <h4>
-              <span class="material-symbols-outlined">document_scanner</span>
-              手順A: スマホでスキャン
-            </h4>
-            <p style="font-size: 13px;">第2部で学んだGoogleドライブのスキャン機能で、紙のマニュアルを撮影してPDFとしてGoogleドライブに保存。</p>
-          </div>
-          <div class="col-box">
-            <h4>
-              <span class="material-symbols-outlined">smart_toy</span>
-              手順B: NotebookLMに読み込ませる
-            </h4>
-            <p style="font-size: 13px;">NotebookLMで「ノートブックを新規作成」＞「Google ドライブ」から先ほどのPDFを選択。たったこれだけ！</p>
-          </div>
-        </div>
-
-        <div class="dads-alert dads-alert-success">
-          <span class="material-symbols-outlined">chat</span>
-          <div class="dads-alert-content">
-            <h4>実際に受講者に投げてもらうプロンプト例</h4>
-            <p>
-              ・「第3条の支払い期日と遅延損害金について要約して」<br>
-              ・「新人オペレーター向けのよくあるトラブルと対処法5選を作って」<br>
-              ・「このマニュアルを読んだ後の理解度確認クイズ（3択問題）を3問作って」
-            </p>
-          </div>
+          <ul class="substep-list">
+            <li class="substep-item">
+              <span class="substep-num">1</span>
+              <div class="substep-text">
+                第2部でPixelレコーダーから保存した「Googleドキュメント」を用意します。
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">2</span>
+              <div class="substep-text">
+                PC（またはスマホ）のChromeブラウザで <strong>notebooklm.google.com</strong> にアクセスし、社用アカウントでログインします。
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">3</span>
+              <div class="substep-text">
+                画面左上の <span class="substep-ui-tag">新しいノートブック</span>（＋ボタン）をタップします。
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">4</span>
+              <div class="substep-text">
+                ソースの追加画面で <span class="substep-ui-tag">Google ドライブ</span> アイコンを選択し、先ほどの文字起こしドキュメントにチェックを入れて右下の <span class="substep-ui-tag">挿入</span> をタップします。
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">5</span>
+              <div class="substep-text">
+                画面右下のチャット入力欄に、以下のプロンプトを入力して紙飛行機（送信）アイコンを押します：
+                <span class="substep-screen-note">「この会議の【決定事項】と【次回までの各担当者の宿題（アクションアイテム）】を箇条書きで分かりやすく整理してください。」</span>
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">6</span>
+              <div class="substep-text">
+                数秒で議事録が生成されます。回答の数字（[1]、[2]）をクリックすると、会議中のどの発言に基づいているかがハイライト表示されるため、AIのハルシネーション（嘘）を1秒で確認できます！
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">7</span>
+              <div class="substep-text">
+                【音声ディープダイブ】ノートブック右上の「スタジオ」パネルにある <span class="substep-ui-tag">音声解説（Audio Overview）</span> の「生成」ボタンをタップします。
+                <span class="substep-screen-note">2人のAIホストが会議内容を深掘りする約5〜10分の解説ラジオ番組が自動生成され、退勤時や移動中にPixel 9aのイヤホンで楽しく復習できます！</span>
+              </div>
+            </li>
+          </ul>
         </div>
       </article>
 
-      <!-- Card 3-3: Ask about screen & Gemini Live -->
+      <!-- Card 3-2: Ask about screen & Gemini Live -->
       <article class="dads-card">
         <div class="dads-card-header">
           <div class="dads-card-title">
             <span class="material-symbols-outlined">psychology_alt</span>
-            3-3. 電源ボタン長押しで発動：「画面について質問」＆ Gemini Live
+            3-2. 電源ボタン長押しで発動：「画面について質問」＆ Gemini Live の操作手順
           </div>
           <span class="dads-badge dads-badge-critical">コピペ作業が消滅</span>
         </div>
-        <p>画面に表示されている長文メール、PDF、英語のWebサイト、Slackのやり取り。Pixel 9aなら、文章をコピーしてAIアプリに貼り付ける必要はありません。<strong>電源ボタンを長押しして「この画面について質問」を押すだけ</strong>で、開いている画面をGeminiが瞬時に理解します。</p>
+
+        <div class="detailed-step-box">
+          <div class="detailed-step-header">
+            <span class="material-symbols-outlined">touch_app</span>
+            「この画面について質問（Ask about screen）」の具体的タップ手順
+          </div>
+          <ul class="substep-list">
+            <li class="substep-item">
+              <span class="substep-num">1</span>
+              <div class="substep-text">
+                質問したい長文メール、PDF、英語のWebサイト、Slackの画面を開いたままにします。
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">2</span>
+              <div class="substep-text">
+                端末の右側面にある <strong>電源ボタン（上側のボタン）を約1秒間長押し</strong> します。
+                <span class="substep-screen-note">画面の下半分に、青白く光るGeminiのオーバーレイウィンドウがフワッと立ち上がります。</span>
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">3</span>
+              <div class="substep-text">
+                Geminiウィンドウの上部に表示されている <span class="substep-ui-tag"><span class="material-symbols-outlined">screenshot</span> この画面について質問</span>（または「画面を追加」）ボタンをタップします。
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">4</span>
+              <div class="substep-text">
+                画面のスクリーンショットが自動添付されます。マイクをタップして「このメールの要点を3行でまとめて」と話すか、「相手への丁寧な返信メール文案を作って」と入力して送信します。
+                <span class="substep-screen-note">文章をコピーしてAIアプリに切り替えて貼り付ける面倒な作業が完全にゼロになります！</span>
+              </div>
+            </li>
+          </ul>
+        </div>
 
         <div class="two-col-grid">
           <div class="col-box primary">
             <h4>
-              <span class="material-symbols-outlined">screenshot</span>
-              「この画面について質問（Ask about screen）」
+              <span class="material-symbols-outlined">forum</span>
+              Gemini Live（自然音声対話）の操作手順
             </h4>
             <ol style="font-size: 13px; padding-left: 20px; line-height: 1.8;">
-              <li>長文のメールや資料を開いた状態で、電源ボタンを長押し</li>
-              <li>画面下に現れたGeminiの「この画面について質問」をタップ</li>
-              <li>「要点を3行でまとめて」「返信の丁寧な断り文案を作って」と伝えるだけ</li>
-              <li>画面に写っている表やグラフの数値も読み取って回答してくれます</li>
+              <li>電源ボタン長押しでGeminiを起動</li>
+              <li>入力欄の右端にある<strong>縦の波形アイコン（|||）</strong>をタップ</li>
+              <li>画面全体が黒い波形画面になり「ピロッ」と音が鳴る</li>
+              <li>「来週の営業プレゼンの構成を一緒に考えてほしい」と自然に会話</li>
+              <li>Geminiの話の途中で「あ、第2部はもっと短くして」と割り込んでもOK</li>
+              <li>右下の「×」を押して終了</li>
             </ol>
           </div>
 
           <div class="col-box">
             <h4>
-              <span class="material-symbols-outlined">forum</span>
-              Gemini Live（自然音声対話）
+              <span class="material-symbols-outlined">settings_voice</span>
+              Gemini起動方法の3パターン
             </h4>
-            <ol style="font-size: 13px; padding-left: 20px; line-height: 1.8;">
-              <li>Gemini画面右下の音声ウェーブアイコンをタップ</li>
-              <li>人間と話すように「来週の営業プレゼンの構成を一緒に考えてほしいんだけど…」と話しかける</li>
-              <li>途中で話を遮って「やっぱり第2部はもっと短くして」と割り込んでも柔軟に追従</li>
-              <li>移動中にイヤホンで歩きながら思考を整理するのに最適です</li>
-            </ol>
+            <ul style="font-size: 13px; padding-left: 20px; line-height: 1.8;">
+              <li><strong>方法A:</strong> 右側面の電源ボタンを1秒長押し</li>
+              <li><strong>方法B:</strong> 画面の左下隅または右下隅から斜め上へサッとスワイプ</li>
+              <li><strong>方法C:</strong> 「OK Google」と声で呼びかけ（※設定 ＞ Google ＞ 音声 ＞ Voice Match で事前に声を登録）</li>
+            </ul>
           </div>
         </div>
       </article>
@@ -1408,29 +1438,273 @@
 
 
     <!-- =====================================================================
-         PART 4: 実務を守る独自AI＆PC連携 (2:15 - 2:45)
+         PART 4: 写真編集マジック・Add Me・通話AI (2:15 - 2:45)
          ===================================================================== -->
     <section id="part4" class="part-section">
       <div class="section-header">
         <h2>
-          <span class="material-symbols-outlined">shield</span>
-          第4部：実務を守るPixel 9a 独自AI＆PC連携（所要時間：30分）
+          <span class="material-symbols-outlined">auto_fix_high</span>
+          第4部：写真編集・Add Me・通話AIの完全操作手順（所要時間：30分）
         </h2>
-        <p>営業電話を自動でシャットアウトする通話機能、現場写真の編集マジック、PCとのシームレスなファイル共有・Webカメラ化など、ビジネスを支える実用機能を網羅します。</p>
+        <p>「どこのボタンを押せばいいか分からない」を完全解決！消しゴムマジック、編集マジック、一緒に写る（Add Me）、ベストテイク、通話スクリーニングの1ステップごとのタップ操作です。</p>
       </div>
 
-      <!-- Card 4-1: Call Screen & Clear Calling -->
+      <!-- Card 4-1: Magic Eraser & Magic Editor Step-by-Step -->
       <article class="dads-card">
         <div class="dads-card-header">
           <div class="dads-card-title">
-            <span class="material-symbols-outlined">phone_in_talk</span>
-            4-1. 通話スクリーニング（Call Screen）：怪しい営業電話をAIが自動代行応対
+            <span class="material-symbols-outlined">brush</span>
+            4-1. 消しゴムマジック ＆ 編集マジック：具体的タップ手順
           </div>
-          <span class="dads-badge dads-badge-critical">仕事の中断をゼロにする</span>
+          <span class="dads-badge dads-badge-critical">1タップずつ完全図解</span>
         </div>
-        <p>知らない番号から着信があったとき、出るべきか迷って集中が切れたり、不要な営業電話に時間を奪われたりしていませんか？<strong>「通話をスクリーニング」を押すと、Googleアシスタントが相手に名乗りと用件を尋ね、相手の返答をリアルタイムで画面に文字起こし</strong>してくれます。</p>
 
-        <div class="simulator-wrapper">
+        <div class="detailed-step-box">
+          <div class="detailed-step-header">
+            <span class="material-symbols-outlined">delete_sweep</span>
+            手順A：消しゴムマジック（不要な人や物を消去する手順）
+          </div>
+          <ul class="substep-list">
+            <li class="substep-item">
+              <span class="substep-num">1</span>
+              <div class="substep-text">
+                <span class="substep-ui-tag">Google フォト</span> アプリを開き、不要なものが写り込んだ写真を1枚タップして全画面表示します。
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">2</span>
+              <div class="substep-text">
+                画面の<strong>一番下にあるバーの左から2番目</strong>、スライダー調整マークの <span class="substep-ui-tag"><span class="material-symbols-outlined">tune</span> 編集</span> をタップします。
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">3</span>
+              <div class="substep-text">
+                画面下部にメニュー（候補、切り抜き、調整、フィルタ、ツール…）が並びます。<strong>指で左にスワイプして「ツール」をタップ</strong>します。
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">4</span>
+              <div class="substep-text">
+                ツールの項目から <span class="substep-ui-tag">消しゴムマジック</span> をタップします。
+                <span class="substep-screen-note">AIが自動分析し、消去候補の人物を白い枠で囲んで提案してくれます。</span>
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">5</span>
+              <div class="substep-text">
+                白い枠をタップするか、消したい人・看板・ゴミ箱などを<strong>指先でグルッと円で囲む（または塗りつぶす）</strong>ように指を滑らせます。
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">6</span>
+              <div class="substep-text">
+                指を離すと、指定した部分が一瞬で消え、周囲の背景（壁や空）と自然に同化します！
+                <span class="substep-screen-note">※消しすぎた時は、画面上部の「◀（元に戻す矢印）」をタップすれば元に戻せます。</span>
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">7</span>
+              <div class="substep-text">
+                画面<strong>右下の「完了」</strong>をタップし、続けて画面<strong>右下の「コピーを保存」</strong>をタップします。
+                <span class="substep-screen-note">元の写真は上書きされず、消去後の綺麗な写真が新しく別ファイルとして保存されます。</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="detailed-step-box" style="border-left-color: #6200EE;">
+          <div class="detailed-step-header" style="color: #6200EE;">
+            <span class="material-symbols-outlined">magic_button</span>
+            手順B：編集マジック（人物を移動させる・大きくする・空を変える手順）
+          </div>
+          <ul class="substep-list">
+            <li class="substep-item">
+              <span class="substep-num">1</span>
+              <div class="substep-text">
+                Googleフォトで写真を全画面表示し、画面下の <span class="substep-ui-tag"><span class="material-symbols-outlined">tune</span> 編集</span> をタップします。
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">2</span>
+              <div class="substep-text">
+                画面の<strong>左下隅にある「キラキラマーク（紫や青のグラデーション星型アイコン）」</strong>をタップします。
+                <span class="substep-screen-note">編集マジックモードが起動します。</span>
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">3</span>
+              <div class="substep-text">
+                移動させたい人物や車を<strong>「ポンと1回タップ」するか、「指先で輪郭を囲む」</strong>と、その被写体だけが白くキラキラ光って選択されます。
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">4</span>
+              <div class="substep-text">
+                <strong>【位置移動】</strong>白く光った被写体に指を乗せ、そのまま好きな位置（例：中央から右端へ）ドラッグして指を離します。<br>
+                <strong>【サイズ変更】</strong>被写体に2本指を乗せ、指を広げると拡大、縮めると小さくなります。
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">5</span>
+              <div class="substep-text">
+                画面右下の <strong>矢印ボタン（→）</strong>をタップすると、AIが背景を再生成し、3〜4パターンの仕上がり候補を出してくれます。左右にスワイプして最も自然なものを選びます。
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">6</span>
+              <div class="substep-text">
+                右下の <strong>チェックマーク（）</strong>をタップし、<span class="substep-ui-tag">コピーを保存</span> をタップして完了です！
+              </div>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Card 4-2: Add Me & Best Take Step-by-Step -->
+      <article class="dads-card">
+        <div class="dads-card-header">
+          <div class="dads-card-title">
+            <span class="material-symbols-outlined">groups</span>
+            4-2. 一緒に写る（Add Me）＆ ベストテイク：具体的撮影手順
+          </div>
+          <span class="dads-badge dads-badge-pro">社内イベント・集合写真</span>
+        </div>
+
+        <div class="detailed-step-box">
+          <div class="detailed-step-header">
+            <span class="material-symbols-outlined">person_add</span>
+            「一緒に写る（Add Me）」で撮影者も全員集合写真に入る手順
+          </div>
+          <ul class="substep-list">
+            <li class="substep-item">
+              <span class="substep-num">1</span>
+              <div class="substep-text">
+                <span class="substep-ui-tag">カメラ</span> アプリを起動します。
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">2</span>
+              <div class="substep-text">
+                画面下部のシャッターボタンの上にある撮影モード文字（夜景、写真、ポートレート…）を横にスワイプし、<span class="substep-ui-tag">一緒に写る（Add Me）</span> をタップします。
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">3</span>
+              <div class="substep-text">
+                <strong>【1枚目撮影】</strong>撮影者Aが、同僚メンバーをフレームの「左半分」に寄せて収めます（※右半分は後で自分が立つ場所として空けておく）。中央下の白いシャッターボタンを押します。
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">4</span>
+              <div class="substep-text">
+                撮影直後、画面に「撮影者を交代してください」と音声と文字で指示が出ます。
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">5</span>
+              <div class="substep-text">
+                <strong>【交代】</strong>撮影者Aがメンバーにスマホを渡し、撮影者A自身が先ほど空けておいた「右半分のスペース」に入ってポーズを取ります。
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">6</span>
+              <div class="substep-text">
+                <strong>【アライメント合わせ】</strong>新しい撮影者は、画面にうっすら表示されている「1枚目の白い枠（ゴースト輪郭）」が実際の背景と重なるようにスマホを向けます。位置が合致すると枠が白くなり「固定」されます。
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">7</span>
+              <div class="substep-text">
+                <strong>【2枚目撮影】</strong>シャッターボタンを押すと、AIが2枚を自動合成し、撮影者も含めた全員が揃った1枚の写真が完成します！
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="detailed-step-box" style="border-left-color: var(--dads-green-900);">
+          <div class="detailed-step-header" style="color: var(--dads-green-900);">
+            <span class="material-symbols-outlined">sentiment_satisfied</span>
+            「ベストテイク（Best Take）」で目をつぶった顔を差し替える手順
+          </div>
+          <ul class="substep-list">
+            <li class="substep-item">
+              <span class="substep-num">1</span>
+              <div class="substep-text">
+                集合写真を撮る際、同じ構図で連続して2〜4枚撮影しておきます。
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">2</span>
+              <div class="substep-text">
+                Googleフォトでその集合写真を開き、画面下の <span class="substep-ui-tag">編集</span> をタップ ＞ 下メニューをスワイプして <span class="substep-ui-tag">ツール</span> ＞ <span class="substep-ui-tag">ベストテイク</span> をタップします。
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">3</span>
+              <div class="substep-text">
+                写真の下部に、写っている全員の顔が丸いアイコンでズラリと並びます。目をつぶっている人の顔アイコンをタップします。
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">4</span>
+              <div class="substep-text">
+                その人の直前・直後の表情候補（目を開けた笑顔など）が下に丸く一覧表示されます。一番良い表情をタップすると、集合写真の中のその人の顔だけがスッと自然に差し替わります！
+              </div>
+            </li>
+            <li class="substep-item">
+              <span class="substep-num">5</span>
+              <div class="substep-text">
+                右下の <span class="substep-ui-tag">完了</span> ＞ <span class="substep-ui-tag">コピーを保存</span> をタップして完了です。
+              </div>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Card 4-3: Audio Magic Eraser & Call Screen -->
+      <article class="dads-card">
+        <div class="dads-card-header">
+          <div class="dads-card-title">
+            <span class="material-symbols-outlined">hearing</span>
+            4-3. 音声消しゴムマジック ＆ 通話スクリーニングの具体的操作手順
+          </div>
+          <span class="dads-badge dads-badge-info">動画編集・電話対策</span>
+        </div>
+
+        <div class="two-col-grid">
+          <div class="col-box primary">
+            <h4>
+              <span class="material-symbols-outlined">noise_aware</span>
+              音声消しゴムマジック（動画の風切り音・雑音消去）
+            </h4>
+            <ol style="font-size: 13px; padding-left: 20px; line-height: 1.8;">
+              <li>Googleフォトで撮影した動画をタップして全画面表示</li>
+              <li>画面下の <span class="substep-ui-tag">編集</span> をタップ</li>
+              <li>下メニューから <span class="substep-ui-tag">音声</span> ＞ <span class="substep-ui-tag">音声消しゴムマジック</span> をタップ</li>
+              <li>AIが音声を「声」「風」「騒音」等に自動分離</li>
+              <li>消したい音（例：「風」や「騒音」）のボタンをタップ</li>
+              <li>音量スライダーを左（マイナス側）に限界までドラッグ</li>
+              <li>プレビュー再生で声だけがクリアになったのを確認し「コピーを保存」をタップ</li>
+            </ol>
+          </div>
+
+          <div class="col-box">
+            <h4>
+              <span class="material-symbols-outlined">phone_in_talk</span>
+              通話スクリーニング（営業電話の自動代行応対）
+            </h4>
+            <ol style="font-size: 13px; padding-left: 20px; line-height: 1.8;">
+              <li>見知らぬ番号から電話が鳴った時、画面中央の <span class="substep-ui-tag">通話をスクリーニング</span> をタップ</li>
+              <li>Googleアシスタントが「ご用件をお話しください」と自動応答</li>
+              <li>相手が話した声がリアルタイムで画面に文字起こしされる</li>
+              <li>迷惑電話なら画面下の「お断り」を押して切断。取引先なら「応答」を押して電話に出る</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- Simulator for Call Screen -->
+        <div class="simulator-wrapper" style="margin-top: 20px;">
           <div class="phone-mockup">
             <div class="phone-notch"></div>
             <div class="phone-screen" style="background-color: #202124; color: #FFF;">
@@ -1472,8 +1746,8 @@
               <div class="dads-alert dads-alert-info" style="margin-top: 14px;">
                 <span class="material-symbols-outlined">headset_mic</span>
                 <div class="dads-alert-content">
-                  <h4>クリア通話（Clear Calling）も自動適用！</h4>
-                  <p>「設定」＞「着信音とバイブレーション」＞「クリア通話」をONにすると、駅のホームや強風の現場でも相手の背景ノイズをAIが除去し、声だけを明瞭に届けてくれます。</p>
+                  <h4>クリア通話（Clear Calling）も有効化！</h4>
+                  <p>「設定」＞「着信音とバイブレーション」＞「クリア通話」をONにすると、駅や工事現場でも相手の騒音をAIが消去して声だけを明瞭に届けてくれます。</p>
                 </div>
               </div>
             </div>
@@ -1481,112 +1755,42 @@
         </div>
       </article>
 
-      <!-- Card 4-2: Live Translate -->
-      <article class="dads-card">
-        <div class="dads-card-header">
-          <div class="dads-card-title">
-            <span class="material-symbols-outlined">translate</span>
-            4-2. リアルタイム通訳（Live Translate）：対面通訳 ＆ LINE/Slack内直接翻訳
-          </div>
-          <span class="dads-badge dads-badge-info">外国人対応・海外出張</span>
-        </div>
-        <p>外国人の来客や海外拠点とのやり取りもPixel 9aなら安心です。相手とスマホを挟んで画面分割で対話する「対面通訳モード」に加え、<strong>チャットアプリのキーボード上で、受信した外国語が自動翻訳され、日本語で返信文を打つだけで自動翻訳されて送信</strong>されます。</p>
-
-        <div class="two-col-grid">
-          <div class="col-box">
-            <h4>
-              <span class="material-symbols-outlined">interpreter_mode</span>
-              対面通訳モード（Googleアシスタント）
-            </h4>
-            <p style="font-size: 13px; margin-bottom: 8px;">「OK Google, 英語の通訳をして」と話しかけるだけ。</p>
-            <p style="font-size: 13px; color: var(--dads-grey-700);">画面が上下に分かれ、自分が日本語で話した内容が英語で相手側に表示＆音声再生され、相手が英語で話した内容が即座に日本語で表示されます。</p>
-          </div>
-          <div class="col-box">
-            <h4>
-              <span class="material-symbols-outlined">mark_chat_read</span>
-              チャットアプリ内の自動翻訳
-            </h4>
-            <p style="font-size: 13px; margin-bottom: 8px;">Gboardの翻訳機能と連携。</p>
-            <p style="font-size: 13px; color: var(--dads-grey-700);">翻訳アプリに文章をコピペし往復する必要がありません。メッセージ入力欄に日本語を打つと、上部の送信プレビューがリアルタイムに英語（または指定の言語）に変換されます。</p>
-          </div>
-        </div>
-      </article>
-
-      <!-- Card 4-3: Pixel Camera AI Tools -->
-      <article class="dads-card">
-        <div class="dads-card-header">
-          <div class="dads-card-title">
-            <span class="material-symbols-outlined">photo_camera</span>
-            4-3. 現場・広報写真で無双するPixel 9a カメラAI機能群
-          </div>
-          <span class="dads-badge dads-badge-success">撮影失敗がゼロに</span>
-        </div>
-        <p>社内イベント、現場視察、広報用写真の撮影でもPixel 9aのAIが大活躍します。</p>
-
-        <div class="two-col-grid">
-          <div class="col-box">
-            <h4>
-              <span class="material-symbols-outlined">person_add</span>
-              一緒に写る（Add Me）
-            </h4>
-            <p style="font-size: 13px; color: var(--dads-grey-700);">集合写真を撮る際、誰かが撮影係になって写真に入れない問題を解決。1枚目を撮った後、撮影者を交代して元の構図に立つと、ARガイドに従って撮影者も全員が写った自然な1枚にAI合成されます。</p>
-          </div>
-          <div class="col-box">
-            <h4>
-              <span class="material-symbols-outlined">auto_fix_high</span>
-              編集マジック（Magic Editor）
-            </h4>
-            <p style="font-size: 13px; color: var(--dads-grey-700);">現場の写真に写り込んでしまった一般人や不要なコーン、機材を指でタップするだけで消去（消しゴムマジック）。さらに被写体の位置をずらしたり、空の天気を明るく補正することも可能です。</p>
-          </div>
-          <div class="col-box">
-            <h4>
-              <span class="material-symbols-outlined">sentiment_satisfied</span>
-              ベストテイク（Best Take）
-            </h4>
-            <p style="font-size: 13px; color: var(--dads-grey-700);">集合写真で誰かが目をつぶってしまっても撮り直す必要はありません。連写した写真から、各人の最も良い笑顔の表情だけを顔ごとに選んで差し替えられます。</p>
-          </div>
-          <div class="col-box">
-            <h4>
-              <span class="material-symbols-outlined">noise_aware</span>
-              音声消しゴムマジック（動画用）
-            </h4>
-            <p style="font-size: 13px; color: var(--dads-grey-700);">現場で動画を撮った際の「風切り音」「機械のノイズ」「周囲のざわめき」をAIが個別に分離。スライダーを動かすだけで、人物の声だけを残して雑音を消去できます。</p>
-          </div>
-        </div>
-      </article>
-
-      <!-- Card 4-4: Quick Share & PC Web Camera -->
+      <!-- Card 4-4: Quick Share & Web Camera -->
       <article class="dads-card">
         <div class="dads-card-header">
           <div class="dads-card-title">
             <span class="material-symbols-outlined">devices</span>
-            4-4. PC連携：クイック共有（Quick Share）＆ 超高画質Webカメラ化
+            4-4. PC連携：クイック共有（Quick Share）＆ 超高画質Webカメラ化の操作手順
           </div>
           <span class="dads-badge dads-badge-pro">デスクワーク直結</span>
         </div>
-        <p>「iPhoneならAirDropがあったのに…」と嘆く必要はありません。<strong>「クイック共有」を使えばWindows PCやMacとも瞬時に大容量ファイルを送受信でき、さらにUSBで挿すだけでPixel 9aがPCの高画質Webカメラに早変わり</strong>します。</p>
 
         <div class="two-col-grid">
           <div class="col-box">
             <h4>
               <span class="material-symbols-outlined">share</span>
-              クイック共有（Quick Share）
+              クイック共有（Quick Share）の送信手順
             </h4>
-            <ul style="font-size: 13px; padding-left: 20px; line-height: 1.8;">
-              <li>Android間はもちろん、Windows用「Quick Shareアプリ」をPCに入れておけば、AirDrop感覚でドラッグ＆ドロップ送信</li>
-              <li>スマホでスキャンしたPDFや動画を、ギガ数を消費せずPCにダイレクト転送</li>
-            </ul>
+            <ol style="font-size: 13px; padding-left: 20px; line-height: 1.8;">
+              <li>送りたい写真やPDFを開き、<span class="substep-ui-tag"><span class="material-symbols-outlined">share</span> 共有</span> アイコンをタップ</li>
+              <li>共有先一覧から <span class="substep-ui-tag">クイック共有</span> をタップ</li>
+              <li>近くにある同僚のAndroidやWindows PCが一覧に出るので相手の名前をタップ</li>
+              <li>相手側で「承諾」を押すと数秒でギガ消費ゼロで高速転送されます</li>
+            </ol>
           </div>
+
           <div class="col-box">
             <h4>
               <span class="material-symbols-outlined">videocam</span>
-              USB接続で即PC Webカメラ化
+              USBケーブルで即PC Webカメラ化する手順
             </h4>
-            <ul style="font-size: 13px; padding-left: 20px; line-height: 1.8;">
-              <li>付属のUSBケーブルでPixel 9aをPC（Windows/Mac）に接続</li>
-              <li>画面上部の通知から「このデバイスを充電中」＞「ウェブカメラ」を選択</li>
-              <li>ZoomやGoogle Meetでカメラ設定を開くと「Android Webcam」として認識。PC内蔵カメラとは比較にならない高画質で会議に参加できます</li>
-            </ul>
+            <ol style="font-size: 13px; padding-left: 20px; line-height: 1.8;">
+              <li>付属のUSB-CケーブルでPixel 9aをPC（Windows/Mac）に接続</li>
+              <li>スマホ画面の最上部から下にスワイプし、通知一覧を出す</li>
+              <li>「このデバイスをUSBで充電中」という通知をタップ</li>
+              <li>USBの接続用途から <span class="substep-ui-tag">ウェブカメラ</span> を選択</li>
+              <li>ZoomやGoogle Meetのカメラ設定で「Android Webcam」を選ぶだけで超高画質配信開始</li>
+            </ol>
           </div>
         </div>
       </article>
@@ -1600,7 +1804,7 @@
       <div class="section-header">
         <h2>
           <span class="material-symbols-outlined">checklist</span>
-          第5部：3時間進行表・ハンズオン演習チェック・Q&A集
+          第5部：3時間進行表・ハンズオン演習チェック・Q&amp;A集
         </h2>
         <p>勉強会を時間通りに成功させ、受講者が「できた！」を実感するためのタイムスケジュールと実践チェックリスト、よくある質問集です。</p>
       </div>
@@ -1640,7 +1844,7 @@
               </tr>
               <tr>
                 <td><strong>0:40〜1:20</strong><br>(40分)</td>
-                <td>第2部：現場直結！爆速キャプチャ</td>
+                <td>第2部：現場スキャン＆文字起こし</td>
                 <td>・ドライブでの書類スキャン（手元資料をPDF化）<br>・Pixelレコーダーで会話を録音・文字起こし体験<br>・かこって検索で画面内文字コピー</td>
                 <td>紙資料のスキャンと会議録音を自分の手で完了できる</td>
               </tr>
@@ -1651,18 +1855,18 @@
               <tr style="background-color: #FAF5FF;">
                 <td><strong>1:30〜2:15</strong><br>(45分)</td>
                 <td><strong>第3部：【超目玉】<br>Gemini × NotebookLM連携</strong></td>
-                <td>・録音した文字起こしをNotebookLMへ投入<br>・議事録・決定事項・FAQの自動抽出演習<br>・Audio Overview（音声解説）をイヤホンで聴く<br>・「この画面について質問」でメール返信案作成</td>
+                <td>・録音文字起こしをNotebookLMへ投入<br>・議事録・決定事項・FAQの自動抽出演習<br>・Audio Overview（音声解説）をイヤホンで聴く<br>・「この画面について質問」でメール返信案作成</td>
                 <td><strong>「この連携はすごい！」と感動し、実務で即座に使うイメージが湧く</strong></td>
               </tr>
               <tr>
                 <td><strong>2:15〜2:45</strong><br>(30分)</td>
-                <td>第4部：実務を守る独自AI＆PC連携</td>
-                <td>・通話スクリーニングのシミュレーション実演<br>・クリア通話設定<br>・一緒に写る（Add Me）＆編集マジック体験<br>・Quick Share送信 ＆ PC Webカメラ化実演</td>
-                <td>迷惑電話対策と高品質なWeb会議環境を構築できる</td>
+                <td>第4部：写真編集・Add Me・通話AI</td>
+                <td>・消しゴムマジックで不要物を指で消去<br>・編集マジックで人物を移動<br>・一緒に写る（Add Me）を2人1組で体験<br>・通話スクリーニングのシミュレーション実演</td>
+                <td>写真編集と迷惑電話対策を迷わず操作できる</td>
               </tr>
               <tr>
                 <td><strong>2:45〜3:00</strong><br>(15分)</td>
-                <td>第5部：総括・チェック・Q&A</td>
+                <td>第5部：総括・チェック・Q&amp;A</td>
                 <td>・ハンズオン習得度チェックリストの確認<br>・質疑応答と今後の社内サポート窓口の案内</td>
                 <td>すべての不安が解消され、明日から自信を持って使える</td>
               </tr>
@@ -1721,7 +1925,15 @@
           </div>
           <div class="checklist-item" onclick="toggleCheck(this, 'c10')">
             <input type="checkbox" id="c10">
-            <label for="c10">【第4部】通話スクリーニングの画面と、クリア通話の設定箇所を確認した</label>
+            <label for="c10">【第4部】Googleフォトの「編集」＞「消しゴムマジック」で不要な物を消去した</label>
+          </div>
+          <div class="checklist-item" onclick="toggleCheck(this, 'c11')">
+            <input type="checkbox" id="c11">
+            <label for="c11">【第4部】カメラの「一緒に写る（Add Me）」で2人交代撮影を試した</label>
+          </div>
+          <div class="checklist-item" onclick="toggleCheck(this, 'c12')">
+            <input type="checkbox" id="c12">
+            <label for="c12">【第4部】通話スクリーニングの画面と、クリア通話の設定箇所を確認した</label>
           </div>
         </div>
       </article>
@@ -1802,11 +2014,12 @@
         </div>
         <ul style="padding-left: 20px; font-size: 14px; line-height: 2;">
           <li><a href="https://support.google.com/pixelphone" target="_blank" rel="noopener">Pixel スマートフォン ヘルプ（公式）</a></li>
+          <li><a href="https://support.google.com/photos/answer/12112116" target="_blank" rel="noopener">消しゴムマジックで写真から不要なものを消去する（公式ヘルプ）</a></li>
+          <li><a href="https://support.google.com/googlecamera/answer/15234125" target="_blank" rel="noopener">Google Pixel の「一緒に写る」で集合写真を撮影する（公式ヘルプ）</a></li>
           <li><a href="https://support.google.com/drive/answer/3145835" target="_blank" rel="noopener">Google ドライブでドキュメントをスキャンする手順</a></li>
           <li><a href="https://support.google.com/pixelphone/answer/9516618" target="_blank" rel="noopener">Google Pixel で音声を録音・文字起こしする</a></li>
           <li><a href="https://notebooklm.google.com" target="_blank" rel="noopener">NotebookLM 公式サイト（GoogleのAIリサーチツール）</a></li>
           <li><a href="https://support.google.com/pixelphone/answer/9118387" target="_blank" rel="noopener">電話に出る前に通話をスクリーニングする（Call Screen）</a></li>
-          <li><a href="https://support.google.com/pixelphone/answer/11209263" target="_blank" rel="noopener">Google Pixel でリアルタイム通訳を使用する</a></li>
         </ul>
       </article>
     </section>
@@ -1826,9 +2039,9 @@
         <h5>主要カリキュラム</h5>
         <ul>
           <li><a href="javascript:void(0)" onclick="switchTabDirect('part1')">1. 基本設定＆ストレス根絶</a></li>
-          <li><a href="javascript:void(0)" onclick="switchTabDirect('part2')">2. 現場スキャン＆文字起こし</a></li>
+          <li><a href="javascript:void(0)" onclick="switchTabDirect('part2')">2. スキャン＆文字起こし</a></li>
           <li><a href="javascript:void(0)" onclick="switchTabDirect('part3')">3. Gemini × NotebookLM連携</a></li>
-          <li><a href="javascript:void(0)" onclick="switchTabDirect('part4')">4. 独自AI＆通話・カメラ</a></li>
+          <li><a href="javascript:void(0)" onclick="switchTabDirect('part4')">4. 写真編集・Add Me・通話AI</a></li>
           <li><a href="javascript:void(0)" onclick="switchTabDirect('part5')">5. 進行表・チェックリスト</a></li>
         </ul>
       </div>
